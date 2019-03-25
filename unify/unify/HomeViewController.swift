@@ -7,24 +7,23 @@
 //
 
 import UIKit
+import Firebase
 
-class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class HomeViewController: UIViewController {
     
+    var ref: DatabaseReference!
+    let user = Auth.auth().currentUser
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        ref = Database.database().reference()
+        
     }
     
 
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
-    }
+
     
     /*
     // MARK: - Navigation
