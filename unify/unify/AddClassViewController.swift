@@ -18,6 +18,7 @@ class AddClassViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        UIColourScheme.instance.set(for:self)
         
         // Database reference.
         ref = Database.database().reference()

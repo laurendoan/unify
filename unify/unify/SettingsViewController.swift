@@ -14,6 +14,7 @@ class SettingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        UIColourScheme.instance.set(for:self)
     }
     
     // Hides the navigation bar when the view appears.

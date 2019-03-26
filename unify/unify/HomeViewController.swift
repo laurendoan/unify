@@ -26,6 +26,7 @@ class HomeViewController: UIViewController, UITableViewDataSource,  UITableViewD
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        UIColourScheme.instance.set(for:self)
         tableView.delegate = self
         tableView.dataSource = self
         

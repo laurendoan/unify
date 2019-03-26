@@ -23,6 +23,7 @@
 		E254C9E5224892E300F28F30 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E254C9E4224892E300F28F30 /* GoogleService-Info.plist */; };
 		E2FB94F22249532C00A4D57A /* AddClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FB94F12249532C00A4D57A /* AddClassViewController.swift */; };
 		EDD02CDA224AAFBE009D9B98 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD02CD9224AAFBE009D9B98 /* MessagesViewController.swift */; };
+		EDD02CDE224AD913009D9B98 /* UIColorScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD02CDD224AD913009D9B98 /* UIColorScheme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		E254C9E4224892E300F28F30 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E2FB94F12249532C00A4D57A /* AddClassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddClassViewController.swift; sourceTree = "<group>"; };
 		EDD02CD9224AAFBE009D9B98 /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
+		EDD02CDD224AD913009D9B98 /* UIColorScheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorScheme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 				E254C9D122487B0900F28F30 /* LaunchScreen.storyboard */,
 				E254C9E4224892E300F28F30 /* GoogleService-Info.plist */,
 				E254C9D422487B0900F28F30 /* Info.plist */,
+				EDD02CDD224AD913009D9B98 /* UIColorScheme.swift */,
 			);
 			path = unify;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 				B96CD3DE224ABE630083F080 /* Constants.swift in Sources */,
 				E254C9E32248831D00F28F30 /* HomeViewController.swift in Sources */,
 				E2FB94F22249532C00A4D57A /* AddClassViewController.swift in Sources */,
+				EDD02CDE224AD913009D9B98 /* UIColorScheme.swift in Sources */,
 				982ACE46224A9F3100DE62AD /* CustomTabBarController.swift in Sources */,
 				982ACE42224A95F800DE62AD /* SettingsViewController.swift in Sources */,
 				E254C9DF22487C9400F28F30 /* LoginViewController.swift in Sources */,

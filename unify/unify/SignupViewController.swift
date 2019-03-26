@@ -23,6 +23,7 @@ class SignupViewController: UIViewController {
    
     override func viewDidLoad() {
         super.viewDidLoad()
+        UIColourScheme.instance.set(for:self)
 
         // Do any additional setup after loading the view.
         ref = Database.database().reference()
