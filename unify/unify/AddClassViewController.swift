@@ -30,8 +30,6 @@ class AddClassViewController: UIViewController {
             let value = snapshot.value as? NSDictionary
             var courses = value?["courses"] as? Array ?? []
             let course = self.courseNumTextField.text! + self.instructorTextField.text!.replacingOccurrences(of: " ", with: "")
-            print ("Courses: \(courses)")
-            print("Course: \(course)")
             guard !courses.contains(where: { (element) -> Bool in
                 element as! String == course
             }) else {
@@ -60,16 +58,4 @@ class AddClassViewController: UIViewController {
             print(error.localizedDescription)
         }
     }
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
