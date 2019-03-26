@@ -31,10 +31,14 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="Jsz-MW-M8K"/>
+                    <connections>
+                        <segue destination="dsY-OT-WZX" kind="show" identifier="noUserSegueIdentifier" id="cXk-L4-t7L"/>
+                        <segue destination="nrL-UJ-u5x" kind="show" identifier="yesUserSegueIdentifier" id="Ee4-If-VZS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1220" y="122.78860569715144"/>
+            <point key="canvasLocation" x="1219" y="123"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="0YU-zF-66F">
@@ -348,6 +352,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="0U4-oL-Chs"/>
+        <segue reference="Ee4-If-VZS"/>
+        <segue reference="cXk-L4-t7L"/>
     </inferredMetricsTieBreakers>
 </document>
