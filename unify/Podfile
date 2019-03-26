@@ -6,8 +6,12 @@ target 'unify' do
   use_frameworks!
 
   # Pods for unify
+  
   pod 'Firebase/Core'
+  pod 'Firebase/Storage'
   pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
   pod 'Firebase/Database'
+  pod 'JSQMessagesViewController'
 
 end
