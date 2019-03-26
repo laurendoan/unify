@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		982ACE42224A95F800DE62AD /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982ACE41224A95F800DE62AD /* SettingsViewController.swift */; };
+		982ACE46224A9F3100DE62AD /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982ACE45224A9F3100DE62AD /* CustomTabBarController.swift */; };
+		982ACE48224AA0C700DE62AD /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982ACE47224AA0C700DE62AD /* CalendarViewController.swift */; };
 		DB60BCA4F1410B7E51997131 /* Pods_unify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F270BD575D0200A0C904A45 /* Pods_unify.framework */; };
 		E254C9C922487B0800F28F30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E254C9C822487B0800F28F30 /* AppDelegate.swift */; };
 		E254C9CB22487B0800F28F30 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E254C9CA22487B0800F28F30 /* ViewController.swift */; };
@@ -23,6 +26,9 @@
 /* Begin PBXFileReference section */
 		0F270BD575D0200A0C904A45 /* Pods_unify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_unify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F49E841754192BA8970E78A /* Pods-unify.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unify.debug.xcconfig"; path = "Target Support Files/Pods-unify/Pods-unify.debug.xcconfig"; sourceTree = "<group>"; };
+		982ACE41224A95F800DE62AD /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		982ACE45224A9F3100DE62AD /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		982ACE47224AA0C700DE62AD /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		C02668A1F95126759323CD90 /* Pods-unify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unify.release.xcconfig"; path = "Target Support Files/Pods-unify/Pods-unify.release.xcconfig"; sourceTree = "<group>"; };
 		E254C9C522487B0800F28F30 /* unify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = unify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E254C9C822487B0800F28F30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -74,10 +80,13 @@
 				E254C9C822487B0800F28F30 /* AppDelegate.swift */,
 				E254C9CA22487B0800F28F30 /* ViewController.swift */,
 				E254C9CC22487B0800F28F30 /* Main.storyboard */,
+				982ACE47224AA0C700DE62AD /* CalendarViewController.swift */,
+				982ACE45224A9F3100DE62AD /* CustomTabBarController.swift */,
 				E2FB94F12249532C00A4D57A /* AddClassViewController.swift */,
 				E254C9E22248831D00F28F30 /* HomeViewController.swift */,
 				E254C9E022487CB200F28F30 /* SignupViewController.swift */,
 				E254C9DE22487C9400F28F30 /* LoginViewController.swift */,
+				982ACE41224A95F800DE62AD /* SettingsViewController.swift */,
 				E254C9CF22487B0900F28F30 /* Assets.xcassets */,
 				E254C9D122487B0900F28F30 /* LaunchScreen.storyboard */,
 				E254C9E4224892E300F28F30 /* GoogleService-Info.plist */,
@@ -232,8 +241,11 @@
 			files = (
 				E254C9E32248831D00F28F30 /* HomeViewController.swift in Sources */,
 				E2FB94F22249532C00A4D57A /* AddClassViewController.swift in Sources */,
+				982ACE46224A9F3100DE62AD /* CustomTabBarController.swift in Sources */,
+				982ACE42224A95F800DE62AD /* SettingsViewController.swift in Sources */,
 				E254C9DF22487C9400F28F30 /* LoginViewController.swift in Sources */,
 				E254C9CB22487B0800F28F30 /* ViewController.swift in Sources */,
+				982ACE48224AA0C700DE62AD /* CalendarViewController.swift in Sources */,
 				E254C9E122487CB200F28F30 /* SignupViewController.swift in Sources */,
 				E254C9C922487B0800F28F30 /* AppDelegate.swift in Sources */,
 			);

@@ -18,9 +18,14 @@ class AddClassViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        // Database reference.
         ref = Database.database().reference()
+    }
+    
+    // Hides the navigation bar when the view appears.
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
     @IBAction func addButton(_ sender: Any) {

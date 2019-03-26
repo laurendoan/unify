@@ -54,6 +54,11 @@ class HomeViewController: UIViewController, UITableViewDataSource,  UITableViewD
         }
     }
     
+    // Hides the navigation bar when the view appears.
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return courses.count
     }
@@ -73,4 +78,5 @@ class HomeViewController: UIViewController, UITableViewDataSource,  UITableViewD
         cell.textLabel?.text = courseTitles[row]
         return cell
     }
+    
 }
