@@ -30,7 +30,17 @@ class AddClassViewController: UIViewController {
             let value = snapshot.value as? NSDictionary
             var courses = value?["courses"] as? Array ?? []
             let course = self.courseNumTextField.text! + self.instructorTextField.text!.replacingOccurrences(of: " ", with: "")
+            print ("Courses: \(courses)")
             print("Course: \(course)")
+            guard !courses.contains(where: { (element) -> Bool in
+                element as! String == course
+            }) else {
+                let alertController = UIAlertController(title: "Error", message: "Class already exists", preferredStyle: .alert)
+                let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                alertController.addAction(defaultAction)
+                self.present(alertController, animated: true, completion: nil)
+                return
+            }
             self.ref.child("courses").observeSingleEvent(of: .value, with: { (snapshot) in
                 // Check if class is a valid course
                 if snapshot.hasChild(course) {

@@ -320,7 +320,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="0u2-7v-Lqf"/>
                     </view>
-                    <nil key="simulatedTopBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fmF-5C-SSt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -346,6 +345,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="ueu-L7-fyj"/>
         <segue reference="PHN-N8-s4K"/>
     </inferredMetricsTieBreakers>
 </document>
