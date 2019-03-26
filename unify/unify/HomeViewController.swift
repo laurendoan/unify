@@ -60,20 +60,12 @@ class HomeViewController: UIViewController, UITableViewDataSource,  UITableViewD
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return courses.count
+        return courseTitles.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: textCellIdentifier, for: indexPath as IndexPath)
         let row = indexPath.row
-        
-        ref.child("courses").child(String(courses[row])).child("classTitle").observeSingleEvent(of: .value, with: { (snapshot) in
-            let title = snapshot.value as? String
-            self.courseClicked = title!
-            self.tableView.reloadData()
-        }) { (error) in
-            print(error.localizedDescription)
-        }
         
         cell.textLabel?.text = courseTitles[row]
         return cell
