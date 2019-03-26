@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class HomeViewController: UIViewController, UITableViewDataSource,  UITableViewDelegate {
     var ref: DatabaseReference!
     let user = Auth.auth().currentUser
     @IBOutlet weak var tableView: UITableView!
@@ -27,6 +27,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             let value = snapshot.value as? NSDictionary
             let courses = value?["courses"] as? Array ?? []
             self.courses = courses as! [String]
+            self.tableView.reloadData()
         }) { (error) in
             print(error.localizedDescription)
         }
