@@ -13,9 +13,15 @@ class HomeViewController: UIViewController, UITableViewDataSource,  UITableViewD
     var ref: DatabaseReference!
     let user = Auth.auth().currentUser
     @IBOutlet weak var tableView: UITableView!
-    var courses: [String] = [] // User's registered classes
+    
+    /* Array variables to store courses and its unique IDs */
+    var courses: [String] = []
     var courseTitles: [String] = []
-    var courseClicked = ""
+    
+    /* Variables to be sent to MessageViewController */
+    var classClicked: String = ""
+    var classClickedID: String = ""
+    
     let textCellIdentifier = "textCellIdentifier"
 
     override func viewDidLoad() {
@@ -69,6 +75,25 @@ class HomeViewController: UIViewController, UITableViewDataSource,  UITableViewD
         
         cell.textLabel?.text = courseTitles[row]
         return cell
+    }
+    
+    //this is the function that is called onclick of a class cell
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let row = indexPath.row
+        
+        /* Sets variable to be sent to via segue */
+        classClicked = courses[row]
+        classClickedID = courseTitles[row]
+        
+        self.performSegue(withIdentifier: "homeToMessagesSegueIdentifier", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "homeToMessagesSegueIdentifier",
+            let destination = segue.destination as? MessagesViewController {
+            destination.className = classClicked
+            destination.classID = classClickedID
+        }
     }
     
 }

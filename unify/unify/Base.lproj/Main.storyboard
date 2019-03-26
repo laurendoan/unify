@@ -436,11 +436,27 @@
                     <tabBarItem key="tabBarItem" title="Home" id="hX3-CA-MHX"/>
                     <connections>
                         <outlet property="tableView" destination="uyH-NB-7xW" id="pQD-UM-NVd"/>
+                        <segue destination="2NO-OY-jFv" kind="show" identifier="homeToMessagesSegueIdentifier" id="Qan-OX-IHG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fmF-5C-SSt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3657.971014492754" y="447.99107142857139"/>
+        </scene>
+        <!--Messages View Controller-->
+        <scene sceneID="d0C-wM-oZt">
+            <objects>
+                <viewController id="2NO-OY-jFv" customClass="MessagesViewController" customModule="unify" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xYG-OV-hR4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Qsb-7X-jYh"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QfF-m7-Jdl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4483" y="455"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Vos-SW-Wlp">
@@ -466,6 +482,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="5CE-8p-1PO" customClass="CustomTabBarController" customModule="unify" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="T7T-ML-fNq">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
