@@ -29,25 +29,22 @@ class AddClassViewController: UIViewController {
             // Get user value
             let value = snapshot.value as? NSDictionary
             var courses = value?["courses"] as? Array ?? []
-            var checkClass = true
             let course = self.courseNumTextField.text! + self.instructorTextField.text!.replacingOccurrences(of: " ", with: "")
+            print("Course: \(course)")
             self.ref.child("courses").observeSingleEvent(of: .value, with: { (snapshot) in
-                // check if class is a valid course
-                if !snapshot.hasChild(course) {
+                // Check if class is a valid course
+                if snapshot.hasChild(course) {
+                    courses.append(course)
+                    self.ref.child("users/\(userID!)/courses").setValue(courses)
+                    self.performSegue(withIdentifier: "addClassSegueIdentifier", sender: self)
+                } else {
                     let alertController = UIAlertController(title: "Error", message: "try again", preferredStyle: .alert)
                     let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
                     alertController.addAction(defaultAction)
                     self.present(alertController, animated: true, completion: nil)
-                    checkClass = false
                 }
-
             }) { (error) in
                 print(error.localizedDescription)
-            }
-            if checkClass {
-                courses.append(course)
-                self.ref.child("users/\(userID!)/courses").setValue(courses)
-                self.performSegue(withIdentifier: "addClassSegueIdentifier", sender: self)
             }
         }) { (error) in
             print(error.localizedDescription)
