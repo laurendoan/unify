@@ -14,6 +14,8 @@ class HomeViewController: UIViewController, UITableViewDataSource,  UITableViewD
     let user = Auth.auth().currentUser
     @IBOutlet weak var tableView: UITableView!
     var courses: [String] = [] // User's registered classes
+    var courseTitles: [String] = []
+    var courseClicked = ""
     let textCellIdentifier = "textCellIdentifier"
 
     override func viewDidLoad() {
@@ -21,6 +23,7 @@ class HomeViewController: UIViewController, UITableViewDataSource,  UITableViewD
         tableView.delegate = self
         tableView.dataSource = self
         
+        /*
         // Add courses from database into courses array
         ref = Database.database().reference()
         ref.child("users").child(user!.uid).observe(DataEventType.value, with: { (snapshot) in
@@ -28,6 +31,24 @@ class HomeViewController: UIViewController, UITableViewDataSource,  UITableViewD
             let courses = value?["courses"] as? Array ?? []
             self.courses = courses as! [String]
             self.tableView.reloadData()
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+        */
+        
+        ref = Database.database().reference()
+        ref.child("users").child(user!.uid).child("courses").observe(.value, with: { (snapshot) in
+            for i in snapshot.children.allObjects as! [DataSnapshot] {
+                let identifier = i.value as? String
+                self.courses.append(identifier!)
+                self.ref.child("courses").child(identifier!).child("classTitle").observeSingleEvent(of: .value, with: { (snap) in
+                    let title = snap.value as? String
+                    self.courseTitles.append(title!)
+                    self.tableView.reloadData()
+                }) { (error) in
+                    print(error.localizedDescription)
+                }
+            }
         }) { (error) in
             print(error.localizedDescription)
         }
@@ -39,10 +60,17 @@ class HomeViewController: UIViewController, UITableViewDataSource,  UITableViewD
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: textCellIdentifier, for: indexPath as IndexPath)
-        
         let row = indexPath.row
-        cell.textLabel?.text = courses[row]
         
+        ref.child("courses").child(String(courses[row])).child("classTitle").observeSingleEvent(of: .value, with: { (snapshot) in
+            let title = snapshot.value as? String
+            self.courseClicked = title!
+            self.tableView.reloadData()
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+        
+        cell.textLabel?.text = courseTitles[row]
         return cell
     }
 }
