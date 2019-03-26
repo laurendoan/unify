@@ -30,8 +30,6 @@ class SignupViewController: UIViewController {
     
 
     @IBAction func signupButton(_ sender: Any) {
-        
-        
         if passwordTextField.text != retypePasswordTextField.text {
             let alertController = UIAlertController(title: "Password does not match", message: "Please re-type password", preferredStyle: .alert)
             let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
@@ -59,15 +57,6 @@ class SignupViewController: UIViewController {
             }
         }
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
     // code to dismiss keyboard when user clicks on background
     func textFieldShouldReturn(textField:UITextField) -> Bool {
