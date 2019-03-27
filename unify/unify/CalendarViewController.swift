@@ -12,6 +12,8 @@ class CalendarViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Sets the background color.
         UIColourScheme.instance.set(for:self)
     }
     

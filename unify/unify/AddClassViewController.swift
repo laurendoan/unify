@@ -18,18 +18,20 @@ class AddClassViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Sets the background color.
         UIColourScheme.instance.set(for:self)
         
         // Database reference.
         ref = Database.database().reference()
     }
     
-    // Shows the navigation bar.
+    // Shows the navigation bar when the view appears.
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
-    // Adds a class to the user's course list.
+    // Adds a class to the user's course list when the "add" button is pressed.
     @IBAction func addButton(_ sender: Any) {
         let userID = Auth.auth().currentUser?.uid
         
@@ -46,7 +48,8 @@ class AddClassViewController: UIViewController {
                 let value = snapshot.value as? NSDictionary
                 var courses = value?["courses"] as? Array ?? []
                 let course = (self.courseNumTextField.text! + self.instructorTextField.text!.replacingOccurrences(of: " ", with: "")).uppercased()
-                print(course)
+                
+                // Check if the user is already a part of given course.
                 guard !courses.contains(where: { (element) -> Bool in
                     element as! String == course
                 }) else {
@@ -56,8 +59,10 @@ class AddClassViewController: UIViewController {
                     self.present(alertController, animated: true, completion: nil)
                     return
                 }
+                
+                // Check if given course exists in the database.
                 self.ref.child("courses").observeSingleEvent(of: .value, with: { (snapshot) in
-                    // Check if given course exists.
+                    // If the course exists, add course to user's list.
                     if snapshot.hasChild(course) {
                         courses.append(course)
                         self.ref.child("users/\(userID!)/courses").setValue(courses)

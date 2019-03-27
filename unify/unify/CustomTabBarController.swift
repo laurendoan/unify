@@ -13,7 +13,7 @@ class CustomTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // NOTE: This isn't being used right now, but we may use this in later releases.
+        // NOTE: This isn't being used right now, but we may use this in later releases if we decide to update the navigation bar.
         // Sets the default VC to index 1 of the tab bar.
         // selectedIndex = 1
     }
