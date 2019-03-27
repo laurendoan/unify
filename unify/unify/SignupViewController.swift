@@ -29,10 +29,14 @@ class SignupViewController: UIViewController {
         ref = Database.database().reference()
     }
     
+    // Shows the navigation bar.
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(false, animated: true)
+    }
 
     @IBAction func signupButton(_ sender: Any) {
         if passwordTextField.text != retypePasswordTextField.text {
-            let alertController = UIAlertController(title: "Password does not match", message: "Please re-type password", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "Password does not match", message: "Please re-type password.", preferredStyle: .alert)
             let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
             
             alertController.addAction(defaultAction)
@@ -59,7 +63,7 @@ class SignupViewController: UIViewController {
         }
     }
 
-    // code to dismiss keyboard when user clicks on background
+    // Dismisses keyboard when user clicks on background.
     func textFieldShouldReturn(textField:UITextField) -> Bool {
         textField.resignFirstResponder()
         return true

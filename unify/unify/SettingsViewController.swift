@@ -25,7 +25,6 @@ class SettingsViewController: UIViewController {
     // Signs out the current user.
     @IBAction func signOutButtonClicked(_ sender: Any) {
         let firebaseAuth = Auth.auth()
-        
         do {
             try firebaseAuth.signOut()
             performSegue(withIdentifier: signOutSegueIdentifier, sender: self)

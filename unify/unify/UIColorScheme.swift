@@ -8,11 +8,10 @@
 
 import Foundation
 
-/* Instance class */
 class UIColourScheme {
     static let instance = UIColourScheme()
     
-    /* Sets background color */
+    // Sets the background color.
     func set(for viewController: UIViewController) {
         viewController.view.backgroundColor =
             UIColor(red: 214/255, green: 241/255, blue: 253/255, alpha: 1)

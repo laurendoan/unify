@@ -24,6 +24,7 @@ class LoginViewController: UIViewController {
         navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
+    // Logs the user in.
     @IBAction func loginButton(_ sender: Any) {
         Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
             if error == nil {
@@ -39,7 +40,7 @@ class LoginViewController: UIViewController {
         }
     }
     
-    // code to dismiss keyboard when user clicks on background
+    // Dismisses the keyboard when user clicks on background.
     func textFieldShouldReturn(textField:UITextField) -> Bool {
         textField.resignFirstResponder()
         return true

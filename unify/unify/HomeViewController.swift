@@ -80,6 +80,8 @@ class HomeViewController: UIViewController, UITableViewDataSource,  UITableViewD
     
     //this is the function that is called onclick of a class cell
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
         let row = indexPath.row
         
         /* Sets variable to be sent to via segue */
