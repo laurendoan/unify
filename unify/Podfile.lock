@@ -118,6 +118,7 @@ PODS:
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
   - Protobuf (3.7.0)
+  - SideMenuSwift (1.0.2)
 
 DEPENDENCIES:
   - Firebase/Auth
@@ -126,6 +127,7 @@ DEPENDENCIES:
   - Firebase/Firestore
   - Firebase/Storage
   - JSQMessagesViewController
+  - SideMenuSwift
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -149,6 +151,7 @@ SPEC REPOS:
     - leveldb-library
     - nanopb
     - Protobuf
+    - SideMenuSwift
 
 SPEC CHECKSUMS:
   BoringSSL-GRPC: 2a230d9cd93e7ce39916044f645cebb31f37dde6
@@ -171,7 +174,8 @@ SPEC CHECKSUMS:
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   Protobuf: 7a877b7f3e5964e3fce995e2eb323dbc6831bb5a
+  SideMenuSwift: 435ede4955a813fc4fd6c822c067784626621448
 
-PODFILE CHECKSUM: 5ba0541ba809b42764de0eac2e5c132b19a06d30
+PODFILE CHECKSUM: 3f4d37558ab10b5062a95af5ef36752431ba97a6
 
 COCOAPODS: 1.6.1

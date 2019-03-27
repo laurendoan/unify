@@ -12,6 +12,7 @@ import Firebase
 
 class MessagesViewController: JSQMessagesViewController {
     
+
     /* Data sent from HomepageViewController - Class Title and Course's Unique ID */
     var className = ""
     var classID = ""
@@ -113,5 +114,21 @@ class MessagesViewController: JSQMessagesViewController {
         
         finishSendingMessage()
     }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "sidePanelSegueIdentifier", //opening note for first time from button
+            let controller = segue.destination as? SidePanelViewController {
+            controller.preferredContentSize = CGSize(width: 300, height: UIScreen.main.bounds.height + (self.navigationController?.navigationBar.frame.height)!) //set size of popover
+            let presentationController = AlwaysPresentAsPopover.configurePresentation(forController: controller)
+            presentationController.barButtonItem = sender as? UIBarButtonItem
+            //presentationController.sourceRect = CGRect(origin: CGPoint(x: 0, y: 0), size: UIScreen.main.fixedCoordinateSpace.bounds.size)
+            //presentationController.sourceRect = CGRect(origin: self.view.bounds.origin, size: UIScreen.main.bounds.size)
+            presentationController.permittedArrowDirections = [.down, .up]
+            //controller.delegate = self
+            //controller.currentText = ""
+        }
 
+    }
 }

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01B96075224AE4C4009C137E /* AlwaysShowPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B96074224AE4C4009C137E /* AlwaysShowPopup.swift */; };
+		01B96077224AE4EF009C137E /* SidePanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B96076224AE4EF009C137E /* SidePanelViewController.swift */; };
+		01B96079224AFDC2009C137E /* MembersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B96078224AFDC2009C137E /* MembersViewController.swift */; };
 		982ACE42224A95F800DE62AD /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982ACE41224A95F800DE62AD /* SettingsViewController.swift */; };
 		982ACE46224A9F3100DE62AD /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982ACE45224A9F3100DE62AD /* CustomTabBarController.swift */; };
 		982ACE48224AA0C700DE62AD /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982ACE47224AA0C700DE62AD /* CalendarViewController.swift */; };
@@ -26,6 +29,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01B96074224AE4C4009C137E /* AlwaysShowPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlwaysShowPopup.swift; sourceTree = "<group>"; };
+		01B96076224AE4EF009C137E /* SidePanelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidePanelViewController.swift; sourceTree = "<group>"; };
+		01B96078224AFDC2009C137E /* MembersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembersViewController.swift; sourceTree = "<group>"; };
 		0F270BD575D0200A0C904A45 /* Pods_unify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_unify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F49E841754192BA8970E78A /* Pods-unify.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unify.debug.xcconfig"; path = "Target Support Files/Pods-unify/Pods-unify.debug.xcconfig"; sourceTree = "<group>"; };
 		982ACE41224A95F800DE62AD /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +105,9 @@
 				E254C9D122487B0900F28F30 /* LaunchScreen.storyboard */,
 				E254C9E4224892E300F28F30 /* GoogleService-Info.plist */,
 				E254C9D422487B0900F28F30 /* Info.plist */,
+				01B96074224AE4C4009C137E /* AlwaysShowPopup.swift */,
+				01B96076224AE4EF009C137E /* SidePanelViewController.swift */,
+				01B96078224AFDC2009C137E /* MembersViewController.swift */,
 			);
 			path = unify;
 			sourceTree = "<group>";
@@ -227,6 +236,7 @@
 				"${BUILT_PRODUCTS_DIR}/JSQMessagesViewController/JSQMessagesViewController.framework",
 				"${BUILT_PRODUCTS_DIR}/JSQSystemSoundPlayer/JSQSystemSoundPlayer.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SideMenuSwift/SideMenuSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
@@ -242,6 +252,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQMessagesViewController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQSystemSoundPlayer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenuSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
@@ -261,12 +272,15 @@
 			files = (
 				EDD02CDA224AAFBE009D9B98 /* MessagesViewController.swift in Sources */,
 				B96CD3DE224ABE630083F080 /* Constants.swift in Sources */,
+				01B96075224AE4C4009C137E /* AlwaysShowPopup.swift in Sources */,
 				E254C9E32248831D00F28F30 /* HomeViewController.swift in Sources */,
 				E2FB94F22249532C00A4D57A /* AddClassViewController.swift in Sources */,
 				982ACE46224A9F3100DE62AD /* CustomTabBarController.swift in Sources */,
 				982ACE42224A95F800DE62AD /* SettingsViewController.swift in Sources */,
 				E254C9DF22487C9400F28F30 /* LoginViewController.swift in Sources */,
+				01B96077224AE4EF009C137E /* SidePanelViewController.swift in Sources */,
 				E254C9CB22487B0800F28F30 /* ViewController.swift in Sources */,
+				01B96079224AFDC2009C137E /* MembersViewController.swift in Sources */,
 				982ACE48224AA0C700DE62AD /* CalendarViewController.swift in Sources */,
 				E254C9E122487CB200F28F30 /* SignupViewController.swift in Sources */,
 				E254C9C922487B0800F28F30 /* AppDelegate.swift in Sources */,

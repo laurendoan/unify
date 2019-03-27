@@ -13,5 +13,6 @@ target 'unify' do
   pod 'Firebase/Firestore'
   pod 'Firebase/Database'
   pod 'JSQMessagesViewController'
+  pod 'SideMenuSwift'
 
 end
