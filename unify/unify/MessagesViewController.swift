@@ -18,12 +18,12 @@ class MessagesViewController: JSQMessagesViewController {
     
     var databaseClass = Constants.refs.databaseRoot.child("chats")
     
-    // Outgoing message.
+    // Creates bubble image for outgoing message.
     lazy var outgoingBubble: JSQMessagesBubbleImage = {
         return JSQMessagesBubbleImageFactory()!.outgoingMessagesBubbleImage(with: UIColor.jsq_messageBubbleBlue())
     }()
     
-    // Incoming message.
+    // Creates bubble image for incoming message.
     lazy var incomingBubble: JSQMessagesBubbleImage = {
         return JSQMessagesBubbleImageFactory()!.incomingMessagesBubbleImage(with: UIColor.jsq_messageBubbleLightGray())
     }()
@@ -33,6 +33,7 @@ class MessagesViewController: JSQMessagesViewController {
         
         // Sets the background color.
         UIColourScheme.instance.set(for:self)
+        collectionView.backgroundColor = UIColor(red: 230/255, green: 241/255, blue: 253/255, alpha: 1)
 
         // Chat room database reference.
         databaseClass = Constants.refs.databaseChats.child(className)
@@ -51,12 +52,12 @@ class MessagesViewController: JSQMessagesViewController {
         
         title = "\(classID)"
         
-        // Style message view.
+        // Removes file upload button and user avatars.
         inputToolbar.contentView.leftBarButtonItem = nil
         collectionView.collectionViewLayout.incomingAvatarViewSize = CGSize.zero
         collectionView.collectionViewLayout.outgoingAvatarViewSize = CGSize.zero
         
-        // Save message to database.
+        // Queries databse for previous messages to populate chat.
         let query = databaseClass.queryLimited(toLast: 100)
         _ = query.observe(.childAdded, with: { [weak self] snapshot in
             if  let data        = snapshot.value as? [String: String],
@@ -89,7 +90,7 @@ class MessagesViewController: JSQMessagesViewController {
         return messages.count
     }
     
-    // Distinguishes outgoing vs. incoming bubbles.
+    // Distinguishes outgoing vs. incoming bubble appearance.
     override func collectionView(_ collectionView: JSQMessagesCollectionView!, messageBubbleImageDataForItemAt indexPath: IndexPath!) -> JSQMessageBubbleImageDataSource! {
         return messages[indexPath.item].senderId == senderId ? outgoingBubble : incomingBubble
     }
@@ -104,12 +105,12 @@ class MessagesViewController: JSQMessagesViewController {
         return messages[indexPath.item].senderId == senderId ? nil : NSAttributedString(string: messages[indexPath.item].senderDisplayName)
     }
     
-    // Sets the height of the message bubble.
+    // Sets the spacing between message bubbles.
     override func collectionView(_ collectionView: JSQMessagesCollectionView!, layout collectionViewLayout: JSQMessagesCollectionViewFlowLayout!, heightForMessageBubbleTopLabelAt indexPath: IndexPath!) -> CGFloat {
         return messages[indexPath.item].senderId == senderId ? 0 : 15
     }
     
-    // Sends the message if the send button is pressed.
+    // Sends the message if the send button is pressed and stores to firebase.
     override func didPressSend(_ button: UIButton!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: Date!) {
         let ref = databaseClass.childByAutoId()
         let message = ["sender_id": senderId, "name": senderDisplayName, "text": text]
