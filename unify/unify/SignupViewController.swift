@@ -18,6 +18,7 @@ class SignupViewController: UIViewController {
     @IBOutlet weak var firstNameTextField: UITextField!
     @IBOutlet weak var lastNameTextField: UITextField!
     
+    @IBOutlet weak var button: UIButton!
     var ref: DatabaseReference!
     
    
@@ -27,6 +28,7 @@ class SignupViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         ref = Database.database().reference()
+        button.layer.cornerRadius = 25
     }
     
     // Shows the navigation bar.
