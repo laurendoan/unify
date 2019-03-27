@@ -53,22 +53,11 @@
                                     <action selector="loginButton:" destination="dsY-OT-WZX" eventType="touchUpInside" id="dIp-Fs-EGv"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MJx-ri-PqG">
-                                <rect key="frame" x="217" y="712" width="85" height="38"/>
-                                <color key="backgroundColor" red="0.89508980512619019" green="0.55798077583312988" blue="0.50586259365081787" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <state key="normal" title="Sign Up">
-                                    <color key="titleColor" red="0.9030032753944397" green="0.94410663843154907" blue="0.99608701467514038" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </state>
-                                <connections>
-                                    <segue destination="ztd-6B-b43" kind="show" id="T4e-Vk-As7"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New User?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xZ0-fG-KUy">
                                 <rect key="frame" x="125" y="721" width="84" height="21"/>
                                 <color key="backgroundColor" red="0.9029574990272522" green="0.94418281316757202" blue="0.99216490983963013" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.89508980510000002" green="0.55798077580000005" blue="0.50586259369999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Email:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F9v-fc-nKM">
@@ -81,13 +70,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="7JX-bK-pjx">
-                                <rect key="frame" x="132" y="110" width="150" height="150"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="F7z-bd-uIE"/>
-                                    <constraint firstAttribute="height" constant="150" id="sAb-Yy-Enz"/>
-                                </constraints>
-                            </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Password:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AvY-4h-fo8">
                                 <rect key="frame" x="20" y="407" width="374" height="50"/>
                                 <color key="backgroundColor" red="0.902957499" green="0.94418281319999997" blue="0.99216490980000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -99,15 +81,33 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="7JX-bK-pjx">
+                                <rect key="frame" x="132" y="110" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="F7z-bd-uIE"/>
+                                    <constraint firstAttribute="height" constant="150" id="sAb-Yy-Enz"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MJx-ri-PqG">
+                                <rect key="frame" x="217" y="708" width="96" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Sign Up">
+                                    <color key="titleColor" red="0.8911724687" green="0.55803936720000002" blue="0.50194042920000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ztd-6B-b43" kind="show" id="T4e-Vk-As7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.9029574990272522" green="0.94418281316757202" blue="0.99216490983963013" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="F9v-fc-nKM" firstAttribute="top" secondItem="7JX-bK-pjx" secondAttribute="bottom" constant="72" id="02r-pn-VQN"/>
-                            <constraint firstItem="MJx-ri-PqG" firstAttribute="top" secondItem="Fyu-QY-Ad3" secondAttribute="bottom" constant="129" id="AIa-n8-jdJ"/>
+                            <constraint firstItem="MJx-ri-PqG" firstAttribute="top" secondItem="Fyu-QY-Ad3" secondAttribute="bottom" constant="125" id="5Ig-Ns-BvH"/>
                             <constraint firstItem="F9v-fc-nKM" firstAttribute="leading" secondItem="jsS-DC-N4g" secondAttribute="leading" constant="20" id="AgV-qW-syp"/>
                             <constraint firstItem="jsS-DC-N4g" firstAttribute="trailing" secondItem="F9v-fc-nKM" secondAttribute="trailing" constant="20" id="JQg-JN-Z0K"/>
+                            <constraint firstItem="MJx-ri-PqG" firstAttribute="leading" secondItem="xZ0-fG-KUy" secondAttribute="trailing" constant="8" id="KwC-DV-FEq"/>
                             <constraint firstItem="Fyu-QY-Ad3" firstAttribute="top" secondItem="AvY-4h-fo8" secondAttribute="bottom" constant="71" id="RHf-Ps-7yw"/>
-                            <constraint firstItem="jsS-DC-N4g" firstAttribute="trailing" secondItem="MJx-ri-PqG" secondAttribute="trailing" constant="112" id="VPW-Ei-h5y"/>
+                            <constraint firstItem="jsS-DC-N4g" firstAttribute="trailing" secondItem="MJx-ri-PqG" secondAttribute="trailing" constant="101" id="Syp-JN-n6U"/>
                             <constraint firstItem="xZ0-fG-KUy" firstAttribute="top" secondItem="Fyu-QY-Ad3" secondAttribute="bottom" constant="138" id="azX-Zv-cuY"/>
                             <constraint firstItem="7JX-bK-pjx" firstAttribute="top" secondItem="jsS-DC-N4g" secondAttribute="top" constant="66" id="gpF-si-8EA"/>
                             <constraint firstItem="7JX-bK-pjx" firstAttribute="centerX" secondItem="ldV-9l-RT8" secondAttribute="centerX" id="hDL-fX-c7g"/>
@@ -120,14 +120,16 @@
                         <viewLayoutGuide key="safeArea" id="jsS-DC-N4g"/>
                     </view>
                     <connections>
+                        <outlet property="button" destination="Fyu-QY-Ad3" id="abF-rO-0kc"/>
                         <outlet property="emailTextField" destination="F9v-fc-nKM" id="Zrv-Lm-pSq"/>
                         <outlet property="passwordTextField" destination="AvY-4h-fo8" id="bVn-cV-TW0"/>
+                        <outlet property="suButton" destination="MJx-ri-PqG" id="7vt-CI-ZsP"/>
                         <segue destination="5CE-8p-1PO" kind="show" identifier="loginToHomeSegueIdentifier" id="0U4-oL-Chs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZLa-TC-nlh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1979.7101449275365" y="122.54464285714285"/>
+            <point key="canvasLocation" x="1911.594202898551" y="122.54464285714285"/>
         </scene>
         <!--Signup View Controller-->
         <scene sceneID="EP7-TD-SEZ">
@@ -351,6 +353,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Add a Class" id="IdT-6A-rAN"/>
                     <connections>
+                        <outlet property="button" destination="dwA-T3-q65" id="Tdf-97-XqX"/>
                         <outlet property="courseNumTextField" destination="vje-Ci-Q0f" id="qCj-oP-KFz"/>
                         <outlet property="instructorTextField" destination="Apv-vp-DO8" id="XS0-2Q-V5Z"/>
                         <segue destination="5CE-8p-1PO" kind="show" identifier="addClassSegueIdentifier" id="PHN-N8-s4K"/>

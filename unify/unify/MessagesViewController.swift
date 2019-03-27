@@ -50,6 +50,7 @@ class MessagesViewController: JSQMessagesViewController {
             print(error.localizedDescription)
         }
         
+        // Set title of chatroom.
         title = "\(classID)"
         
         // Removes file upload button and user avatars.
@@ -57,7 +58,7 @@ class MessagesViewController: JSQMessagesViewController {
         collectionView.collectionViewLayout.incomingAvatarViewSize = CGSize.zero
         collectionView.collectionViewLayout.outgoingAvatarViewSize = CGSize.zero
         
-        // Queries databse for previous messages to populate chat.
+        // Queries database for previous messages to populate chat.
         let query = databaseClass.queryLimited(toLast: 100)
         _ = query.observe(.childAdded, with: { [weak self] snapshot in
             if  let data        = snapshot.value as? [String: String],

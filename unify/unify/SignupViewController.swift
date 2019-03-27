@@ -51,7 +51,7 @@ class SignupViewController: UIViewController {
             // Create a new user.
             Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!){ (user, error) in
                 if error == nil {
-                    // store display name for user
+                    // Store display name for user.
                     Auth.auth().currentUser?.sendEmailVerification { (error) in
                         let name = self.firstNameTextField.text! + " " + self.lastNameTextField.text!
                         let user = Auth.auth().currentUser

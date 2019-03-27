@@ -14,11 +14,19 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
+    @IBOutlet weak var button: UIButton!
+    @IBOutlet weak var suButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Sets the background color.
         UIColourScheme.instance.set(for:self)
+        
+        // Style "Login" button.
+        button.layer.cornerRadius = 25
+        
+        // Style "Sign Up" button.
+        suButton.layer.cornerRadius = 10
     }
     
     // Hides the navigation bar when the view appears.

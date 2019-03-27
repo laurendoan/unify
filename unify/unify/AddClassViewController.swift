@@ -16,6 +16,7 @@ class AddClassViewController: UIViewController {
     @IBOutlet weak var courseNumTextField: UITextField!
     @IBOutlet weak var instructorTextField: UITextField!
     
+    @IBOutlet weak var button: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,6 +25,9 @@ class AddClassViewController: UIViewController {
         
         // Database reference.
         ref = Database.database().reference()
+        
+        // Style "Login" button.
+        button.layer.cornerRadius = 25
     }
     
     // Shows the navigation bar when the view appears.
