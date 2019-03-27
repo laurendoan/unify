@@ -14,6 +14,6 @@ class UIColourScheme {
     // Sets the background color.
     func set(for viewController: UIViewController) {
         viewController.view.backgroundColor =
-            UIColor(red: 214/255, green: 241/255, blue: 253/255, alpha: 1)
+            UIColor(red: 230/255, green: 241/255, blue: 253/255, alpha: 1)
     }
 }
