@@ -259,7 +259,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="qZ5-KT-Xii"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Calendar" id="Yv7-y3-qnN"/>
+                    <tabBarItem key="tabBarItem" title="Calendar" image="icons8-calendar-17-50" id="Yv7-y3-qnN"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L7F-8J-H8h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -412,7 +412,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="JWu-Qi-2cn"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" id="Mty-Gk-BpO"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="icons8-settings-50" id="Mty-Gk-BpO"/>
                     <connections>
                         <segue destination="dsY-OT-WZX" kind="show" identifier="signOutSegueIdentifier" id="7CV-a4-Zxi"/>
                     </connections>
@@ -483,7 +483,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0u2-7v-Lqf"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" id="hX3-CA-MHX"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="icons8-home-page-50" id="hX3-CA-MHX"/>
                     <connections>
                         <outlet property="tableView" destination="uyH-NB-7xW" id="pQD-UM-NVd"/>
                         <segue destination="2NO-OY-jFv" kind="show" identifier="homeToMessagesSegueIdentifier" id="Qan-OX-IHG"/>
@@ -548,6 +548,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="icons8-calendar-17-50" width="15" height="15"/>
+        <image name="icons8-home-page-50" width="15" height="15"/>
+        <image name="icons8-settings-50" width="15" height="15"/>
         <image name="logo" width="589" height="600"/>
     </resources>
     <inferredMetricsTieBreakers>
