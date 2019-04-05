@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class UIColourScheme {
     static let instance = UIColourScheme()

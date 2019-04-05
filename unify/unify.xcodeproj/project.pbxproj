@@ -11,6 +11,8 @@
 		982ACE46224A9F3100DE62AD /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982ACE45224A9F3100DE62AD /* CustomTabBarController.swift */; };
 		982ACE48224AA0C700DE62AD /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982ACE47224AA0C700DE62AD /* CalendarViewController.swift */; };
 		B96CD3DE224ABE630083F080 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96CD3DD224ABE630083F080 /* Constants.swift */; };
+		B9F89ABC2256E30D004FDE81 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F89ABB2256E30D004FDE81 /* UIColor+Extensions.swift */; };
+		B9F89ABF2256E31B004FDE81 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F89ABE2256E31B004FDE81 /* Message.swift */; };
 		DB60BCA4F1410B7E51997131 /* Pods_unify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F270BD575D0200A0C904A45 /* Pods_unify.framework */; };
 		E254C9C922487B0800F28F30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E254C9C822487B0800F28F30 /* AppDelegate.swift */; };
 		E254C9CB22487B0800F28F30 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E254C9CA22487B0800F28F30 /* ViewController.swift */; };
@@ -22,7 +24,7 @@
 		E254C9E32248831D00F28F30 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E254C9E22248831D00F28F30 /* HomeViewController.swift */; };
 		E254C9E5224892E300F28F30 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E254C9E4224892E300F28F30 /* GoogleService-Info.plist */; };
 		E2FB94F22249532C00A4D57A /* AddClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FB94F12249532C00A4D57A /* AddClassViewController.swift */; };
-		EDD02CDA224AAFBE009D9B98 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD02CD9224AAFBE009D9B98 /* MessagesViewController.swift */; };
+		EDD02CDA224AAFBE009D9B98 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD02CD9224AAFBE009D9B98 /* MessageViewController.swift */; };
 		EDD02CDE224AD913009D9B98 /* UIColorScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD02CDD224AD913009D9B98 /* UIColorScheme.swift */; };
 /* End PBXBuildFile section */
 
@@ -32,8 +34,9 @@
 		982ACE41224A95F800DE62AD /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		982ACE45224A9F3100DE62AD /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		982ACE47224AA0C700DE62AD /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
-		B96CD3DC224ABE260083F080 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		B96CD3DD224ABE630083F080 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B9F89ABB2256E30D004FDE81 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		B9F89ABE2256E31B004FDE81 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		C02668A1F95126759323CD90 /* Pods-unify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unify.release.xcconfig"; path = "Target Support Files/Pods-unify/Pods-unify.release.xcconfig"; sourceTree = "<group>"; };
 		E254C9C522487B0800F28F30 /* unify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = unify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E254C9C822487B0800F28F30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -47,7 +50,7 @@
 		E254C9E22248831D00F28F30 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E254C9E4224892E300F28F30 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E2FB94F12249532C00A4D57A /* AddClassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddClassViewController.swift; sourceTree = "<group>"; };
-		EDD02CD9224AAFBE009D9B98 /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
+		EDD02CD9224AAFBE009D9B98 /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		EDD02CDD224AD913009D9B98 /* UIColorScheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorScheme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -63,11 +66,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B9F89ABA2256E30D004FDE81 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B9F89ABB2256E30D004FDE81 /* UIColor+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B9F89ABD2256E31B004FDE81 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B9F89ABE2256E31B004FDE81 /* Message.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		E254C9BC22487B0800F28F30 = {
 			isa = PBXGroup;
 			children = (
 				B96CD3DD224ABE630083F080 /* Constants.swift */,
-				B96CD3DC224ABE260083F080 /* Bridging-Header.h */,
+				B9F89ABD2256E31B004FDE81 /* Models */,
+				B9F89ABA2256E30D004FDE81 /* Extensions */,
 				E254C9C722487B0800F28F30 /* unify */,
 				E254C9C622487B0800F28F30 /* Products */,
 				E97122A389F4D67698A2BABA /* Pods */,
@@ -90,7 +110,7 @@
 				E254C9CA22487B0800F28F30 /* ViewController.swift */,
 				E254C9CC22487B0800F28F30 /* Main.storyboard */,
 				982ACE47224AA0C700DE62AD /* CalendarViewController.swift */,
-				EDD02CD9224AAFBE009D9B98 /* MessagesViewController.swift */,
+				EDD02CD9224AAFBE009D9B98 /* MessageViewController.swift */,
 				982ACE45224A9F3100DE62AD /* CustomTabBarController.swift */,
 				E2FB94F12249532C00A4D57A /* AddClassViewController.swift */,
 				E254C9E22248831D00F28F30 /* HomeViewController.swift */,
@@ -227,8 +247,8 @@
 				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/JSQMessagesViewController/JSQMessagesViewController.framework",
-				"${BUILT_PRODUCTS_DIR}/JSQSystemSoundPlayer/JSQSystemSoundPlayer.framework",
+				"${BUILT_PRODUCTS_DIR}/MessageInputBar/MessageInputBar.framework",
+				"${BUILT_PRODUCTS_DIR}/MessageKit/MessageKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
@@ -242,8 +262,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQMessagesViewController.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQSystemSoundPlayer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MessageInputBar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MessageKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
@@ -262,9 +282,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDD02CDA224AAFBE009D9B98 /* MessagesViewController.swift in Sources */,
+				EDD02CDA224AAFBE009D9B98 /* MessageViewController.swift in Sources */,
 				B96CD3DE224ABE630083F080 /* Constants.swift in Sources */,
 				E254C9E32248831D00F28F30 /* HomeViewController.swift in Sources */,
+				B9F89ABC2256E30D004FDE81 /* UIColor+Extensions.swift in Sources */,
 				E2FB94F22249532C00A4D57A /* AddClassViewController.swift in Sources */,
 				EDD02CDE224AD913009D9B98 /* UIColorScheme.swift in Sources */,
 				982ACE46224A9F3100DE62AD /* CustomTabBarController.swift in Sources */,
@@ -274,6 +295,7 @@
 				982ACE48224AA0C700DE62AD /* CalendarViewController.swift in Sources */,
 				E254C9E122487CB200F28F30 /* SignupViewController.swift in Sources */,
 				E254C9C922487B0800F28F30 /* AppDelegate.swift in Sources */,
+				B9F89ABF2256E31B004FDE81 /* Message.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,7 +451,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = unify.bundle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -449,7 +471,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = unify.bundle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

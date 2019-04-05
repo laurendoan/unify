@@ -12,6 +12,7 @@ target 'unify' do
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
   pod 'Firebase/Database'
-  pod 'JSQMessagesViewController'
+  pod 'MessageKit'
+  pod 'MessageInputBar'
 
 end
