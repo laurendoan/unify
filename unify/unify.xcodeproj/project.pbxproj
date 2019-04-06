@@ -10,6 +10,8 @@
 		982ACE42224A95F800DE62AD /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982ACE41224A95F800DE62AD /* SettingsViewController.swift */; };
 		982ACE46224A9F3100DE62AD /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982ACE45224A9F3100DE62AD /* CustomTabBarController.swift */; };
 		982ACE48224AA0C700DE62AD /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982ACE47224AA0C700DE62AD /* CalendarViewController.swift */; };
+		98EDC28E22593A7C00B05494 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EDC28D22593A7C00B05494 /* SettingsTableViewController.swift */; };
+		98EDC29022594EA500B05494 /* EditAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EDC28F22594EA500B05494 /* EditAccountViewController.swift */; };
 		B96CD3DE224ABE630083F080 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96CD3DD224ABE630083F080 /* Constants.swift */; };
 		DB60BCA4F1410B7E51997131 /* Pods_unify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F270BD575D0200A0C904A45 /* Pods_unify.framework */; };
 		E254C9C922487B0800F28F30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E254C9C822487B0800F28F30 /* AppDelegate.swift */; };
@@ -32,6 +34,8 @@
 		982ACE41224A95F800DE62AD /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		982ACE45224A9F3100DE62AD /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		982ACE47224AA0C700DE62AD /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		98EDC28D22593A7C00B05494 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		98EDC28F22594EA500B05494 /* EditAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAccountViewController.swift; sourceTree = "<group>"; };
 		B96CD3DC224ABE260083F080 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		B96CD3DD224ABE630083F080 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C02668A1F95126759323CD90 /* Pods-unify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unify.release.xcconfig"; path = "Target Support Files/Pods-unify/Pods-unify.release.xcconfig"; sourceTree = "<group>"; };
@@ -89,6 +93,8 @@
 				E254C9C822487B0800F28F30 /* AppDelegate.swift */,
 				E254C9CA22487B0800F28F30 /* ViewController.swift */,
 				E254C9CC22487B0800F28F30 /* Main.storyboard */,
+				98EDC28F22594EA500B05494 /* EditAccountViewController.swift */,
+				98EDC28D22593A7C00B05494 /* SettingsTableViewController.swift */,
 				982ACE47224AA0C700DE62AD /* CalendarViewController.swift */,
 				EDD02CD9224AAFBE009D9B98 /* MessagesViewController.swift */,
 				982ACE45224A9F3100DE62AD /* CustomTabBarController.swift */,
@@ -263,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDD02CDA224AAFBE009D9B98 /* MessagesViewController.swift in Sources */,
+				98EDC28E22593A7C00B05494 /* SettingsTableViewController.swift in Sources */,
 				B96CD3DE224ABE630083F080 /* Constants.swift in Sources */,
 				E254C9E32248831D00F28F30 /* HomeViewController.swift in Sources */,
 				E2FB94F22249532C00A4D57A /* AddClassViewController.swift in Sources */,
@@ -271,6 +278,7 @@
 				982ACE42224A95F800DE62AD /* SettingsViewController.swift in Sources */,
 				E254C9DF22487C9400F28F30 /* LoginViewController.swift in Sources */,
 				E254C9CB22487B0800F28F30 /* ViewController.swift in Sources */,
+				98EDC29022594EA500B05494 /* EditAccountViewController.swift in Sources */,
 				982ACE48224AA0C700DE62AD /* CalendarViewController.swift in Sources */,
 				E254C9E122487CB200F28F30 /* SignupViewController.swift in Sources */,
 				E254C9C922487B0800F28F30 /* AppDelegate.swift in Sources */,
