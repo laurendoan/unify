@@ -14,9 +14,9 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BB62836C8D8DBC370FAC5AB7340C7AAC"
-               BuildableName = "FirebaseInstanceID.framework"
-               BlueprintName = "FirebaseInstanceID"
+               BlueprintIdentifier = "26BBF02B2E6A378C4E9541A7406E00D5"
+               BuildableName = "JSQSystemSoundPlayer.framework"
+               BlueprintName = "JSQSystemSoundPlayer"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
