@@ -13,5 +13,8 @@ target 'unify' do
   pod 'Firebase/Firestore'
   pod 'Firebase/Database'
   pod 'JSQMessagesViewController'
+  pod 'MessageKit'
+  pod 'MessageInputBar'
+  pod 'JTAppleCalendar', '~> 7.0'
 
 end

@@ -91,7 +91,7 @@ class HomeViewController: UIViewController, UITableViewDataSource,  UITableViewD
     // Prepares for segue to MessagesVC.
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == homeToMessagesSegueIdentifier,
-            let destination = segue.destination as? MessagesViewController {
+            let destination = segue.destination as? MessageViewController {
             destination.className = classClicked
             destination.classID = classClickedID
         }
