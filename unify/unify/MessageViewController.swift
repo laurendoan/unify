@@ -60,17 +60,36 @@ final class MessageViewController: MessagesViewController {
     func setupPanel() {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "=", style: .plain, target: self, action: #selector(togglePanel)) //first create a button for the panel
         
+        self.navigationItem.rightBarButtonItem?.image = UIImage(named: "icons8-menu-26.png")
+        
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         panelView = storyboard.instantiateViewController(withIdentifier: "PanelViewController") as! PanelViewController
         panelView.view.frame = CGRect(x: self.view.frame.width/3, y: 0, width: self.view.frame.width*2/3, height: self.view.frame.height) //want it 1/3 of the way across the screen so it's coming from the right
         
+        panelView.tableView.rowHeight = 40
+        panelView.tableView.frame = CGRect(x: 0, y: 100, width: 276, height: panelView.tableView.rowHeight * 5)
         
-        panelView.stackView.frame = CGRect(x: 0, y: 100, width: 276, height: 80)
-        panelView.stackView.alignment = .fill
+        //panelView.stackView.frame = CGRect(x: 0, y: 100, width: 276, height: 200)
+        //panelView.stackView.alignment = .fill
 
-        panelView.muteLabel.frame = CGRect(x: panelView.stackView.frame.minX + 10, y: panelView.muteLabel.frame.minY, width: panelView.muteLabel.frame.width, height: panelView.muteLabel.frame.height)
+        //panelView.muteLabel.frame = CGRect(x: panelView.stackView.frame.minX + 10, y: panelView.muteLabel.frame.minY, width: panelView.muteLabel.frame.width, height: panelView.muteLabel.frame.height)
         
-        panelView.muteSwitch.frame = CGRect(x: panelView.stackView.frame.maxX - 10 - panelView.muteSwitch.frame.width, y: panelView.muteSwitch.frame.minY, width: panelView.muteSwitch.frame.width, height: panelView.muteSwitch.frame.height)
+        //panelView.muteSwitch.frame = CGRect(x: panelView.stackView.frame.maxX - 10 - panelView.muteSwitch.frame.width, y: panelView.muteSwitch.frame.minY, width: panelView.muteSwitch.frame.width, height: panelView.muteSwitch.frame.height)
+        
+        
+        //panelView.dividerView.frame = CGRect(x: panelView.stackView.frame.minX + 10, y:45, width: 100, height: 10)
+
+        //panelView.dividerView.frame = CGRect(x: 0, y: 99, width: panelView.stackView.frame.width, height: 1)
+        //print(panelView.stackView.subviews.count)
+        //print(panelView.stackView.subviews[0].frame)
+        //panelView.stackView.subviews[1].frame = CGRect(x: 0, y: 64, width: 376, height: 64)
+        //print(panelView.stackView.subviews[1].frame)
+        //panelView.stackView.bringSubviewToFront(panelView.stackView.subviews[1])
+        //panelView.dividerView.backgroundColor = UIColor.black
+        
+        //print(panelView.muteLabel.frame)
+        //print(panelView.stackView.frame)
+        //print(panelView.dividerView.frame)
 
         self.view.insertSubview(panelView.view, at: 0)
         self.view.bringSubviewToFront(panelView.view)
