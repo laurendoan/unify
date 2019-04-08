@@ -15,6 +15,9 @@
 		982ACE48224AA0C700DE62AD /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982ACE47224AA0C700DE62AD /* CalendarViewController.swift */; };
 		98EDC28E22593A7C00B05494 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EDC28D22593A7C00B05494 /* SettingsTableViewController.swift */; };
 		98EDC29022594EA500B05494 /* EditAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EDC28F22594EA500B05494 /* EditAccountViewController.swift */; };
+		B96952A9225BE55F0011DB22 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96952A8225BE55F0011DB22 /* NotesViewController.swift */; };
+		B96952AB225BE7510011DB22 /* NoteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96952AA225BE7510011DB22 /* NoteCollectionViewCell.swift */; };
+		B96952AD225BEFE40011DB22 /* ViewNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96952AC225BEFE40011DB22 /* ViewNoteViewController.swift */; };
 		B96CD3DE224ABE630083F080 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96CD3DD224ABE630083F080 /* Constants.swift */; };
 		DB60BCA4F1410B7E51997131 /* Pods_unify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F270BD575D0200A0C904A45 /* Pods_unify.framework */; };
 		E254C9C922487B0800F28F30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E254C9C822487B0800F28F30 /* AppDelegate.swift */; };
@@ -46,6 +49,9 @@
 		982ACE47224AA0C700DE62AD /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		98EDC28D22593A7C00B05494 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		98EDC28F22594EA500B05494 /* EditAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAccountViewController.swift; sourceTree = "<group>"; };
+		B96952A8225BE55F0011DB22 /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
+		B96952AA225BE7510011DB22 /* NoteCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteCollectionViewCell.swift; sourceTree = "<group>"; };
+		B96952AC225BEFE40011DB22 /* ViewNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewNoteViewController.swift; sourceTree = "<group>"; };
 		B96CD3DC224ABE260083F080 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		B96CD3DD224ABE630083F080 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C02668A1F95126759323CD90 /* Pods-unify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unify.release.xcconfig"; path = "Target Support Files/Pods-unify/Pods-unify.release.xcconfig"; sourceTree = "<group>"; };
@@ -117,11 +123,14 @@
 				E254C9E022487CB200F28F30 /* SignupViewController.swift */,
 				E254C9DE22487C9400F28F30 /* LoginViewController.swift */,
 				982ACE41224A95F800DE62AD /* SettingsViewController.swift */,
+				ED8C0DD822599C2D00B3CE13 /* MessageViewController.swift */,
+				B96952AA225BE7510011DB22 /* NoteCollectionViewCell.swift */,
+				B96952A8225BE55F0011DB22 /* NotesViewController.swift */,
+				B96952AC225BEFE40011DB22 /* ViewNoteViewController.swift */,
 				E254C9CF22487B0900F28F30 /* Assets.xcassets */,
 				E254C9D122487B0900F28F30 /* LaunchScreen.storyboard */,
 				E254C9E4224892E300F28F30 /* GoogleService-Info.plist */,
 				E254C9D422487B0900F28F30 /* Info.plist */,
-				ED8C0DD822599C2D00B3CE13 /* MessageViewController.swift */,
 				ED8C0DDA22599C3200B3CE13 /* Calendar */,
 				01FB02CA225AC111009288A8 /* PanelViewController.swift */,
 				01FA81F2225BB797006CAE18 /* MuteTableViewCell.swift */,
@@ -292,10 +301,12 @@
 			files = (
 				01FA81F3225BB797006CAE18 /* MuteTableViewCell.swift in Sources */,
 				98EDC28E22593A7C00B05494 /* SettingsTableViewController.swift in Sources */,
+				B96952A9225BE55F0011DB22 /* NotesViewController.swift in Sources */,
 				B96CD3DE224ABE630083F080 /* Constants.swift in Sources */,
 				E254C9E32248831D00F28F30 /* HomeViewController.swift in Sources */,
 				E2FB94F22249532C00A4D57A /* AddClassViewController.swift in Sources */,
 				ED8C0DD922599C2D00B3CE13 /* MessageViewController.swift in Sources */,
+				B96952AD225BEFE40011DB22 /* ViewNoteViewController.swift in Sources */,
 				EDD02CDE224AD913009D9B98 /* UIColorScheme.swift in Sources */,
 				ED8C0DDC22599CB100B3CE13 /* CustomCell.swift in Sources */,
 				982ACE46224A9F3100DE62AD /* CustomTabBarController.swift in Sources */,
@@ -305,6 +316,7 @@
 				98EDC29022594EA500B05494 /* EditAccountViewController.swift in Sources */,
 				982ACE48224AA0C700DE62AD /* CalendarViewController.swift in Sources */,
 				ED8C0DD522599BCB00B3CE13 /* Message.swift in Sources */,
+				B96952AB225BE7510011DB22 /* NoteCollectionViewCell.swift in Sources */,
 				01FA81F5225BBEEF006CAE18 /* MembersTableViewCell.swift in Sources */,
 				01FB02CB225AC111009288A8 /* PanelViewController.swift in Sources */,
 				E254C9E122487CB200F28F30 /* SignupViewController.swift in Sources */,
