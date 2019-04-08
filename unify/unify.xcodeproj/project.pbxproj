@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01FB02CB225AC111009288A8 /* PanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FB02CA225AC111009288A8 /* PanelViewController.swift */; };
 		982ACE42224A95F800DE62AD /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982ACE41224A95F800DE62AD /* SettingsViewController.swift */; };
 		982ACE46224A9F3100DE62AD /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982ACE45224A9F3100DE62AD /* CustomTabBarController.swift */; };
 		982ACE48224AA0C700DE62AD /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982ACE47224AA0C700DE62AD /* CalendarViewController.swift */; };
@@ -33,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01FB02CA225AC111009288A8 /* PanelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanelViewController.swift; sourceTree = "<group>"; };
 		0F270BD575D0200A0C904A45 /* Pods_unify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_unify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F49E841754192BA8970E78A /* Pods-unify.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unify.debug.xcconfig"; path = "Target Support Files/Pods-unify/Pods-unify.debug.xcconfig"; sourceTree = "<group>"; };
 		982ACE41224A95F800DE62AD /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				E254C9D422487B0900F28F30 /* Info.plist */,
 				ED8C0DD822599C2D00B3CE13 /* MessageViewController.swift */,
 				ED8C0DDA22599C3200B3CE13 /* Calendar */,
+				01FB02CA225AC111009288A8 /* PanelViewController.swift */,
 			);
 			path = unify;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 				98EDC29022594EA500B05494 /* EditAccountViewController.swift in Sources */,
 				982ACE48224AA0C700DE62AD /* CalendarViewController.swift in Sources */,
 				ED8C0DD522599BCB00B3CE13 /* Message.swift in Sources */,
+				01FB02CB225AC111009288A8 /* PanelViewController.swift in Sources */,
 				E254C9E122487CB200F28F30 /* SignupViewController.swift in Sources */,
 				ED8C0DDE22599CCF00B3CE13 /* EventContent.swift in Sources */,
 				E254C9C922487B0800F28F30 /* AppDelegate.swift in Sources */,

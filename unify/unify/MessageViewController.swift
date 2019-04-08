@@ -18,6 +18,8 @@ final class MessageViewController: MessagesViewController {
         return .lightContent
     }
     
+    var panelView = PanelViewController()
+    
     var messageList: [Message] = []
     
     let refreshControl = UIRefreshControl()
@@ -52,6 +54,59 @@ final class MessageViewController: MessagesViewController {
         configureMessageCollectionView()
         configureMessageInputBar()
         loadMessages()
+        setupPanel()
+    }
+    
+    func setupPanel() {
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "=", style: .plain, target: self, action: #selector(togglePanel)) //first create a button for the panel
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        panelView = storyboard.instantiateViewController(withIdentifier: "PanelViewController") as! PanelViewController
+        panelView.view.frame = CGRect(x: self.view.frame.width/3, y: 0, width: self.view.frame.width*2/3, height: self.view.frame.height) //want it 1/3 of the way across the screen so it's coming from the right
+        
+        
+        panelView.stackView.frame = CGRect(x: 0, y: 100, width: 276, height: 80)
+        panelView.stackView.alignment = .fill
+
+        panelView.muteLabel.frame = CGRect(x: panelView.stackView.frame.minX + 10, y: panelView.muteLabel.frame.minY, width: panelView.muteLabel.frame.width, height: panelView.muteLabel.frame.height)
+        
+        panelView.muteSwitch.frame = CGRect(x: panelView.stackView.frame.maxX - 10 - panelView.muteSwitch.frame.width, y: panelView.muteSwitch.frame.minY, width: panelView.muteSwitch.frame.width, height: panelView.muteSwitch.frame.height)
+
+        self.view.insertSubview(panelView.view, at: 0)
+        self.view.bringSubviewToFront(panelView.view)
+        
+        panelView.view.isHidden = true; //don't show it initially
+        panelView.view.frame = CGRect(x: self.view.frame.width, y: panelView.view.frame.minY, width: panelView.view.frame.width, height: panelView.view.frame.height)
+    }
+    
+    @objc func togglePanel() {
+        if(panelView.view.isHidden == true) {
+            panelView.view.isHidden = false
+            UIView.animate(withDuration: 0.3, animations: {
+                //self.panelView.view.alpha = 1
+                self.panelView.view.frame = CGRect(x: self.view.frame.width/3, y: self.panelView.view.frame.minY, width: self.panelView.view.frame.width, height: self.panelView.view.frame.height)
+            }, completion:  nil)
+        }
+        else {
+            UIView.animate(withDuration: 0.3, animations: {
+                //self.panelView.view.alpha = 0
+                self.panelView.view.frame = CGRect(x: self.view.frame.width, y: self.panelView.view.frame.minY, width: self.panelView.view.frame.width, height: self.panelView.view.frame.height)
+                
+            }, completion:  {
+                (value: Bool) in
+                self.panelView.view.isHidden = true
+            })
+        }
+        
+        //panelView.view.isHidden = !panelView.view.isHidden //if they hit the button, just do the opposite of what it's currently doing
+        //below code shows panel above navigation bar, but can't click away to hide panel
+        /*if(panelView.view.isHidden == false) {
+            self.navigationController!.navigationBar.layer.zPosition = -1;
+        }
+        else {
+            self.navigationController!.navigationBar.layer.zPosition = 0;
+        }*/
+
     }
     
     func configureMessageCollectionView() {
