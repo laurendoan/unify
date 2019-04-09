@@ -15,6 +15,7 @@ import UIKit
 class PanelViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
 {
     //var delegate: NotesDelegate?
+    var classNameRef = "ERROR - INCORRECT CLASSNAMEREF"
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //print(section)
@@ -65,11 +66,22 @@ class PanelViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        //let row = indexPath.row
+        let row = indexPath.row
         /*if(row == 2) {
             print("they clicked notes")
             delegate?.notesPressed()
         }*/
+        if (row == 3) {
+            self.performSegue(withIdentifier: "scheduleToEventSegue", sender: self)
+        }
+    }
+    
+    // Prepares for segue to MessagesVC.
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "scheduleToEventSegue",
+            let destination = segue.destination as? EventScheduleViewController {
+            destination.classRef = classNameRef
+        }
     }
 
     /*

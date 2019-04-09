@@ -10,6 +10,7 @@ import UIKit
 
 class CalendarTableViewCell: UITableViewCell {
     /* Initialized Outlets */
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var eventNameLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     

@@ -20,6 +20,8 @@ class CalendarViewController: UIViewController {
     /* Initialized variables */
     let formatter = DateFormatter()
     var ref: DatabaseReference!
+    var courses: [String] = [] // User's list of courses.
+    var courseTitles: [String] = [] // Used to display in table view.
     //var contents = [EventContent]()
     var clickedDateContent = [EventContent]()
     var clickedDate = ""
@@ -39,6 +41,7 @@ class CalendarViewController: UIViewController {
         
         // Database reference
         ref = Database.database().reference()
+        let userID = Auth.auth().currentUser?.uid
         
         // Sets the background color.
         UIColourScheme.instance.set(for:self)
@@ -50,6 +53,26 @@ class CalendarViewController: UIViewController {
         let currentDate = Date()
         calendarView.scrollToDate(currentDate)
         calendarView.selectDates([currentDate])
+        
+        // Retrieve courses from database, store in courses & courseTitles array.
+        ref.child("users").child(userID!).child("courses").observe(.value, with: { (snapshot) in
+            for i in snapshot.children.allObjects as! [DataSnapshot] {
+                // Add to courses array.
+                let identifier = i.value as? String
+                self.courses.append(identifier!)
+                
+                // Add to courseTitles array. Update table view.
+                self.ref.child("courses").child(identifier!).child("classTitle").observeSingleEvent(of: .value, with: { (snap) in
+                    let title = snap.value as? String
+                    self.courseTitles.append(title!)
+                    self.tableView.reloadData()
+                }) { (error) in
+                    print(error.localizedDescription)
+                }
+            }
+        }) { (error) in
+            print(error.localizedDescription)
+        }
     }
     
     // Hides the navigation bar when the view appears.
@@ -162,16 +185,15 @@ extension CalendarViewController: JTAppleCalendarViewDataSource, JTAppleCalendar
         print(clickedDate)
         
         // user UID
-        let userID = Auth.auth().currentUser?.uid
+        self.clickedDateContent.removeAll()
         
         // Checks if there's any content for that date
-        ref.child("users").child(userID!).child("schedule").observeSingleEvent(of: .value, with: { (snapshot) in
-            if snapshot.hasChild(self.clickedDate) {
-                // Observes all children under specific date
-                self.ref.child("users").child(userID!).child("schedule").child(self.clickedDate)            .observe(DataEventType.value) { (snapshot) in
-                    if (snapshot.childrenCount > 0) {
-                        self.clickedDateContent.removeAll()
-                        
+        for index in 0 ..< courses.count {
+            ref.child("schedule").child(courses[index]).observeSingleEvent(of: .value, with: {
+                (snapshot) in
+                if snapshot.hasChild(self.clickedDate) {
+                    // Observes all children under specific date
+                    self.ref.child("schedule").child(self.courses[index]).child(self.clickedDate)                    .observe(DataEventType.value) { (snapshot) in
                         // Iterates through the number of children
                         for i in snapshot.children.allObjects as! [DataSnapshot] {
                             // Pulls data from each child (name of course, course id, and the instructor)
@@ -185,17 +207,17 @@ extension CalendarViewController: JTAppleCalendarViewDataSource, JTAppleCalendar
                             let c = EventContent(name: name as? String,
                                                  location: location as? String,
                                                  date: date as? String,
-                                                 time: time as? String)
+                                                 time: time as? String,
+                                                 course: self.courseTitles[index])
                             self.clickedDateContent.append(c)
                             self.tableView.reloadData()
                         }
                     }
+                } else {
+                    self.tableView.reloadData()
                 }
-            } else {
-                self.clickedDateContent.removeAll()
-                self.tableView.reloadData()
-            }
-        })
+            })
+        }
     }
     
     func calendar(_ calendar: JTAppleCalendarView,
@@ -230,8 +252,10 @@ extension CalendarViewController: UITableViewDelegate, UITableViewDataSource {
         let n = String(clickedDateContent[row].name!)
         let l = String(clickedDateContent[row].location!)
         let t = String(clickedDateContent[row].time!)
+        let title = String(clickedDateContent[row].course!)
         cell.eventNameLabel.text = "\(n) (\(t))"
         cell.descriptionLabel.text = "Location: \(l)"
+        cell.titleLabel.text = "\(title)"
         
         return cell
     }
