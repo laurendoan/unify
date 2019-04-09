@@ -12,6 +12,8 @@ class ViewNoteViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
     var newImage: UIImage? = UIImage()
+    var backButtonSegueIdentifier = "backButtonSegueIdentifier"
+    var className = ""
     
     
     override func viewDidLoad() {
@@ -29,6 +31,12 @@ class ViewNoteViewController: UIViewController {
     
     @IBAction func buttonPressed(_ sender: UIBarButtonItem) {
         UIImageWriteToSavedPhotosAlbum(newImage!, nil, nil, nil);
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == backButtonSegueIdentifier, let destination = segue.destination as? NotesViewController {
+            destination.className = self.className
+        }
     }
     
 }

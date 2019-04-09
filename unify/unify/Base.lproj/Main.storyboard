@@ -1179,9 +1179,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="J6q-rN-bT3">
-                                <rect key="frame" x="20" y="107" width="276" height="706"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="J6q-rN-bT3">
+                                <rect key="frame" x="20" y="88" width="374" height="725"/>
                                 <color key="backgroundColor" red="0.88235294117647056" green="0.94901960784313721" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qL1-BT-72f">
                                     <size key="itemSize" width="85" height="85"/>
@@ -1209,11 +1208,10 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="foK-ix-T1p">
-                                <rect key="frame" x="20" y="813" width="276" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="foK-ix-T1p">
+                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
                                 <items>
-                                    <barButtonItem title="Upload Note" id="DZr-Ym-rBo">
+                                    <barButtonItem title="Upload Note" width="216" id="DZr-Ym-rBo">
                                         <connections>
                                             <action selector="uploadNoteButtonPressed:" destination="d5N-Yh-7KA" id="peE-hs-ggv"/>
                                         </connections>
@@ -1225,15 +1223,15 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lvW-hD-Fxu">
-                                <rect key="frame" x="0.0" y="62" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lvW-hD-Fxu">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <color key="backgroundColor" red="0.88235294119999996" green="0.94901960780000005" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
                                     <navigationItem id="Irn-om-Jx7">
                                         <barButtonItem key="leftBarButtonItem" title="&lt; Back" id="IXU-vM-0Ya">
                                             <connections>
                                                 <action selector="backButtonPressed:" destination="d5N-Yh-7KA" id="tHX-Gz-IQC"/>
+                                                <segue destination="2NO-OY-jFv" kind="show" identifier="backToMessagesSegueIdentifier" id="GXc-nd-vfh"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -1241,6 +1239,20 @@
                             </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="0.88235294117647056" green="0.94901960784313721" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="lvW-hD-Fxu" firstAttribute="leading" secondItem="UDJ-m2-o5t" secondAttribute="leading" id="0gf-0t-5tk"/>
+                            <constraint firstItem="J6q-rN-bT3" firstAttribute="top" secondItem="lvW-hD-Fxu" secondAttribute="bottom" id="3A0-Ru-XbE"/>
+                            <constraint firstItem="foK-ix-T1p" firstAttribute="leading" secondItem="UDJ-m2-o5t" secondAttribute="leading" id="4XZ-sJ-ZOz"/>
+                            <constraint firstItem="lvW-hD-Fxu" firstAttribute="top" secondItem="UDJ-m2-o5t" secondAttribute="top" id="CZE-zU-1Ok"/>
+                            <constraint firstItem="foK-ix-T1p" firstAttribute="top" secondItem="J6q-rN-bT3" secondAttribute="bottom" id="NtB-39-NKz"/>
+                            <constraint firstItem="lvW-hD-Fxu" firstAttribute="trailing" secondItem="UDJ-m2-o5t" secondAttribute="trailing" id="Q9s-WR-1PC"/>
+                            <constraint firstItem="foK-ix-T1p" firstAttribute="top" secondItem="J6q-rN-bT3" secondAttribute="bottom" id="Tay-DH-46P"/>
+                            <constraint firstItem="foK-ix-T1p" firstAttribute="trailing" secondItem="UDJ-m2-o5t" secondAttribute="trailing" id="b4C-Zk-Ca8"/>
+                            <constraint firstItem="foK-ix-T1p" firstAttribute="bottom" secondItem="UDJ-m2-o5t" secondAttribute="bottom" id="bCD-hO-HnS"/>
+                            <constraint firstItem="J6q-rN-bT3" firstAttribute="top" secondItem="lvW-hD-Fxu" secondAttribute="bottom" id="i6Q-vv-t69"/>
+                            <constraint firstItem="J6q-rN-bT3" firstAttribute="leading" secondItem="UDJ-m2-o5t" secondAttribute="leading" constant="20" id="jmo-6A-pxS"/>
+                            <constraint firstItem="UDJ-m2-o5t" firstAttribute="trailing" secondItem="J6q-rN-bT3" secondAttribute="trailing" constant="20" id="qRi-fF-cqS"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="UDJ-m2-o5t"/>
                     </view>
                     <connections>
@@ -1273,14 +1285,30 @@
                                 </items>
                             </toolbar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ohs-vc-ncn">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                             </imageView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZoK-tA-4Xa">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="View" id="ZjG-Is-coF">
+                                        <barButtonItem key="leftBarButtonItem" title="&lt; Back" id="CfV-9U-2U3">
+                                            <connections>
+                                                <segue destination="d5N-Yh-7KA" kind="show" identifier="backButtonSegueIdentifier" id="TMN-F4-Po0"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="0.88235294119999996" green="0.94901960780000005" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Ohs-vc-ncn" firstAttribute="top" secondItem="RrW-rc-g0l" secondAttribute="top" id="6Qm-b8-9H4"/>
+                            <constraint firstItem="Ohs-vc-ncn" firstAttribute="top" secondItem="ZoK-tA-4Xa" secondAttribute="bottom" id="4gZ-iw-og8"/>
+                            <constraint firstItem="ZoK-tA-4Xa" firstAttribute="leading" secondItem="RrW-rc-g0l" secondAttribute="leading" id="5z2-7o-yeC"/>
                             <constraint firstItem="LuV-Vq-P01" firstAttribute="trailing" secondItem="RrW-rc-g0l" secondAttribute="trailing" id="9XU-aN-UNa"/>
+                            <constraint firstItem="Ohs-vc-ncn" firstAttribute="top" secondItem="ZoK-tA-4Xa" secondAttribute="bottom" id="C1q-ta-tMC"/>
                             <constraint firstItem="LuV-Vq-P01" firstAttribute="top" secondItem="Ohs-vc-ncn" secondAttribute="bottom" id="MeF-Jr-jSN"/>
+                            <constraint firstItem="ZoK-tA-4Xa" firstAttribute="trailing" secondItem="RrW-rc-g0l" secondAttribute="trailing" id="Ny8-pw-V7T"/>
+                            <constraint firstItem="ZoK-tA-4Xa" firstAttribute="top" secondItem="RrW-rc-g0l" secondAttribute="top" id="WG1-Xu-67T"/>
                             <constraint firstItem="Ohs-vc-ncn" firstAttribute="trailing" secondItem="RrW-rc-g0l" secondAttribute="trailing" id="cjJ-Gn-GC2"/>
                             <constraint firstItem="LuV-Vq-P01" firstAttribute="bottom" secondItem="RrW-rc-g0l" secondAttribute="bottom" id="n93-j4-ZAh"/>
                             <constraint firstItem="Ohs-vc-ncn" firstAttribute="leading" secondItem="RrW-rc-g0l" secondAttribute="leading" id="tOu-hW-wx4"/>
@@ -1346,7 +1374,9 @@
         <image name="unify" width="600" height="331"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="KP3-9f-9yI"/>
         <segue reference="0U4-oL-Chs"/>
+        <segue reference="GXc-nd-vfh"/>
         <segue reference="PXg-qo-ebX"/>
     </inferredMetricsTieBreakers>
 </document>
