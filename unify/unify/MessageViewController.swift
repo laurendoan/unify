@@ -113,6 +113,7 @@ final class MessageViewController: MessagesViewController {
         //notesView.toolbar.frame = CGRect(x: 0, y: self.view.frame.height - notesView.toolbar.frame.height - self.messageInputBar.frame.height, width: 276, height: notesView.toolbar.frame.height)
         //notesView.className = classID
         //notesView.navBar.frame = CGRect(x: 0, y: (self.navigationController?.navigationBar.frame.height)!, width: notesView.navBar.frame.width, height: notesView.navBar.frame.height)
+        panelView.classNameRef = className
     }
     
     @objc func togglePanel() {
