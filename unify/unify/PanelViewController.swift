@@ -8,13 +8,13 @@
 
 import UIKit
 
-protocol NotesDelegate {
+/*protocol NotesDelegate {
     func notesPressed()
-}
+}*/
 
 class PanelViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
 {
-    var delegate: NotesDelegate?
+    //var delegate: NotesDelegate?
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //print(section)
@@ -22,7 +22,7 @@ class PanelViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        print("in function", indexPath.row)
+        //print("in function", indexPath.row)
         if(indexPath.row == 0) {
             let cell:MuteTableViewCell = tableView.dequeueReusableCell(withIdentifier: "muteCellIdentifier", for: indexPath as IndexPath) as! MuteTableViewCell
             return cell
@@ -65,11 +65,11 @@ class PanelViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let row = indexPath.row
-        if(row == 2) {
+        //let row = indexPath.row
+        /*if(row == 2) {
             print("they clicked notes")
             delegate?.notesPressed()
-        }
+        }*/
     }
 
     /*

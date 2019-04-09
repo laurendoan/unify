@@ -30,7 +30,7 @@ class ViewController: UIViewController {
         }
         )
         
-        DispatchQueue.main.asyncAfter(deadline:.now() + 10.0, execute: {
+        DispatchQueue.main.asyncAfter(deadline:.now() + 5.0, execute: {
         
         // Check if there is a user currently signed in.
         if Auth.auth().currentUser != nil {
