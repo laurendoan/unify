@@ -30,6 +30,7 @@
 		E254C9E32248831D00F28F30 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E254C9E22248831D00F28F30 /* HomeViewController.swift */; };
 		E254C9E5224892E300F28F30 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E254C9E4224892E300F28F30 /* GoogleService-Info.plist */; };
 		E2FB94F22249532C00A4D57A /* AddClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FB94F12249532C00A4D57A /* AddClassViewController.swift */; };
+		ED2E4693225C62DD00B67569 /* EventScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2E4692225C62DD00B67569 /* EventScheduleViewController.swift */; };
 		ED8C0DD522599BCB00B3CE13 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8C0DD422599BCB00B3CE13 /* Message.swift */; };
 		ED8C0DD922599C2D00B3CE13 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8C0DD822599C2D00B3CE13 /* MessageViewController.swift */; };
 		ED8C0DDC22599CB100B3CE13 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8C0DDB22599CB100B3CE13 /* CustomCell.swift */; };
@@ -67,6 +68,7 @@
 		E254C9E22248831D00F28F30 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E254C9E4224892E300F28F30 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E2FB94F12249532C00A4D57A /* AddClassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddClassViewController.swift; sourceTree = "<group>"; };
+		ED2E4692225C62DD00B67569 /* EventScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventScheduleViewController.swift; sourceTree = "<group>"; };
 		ED8C0DD422599BCB00B3CE13 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		ED8C0DD822599C2D00B3CE13 /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		ED8C0DDB22599CB100B3CE13 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 				01FB02CA225AC111009288A8 /* PanelViewController.swift */,
 				01FA81F2225BB797006CAE18 /* MuteTableViewCell.swift */,
 				01FA81F4225BBEEF006CAE18 /* MembersTableViewCell.swift */,
+				ED2E4692225C62DD00B67569 /* EventScheduleViewController.swift */,
 			);
 			path = unify;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 				982ACE48224AA0C700DE62AD /* CalendarViewController.swift in Sources */,
 				ED8C0DD522599BCB00B3CE13 /* Message.swift in Sources */,
 				B96952AB225BE7510011DB22 /* NoteCollectionViewCell.swift in Sources */,
+				ED2E4693225C62DD00B67569 /* EventScheduleViewController.swift in Sources */,
 				01FA81F5225BBEEF006CAE18 /* MembersTableViewCell.swift in Sources */,
 				01FB02CB225AC111009288A8 /* PanelViewController.swift in Sources */,
 				E254C9E122487CB200F28F30 /* SignupViewController.swift in Sources */,

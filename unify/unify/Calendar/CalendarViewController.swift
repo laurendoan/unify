@@ -37,7 +37,7 @@ class CalendarViewController: UIViewController {
         tableView.dataSource = self
         tableView.rowHeight = 100
         
-        // Database reference.
+        // Database reference
         ref = Database.database().reference()
         
         // Sets the background color.
@@ -161,11 +161,14 @@ extension CalendarViewController: JTAppleCalendarViewDataSource, JTAppleCalendar
         
         print(clickedDate)
         
+        // user UID
+        let userID = Auth.auth().currentUser?.uid
+        
         // Checks if there's any content for that date
-        ref.child("betaSchedule").observeSingleEvent(of: .value, with: { (snapshot) in
+        ref.child("users").child(userID!).child("schedule").observeSingleEvent(of: .value, with: { (snapshot) in
             if snapshot.hasChild(self.clickedDate) {
                 // Observes all children under specific date
-                self.ref.child("betaSchedule").child(self.clickedDate).observe(DataEventType.value) { (snapshot) in
+                self.ref.child("users").child(userID!).child("schedule").child(self.clickedDate)            .observe(DataEventType.value) { (snapshot) in
                     if (snapshot.childrenCount > 0) {
                         self.clickedDateContent.removeAll()
                         
