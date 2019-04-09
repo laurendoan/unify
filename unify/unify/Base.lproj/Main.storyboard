@@ -969,9 +969,6 @@
                                             <color key="backgroundColor" red="0.902957499" green="0.94418281319999997" blue="0.99216490980000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.902957499" green="0.94418281319999997" blue="0.99216490980000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <connections>
-                                            <segue destination="d5N-Yh-7KA" kind="show" id="zUH-jS-ofl"/>
-                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="scheduleCellIdentifier" id="Ijg-O2-paO">
                                         <rect key="frame" x="0.0" y="160" width="276" height="44"/>
@@ -1027,17 +1024,15 @@
         <!--Notes View Controller-->
         <scene sceneID="fro-af-dQo">
             <objects>
-                <viewController id="d5N-Yh-7KA" customClass="NotesViewController" customModule="unify" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NotesViewController" id="d5N-Yh-7KA" customClass="NotesViewController" customModule="unify" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kjF-aC-6Ae">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="J6q-rN-bT3">
-                                <rect key="frame" x="20" y="88" width="276" height="725"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="J6q-rN-bT3">
+                                <rect key="frame" x="20" y="107" width="276" height="706"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.88235294117647056" green="0.94901960784313721" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="276" id="dU7-a7-lwH"/>
-                                </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qL1-BT-72f">
                                     <size key="itemSize" width="85" height="85"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -1052,29 +1047,21 @@
                                             <rect key="frame" x="0.0" y="0.0" width="85" height="85"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xJr-8d-qOy">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xJr-8d-qOy">
                                                     <rect key="frame" x="0.0" y="0.0" width="85" height="85"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
                                         </view>
-                                        <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="xJr-8d-qOy" secondAttribute="trailing" id="DnG-8q-qIk"/>
-                                            <constraint firstAttribute="bottom" secondItem="xJr-8d-qOy" secondAttribute="bottom" id="JTy-lX-wpQ"/>
-                                            <constraint firstItem="xJr-8d-qOy" firstAttribute="leading" secondItem="FaZ-Sg-fd5" secondAttribute="leading" id="TRm-qc-jKb"/>
-                                            <constraint firstItem="xJr-8d-qOy" firstAttribute="top" secondItem="FaZ-Sg-fd5" secondAttribute="top" id="cEO-b9-Keg"/>
-                                        </constraints>
                                         <connections>
                                             <outlet property="imageView" destination="xJr-8d-qOy" id="ElT-s8-1Jo"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="foK-ix-T1p">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="foK-ix-T1p">
                                 <rect key="frame" x="20" y="813" width="276" height="49"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="276" id="3dt-T3-sco"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="276" id="MBK-3b-8K1"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <barButtonItem title="Upload Note" id="DZr-Ym-rBo">
                                         <connections>
@@ -1088,22 +1075,28 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lvW-hD-Fxu">
+                                <rect key="frame" x="0.0" y="62" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.88235294119999996" green="0.94901960780000005" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <items>
+                                    <navigationItem id="Irn-om-Jx7">
+                                        <barButtonItem key="leftBarButtonItem" title="&lt; Back" id="IXU-vM-0Ya">
+                                            <connections>
+                                                <action selector="backButtonPressed:" destination="d5N-Yh-7KA" id="tHX-Gz-IQC"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="0.88235294117647056" green="0.94901960784313721" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="UDJ-m2-o5t" firstAttribute="trailing" secondItem="J6q-rN-bT3" secondAttribute="trailing" constant="118" id="HNQ-hl-kBP"/>
-                            <constraint firstItem="foK-ix-T1p" firstAttribute="top" secondItem="J6q-rN-bT3" secondAttribute="bottom" id="Mt4-va-2QM"/>
-                            <constraint firstItem="UDJ-m2-o5t" firstAttribute="trailing" secondItem="foK-ix-T1p" secondAttribute="trailing" constant="118" id="QpD-ne-Qot"/>
-                            <constraint firstItem="foK-ix-T1p" firstAttribute="bottom" secondItem="UDJ-m2-o5t" secondAttribute="bottom" id="apo-Wq-prh"/>
-                            <constraint firstItem="foK-ix-T1p" firstAttribute="top" secondItem="J6q-rN-bT3" secondAttribute="bottom" id="jFJ-kI-dkD"/>
-                            <constraint firstItem="J6q-rN-bT3" firstAttribute="top" secondItem="UDJ-m2-o5t" secondAttribute="top" constant="44" id="nH7-d3-od1"/>
-                            <constraint firstItem="J6q-rN-bT3" firstAttribute="leading" secondItem="UDJ-m2-o5t" secondAttribute="leading" constant="20" id="nvJ-uQ-XHn"/>
-                            <constraint firstItem="foK-ix-T1p" firstAttribute="leading" secondItem="UDJ-m2-o5t" secondAttribute="leading" constant="20" id="yDd-Bw-o1i"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="UDJ-m2-o5t"/>
                     </view>
                     <connections>
+                        <outlet property="navBar" destination="lvW-hD-Fxu" id="5BA-Pw-g6h"/>
                         <outlet property="noteCollectionView" destination="J6q-rN-bT3" id="a8d-lP-zrz"/>
+                        <outlet property="toolbar" destination="foK-ix-T1p" id="ESz-G3-KEx"/>
                         <segue destination="YyX-Iu-3Ck" kind="show" identifier="viewImageSegueIdentifier" id="KP3-9f-9yI"/>
                     </connections>
                 </viewController>

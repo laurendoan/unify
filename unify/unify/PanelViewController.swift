@@ -8,8 +8,14 @@
 
 import UIKit
 
+protocol NotesDelegate {
+    func notesPressed()
+}
+
 class PanelViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
 {
+    var delegate: NotesDelegate?
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //print(section)
         return 5;
@@ -57,6 +63,14 @@ class PanelViewController: UIViewController, UITableViewDelegate, UITableViewDat
         // Do any additional setup after loading the view.
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let row = indexPath.row
+        if(row == 2) {
+            print("they clicked notes")
+            delegate?.notesPressed()
+        }
+    }
 
     /*
     // MARK: - Navigation

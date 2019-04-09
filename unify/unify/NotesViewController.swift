@@ -11,11 +11,19 @@ import UIKit
 import MobileCoreServices
 import Firebase
 
+protocol BackDelegate {
+    func backPressed()
+}
+
 class NotesViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UICollectionViewDataSource, UICollectionViewDelegate {
+    
+    var delegate: BackDelegate?
 
     
     var className = "CS439"
     @IBOutlet weak var noteCollectionView: UICollectionView!
+    @IBOutlet var toolbar: UIToolbar!
+    @IBOutlet var navBar: UINavigationBar!
     var pics = [UIImage]()
     let noteCellIdentifier = "noteCellIdentifier"
     let viewImageSegueIdentifier = "viewImageSegueIdentifier"
@@ -63,6 +71,9 @@ class NotesViewController: UIViewController, UIImagePickerControllerDelegate, UI
         return pics.count
     }
     
+    @IBAction func backButtonPressed(_ sender: Any) {
+        delegate?.backPressed()
+    }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: noteCellIdentifier, for: indexPath) as! NoteCollectionViewCell
         
