@@ -27,6 +27,7 @@ class NotesViewController: UIViewController, UIImagePickerControllerDelegate, UI
     var pics = [UIImage]()
     let noteCellIdentifier = "noteCellIdentifier"
     let viewImageSegueIdentifier = "viewImageSegueIdentifier"
+    let backToMessagesSegueIdentifier = "backToMessagesSegueIdentifier"
     var imageSelected: UIImage!
     
     override func viewDidLoad() {
@@ -169,6 +170,9 @@ class NotesViewController: UIViewController, UIImagePickerControllerDelegate, UI
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == viewImageSegueIdentifier, let destination = segue.destination as? ViewNoteViewController {
             destination.newImage! = imageSelected
+            destination.className = self.className
+        } else if segue.identifier == backToMessagesSegueIdentifier, let destination = segue.destination as? MessageViewController {
+            destination.className = self.className
         }
     }
 }
