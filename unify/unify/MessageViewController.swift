@@ -20,17 +20,12 @@ final class MessageViewController: MessagesViewController, NotesDelegate, BackDe
     }
     
     var panelView = PanelViewController()
-    
     var notesView = NotesViewController()
-    
     var panelOut = false
-    
     var panelState = -1 //-1: inside, 0: standard, 1: notes, ADD: 2: members
     
     var messageList: [Message] = []
-    
     let refreshControl = UIRefreshControl()
-    
     var className: String = ""
     var classID: String = ""
     var senderDisplayName: String?
@@ -107,6 +102,7 @@ final class MessageViewController: MessagesViewController, NotesDelegate, BackDe
         panelView.view.frame = CGRect(x: self.view.frame.width, y: panelView.view.frame.minY, width: panelView.view.frame.width, height: panelView.view.frame.height)
         
         notesView = storyboard.instantiateViewController(withIdentifier: "NotesViewController") as! NotesViewController
+        notesView.className = self.className
         notesView.delegate = self
         notesView.view.frame = CGRect(x: self.view.frame.width/3, y: 50, width: self.view.frame.width*2/3, height: self.view.frame.height) //want it 1/3 of the way across the screen so it's coming from the right
         
@@ -177,8 +173,8 @@ final class MessageViewController: MessagesViewController, NotesDelegate, BackDe
         notesView.view.isHidden = false
         self.notesView.view.frame = CGRect(x: self.view.frame.width/3, y: self.notesView.view.frame.minY, width: self.notesView.view.frame.width, height: self.notesView.view.frame.height)
         self.view.bringSubviewToFront(notesView.view)
-        panelState = 1 
-        
+        panelState = 1
+        notesView.className = self.className
     }
     
     func backPressed() {

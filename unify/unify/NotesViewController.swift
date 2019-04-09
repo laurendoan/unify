@@ -74,6 +74,7 @@ class NotesViewController: UIViewController, UIImagePickerControllerDelegate, UI
     @IBAction func backButtonPressed(_ sender: Any) {
         delegate?.backPressed()
     }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: noteCellIdentifier, for: indexPath) as! NoteCollectionViewCell
         
