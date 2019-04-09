@@ -18,6 +18,7 @@ class EventScheduleViewController: UIViewController {
     
     /* Initialized Variables */
     var ref: DatabaseReference!
+    var classRef = "ERROR - NO CLASSREF"
     
     /* Used to send event data back to Database under userID -> schedule */
     @IBAction func submitButton(_ sender: Any) {
@@ -31,7 +32,7 @@ class EventScheduleViewController: UIViewController {
             self.present(alertController, animated: true, completion: nil)
         } else {
             // Gets user UID from firebase
-            let userID = Auth.auth().currentUser?.uid
+            // let userID = Auth.auth().currentUser?.uid
             
             // Readys the textfields for usage
             let e = eventNameTF.text!
@@ -40,12 +41,11 @@ class EventScheduleViewController: UIViewController {
             let t = timeTF.text!
             
             // Adds data onto Firebase
-            self.ref.child("users").child(userID!).child("schedule")
-                .child(d).childByAutoId().setValue([
-                    "date" : d,
-                    "location" : l,
-                    "name" : e,
-                    "time" : t
+            self.ref.child("schedule").child(classRef).child(d).childByAutoId().setValue([
+                "date" : d,
+                "location" : l,
+                "name" : e,
+                "time" : t
                 ])
             
             // Dismisses the EventScheduleVC back to sidePanel
@@ -60,6 +60,7 @@ class EventScheduleViewController: UIViewController {
         UIColourScheme.instance.set(for:self)
         ref = Database.database().reference()
         
+        print(classRef)
         // Do any additional setup after loading the view.
     }
     
