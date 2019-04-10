@@ -14,16 +14,18 @@ import Firebase
 
 final class MessageViewController: MessagesViewController, MembersDelegate, LeaveClassProtocol {
 
-   
+   // sets style for status bar
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
     
+    // instance variables for side panel
     var panelView = PanelViewController()
     var membersView = MembersViewController()
     var panelOut = false
     var panelState = -1 //-1: inside, 0: standard, 1: members
     
+    // instance variables for messages
     var messageList: [Message] = []
     let refreshControl = UIRefreshControl()
     var className: String = ""
@@ -43,6 +45,7 @@ final class MessageViewController: MessagesViewController, MembersDelegate, Leav
         self.navigationController?.isNavigationBarHidden = false
         title = "\(classID)"
         
+        // disable avatars next to messages
         if let layout = messagesCollectionView.collectionViewLayout as? MessagesCollectionViewFlowLayout {
             layout.textMessageSizeCalculator.outgoingAvatarSize = .zero
             layout.textMessageSizeCalculator.incomingAvatarSize = .zero
@@ -64,11 +67,13 @@ final class MessageViewController: MessagesViewController, MembersDelegate, Leav
         
     }
     
+    // sets up side panel and enables nav bar
     override func viewDidAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = false
         setupPanel()
     }
     
+    // sets up the side panel functionality
     func setupPanel() {
         //Currently, two things can be viewed in panel view: the standard panel class info page, and the members page.
         //At the start, these are both instantiated and placed with their left edges to the far right of the screen.
@@ -202,6 +207,7 @@ final class MessageViewController: MessagesViewController, MembersDelegate, Leav
         
     }*/
     
+    // sets up basic configurations for messages collection view
     func configureMessageCollectionView() {
         messagesCollectionView.messagesDataSource = self
         
@@ -215,23 +221,27 @@ final class MessageViewController: MessagesViewController, MembersDelegate, Leav
         messagesCollectionView.messagesDisplayDelegate = self
     }
     
+    // initializes the input bar for messages
     func configureMessageInputBar() {
         messageInputBar.delegate = self
         messageInputBar.inputTextView.tintColor = .primaryColor
         messageInputBar.sendButton.tintColor = .primaryColor
     }
     
+    // loads messages for chat room
     func loadMessages() {
         // Chat room database reference.
         let databaseClass = Constants.refs.databaseChats.child(className)
         let senderId = Auth.auth().currentUser!.uid
         
+        // Reads in messages from specific class and inserts them into messages list to be displayed.
+        // Observer remains active to allow new messages from other users to display
         let ref = Constants.refs.databaseUsers
         ref.child(senderId).observeSingleEvent(of: .value, with: { (snapshot) in
             let value = snapshot.value as? NSDictionary
             self.senderDisplayName = value?["displayName"] as? String ?? ""
             self.sender = Sender(id: senderId, displayName: self.senderDisplayName!)
-            let query = databaseClass.queryLimited(toLast: 10)
+            let query = databaseClass.queryLimited(toLast: 20)
             
             _ = query.observe(.childAdded, with: { [weak self] snapshot in
                 
@@ -253,6 +263,7 @@ final class MessageViewController: MessagesViewController, MembersDelegate, Leav
         }
     }
     
+    // TODO: Load more messages upon scrolling to the top of messages screen
     @objc
     func loadMoreMessages() {
         
@@ -260,6 +271,7 @@ final class MessageViewController: MessagesViewController, MembersDelegate, Leav
     
     // MARK: - Helpers
     
+    // inserts message into list and updates view
     func insertMessage(_ message: Message) {
         messageList.append(message)
         // Reload last section to update header/footer labels and insert a new one
@@ -275,6 +287,7 @@ final class MessageViewController: MessagesViewController, MembersDelegate, Leav
         })
     }
     
+    // checks if last section is visible for scrolling to bottom
     func isLastSectionVisible() -> Bool {
         
         guard !messageList.isEmpty else { return false }
@@ -292,14 +305,17 @@ extension MessageViewController: MessagesDisplayDelegate {
     
     // MARK: - Text Messages
     
+    // selects text color depending on who sent message.
     func textColor(for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> UIColor {
         return isFromCurrentSender(message: message) ? .white : .darkText
     }
     
+    // sets message background color depending on who sent message
     func backgroundColor(for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> UIColor {
         return isFromCurrentSender(message: message) ? .primaryColor : UIColor(red: 230/255, green: 241/255, blue: 253/255, alpha: 1)
     }
     
+    // sets bubble tail direction depending on who sent message
     func messageStyle(for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> MessageStyle {
         
         let tail: MessageStyle.TailCorner = isFromCurrentSender(message: message) ? .bottomRight : .bottomLeft
@@ -312,14 +328,17 @@ extension MessageViewController: MessagesDisplayDelegate {
 
 extension MessageViewController: MessagesLayoutDelegate {
     
+    // hides extra height for avatars
     func cellTopLabelHeight(for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> CGFloat {
         return 0
     }
     
+    // sets height above message for name
     func messageTopLabelHeight(for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> CGFloat {
         return 20
     }
     
+    // sets height below message for time
     func messageBottomLabelHeight(for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> CGFloat {
         return 16
     }
@@ -327,23 +346,28 @@ extension MessageViewController: MessagesLayoutDelegate {
 }
 
 extension MessageViewController: MessagesDataSource {
+    // returns the current sender
     func currentSender() -> Sender {
         return sender!
     }
     
+    // returns number of messages in chat
     func numberOfSections(in messagesCollectionView: MessagesCollectionView) -> Int {
         return messageList.count
     }
     
+    // returns message for given section
     func messageForItem(at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> MessageType {
         return messageList[indexPath.section]
     }
     
+    // sets display name style above message
     func messageTopLabelAttributedText(for message: MessageType, at indexPath: IndexPath) -> NSAttributedString? {
         let name = message.sender.displayName
         return NSAttributedString(string: name, attributes: [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .caption1)])
     }
     
+    // sets date and date style below message
     func messageBottomLabelAttributedText(for message: MessageType, at indexPath: IndexPath) -> NSAttributedString? {
         
         let date = message.sentDate
@@ -357,20 +381,19 @@ extension MessageViewController: MessagesDataSource {
 
 extension MessageViewController: MessageInputBarDelegate {
     
+    // handles message sending upon pressing send
     func messageInputBar(_ inputBar: MessageInputBar, didPressSendButtonWith text: String) {
-        
+        // generates message object and writes to database.
         for component in inputBar.inputTextView.components {
-            
             let current = currentSender()
-            
             if let str = component as? String {
                 let message = Message(text: str, sender: current, messageId: UUID().uuidString, date: Date())
                 let ref = Constants.refs.databaseChats.child(className).childByAutoId()
                 let newMessage = ["sender_id": current.id, "name": current.displayName, "text": str, "message_id": message.messageId, "date": String(Date().timeIntervalSince1970)]
                 ref.setValue(newMessage)
             }
-            
         }
+        // refreshes message bar
         inputBar.inputTextView.text = String()
         messagesCollectionView.scrollToBottom(animated: true)
     }

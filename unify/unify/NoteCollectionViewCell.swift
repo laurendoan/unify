@@ -8,6 +8,7 @@
 
 import UIKit
 
+// custom cell for displaying note images
 class NoteCollectionViewCell: UICollectionViewCell {
     
     
