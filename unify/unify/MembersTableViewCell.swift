@@ -10,6 +10,7 @@ import UIKit
 
 class MembersTableViewCell: UITableViewCell {
 
+    @IBOutlet var memberName: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

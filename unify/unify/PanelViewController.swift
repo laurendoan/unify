@@ -8,13 +8,13 @@
 
 import UIKit
 
-/*protocol NotesDelegate {
-    func notesPressed()
-}*/
+protocol MembersDelegate {
+    func membersPressed()
+}
 
 class PanelViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
 {
-    //var delegate: NotesDelegate?
+    var delegate: MembersDelegate?
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //print(section)
@@ -65,11 +65,11 @@ class PanelViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        //let row = indexPath.row
-        /*if(row == 2) {
-            print("they clicked notes")
-            delegate?.notesPressed()
-        }*/
+        let row = indexPath.row
+        if(row == 1) {
+            //print("they clicked notes")
+            delegate?.membersPressed()
+        }
     }
 
     /*

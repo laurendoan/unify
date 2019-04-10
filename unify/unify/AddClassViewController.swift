@@ -70,7 +70,15 @@ class AddClassViewController: UIViewController {
                     if snapshot.hasChild(course) {
                         courses.append(course)
                         self.ref.child("users/\(userID!)/courses").setValue(courses)
+                        //If the class exists, then also add the user to its members list.
+                        self.ref.child("courses").child(course).observeSingleEvent(of: .value, with: { (snapshot) in
+                            let value = snapshot.value as? NSDictionary
+                            var members = value?["members"] as? Array ?? []
+                            members.append(userID!)
+                            self.ref.child("courses/\(course)/members").setValue(members)
+                        })
                         self.performSegue(withIdentifier: "addClassSegueIdentifier", sender: self)
+                        
                     } else {
                         // User did not insert a valid course.
                         let alertController = UIAlertController(title: "Error", message: "Class does not exist. Please try again.", preferredStyle: .alert)

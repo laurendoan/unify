@@ -12,17 +12,17 @@ import MessageKit
 import MessageInputBar
 import Firebase
 
-final class MessageViewController: MessagesViewController {
+final class MessageViewController: MessagesViewController, MembersDelegate {
 
-   
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
     
     var panelView = PanelViewController()
+    var membersView = MembersViewController()
     //var notesView = NotesViewController()
     var panelOut = false
-    var panelState = -1 //-1: inside, 0: standard, 1: notes, ADD: 2: members
+    var panelState = -1 //-1: inside, 0: standard, 1: members
     
     var messageList: [Message] = []
     let refreshControl = UIRefreshControl()
@@ -96,20 +96,24 @@ final class MessageViewController: MessagesViewController {
         self.view.insertSubview(panelView.view, at: 0)
         self.view.bringSubviewToFront(panelView.view)
         
-        //panelView.delegate = self
+        panelView.delegate = self
         panelOut = false
         panelView.view.isHidden = true; //don't show it initially
         panelView.view.frame = CGRect(x: self.view.frame.width, y: panelView.view.frame.minY, width: panelView.view.frame.width, height: panelView.view.frame.height)
         
-        //notesView = storyboard.instantiateViewController(withIdentifier: "NotesViewController") as! NotesViewController
+        membersView = storyboard.instantiateViewController(withIdentifier: "MembersViewController") as! MembersViewController
         //notesView.className = self.className
         //notesView.delegate = self
-        //notesView.view.frame = CGRect(x: self.view.frame.width/3, y: 50, width: self.view.frame.width*2/3, height: self.view.frame.height) //want it 1/3 of the way across the screen so it's coming from the right
+        membersView.view.frame = CGRect(x: self.view.frame.width/3, y: 50, width: self.view.frame.width*2/3, height: self.view.frame.height) //want it 1/3 of the way across the screen so it's coming from the right
         
-        //self.view.insertSubview(notesView.view, at: 0)
-        //self.view.bringSubviewToFront(panelView.view)
-        //notesView.view.frame = CGRect(x: self.view.frame.width, y: notesView.view.frame.minY, width: notesView.view.frame.width, height: notesView.view.frame.height)
-        //notesView.noteCollectionView.frame = CGRect(x: 0, y: 100, width: 276, height:  notesView.noteCollectionView.frame.height)
+        self.view.insertSubview(membersView.view, at: 0)
+        self.view.bringSubviewToFront(panelView.view)
+        membersView.view.frame = CGRect(x: self.view.frame.width, y: membersView.view.frame.minY, width: membersView.view.frame.width, height: membersView.view.frame.height)
+        membersView.membersLabel.frame = CGRect(x: panelView.view.frame.width/2 - membersView.membersLabel.frame.width/2, y: 50, width: membersView.membersLabel.frame.width, height: membersView.membersLabel.frame.height)
+        membersView.membersTableView.frame = CGRect(x: 0, y: 100, width: 276, height:  membersView.membersTableView.frame.height)
+        print("Setting members view class name to: ", self.className)
+        membersView.className = self.className
+        
         //notesView.toolbar.frame = CGRect(x: 0, y: self.view.frame.height - notesView.toolbar.frame.height - self.messageInputBar.frame.height, width: 276, height: notesView.toolbar.frame.height)
         //notesView.className = classID
         //notesView.navBar.frame = CGRect(x: 0, y: (self.navigationController?.navigationBar.frame.height)!, width: notesView.navBar.frame.width, height: notesView.navBar.frame.height)
@@ -129,7 +133,7 @@ final class MessageViewController: MessagesViewController {
         }
         else {
             if(panelState == 0) {
-                //self.notesView.view.frame = CGRect(x: self.view.frame.width, y: self.notesView.view.frame.minY, width: self.notesView.view.frame.width, height: self.notesView.view.frame.height) //move panel back even though it's invisible
+                self.membersView.view.frame = CGRect(x: self.view.frame.width, y: self.membersView.view.frame.minY, width: self.membersView.view.frame.width, height: self.membersView.view.frame.height) //move panel back even though it's invisible
                 UIView.animate(withDuration: 0.3, animations: {
                     //self.panelView.view.alpha = 0
                     self.panelView.view.frame = CGRect(x: self.view.frame.width, y: self.panelView.view.frame.minY, width: self.panelView.view.frame.width, height: self.panelView.view.frame.height)
@@ -141,19 +145,19 @@ final class MessageViewController: MessagesViewController {
                     self.panelState = -1
                 })
             }
-            /*else if(panelState == 1){
+            else if(panelState == 1){
                 self.panelView.view.frame = CGRect(x: self.view.frame.width, y: self.panelView.view.frame.minY, width: self.panelView.view.frame.width, height: self.panelView.view.frame.height) //move panel back even though it's invisible
                 UIView.animate(withDuration: 0.3, animations: {
                     //self.panelView.view.alpha = 0
-                    self.notesView.view.frame = CGRect(x: self.view.frame.width, y: self.notesView.view.frame.minY, width: self.notesView.view.frame.width, height: self.notesView.view.frame.height)
+                    self.membersView.view.frame = CGRect(x: self.view.frame.width, y: self.membersView.view.frame.minY, width: self.membersView.view.frame.width, height: self.membersView.view.frame.height)
                     
                 }, completion:  {
                     (value: Bool) in
-                    self.notesView.view.isHidden = true
+                    self.membersView.view.isHidden = true
                     self.panelOut = false
                     self.panelState = -1
                 })
-            }*/
+            }
         }
         
         //panelView.view.isHidden = !panelView.view.isHidden //if they hit the button, just do the opposite of what it's currently doing
@@ -167,17 +171,17 @@ final class MessageViewController: MessagesViewController {
 
     }
     
-    /*func notesPressed() {
-        print("notes pressed")
+    func membersPressed() {
+        print("Members pressed")
         panelView.view.isHidden = true
-        notesView.view.isHidden = false
-        self.notesView.view.frame = CGRect(x: self.view.frame.width/3, y: self.notesView.view.frame.minY, width: self.notesView.view.frame.width, height: self.notesView.view.frame.height)
-        self.view.bringSubviewToFront(notesView.view)
+        membersView.view.isHidden = false
+        self.membersView.view.frame = CGRect(x: self.view.frame.width/3, y: self.membersView.view.frame.minY, width: self.membersView.view.frame.width, height: self.membersView.view.frame.height)
+        self.view.bringSubviewToFront(membersView.view)
         panelState = 1
-        notesView.className = self.className
+        //notesView.className = self.className
     }
     
-    func backPressed() {
+    /*func backPressed() {
         print("back pressed")
         notesView.view.isHidden = true
         panelView.view.isHidden = false
