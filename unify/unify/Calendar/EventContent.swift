@@ -10,14 +10,17 @@ class EventContent {
     var name: String?
     var location: String?
     var date: String?
-    var time: String?
+    var start: String?
+    var end: String?
     var course: String?
     
-    init (name: String?, location: String?, date: String?, time: String?, course: String?) {
+    init (name: String?, location: String?, date: String?,
+          start: String?, end: String?, course: String?) {
         self.name = name
         self.location = location
         self.date = date
-        self.time = time
+        self.start = start
+        self.end = end
         self.course = course
     }
 }

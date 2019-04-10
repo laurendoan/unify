@@ -18,6 +18,7 @@ class PanelViewController: UIViewController, UITableViewDelegate, UITableViewDat
     var classNameRef = "ERROR - INCORRECT CLASSNAMEREF"
     var classId = ""
     let notesSegueIdentifier = "notesSegueIdentifier"
+    var eventVC = EventScheduleViewController()
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //print(section)
@@ -74,7 +75,8 @@ class PanelViewController: UIViewController, UITableViewDelegate, UITableViewDat
             delegate?.notesPressed()
         }*/
         if (row == 3) {
-            self.performSegue(withIdentifier: "scheduleToEventSegue", sender: self)
+            //self.performSegue(withIdentifier: "scheduleToEventSegue", sender: self)
+            eventVC.classRef = classNameRef
         }
     }
     

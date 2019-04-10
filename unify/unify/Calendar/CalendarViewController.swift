@@ -16,6 +16,7 @@ class CalendarViewController: UIViewController {
     @IBOutlet weak var month: UILabel!
     @IBOutlet weak var year: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var dateLabelTF: UILabel!
     
     /* Initialized variables */
     let formatter = DateFormatter()
@@ -109,6 +110,7 @@ class CalendarViewController: UIViewController {
         
         // Darkens the current date. Otherwise, revert back to original color
         // JK. doesn't work yet
+        /*
         let todaysDate = Date()
         formatter.dateFormat = "yyyy MM dd"
         let todaysDateString = formatter.string(from: todaysDate)
@@ -119,6 +121,7 @@ class CalendarViewController: UIViewController {
             validCell.dataLabel.textColor = cellState.isSelected ?
                 monthTextColor : nonMonthTextColor
         }
+         */
         
         // Configures colors between selected, month dates, and non-month dates
         if cellState.isSelected {
@@ -177,14 +180,18 @@ extension CalendarViewController: JTAppleCalendarViewDataSource, JTAppleCalendar
         handleCellSelected(view: cell, cellState: cellState)
         handleCellTextColor(view: cell, cellState: cellState)
         
-        // Reformats current date
+        // Reformats current date for usage in Database
         formatter.dateFormat = "MM-dd-yyyy"
         let currentDate = formatter.string(from: date)
         clickedDate = currentDate.replacingOccurrences(of: "-", with: "")
         
-        print(clickedDate)
+        // Reformats current date for usage by dateLabelTF
+        formatter.dateFormat = "EEEE, MMMM dd"
+        let labelDate = formatter.string(from: date)
+        dateLabelTF.text = labelDate
+        print(labelDate)
         
-        // user UID
+        // Empties array for usage
         self.clickedDateContent.removeAll()
         
         // Checks if there's any content for that date
@@ -201,13 +208,15 @@ extension CalendarViewController: JTAppleCalendarViewDataSource, JTAppleCalendar
                             let name = Object?["name"]
                             let location = Object?["location"]
                             let date = Object?["date"]
-                            let time = Object?["time"]
+                            let start = Object?["start"]
+                            let end = Object?["end"]
                             
                             // Adds classes to the array of 'courses'
                             let c = EventContent(name: name as? String,
                                                  location: location as? String,
                                                  date: date as? String,
-                                                 time: time as? String,
+                                                 start: start as? String,
+                                                 end: end as? String,
                                                  course: self.courseTitles[index])
                             self.clickedDateContent.append(c)
                             self.tableView.reloadData()
@@ -251,9 +260,10 @@ extension CalendarViewController: UITableViewDelegate, UITableViewDataSource {
         let row = indexPath.row
         let n = String(clickedDateContent[row].name!)
         let l = String(clickedDateContent[row].location!)
-        let t = String(clickedDateContent[row].time!)
+        let sT = String(clickedDateContent[row].start!)
+        let eT = String(clickedDateContent[row].end!)
         let title = String(clickedDateContent[row].course!)
-        cell.eventNameLabel.text = "\(n) (\(t))"
+        cell.eventNameLabel.text = "\(n) (\(sT) - \(eT))"
         cell.descriptionLabel.text = "Location: \(l)"
         cell.titleLabel.text = "\(title)"
         
