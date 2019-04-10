@@ -13,8 +13,6 @@ class MembersViewController: UIViewController, UITableViewDelegate, UITableViewD
     
 
     @IBOutlet var membersLabel: UILabel!
-   
-    
     @IBOutlet var tableView: UITableView!
     var className: String = ""
     var members: [String] = []
@@ -59,7 +57,7 @@ class MembersViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //return MembersTableViewCell
-        var ref = Database.database().reference()
+        let ref = Database.database().reference()
         //var members:[String] = []
         var name = ""
         //print("Class: ",className)
@@ -74,6 +72,7 @@ class MembersViewController: UIViewController, UITableViewDelegate, UITableViewD
                 //print(mems.count)
                 name = mems[indexPath.row]
             }
+            self.tableView.reloadData()
         })
         
         let cell:MembersTableViewCell = tableView.dequeueReusableCell(withIdentifier: "membersCellIdentifier", for: indexPath as IndexPath) as! MembersTableViewCell

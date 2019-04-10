@@ -12,6 +12,11 @@ protocol MembersDelegate {
     func membersPressed()
 }
 
+protocol LeaveClassProtocol {
+    // Removes the given class from the user's class list.
+    func leaveClass(className: String)
+}
+
 class PanelViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
 {
     var delegate: MembersDelegate?
@@ -19,6 +24,9 @@ class PanelViewController: UIViewController, UITableViewDelegate, UITableViewDat
     var classId = ""
     let notesSegueIdentifier = "notesSegueIdentifier"
     var eventVC = EventScheduleViewController()
+    
+    var leaveClassDelegate: LeaveClassProtocol?
+    var className = "" // Name of the current class.
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //print(section)
@@ -77,6 +85,12 @@ class PanelViewController: UIViewController, UITableViewDelegate, UITableViewDat
         if (row == 3) {
             //self.performSegue(withIdentifier: "scheduleToEventSegue", sender: self)
             eventVC.classRef = classNameRef
+        }
+        
+        // Leave class.
+        if indexPath.row == 4 {
+            print("Panel class name: \(className)")
+            leaveClassDelegate?.leaveClass(className: className)
         }
     }
     

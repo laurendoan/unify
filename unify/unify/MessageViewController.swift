@@ -12,7 +12,7 @@ import MessageKit
 import MessageInputBar
 import Firebase
 
-final class MessageViewController: MessagesViewController, MembersDelegate {
+final class MessageViewController: MessagesViewController, MembersDelegate, LeaveClassProtocol {
 
    
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -31,6 +31,11 @@ final class MessageViewController: MessagesViewController, MembersDelegate {
     var classID: String = ""
     var senderDisplayName: String?
     var sender : Sender? = nil
+    
+    // Database reference.
+    var ref = Database.database().reference()
+    let user = Auth.auth().currentUser // Current user.
+    let leaveClassSegueIdentifier = "leaveClassSegueIdentifier"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -103,6 +108,9 @@ final class MessageViewController: MessagesViewController, MembersDelegate {
 
         panelView.classNameRef = self.className
         panelView.classId = self.classID
+        
+        panelView.leaveClassDelegate = self
+        panelView.className = className // Pass in class name.
     }
     
     @objc func togglePanel() {
@@ -165,6 +173,36 @@ final class MessageViewController: MessagesViewController, MembersDelegate {
         self.view.bringSubviewToFront(membersView.view)
         panelState = 1
         //notesView.className = self.className
+    }
+    
+    // Removes the user from the given class.
+    func leaveClass(className: String) {
+        print("Leaving a class...")
+        ref.child("users").child(user!.uid).observeSingleEvent(of: .value, with: { (snapshot) in
+            let value = snapshot.value as? NSDictionary
+            var courses = value?["courses"] as? Array ?? []
+            
+            print("Before: \(courses)")
+            
+            var index = 0
+            for course in courses {
+                let courseName = course as? String
+                if courseName == className {
+                    courses.remove(at: index)
+                    break
+                }
+                index += 1
+            }
+            
+            self.ref.child("users").child(self.user!.uid).setValue(["courses": courses])
+            print("Removed: \(courses)")
+            
+            // Return to the home page once the class is removed.
+            self.performSegue(withIdentifier: self.leaveClassSegueIdentifier, sender: nil)
+            
+        }) { (error) in
+            print(error.localizedDescription)
+        }
     }
     
     /*func backPressed() {
