@@ -16,6 +16,8 @@ class EventScheduleViewController: UIViewController {
     @IBOutlet weak var dateTF: UITextField!
     @IBOutlet weak var timeTF: UITextField!
     
+    @IBOutlet weak var button: UIButton!
+    
     /* Initialized Variables */
     var ref: DatabaseReference!
     var classRef = "ERROR - NO CLASSREF"
@@ -57,6 +59,7 @@ class EventScheduleViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        button.layer.cornerRadius = 25
         UIColourScheme.instance.set(for:self)
         ref = Database.database().reference()
         

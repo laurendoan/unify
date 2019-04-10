@@ -24,6 +24,11 @@ class SettingsTableViewController: UITableViewController {
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
     }
+    
+    // Hides the navigation bar when the view appears.
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(true, animated: true)
+    }
 
     // Returns the number of sections in the table view.
     override func numberOfSections(in tableView: UITableView) -> Int {
