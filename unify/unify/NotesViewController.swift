@@ -21,9 +21,9 @@ class NotesViewController: UIViewController, UIImagePickerControllerDelegate, UI
 
     
     var className = "CS439"
+    var classId = ""
     @IBOutlet weak var noteCollectionView: UICollectionView!
     @IBOutlet var toolbar: UIToolbar!
-    @IBOutlet var navBar: UINavigationBar!
     var pics = [UIImage]()
     let noteCellIdentifier = "noteCellIdentifier"
     let viewImageSegueIdentifier = "viewImageSegueIdentifier"
@@ -39,7 +39,7 @@ class NotesViewController: UIViewController, UIImagePickerControllerDelegate, UI
         UIColourScheme.instance.set(for:self)
         // Set title of chatroom.
         self.navigationController?.isNavigationBarHidden = false
-        title = "\(className)"
+        title = "\(classId)"
         noteCollectionView.backgroundColor = UIColor(red: 230/255, green: 241/255, blue: 253/255, alpha: 1)
         
         let databaseClass = Database.database().reference().child("images").child(className)
@@ -171,8 +171,7 @@ class NotesViewController: UIViewController, UIImagePickerControllerDelegate, UI
         if segue.identifier == viewImageSegueIdentifier, let destination = segue.destination as? ViewNoteViewController {
             destination.newImage! = imageSelected
             destination.className = self.className
-        } else if segue.identifier == backToMessagesSegueIdentifier, let destination = segue.destination as? MessageViewController {
-            destination.className = self.className
+            destination.classId = classId
         }
     }
 }

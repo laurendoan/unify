@@ -16,6 +16,8 @@ class PanelViewController: UIViewController, UITableViewDelegate, UITableViewDat
 {
     //var delegate: NotesDelegate?
     var classNameRef = "ERROR - INCORRECT CLASSNAMEREF"
+    var classId = ""
+    let notesSegueIdentifier = "notesSegueIdentifier"
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //print(section)
@@ -81,6 +83,10 @@ class PanelViewController: UIViewController, UITableViewDelegate, UITableViewDat
         if segue.identifier == "scheduleToEventSegue",
             let destination = segue.destination as? EventScheduleViewController {
             destination.classRef = classNameRef
+        } else if segue.identifier == notesSegueIdentifier,
+            let destination = segue.destination as? NotesViewController {
+            destination.className = classNameRef
+            destination.classId = classId
         }
     }
 

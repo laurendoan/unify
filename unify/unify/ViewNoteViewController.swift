@@ -14,7 +14,7 @@ class ViewNoteViewController: UIViewController {
     var newImage: UIImage? = UIImage()
     var backButtonSegueIdentifier = "backButtonSegueIdentifier"
     var className = ""
-    
+    var classId = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +36,7 @@ class ViewNoteViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == backButtonSegueIdentifier, let destination = segue.destination as? NotesViewController {
             destination.className = self.className
+            destination.classId = self.classId
         }
     }
     

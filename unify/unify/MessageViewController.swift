@@ -56,6 +56,11 @@ final class MessageViewController: MessagesViewController {
         configureMessageCollectionView()
         configureMessageInputBar()
         loadMessages()
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = false
         setupPanel()
     }
     
@@ -66,6 +71,8 @@ final class MessageViewController: MessagesViewController {
         
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         panelView = storyboard.instantiateViewController(withIdentifier: "PanelViewController") as! PanelViewController
+    
+        addChild(panelView)
         panelView.view.frame = CGRect(x: self.view.frame.width/3, y: 0, width: self.view.frame.width*2/3, height: self.view.frame.height) //want it 1/3 of the way across the screen so it's coming from the right
         
         panelView.tableView.rowHeight = 40
@@ -92,7 +99,6 @@ final class MessageViewController: MessagesViewController {
         //print(panelView.muteLabel.frame)
         //print(panelView.stackView.frame)
         //print(panelView.dividerView.frame)
-
         self.view.insertSubview(panelView.view, at: 0)
         self.view.bringSubviewToFront(panelView.view)
         
@@ -100,6 +106,7 @@ final class MessageViewController: MessagesViewController {
         panelOut = false
         panelView.view.isHidden = true; //don't show it initially
         panelView.view.frame = CGRect(x: self.view.frame.width, y: panelView.view.frame.minY, width: panelView.view.frame.width, height: panelView.view.frame.height)
+        panelView.didMove(toParent: self)
         
         //notesView = storyboard.instantiateViewController(withIdentifier: "NotesViewController") as! NotesViewController
         //notesView.className = self.className
@@ -113,6 +120,8 @@ final class MessageViewController: MessagesViewController {
         //notesView.toolbar.frame = CGRect(x: 0, y: self.view.frame.height - notesView.toolbar.frame.height - self.messageInputBar.frame.height, width: 276, height: notesView.toolbar.frame.height)
         //notesView.className = classID
         //notesView.navBar.frame = CGRect(x: 0, y: (self.navigationController?.navigationBar.frame.height)!, width: notesView.navBar.frame.width, height: notesView.navBar.frame.height)
+        panelView.classNameRef = self.className
+        panelView.classId = self.classID
     }
     
     @objc func togglePanel() {
