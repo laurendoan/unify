@@ -9,7 +9,9 @@
 import UIKit
 import Firebase
 
-class HomeViewController: UIViewController, UITableViewDataSource,  UITableViewDelegate {
+class HomeViewController: UIViewController, UITableViewDataSource,  UITableViewDelegate, MessageProtocol {
+    
+    
     var ref: DatabaseReference!
     let user = Auth.auth().currentUser
     @IBOutlet weak var tableView: UITableView!
@@ -36,6 +38,10 @@ class HomeViewController: UIViewController, UITableViewDataSource,  UITableViewD
         
         // Retrieve courses from database, store in courses & courseTitles array.
         ref.child("users").child(user!.uid).child("courses").observe(.value, with: { (snapshot) in
+            // Reset course array.
+            self.courses = []
+            self.courseTitles = []
+            
             for i in snapshot.children.allObjects as! [DataSnapshot] {
                 // Add to courses array.
                 let identifier = i.value as? String
@@ -95,5 +101,11 @@ class HomeViewController: UIViewController, UITableViewDataSource,  UITableViewD
             destination.className = classClicked
             destination.classID = classClickedID
         }
+    }
+    
+    func reload(newCourses: [String]) {
+        courses = newCourses
+        print("Course: \(courses)")
+        tableView.reloadData()
     }
 }

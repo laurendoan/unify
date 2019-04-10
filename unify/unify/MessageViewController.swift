@@ -12,6 +12,10 @@ import MessageKit
 import MessageInputBar
 import Firebase
 
+protocol MessageProtocol {
+    func reload(newCourses: [String])
+}
+
 final class MessageViewController: MessagesViewController, MembersDelegate, LeaveClassProtocol {
 
    // sets style for status bar
@@ -37,6 +41,7 @@ final class MessageViewController: MessagesViewController, MembersDelegate, Leav
     var ref = Database.database().reference()
     let user = Auth.auth().currentUser // Current user.
     let leaveClassSegueIdentifier = "leaveClassSegueIdentifier"
+    var messageDelegate: MessageProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -186,11 +191,16 @@ final class MessageViewController: MessagesViewController, MembersDelegate, Leav
                 index += 1
             }
             
-            self.ref.child("users").child(self.user!.uid).setValue(["courses": courses])
+            self.ref.child("users/\(self.user!.uid)/courses").setValue(courses)
             print("Removed: \(courses)")
             
             // Return to the home page once the class is removed.
-            self.performSegue(withIdentifier: self.leaveClassSegueIdentifier, sender: nil)
+//            self.performSegue(withIdentifier: self.leaveClassSegueIdentifier, sender: nil)
+            
+            if let navController = self.navigationController {
+                self.messageDelegate?.reload(newCourses: courses as! [String])
+                navController.popViewController(animated: true)
+            }
             
         }) { (error) in
             print(error.localizedDescription)
