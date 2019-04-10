@@ -1520,7 +1520,7 @@
             <objects>
                 <viewController storyboardIdentifier="MembersViewController" id="JUQ-j0-ziA" customClass="MembersViewController" customModule="unify" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="h8g-s1-NmU">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Members" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xh9-GB-a83">
@@ -1543,7 +1543,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="memberName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sE2-qC-iFM">
-                                                    <rect key="frame" x="20" y="11" width="109" height="21"/>
+                                                    <rect key="frame" x="20" y="11" width="271" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -1568,14 +1568,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KAC-t8-OTf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7960.8695652173919" y="447.99107142857139"/>
+            <point key="canvasLocation" x="7959.375" y="447.88732394366195"/>
         </scene>
     </scenes>
     <resources>
-        <image name="icons8-calendar-17-50" width="15" height="15"/>
-        <image name="icons8-exit-50" width="156.52174377441406" height="156.52174377441406"/>
-        <image name="icons8-home-page-50" width="15" height="15"/>
-        <image name="icons8-settings-50" width="15" height="15"/>
+        <image name="icons8-calendar-17-50" width="20" height="20"/>
+        <image name="icons8-exit-50" width="50" height="50"/>
+        <image name="icons8-home-page-50" width="20" height="20"/>
+        <image name="icons8-settings-50" width="20" height="20"/>
         <image name="inf" width="600" height="224"/>
         <image name="logo" width="589" height="600"/>
         <image name="unifylogo" width="600" height="331"/>

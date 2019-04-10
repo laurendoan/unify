@@ -70,11 +70,15 @@ class AddClassViewController: UIViewController {
                     if snapshot.hasChild(course) {
                         courses.append(course)
                         self.ref.child("users/\(userID!)/courses").setValue(courses)
-                        self.ref.child("courses").child(course).observeSingleEvent(of: .value, with: { (snapshot) in
+                        //Also add user to course's list, need display name first
+                        self.ref.child("users/\(userID!)").observeSingleEvent(of: .value, with: { (snapshot) in
                             let value = snapshot.value as? NSDictionary
-                            var members = value?["members"] as? Array ?? []
-                            members.append(userID!)
-                            self.ref.child("courses/\(course)/members").setValue(members)
+                            let displayName = value!["displayName"]
+                            self.ref.child("courses").child(course).observeSingleEvent(of: .value, with: { (snapshot) in                            let value = snapshot.value as? NSDictionary
+                                var members = value?["members"] as? Array ?? []
+                                members.append(displayName)
+                                self.ref.child("courses/\(course)/members").setValue(members)
+                            })
                         })
                         self.performSegue(withIdentifier: "addClassSegueIdentifier", sender: self)
                     } else {

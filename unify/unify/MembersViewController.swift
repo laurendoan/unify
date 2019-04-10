@@ -23,17 +23,7 @@ class MembersViewController: UIViewController, UITableViewDelegate, UITableViewD
         tableView.dataSource = self
         tableView.delegate = self
         
-        
-        // Do any additional setup after loading the view.
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         var ref = Database.database().reference()
-        //var members:[String] = []
         print("Class: ",className)
         ref.child("courses").observeSingleEvent(of: .value, with: { (snapshot) in
             let value = snapshot.value as? NSDictionary
@@ -45,39 +35,28 @@ class MembersViewController: UIViewController, UITableViewDelegate, UITableViewD
                 //print("val: ", val)
                 print(mems.count)
                 self.count = mems.count
+                self.members = mems
+                self.tableView.reloadData() //Without this, the tableView won't have the correct data. Since this is an async call, it needs this to tell the TableView that data has been added.
             }
-
-            //members = value?["members"] as? Array ?? []
-            //print(members.count)
-            //ref.child("courses/\(self.className)/members").setValue(members)
+            
         })
-        print("Count: ", count)
-        return count
+        // Do any additional setup after loading the view.
+    }
+    
+    /*override func viewDidAppear(_ animated: Bool) {
+        
+    }*/
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return members.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //return MembersTableViewCell
-        let ref = Database.database().reference()
-        //var members:[String] = []
-        var name = ""
-        //print("Class: ",className)
-        ref.child("courses").observeSingleEvent(of: .value, with: { (snapshot) in
-            let value = snapshot.value as? NSDictionary
-            let classValues = value![self.className]! as? NSDictionary
-            //print(classValues)
-            if let val = classValues!["members"]{
-                // now val is not nil and the Optional has been unwrapped, so use it
-                var mems = val as! [String]
-                //print("val: ", val)
-                //print(mems.count)
-                name = mems[indexPath.row]
-            }
-            self.tableView.reloadData()
-        })
-        
+
         let cell:MembersTableViewCell = tableView.dequeueReusableCell(withIdentifier: "membersCellIdentifier", for: indexPath as IndexPath) as! MembersTableViewCell
         
-        cell.memberName.text = name
+        cell.memberName.text = members[indexPath.row]
         print("Name: ", cell.memberName.text)
         return cell
     }

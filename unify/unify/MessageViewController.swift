@@ -20,7 +20,6 @@ final class MessageViewController: MessagesViewController, MembersDelegate, Leav
     }
     
     var panelView = PanelViewController()
-    //var notesView = NotesViewController()
     var membersView = MembersViewController()
     var panelOut = false
     var panelState = -1 //-1: inside, 0: standard, 1: members
@@ -71,6 +70,9 @@ final class MessageViewController: MessagesViewController, MembersDelegate, Leav
     }
     
     func setupPanel() {
+        //Currently, two things can be viewed in panel view: the standard panel class info page, and the members page.
+        //At the start, these are both instantiated and placed with their left edges to the far right of the screen.
+        
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "=", style: .plain, target: self, action: #selector(togglePanel)) //first create a button for the panel
         
         self.navigationItem.rightBarButtonItem?.image = UIImage(named: "icons8-menu-26.png")
@@ -94,16 +96,14 @@ final class MessageViewController: MessagesViewController, MembersDelegate, Leav
         panelView.didMove(toParent: self)
         
         membersView = storyboard.instantiateViewController(withIdentifier: "MembersViewController") as! MembersViewController
-        //notesView.className = self.className
-        //notesView.delegate = self
         membersView.view.frame = CGRect(x: self.view.frame.width/3, y: 50, width: self.view.frame.width*2/3, height: self.view.frame.height) //want it 1/3 of the way across the screen so it's coming from the right
         
         self.view.insertSubview(membersView.view, at: 0)
         self.view.bringSubviewToFront(panelView.view)
         membersView.view.frame = CGRect(x: self.view.frame.width, y: membersView.view.frame.minY, width: membersView.view.frame.width, height: membersView.view.frame.height)
+        //Arrange its components as well: the label and the tableView
         membersView.membersLabel.frame = CGRect(x: panelView.view.frame.width/2 - membersView.membersLabel.frame.width/2, y: 50, width: membersView.membersLabel.frame.width, height: membersView.membersLabel.frame.height)
         membersView.tableView.frame = CGRect(x: 0, y: 100, width: 276, height:  membersView.tableView.frame.height)
-        print("Setting members view class name to: ", self.className)
         membersView.className = self.className
 
         panelView.classNameRef = self.className
@@ -120,16 +120,14 @@ final class MessageViewController: MessagesViewController, MembersDelegate, Leav
                 panelOut = true
                 panelState = 0
                 UIView.animate(withDuration: 0.3, animations: {
-                    //self.panelView.view.alpha = 1
                     self.panelView.view.frame = CGRect(x: self.view.frame.width/3, y: self.panelView.view.frame.minY, width: self.panelView.view.frame.width, height: self.panelView.view.frame.height)
                 }, completion:  nil)
             }
         }
         else {
-            if(panelState == 0) {
+            if(panelState == 0) { //normal panel is out, slide it back
                 self.membersView.view.frame = CGRect(x: self.view.frame.width, y: self.membersView.view.frame.minY, width: self.membersView.view.frame.width, height: self.membersView.view.frame.height) //move panel back even though it's invisible
                 UIView.animate(withDuration: 0.3, animations: {
-                    //self.panelView.view.alpha = 0
                     self.panelView.view.frame = CGRect(x: self.view.frame.width, y: self.panelView.view.frame.minY, width: self.panelView.view.frame.width, height: self.panelView.view.frame.height)
                     
                 }, completion:  {
@@ -139,9 +137,9 @@ final class MessageViewController: MessagesViewController, MembersDelegate, Leav
                     self.panelState = -1
                 })
             }
-            else if(panelState == 1){
+            else if(panelState == 1){ //members view is out, slide it back but hide panel as well and move it back
                 self.panelView.view.frame = CGRect(x: self.view.frame.width, y: self.panelView.view.frame.minY, width: self.panelView.view.frame.width, height: self.panelView.view.frame.height) //move panel back even though it's invisible
-                UIView.animate(withDuration: 0.3, animations: {
+                UIView.animate(withDuration: 0.3, animations: { //only thing changing is the x value so it moves across the screen
                     //self.panelView.view.alpha = 0
                     self.membersView.view.frame = CGRect(x: self.view.frame.width, y: self.membersView.view.frame.minY, width: self.membersView.view.frame.width, height: self.membersView.view.frame.height)
                     
@@ -154,25 +152,14 @@ final class MessageViewController: MessagesViewController, MembersDelegate, Leav
             }
         }
         
-        //panelView.view.isHidden = !panelView.view.isHidden //if they hit the button, just do the opposite of what it's currently doing
-        //below code shows panel above navigation bar, but can't click away to hide panel
-        /*if(panelView.view.isHidden == false) {
-         self.navigationController!.navigationBar.layer.zPosition = -1;
-         }
-         else {
-         self.navigationController!.navigationBar.layer.zPosition = 0;
-         }*/
-        
     }
 
-    func membersPressed() {
-        print("Members pressed")
+    func membersPressed() { //when the members button is pressed in the side panel
         panelView.view.isHidden = true
-        membersView.view.isHidden = false
+        membersView.view.isHidden = false //show correct view
         self.membersView.view.frame = CGRect(x: self.view.frame.width/3, y: self.membersView.view.frame.minY, width: self.membersView.view.frame.width, height: self.membersView.view.frame.height)
-        self.view.bringSubviewToFront(membersView.view)
-        panelState = 1
-        //notesView.className = self.className
+        self.view.bringSubviewToFront(membersView.view) //bring it to front
+        panelState = 1 //update state so we know it's out
     }
     
     // Removes the user from the given class.
