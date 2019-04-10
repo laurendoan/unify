@@ -1238,7 +1238,7 @@
                                                 <color key="textColor" red="0.89510935540000003" green="0.56985825300000004" blue="0.5097833276" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ex: 12:00am - 11:59pm" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Eo-6G-A9o">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="HH:MMam/pm (Ex: 01:00am)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Eo-6G-A9o">
                                                 <rect key="frame" x="0.0" y="36" width="364" height="48"/>
                                                 <color key="backgroundColor" red="0.89516109228134155" green="0.94824951887130737" blue="0.98824256658554077" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="textColor"/>
@@ -1261,7 +1261,7 @@
                                                 <color key="textColor" red="0.89510935540000003" green="0.56985825300000004" blue="0.5097833276" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ex: 12:00am - 11:59pm" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pvg-wm-62W">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="HH:MMam/pm (Ex: 01:00am)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pvg-wm-62W">
                                                 <rect key="frame" x="0.0" y="36" width="364" height="48"/>
                                                 <color key="backgroundColor" red="0.89516109229999996" green="0.94824951889999998" blue="0.98824256659999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="textColor"/>
