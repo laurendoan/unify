@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3Pm-UF-PCa">
-    <device id="retina6_1" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,11 +15,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="unify" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unifylogo" translatesAutoresizingMaskIntoConstraints="NO" id="EPR-MZ-bpI">
-                                <rect key="frame" x="18" y="346.5" width="378" height="203"/>
+                                <rect key="frame" x="-29" y="182.5" width="378" height="203"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="378" id="2Rm-fr-42a"/>
                                     <constraint firstAttribute="width" constant="378" id="3xP-Jo-NtX"/>
@@ -27,7 +27,7 @@
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="inf" translatesAutoresizingMaskIntoConstraints="NO" id="IYh-u7-xpM">
-                                <rect key="frame" x="225" y="476" width="23" height="12"/>
+                                <rect key="frame" x="178" y="312" width="23" height="12"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="12" id="0mS-TI-p2y"/>
                                     <constraint firstAttribute="width" constant="23" id="xEb-0C-udD"/>
@@ -63,11 +63,11 @@
             <objects>
                 <viewController storyboardIdentifier="loginVCIdentifier" id="dsY-OT-WZX" customClass="LoginViewController" customModule="unify" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ldV-9l-RT8">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fyu-QY-Ad3">
-                                <rect key="frame" x="112" y="572" width="190" height="55"/>
+                                <rect key="frame" x="65" y="504" width="190" height="55"/>
                                 <color key="backgroundColor" red="0.89508980512619019" green="0.55798077583312988" blue="0.50586259365081787" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="0Ck-WC-Po6"/>
@@ -82,7 +82,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Email:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F9v-fc-nKM">
-                                <rect key="frame" x="20" y="376" width="374" height="50"/>
+                                <rect key="frame" x="20" y="308" width="280" height="50"/>
                                 <color key="backgroundColor" red="0.902957499" green="0.94418281319999997" blue="0.99216490980000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Fqg-y8-zZg"/>
@@ -92,7 +92,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Password:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AvY-4h-fo8">
-                                <rect key="frame" x="20" y="451" width="374" height="50"/>
+                                <rect key="frame" x="20" y="383" width="280" height="50"/>
                                 <color key="backgroundColor" red="0.902957499" green="0.94418281319999997" blue="0.99216490980000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="g1M-x6-cuN"/>
@@ -102,21 +102,21 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="7JX-bK-pjx">
-                                <rect key="frame" x="132" y="154" width="150" height="150"/>
+                                <rect key="frame" x="85" y="86" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="F7z-bd-uIE"/>
                                     <constraint firstAttribute="height" constant="150" id="sAb-Yy-Enz"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New User?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xZ0-fG-KUy">
-                                <rect key="frame" x="142" y="782" width="80" height="20"/>
+                                <rect key="frame" x="48" y="488" width="80" height="20"/>
                                 <color key="backgroundColor" red="0.9029574990272522" green="0.94418281316757202" blue="0.99216490983963013" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="14"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MJx-ri-PqG">
-                                <rect key="frame" x="230" y="771" width="83" height="40"/>
+                                <rect key="frame" x="136" y="477" width="83" height="40"/>
                                 <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="20"/>
                                 <state key="normal" title="Sign Up">
                                     <color key="titleColor" red="0.8911724687" green="0.55803936720000002" blue="0.50194042920000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -163,17 +163,17 @@
             <objects>
                 <viewController id="ztd-6B-b43" customClass="SignupViewController" customModule="unify" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5rT-Pr-aku">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create your account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eAQ-8q-Ohh">
-                                <rect key="frame" x="64.5" y="196" width="285.5" height="38"/>
+                                <rect key="frame" x="17.5" y="32" width="285" height="38"/>
                                 <fontDescription key="fontDescription" name="GujaratiSangamMN-Bold" family="Gujarati Sangam MN" pointSize="27"/>
                                 <color key="textColor" red="0.89117246866226196" green="0.55803936719894409" blue="0.50194042921066284" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Email:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eBs-aB-XbD">
-                                <rect key="frame" x="20" y="423" width="374" height="50"/>
+                                <rect key="frame" x="20" y="259" width="280" height="50"/>
                                 <color key="backgroundColor" red="0.9029574990272522" green="0.94418281316757202" blue="0.99216490983963013" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="6fs-b4-8lh"/>
@@ -183,7 +183,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Password:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qUl-WV-utO">
-                                <rect key="frame" x="20" y="490" width="374" height="50"/>
+                                <rect key="frame" x="20" y="326" width="280" height="50"/>
                                 <color key="backgroundColor" red="0.9029574990272522" green="0.94418281316757202" blue="0.99216490983963013" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="3vD-mg-QK1"/>
@@ -193,7 +193,7 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Confirm Password:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hQA-oH-Z5e">
-                                <rect key="frame" x="20" y="556" width="374" height="50"/>
+                                <rect key="frame" x="20" y="392" width="280" height="50"/>
                                 <color key="backgroundColor" red="0.9029574990272522" green="0.94418281316757202" blue="0.99216490983963013" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="6o8-Rj-eeu"/>
@@ -203,7 +203,7 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="First name:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tec-94-T9z">
-                                <rect key="frame" x="20" y="293" width="374" height="50"/>
+                                <rect key="frame" x="20" y="129" width="280" height="50"/>
                                 <color key="backgroundColor" red="0.9029574990272522" green="0.94418281316757202" blue="0.99216490983963013" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="8KZ-wa-hC3"/>
@@ -213,7 +213,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Last name:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NLc-Be-tnF">
-                                <rect key="frame" x="20" y="358" width="374" height="50"/>
+                                <rect key="frame" x="20" y="194" width="280" height="50"/>
                                 <color key="backgroundColor" red="0.9029574990272522" green="0.94418281316757202" blue="0.99216490983963013" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="R4N-He-FLa"/>
@@ -223,7 +223,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hN9-Ly-pK8">
-                                <rect key="frame" x="112" y="727" width="190" height="55"/>
+                                <rect key="frame" x="65" y="433" width="190" height="55"/>
                                 <color key="backgroundColor" red="0.89508980510000002" green="0.55798077580000005" blue="0.50586259369999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="190" id="KDE-4O-0Mz"/>
@@ -282,30 +282,30 @@
             <objects>
                 <viewController id="qw1-rd-HSD" customClass="CalendarViewController" customModule="unify" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1Bz-mS-3ri">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calendar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FUJ-1z-ICx">
-                                <rect key="frame" x="20" y="88" width="148" height="42"/>
+                                <rect key="frame" x="20" y="20" width="148" height="42"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
                                 <color key="textColor" red="0.89117246866226196" green="0.55803936719894409" blue="0.50194042921066284" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="aUQ-4w-Xxp">
-                                <rect key="frame" x="0.0" y="138" width="414" height="380"/>
+                                <rect key="frame" x="0.0" y="70" width="320" height="380"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Xe9-wW-ue5">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="79"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="79"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Month" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IR6-GO-6Ta">
-                                                <rect key="frame" x="161.5" y="0.0" width="91" height="49.5"/>
+                                                <rect key="frame" x="114.5" y="0.0" width="91" height="49.5"/>
                                                 <color key="backgroundColor" red="0.90196078430000004" green="0.94509803920000002" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" name="GujaratiSangamMN-Bold" family="Gujarati Sangam MN" pointSize="27"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Year" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A9B-Ma-Kih">
-                                                <rect key="frame" x="181.5" y="49.5" width="51.5" height="29.5"/>
+                                                <rect key="frame" x="134.5" y="49.5" width="51.5" height="29.5"/>
                                                 <color key="backgroundColor" red="0.90196078430000004" green="0.94509803920000002" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="21"/>
                                                 <nil key="textColor"/>
@@ -321,52 +321,52 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="aiw-O5-pIK">
-                                        <rect key="frame" x="0.0" y="79" width="414" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="79" width="320" height="20.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sun" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ay8-A6-zE7">
-                                                <rect key="frame" x="0.0" y="0.0" width="59" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="45.5" height="20.5"/>
                                                 <color key="backgroundColor" red="0.90196078430000004" green="0.94509803920000002" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4V3-tT-rJD">
-                                                <rect key="frame" x="59" y="0.0" width="59.5" height="20.5"/>
+                                                <rect key="frame" x="45.5" y="0.0" width="46" height="20.5"/>
                                                 <color key="backgroundColor" red="0.90196078430000004" green="0.94509803920000002" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tue" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dLy-f9-zBg">
-                                                <rect key="frame" x="118.5" y="0.0" width="59" height="20.5"/>
+                                                <rect key="frame" x="91.5" y="0.0" width="45.5" height="20.5"/>
                                                 <color key="backgroundColor" red="0.90196078430000004" green="0.94509803920000002" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MKX-35-OCb">
-                                                <rect key="frame" x="177.5" y="0.0" width="59" height="20.5"/>
+                                                <rect key="frame" x="137" y="0.0" width="46" height="20.5"/>
                                                 <color key="backgroundColor" red="0.90196078430000004" green="0.94509803920000002" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9T4-dR-E9n">
-                                                <rect key="frame" x="236.5" y="0.0" width="59" height="20.5"/>
+                                                <rect key="frame" x="183" y="0.0" width="45.5" height="20.5"/>
                                                 <color key="backgroundColor" red="0.90196078430000004" green="0.94509803920000002" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fri" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e8z-0y-V4a">
-                                                <rect key="frame" x="295.5" y="0.0" width="59.5" height="20.5"/>
+                                                <rect key="frame" x="228.5" y="0.0" width="46" height="20.5"/>
                                                 <color key="backgroundColor" red="0.90196078430000004" green="0.94509803920000002" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tQ1-JD-2Ey">
-                                                <rect key="frame" x="355" y="0.0" width="59" height="20.5"/>
+                                                <rect key="frame" x="274.5" y="0.0" width="45.5" height="20.5"/>
                                                 <color key="backgroundColor" red="0.90196078430000004" green="0.94509803920000002" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -379,7 +379,7 @@
                                         </constraints>
                                     </stackView>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rd4-oI-eyR" customClass="JTAppleCalendarView" customModule="JTAppleCalendar">
-                                        <rect key="frame" x="0.0" y="99.5" width="414" height="256.5"/>
+                                        <rect key="frame" x="0.0" y="99.5" width="320" height="256.5"/>
                                         <color key="backgroundColor" red="0.90196078430000004" green="0.94509803920000002" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="1gN-Gm-B0j">
                                             <size key="itemSize" width="101" height="101"/>
@@ -430,7 +430,7 @@
                                         </connections>
                                     </collectionView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cDM-iC-xA6">
-                                        <rect key="frame" x="0.0" y="356" width="414" height="24"/>
+                                        <rect key="frame" x="0.0" y="356" width="320" height="24"/>
                                         <color key="backgroundColor" red="0.90196078430000004" green="0.94509803920000002" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -444,18 +444,18 @@
                                 </constraints>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RgI-jR-ChT">
-                                <rect key="frame" x="0.0" y="528" width="414" height="285"/>
+                                <rect key="frame" x="0.0" y="460" width="320" height="59"/>
                                 <color key="backgroundColor" red="0.90196078431372551" green="0.94509803921568625" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="calendarTableViewIdentifier" rowHeight="100" id="80b-2H-irF" customClass="CalendarTableViewCell" customModule="unify" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="100"/>
+                                        <rect key="frame" x="0.0" y="28" width="320" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="80b-2H-irF" id="RS0-TD-dRB">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="99.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="UdN-s3-qu6">
-                                                    <rect key="frame" x="28" y="9" width="95" height="81.5"/>
+                                                    <rect key="frame" x="23" y="9" width="95" height="81.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UxO-Na-1pZ">
                                                             <rect key="frame" x="0.0" y="0.0" width="46" height="22.5"/>
@@ -530,11 +530,11 @@
             <objects>
                 <viewController id="9ii-rc-XoX" customClass="AddClassViewController" customModule="unify" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jDy-le-EAU">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Add a class" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zAA-yg-g1v">
-                                <rect key="frame" x="20" y="44" width="218" height="49"/>
+                                <rect key="frame" x="20" y="20" width="218" height="49"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="218" id="f23-L0-KN6"/>
                                 </constraints>
@@ -542,32 +542,13 @@
                                 <color key="textColor" red="0.8911724687" green="0.55803936720000002" blue="0.50194042920000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Instructor:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mj2-Qk-cKG">
-                                <rect key="frame" x="20" y="320" width="132" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="25"/>
-                                <color key="textColor" red="0.89508980510000002" green="0.55798077580000005" blue="0.50586259369999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="i.e. CS 331" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vje-Ci-Q0f">
-                                <rect key="frame" x="20" y="234" width="374" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.9029574990272522" green="0.94418281316757202" blue="0.99216490983963013" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Course Number:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KN5-5L-Jur">
-                                <rect key="frame" x="20" y="183" width="213" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="25"/>
-                                <color key="textColor" red="0.89508980510000002" green="0.55798077580000005" blue="0.50586259369999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dwA-T3-q65">
-                                <rect key="frame" x="139" y="716" width="130" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dwA-T3-q65">
+                                <rect key="frame" x="85" y="411" width="150" height="54"/>
                                 <color key="backgroundColor" red="0.8911724687" green="0.55803936720000002" blue="0.50194042920000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="OXp-Ub-Mve"/>
+                                    <constraint firstAttribute="width" constant="150" id="vl4-8f-aU3"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="27"/>
                                 <state key="normal" title="Add">
                                     <color key="titleColor" red="0.902957499" green="0.94418281319999997" blue="0.99216490980000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -576,9 +557,27 @@
                                     <action selector="addButton:" destination="9ii-rc-XoX" eventType="touchUpInside" id="98E-wE-hQA"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="i.e. NORMAN A" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Apv-vp-DO8">
-                                <rect key="frame" x="20" y="385" width="374" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instructor:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mj2-Qk-cKG">
+                                <rect key="frame" x="20" y="259" width="132" height="35"/>
+                                <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="25"/>
+                                <color key="textColor" red="0.89508980510000002" green="0.55798077580000005" blue="0.50586259369999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="i.e. CS 331" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vje-Ci-Q0f">
+                                <rect key="frame" x="20" y="173" width="280" height="40"/>
+                                <color key="backgroundColor" red="0.9029574990272522" green="0.94418281316757202" blue="0.99216490983963013" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Course Number:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KN5-5L-Jur">
+                                <rect key="frame" x="20" y="122" width="213" height="35"/>
+                                <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="25"/>
+                                <color key="textColor" red="0.89508980510000002" green="0.55798077580000005" blue="0.50586259369999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="i.e. NORMAN A" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Apv-vp-DO8">
+                                <rect key="frame" x="20" y="324" width="280" height="40"/>
                                 <color key="backgroundColor" red="0.9029574990272522" green="0.94418281316757202" blue="0.99216490983963013" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -587,7 +586,20 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="vje-Ci-Q0f" firstAttribute="top" secondItem="KN5-5L-Jur" secondAttribute="bottom" constant="16" id="1kz-zK-udl"/>
+                            <constraint firstItem="Apv-vp-DO8" firstAttribute="leading" secondItem="3qk-DA-vVC" secondAttribute="leading" constant="20" id="1p6-ZN-Sg1"/>
                             <constraint firstItem="zAA-yg-g1v" firstAttribute="top" secondItem="3qk-DA-vVC" secondAttribute="top" id="4ut-8e-1th"/>
+                            <constraint firstItem="3qk-DA-vVC" firstAttribute="trailing" secondItem="Apv-vp-DO8" secondAttribute="trailing" constant="20" id="8v4-TD-FMt"/>
+                            <constraint firstItem="Mj2-Qk-cKG" firstAttribute="top" secondItem="vje-Ci-Q0f" secondAttribute="bottom" constant="46" id="9Oa-2I-CsS"/>
+                            <constraint firstItem="vje-Ci-Q0f" firstAttribute="leading" secondItem="3qk-DA-vVC" secondAttribute="leading" constant="20" id="Emb-pZ-x6w"/>
+                            <constraint firstItem="Apv-vp-DO8" firstAttribute="top" secondItem="Mj2-Qk-cKG" secondAttribute="bottom" constant="30" id="K2Q-Lc-0M2"/>
+                            <constraint firstItem="3qk-DA-vVC" firstAttribute="bottom" secondItem="dwA-T3-q65" secondAttribute="bottom" constant="103" id="TdJ-An-3Fh"/>
+                            <constraint firstItem="vje-Ci-Q0f" firstAttribute="centerX" secondItem="jDy-le-EAU" secondAttribute="centerX" id="W1m-Eq-p6J"/>
+                            <constraint firstItem="dwA-T3-q65" firstAttribute="centerX" secondItem="jDy-le-EAU" secondAttribute="centerX" id="ZVb-oz-oai"/>
+                            <constraint firstItem="KN5-5L-Jur" firstAttribute="leading" secondItem="3qk-DA-vVC" secondAttribute="leading" constant="20" id="ePx-3a-dXD"/>
+                            <constraint firstItem="3qk-DA-vVC" firstAttribute="trailing" secondItem="vje-Ci-Q0f" secondAttribute="trailing" constant="20" id="t8u-UX-kgF"/>
+                            <constraint firstItem="KN5-5L-Jur" firstAttribute="top" secondItem="zAA-yg-g1v" secondAttribute="bottom" constant="53" id="un5-Nj-Vei"/>
+                            <constraint firstItem="Mj2-Qk-cKG" firstAttribute="leading" secondItem="3qk-DA-vVC" secondAttribute="leading" constant="20" id="xGH-6G-DfS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3qk-DA-vVC"/>
                     </view>
@@ -608,11 +620,11 @@
             <objects>
                 <tableViewController id="PGs-D4-gbo" customClass="SettingsTableViewController" customModule="unify" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="msB-jc-StD">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="   Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Scw-ZV-gzR">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" name="GujaratiSangamMN-Bold" family="Gujarati Sangam MN" pointSize="35"/>
                             <color key="textColor" red="0.94892293210000001" green="0.53954499960000002" blue="0.488080442" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -622,45 +634,53 @@
                             <tableViewSection headerTitle="Notifications" id="pYU-D5-jYN">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="cSt-2u-Xfj">
-                                        <rect key="frame" x="0.0" y="99.5" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="99.5" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cSt-2u-Xfj" id="qxL-O7-jrT">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Chat alerts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qmt-qf-UdB">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chat alerts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qmt-qf-UdB">
                                                     <rect key="frame" x="20" y="12" width="96" height="24"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vMh-Dy-tZx">
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vMh-Dy-tZx">
                                                     <rect key="frame" x="334" y="5" width="49" height="31"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </switch>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="vMh-Dy-tZx" secondAttribute="trailing" constant="33" id="2d4-6z-vhF"/>
+                                                <constraint firstItem="Qmt-qf-UdB" firstAttribute="leading" secondItem="qxL-O7-jrT" secondAttribute="leading" constant="20" id="OPL-EE-aAt"/>
+                                                <constraint firstItem="Qmt-qf-UdB" firstAttribute="top" secondItem="qxL-O7-jrT" secondAttribute="top" constant="12" id="SSt-QL-y3n"/>
+                                                <constraint firstItem="vMh-Dy-tZx" firstAttribute="top" secondItem="qxL-O7-jrT" secondAttribute="top" constant="5" id="Tm0-qa-JjC"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="vWU-WM-5vc">
-                                        <rect key="frame" x="0.0" y="143.5" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="143.5" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vWU-WM-5vc" id="ay5-wx-0L2">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Calendar updates" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6c-Es-qze">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calendar updates" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6c-Es-qze">
                                                     <rect key="frame" x="20" y="12" width="156" height="24"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="32X-lG-Vw8">
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="32X-lG-Vw8">
                                                     <rect key="frame" x="336" y="6" width="49" height="31"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </switch>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="32X-lG-Vw8" secondAttribute="trailing" constant="31" id="5rb-mo-vpo"/>
+                                                <constraint firstItem="f6c-Es-qze" firstAttribute="leading" secondItem="ay5-wx-0L2" secondAttribute="leading" constant="20" id="JGC-6R-kIN"/>
+                                                <constraint firstItem="f6c-Es-qze" firstAttribute="top" secondItem="ay5-wx-0L2" secondAttribute="top" constant="12" id="oKd-ki-7Rx"/>
+                                                <constraint firstItem="32X-lG-Vw8" firstAttribute="top" secondItem="ay5-wx-0L2" secondAttribute="top" constant="6" id="uO7-ih-600"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -668,24 +688,28 @@
                             <tableViewSection headerTitle="Display" id="Oy7-99-kbZ">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="mZn-Lh-qTF">
-                                        <rect key="frame" x="0.0" y="243.5" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="243.5" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mZn-Lh-qTF" id="nk7-nP-JAI">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dark mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l7l-9b-Od5">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dark mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l7l-9b-Od5">
                                                     <rect key="frame" x="20" y="12" width="97" height="24"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lvn-zc-Rn5">
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lvn-zc-Rn5">
                                                     <rect key="frame" x="336" y="6" width="49" height="31"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </switch>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="l7l-9b-Od5" firstAttribute="top" secondItem="nk7-nP-JAI" secondAttribute="top" constant="12" id="1iI-6P-2aV"/>
+                                                <constraint firstAttribute="trailing" secondItem="lvn-zc-Rn5" secondAttribute="trailing" constant="31" id="YvC-dP-l7U"/>
+                                                <constraint firstItem="l7l-9b-Od5" firstAttribute="leading" secondItem="nk7-nP-JAI" secondAttribute="leading" constant="20" id="eMP-Kp-alA"/>
+                                                <constraint firstItem="lvn-zc-Rn5" firstAttribute="top" secondItem="nk7-nP-JAI" secondAttribute="top" constant="6" id="fLI-Ro-S84"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -693,20 +717,23 @@
                             <tableViewSection headerTitle="Account" id="Axq-5k-aqH">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="onp-DU-zdL">
-                                        <rect key="frame" x="0.0" y="343.5" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="343.5" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="onp-DU-zdL" id="syu-YG-zoQ">
-                                            <rect key="frame" x="0.0" y="0.0" width="376" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="286" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Edit account information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="des-Hn-asL">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit account information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="des-Hn-asL">
                                                     <rect key="frame" x="20" y="12" width="216" height="24"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="des-Hn-asL" firstAttribute="top" secondItem="syu-YG-zoQ" secondAttribute="top" constant="12" id="xxY-um-wie"/>
+                                                <constraint firstItem="des-Hn-asL" firstAttribute="leading" secondItem="syu-YG-zoQ" secondAttribute="leading" constant="20" id="yvx-jz-WKh"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -714,24 +741,32 @@
                             <tableViewSection id="qeu-oB-LCo">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="5yc-bA-eDr">
-                                        <rect key="frame" x="0.0" y="423.5" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="423.5" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5yc-bA-eDr" id="p8w-zi-CK1">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sign Out" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aiI-O6-4Eh">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Out" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aiI-O6-4Eh">
                                                     <rect key="frame" x="20" y="12" width="78" height="24"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="17"/>
                                                     <color key="textColor" red="0.99955898523330688" green="0.0" blue="0.006430882029235363" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icons8-exit-50" translatesAutoresizingMaskIntoConstraints="NO" id="rKC-An-00X">
-                                                    <rect key="frame" x="95" y="15" width="12" height="14"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-exit-50" translatesAutoresizingMaskIntoConstraints="NO" id="rKC-An-00X">
+                                                    <rect key="frame" x="111" y="17" width="12" height="14"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="12" id="03L-Ig-3oj"/>
+                                                        <constraint firstAttribute="height" constant="14" id="yjK-mB-EbB"/>
+                                                    </constraints>
                                                 </imageView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="rKC-An-00X" firstAttribute="top" secondItem="p8w-zi-CK1" secondAttribute="top" constant="17" id="KnQ-SY-fl1"/>
+                                                <constraint firstItem="aiI-O6-4Eh" firstAttribute="top" secondItem="p8w-zi-CK1" secondAttribute="top" constant="12" id="enY-LO-bV7"/>
+                                                <constraint firstItem="aiI-O6-4Eh" firstAttribute="leading" secondItem="p8w-zi-CK1" secondAttribute="leading" constant="20" id="rnO-NT-QD3"/>
+                                                <constraint firstItem="rKC-An-00X" firstAttribute="leading" secondItem="aiI-O6-4Eh" secondAttribute="trailing" constant="13" id="xj7-sx-tP4"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -757,11 +792,11 @@
             <objects>
                 <viewController id="RV3-ea-3q0" customClass="EditAccountViewController" customModule="unify" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="s3s-jL-sTC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit Account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MpP-lD-lwV">
-                                <rect key="frame" x="20" y="88" width="220" height="45"/>
+                                <rect key="frame" x="20" y="20" width="220" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="220" id="6SS-8h-42G"/>
                                 </constraints>
@@ -769,23 +804,37 @@
                                 <color key="textColor" red="0.89510935544967651" green="0.56985825300216675" blue="0.50978332757949829" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rbg-It-CkH">
+                                <rect key="frame" x="65" y="442" width="190" height="60"/>
+                                <color key="backgroundColor" red="0.89510935540000003" green="0.56985825300000004" blue="0.5097833276" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="30O-T5-LCc"/>
+                                    <constraint firstAttribute="width" constant="190" id="nlM-De-AfF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="25"/>
+                                <color key="tintColor" red="0.86029630899999998" green="0.94024223090000003" blue="0.98824423549999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveButton:" destination="RV3-ea-3q0" eventType="touchUpInside" id="psh-Fp-O7H"/>
+                                </connections>
+                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="4W9-o9-eGY">
-                                <rect key="frame" x="20" y="183" width="374" height="379"/>
+                                <rect key="frame" x="20" y="101" width="280" height="327"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="QkS-Cn-y2r">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="73"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="60"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Display Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ShX-8P-P2P">
-                                                <rect key="frame" x="0.0" y="0.0" width="149" height="28"/>
-                                                <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="20"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="112" height="21"/>
+                                                <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="15"/>
                                                 <color key="textColor" red="0.89510935544967651" green="0.56985825300216675" blue="0.50978332757949829" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mUG-ZP-ShW">
-                                                <rect key="frame" x="0.0" y="33" width="374" height="40"/>
+                                                <rect key="frame" x="0.0" y="26" width="280" height="34"/>
                                                 <color key="backgroundColor" red="0.9029574990272522" green="0.94418281316757202" blue="0.99216490983963013" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
@@ -795,19 +844,19 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="eYO-BU-hyl">
-                                        <rect key="frame" x="0.0" y="102" width="374" height="73"/>
+                                        <rect key="frame" x="0.0" y="89" width="280" height="60"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rfb-l2-ShV">
-                                                <rect key="frame" x="0.0" y="0.0" width="64" height="28"/>
-                                                <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="20"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="48" height="21"/>
+                                                <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="15"/>
                                                 <color key="textColor" red="0.89510935544967651" green="0.56985825300216675" blue="0.50978332757949829" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nt8-LZ-0m6">
-                                                <rect key="frame" x="0.0" y="33" width="374" height="40"/>
+                                                <rect key="frame" x="0.0" y="26" width="280" height="34"/>
                                                 <color key="backgroundColor" red="0.90300327540000003" green="0.94410663839999998" blue="0.99608701470000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
@@ -817,19 +866,19 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="kbl-7K-o2W">
-                                        <rect key="frame" x="0.0" y="204" width="374" height="73"/>
+                                        <rect key="frame" x="0.0" y="178" width="280" height="60"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pYi-hD-7Bq">
-                                                <rect key="frame" x="0.0" y="0.0" width="105" height="28"/>
-                                                <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="20"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="79" height="21"/>
+                                                <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="15"/>
                                                 <color key="textColor" red="0.89510935544967651" green="0.56985825300216675" blue="0.50978332757949829" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mbn-hF-9b1">
-                                                <rect key="frame" x="0.0" y="33" width="374" height="40"/>
+                                                <rect key="frame" x="0.0" y="26" width="280" height="34"/>
                                                 <color key="backgroundColor" red="0.90300327540000003" green="0.94410663839999998" blue="0.99608701470000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                         </subviews>
@@ -839,19 +888,19 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Zau-2D-Cif">
-                                        <rect key="frame" x="0.0" y="306" width="374" height="73"/>
+                                        <rect key="frame" x="0.0" y="267" width="280" height="60"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm Password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BU6-4b-zOJ">
-                                                <rect key="frame" x="0.0" y="0.0" width="374" height="28"/>
-                                                <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="20"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="21"/>
+                                                <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="15"/>
                                                 <color key="textColor" red="0.89510935544967651" green="0.56985825300216675" blue="0.50978332757949829" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n6y-mQ-NY0">
-                                                <rect key="frame" x="0.0" y="33" width="374" height="40"/>
+                                                <rect key="frame" x="0.0" y="26" width="280" height="34"/>
                                                 <color key="backgroundColor" red="0.90300327540000003" green="0.94410663839999998" blue="0.99608701470000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                         </subviews>
@@ -872,30 +921,16 @@
                                     <constraint firstAttribute="trailing" secondItem="QkS-Cn-y2r" secondAttribute="trailing" id="tm3-Ty-bD7"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rbg-It-CkH">
-                                <rect key="frame" x="112" y="702" width="190" height="60"/>
-                                <color key="backgroundColor" red="0.89510935540000003" green="0.56985825300000004" blue="0.5097833276" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="30O-T5-LCc"/>
-                                    <constraint firstAttribute="width" constant="190" id="nlM-De-AfF"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="25"/>
-                                <color key="tintColor" red="0.86029630899999998" green="0.94024223090000003" blue="0.98824423549999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" title="Save"/>
-                                <connections>
-                                    <action selector="saveButton:" destination="RV3-ea-3q0" eventType="touchUpInside" id="psh-Fp-O7H"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.902957499" green="0.94418281319999997" blue="0.99216490980000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="h56-fR-x9s" firstAttribute="trailing" secondItem="4W9-o9-eGY" secondAttribute="trailing" constant="20" id="5j5-aE-Nsq"/>
                             <constraint firstItem="4W9-o9-eGY" firstAttribute="leading" secondItem="h56-fR-x9s" secondAttribute="leading" constant="20" id="7QB-FD-3aP"/>
                             <constraint firstItem="MpP-lD-lwV" firstAttribute="top" secondItem="h56-fR-x9s" secondAttribute="top" id="Pvy-Sv-GQA"/>
-                            <constraint firstItem="h56-fR-x9s" firstAttribute="bottom" secondItem="Rbg-It-CkH" secondAttribute="bottom" constant="100" id="TxM-RO-Z50"/>
                             <constraint firstItem="Rbg-It-CkH" firstAttribute="centerX" secondItem="s3s-jL-sTC" secondAttribute="centerX" id="dBi-nG-DGx"/>
-                            <constraint firstItem="QkS-Cn-y2r" firstAttribute="top" secondItem="MpP-lD-lwV" secondAttribute="bottom" constant="50" id="fCU-ME-2Ha"/>
                             <constraint firstItem="MpP-lD-lwV" firstAttribute="leading" secondItem="h56-fR-x9s" secondAttribute="leading" constant="20" id="hVw-fU-cMR"/>
+                            <constraint firstItem="h56-fR-x9s" firstAttribute="bottom" secondItem="Rbg-It-CkH" secondAttribute="bottom" constant="66" id="kGM-aL-gF4"/>
+                            <constraint firstItem="4W9-o9-eGY" firstAttribute="top" secondItem="MpP-lD-lwV" secondAttribute="bottom" constant="36" id="owp-Cy-HeA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="h56-fR-x9s"/>
                     </view>
@@ -916,25 +951,25 @@
             <objects>
                 <viewController id="nrL-UJ-u5x" customClass="HomeViewController" customModule="unify" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6YG-Gq-7bP">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uyH-NB-7xW">
-                                <rect key="frame" x="20" y="94" width="374" height="768"/>
+                                <rect key="frame" x="20" y="70" width="280" height="498"/>
                                 <color key="backgroundColor" red="0.9029574990272522" green="0.94418281316757202" blue="0.99216490983963013" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="separatorColor" red="0.89508980510000002" green="0.55798077580000005" blue="0.50586259369999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <color key="sectionIndexBackgroundColor" red="0.9029574990272522" green="0.94418281316757202" blue="0.99216490983963013" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="0.0" reuseIdentifier="textCellIdentifier" textLabel="GcW-ei-5fY" rowHeight="160" style="IBUITableViewCellStyleDefault" id="9EC-uo-0zr">
-                                        <rect key="frame" x="0.0" y="28" width="374" height="160"/>
+                                        <rect key="frame" x="0.0" y="28" width="280" height="160"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9EC-uo-0zr" id="d8D-rc-6W4">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="159.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="280" height="159.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GcW-ei-5fY">
-                                                    <rect key="frame" x="15" y="0.0" width="339" height="159.5"/>
+                                                    <rect key="frame" x="15" y="0.0" width="250" height="159.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="GujaratiSangamMN-Bold" family="Gujarati Sangam MN" pointSize="25"/>
                                                     <color key="textColor" red="0.89508980512619019" green="0.55798077583312988" blue="0.50586259365081787" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -948,13 +983,13 @@
                                 </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chats" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RJT-1l-2rM">
-                                <rect key="frame" x="20" y="44" width="108.5" height="49"/>
+                                <rect key="frame" x="20" y="20" width="108.5" height="49"/>
                                 <fontDescription key="fontDescription" name="GujaratiSangamMN-Bold" family="Gujarati Sangam MN" pointSize="35"/>
                                 <color key="textColor" red="0.89508980510000002" green="0.55798077580000005" blue="0.50586259369999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="700-0a-GvE">
-                                <rect key="frame" x="364" y="38" width="30" height="48"/>
+                                <rect key="frame" x="270" y="14" width="30" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="+"/>
                                 <connections>
@@ -990,7 +1025,7 @@
             <objects>
                 <viewController id="2NO-OY-jFv" customClass="MessageViewController" customModule="unify" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xYG-OV-hR4">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Qsb-7X-jYh"/>
@@ -1008,7 +1043,7 @@
             <objects>
                 <viewController storyboardIdentifier="PanelViewController" id="wYq-5B-9Jm" customClass="PanelViewController" customModule="unify" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OqJ-E8-bsq">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" estimatedRowHeight="-1" sectionHeaderHeight="-1" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="C45-kz-6FX">
@@ -1049,7 +1084,7 @@
                                         <rect key="frame" x="0.0" y="72" width="276" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1gY-5w-Z7l" id="biX-IJ-wMx">
-                                            <rect key="frame" x="0.0" y="0.0" width="242" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="243" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ATU-IH-EDq">
@@ -1074,7 +1109,7 @@
                                         <rect key="frame" x="0.0" y="116" width="276" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="859-sn-xhh" id="tG9-n2-JsZ">
-                                            <rect key="frame" x="0.0" y="0.0" width="242" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="243" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Notes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AET-hH-cYj">
@@ -1096,7 +1131,7 @@
                                         <rect key="frame" x="0.0" y="160" width="276" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ijg-O2-paO" id="rk7-7b-fND">
-                                            <rect key="frame" x="0.0" y="0.0" width="242" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="243" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Schedule" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ri2-MW-bCx">
@@ -1151,20 +1186,20 @@
             <objects>
                 <viewController id="ePl-W5-c24" customClass="EventScheduleViewController" customModule="unify" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qAa-xN-HvA">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Schedule" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bDZ-ah-Grw">
-                                <rect key="frame" x="122" y="64" width="170.5" height="49"/>
+                                <rect key="frame" x="75" y="40" width="170.5" height="49"/>
                                 <fontDescription key="fontDescription" name="GujaratiSangamMN-Bold" family="Gujarati Sangam MN" pointSize="35"/>
                                 <color key="textColor" red="0.89411764705882346" green="0.56862745098039214" blue="0.50980392156862742" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="eV2-9o-Qhv">
-                                <rect key="frame" x="25" y="133" width="364" height="500"/>
+                                <rect key="frame" x="25" y="109" width="270" height="500"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="5Ka-zd-syD">
-                                        <rect key="frame" x="0.0" y="0.0" width="364" height="84"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="270" height="84"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SSo-Cx-4WD">
                                                 <rect key="frame" x="0.0" y="0.0" width="134" height="28"/>
@@ -1173,7 +1208,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ex: CS439 Exam 1" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k9B-yH-5do">
-                                                <rect key="frame" x="0.0" y="36" width="364" height="48"/>
+                                                <rect key="frame" x="0.0" y="36" width="270" height="48"/>
                                                 <color key="backgroundColor" red="0.89516109228134155" green="0.94824951887130737" blue="0.98824256658554077" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="20"/>
@@ -1187,7 +1222,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="A4q-bI-sIw">
-                                        <rect key="frame" x="0.0" y="104" width="364" height="84"/>
+                                        <rect key="frame" x="0.0" y="104" width="270" height="84"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jro-mL-WO3">
                                                 <rect key="frame" x="0.0" y="0.0" width="95" height="28"/>
@@ -1196,7 +1231,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ex: UTC: 2.102A" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R1f-3h-bLb">
-                                                <rect key="frame" x="0.0" y="36" width="364" height="48"/>
+                                                <rect key="frame" x="0.0" y="36" width="270" height="48"/>
                                                 <color key="backgroundColor" red="0.89516109228134155" green="0.94824951887130737" blue="0.98824256658554077" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="20"/>
@@ -1210,7 +1245,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="aHu-Ey-luD">
-                                        <rect key="frame" x="0.0" y="208" width="364" height="84"/>
+                                        <rect key="frame" x="0.0" y="208" width="270" height="84"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pou-QC-dAk">
                                                 <rect key="frame" x="0.0" y="0.0" width="54.5" height="28"/>
@@ -1219,7 +1254,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="MM/DD/YYYY" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j6Z-i7-aYP">
-                                                <rect key="frame" x="0.0" y="36" width="364" height="48"/>
+                                                <rect key="frame" x="0.0" y="36" width="270" height="48"/>
                                                 <color key="backgroundColor" red="0.89516109228134155" green="0.94824951887130737" blue="0.98824256658554077" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="20"/>
@@ -1233,7 +1268,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="qWe-sE-NZj">
-                                        <rect key="frame" x="0.0" y="312" width="364" height="84"/>
+                                        <rect key="frame" x="0.0" y="312" width="270" height="84"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yvD-20-FFf">
                                                 <rect key="frame" x="0.0" y="0.0" width="114.5" height="28"/>
@@ -1242,7 +1277,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="HH:MMam/pm (Ex: 01:00am)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Eo-6G-A9o">
-                                                <rect key="frame" x="0.0" y="36" width="364" height="48"/>
+                                                <rect key="frame" x="0.0" y="36" width="270" height="48"/>
                                                 <color key="backgroundColor" red="0.89516109228134155" green="0.94824951887130737" blue="0.98824256658554077" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="20"/>
@@ -1256,7 +1291,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="uwU-uR-fn9">
-                                        <rect key="frame" x="0.0" y="416" width="364" height="84"/>
+                                        <rect key="frame" x="0.0" y="416" width="270" height="84"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End Time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xah-ui-Pk9">
                                                 <rect key="frame" x="0.0" y="0.0" width="106" height="28"/>
@@ -1265,7 +1300,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="HH:MMam/pm (Ex: 01:00am)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pvg-wm-62W">
-                                                <rect key="frame" x="0.0" y="36" width="364" height="48"/>
+                                                <rect key="frame" x="0.0" y="36" width="270" height="48"/>
                                                 <color key="backgroundColor" red="0.89516109229999996" green="0.94824951889999998" blue="0.98824256659999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="20"/>
@@ -1281,7 +1316,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3FN-g8-lah">
-                                <rect key="frame" x="112" y="747" width="190" height="55"/>
+                                <rect key="frame" x="65" y="453" width="190" height="55"/>
                                 <color key="backgroundColor" red="0.89510935544967651" green="0.56985825300216675" blue="0.50978332757949829" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="190" id="daX-hO-dgd"/>
@@ -1327,11 +1362,11 @@
             <objects>
                 <viewController storyboardIdentifier="NotesViewController" id="d5N-Yh-7KA" customClass="NotesViewController" customModule="unify" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kjF-aC-6Ae">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="J6q-rN-bT3">
-                                <rect key="frame" x="20" y="88" width="374" height="725"/>
+                                <rect key="frame" x="20" y="64" width="280" height="460"/>
                                 <color key="backgroundColor" red="0.88235294117647056" green="0.94901960784313721" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qL1-BT-72f">
                                     <size key="itemSize" width="85" height="85"/>
@@ -1360,7 +1395,7 @@
                                 </cells>
                             </collectionView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="foK-ix-T1p">
-                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                                 <items>
                                     <barButtonItem title="Upload Note" width="216" id="DZr-Ym-rBo">
                                         <connections>
@@ -1404,11 +1439,11 @@
             <objects>
                 <viewController id="YyX-Iu-3Ck" customClass="ViewNoteViewController" customModule="unify" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2lc-bs-XYp">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LuV-Vq-P01">
-                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                                 <items>
                                     <barButtonItem title="Save Note" width="615.5" id="cQn-4E-hEg">
                                         <connections>
@@ -1418,7 +1453,7 @@
                                 </items>
                             </toolbar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ohs-vc-ncn">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="460"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.88235294119999996" green="0.94901960780000005" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1448,7 +1483,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3Pm-UF-PCa" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="n6k-Ti-Qt2">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1546,8 +1581,8 @@
         <image name="unifylogo" width="600" height="331"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Ee4-If-VZS"/>
+        <segue reference="PHN-N8-s4K"/>
         <segue reference="foa-id-vB9"/>
-        <segue reference="cXk-L4-t7L"/>
+        <segue reference="PXg-qo-ebX"/>
     </inferredMetricsTieBreakers>
 </document>
