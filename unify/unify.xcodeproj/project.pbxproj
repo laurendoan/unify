@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01D32ABD225E507600661683 /* MembersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D32ABC225E507600661683 /* MembersViewController.swift */; };
 		01FA81F3225BB797006CAE18 /* MuteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FA81F2225BB797006CAE18 /* MuteTableViewCell.swift */; };
 		01FA81F5225BBEEF006CAE18 /* MembersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FA81F4225BBEEF006CAE18 /* MembersTableViewCell.swift */; };
 		01FB02CB225AC111009288A8 /* PanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FB02CA225AC111009288A8 /* PanelViewController.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01D32ABC225E507600661683 /* MembersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MembersViewController.swift; sourceTree = "<group>"; };
 		01FA81F2225BB797006CAE18 /* MuteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuteTableViewCell.swift; sourceTree = "<group>"; };
 		01FA81F4225BBEEF006CAE18 /* MembersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembersTableViewCell.swift; sourceTree = "<group>"; };
 		01FB02CA225AC111009288A8 /* PanelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanelViewController.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 				01FA81F2225BB797006CAE18 /* MuteTableViewCell.swift */,
 				01FA81F4225BBEEF006CAE18 /* MembersTableViewCell.swift */,
 				ED2E4692225C62DD00B67569 /* EventScheduleViewController.swift */,
+				01D32ABC225E507600661683 /* MembersViewController.swift */,
 			);
 			path = unify;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				982ACE42224A95F800DE62AD /* SettingsViewController.swift in Sources */,
 				E254C9DF22487C9400F28F30 /* LoginViewController.swift in Sources */,
 				E254C9CB22487B0800F28F30 /* ViewController.swift in Sources */,
+				01D32ABD225E507600661683 /* MembersViewController.swift in Sources */,
 				98EDC29022594EA500B05494 /* EditAccountViewController.swift in Sources */,
 				982ACE48224AA0C700DE62AD /* CalendarViewController.swift in Sources */,
 				ED8C0DD522599BCB00B3CE13 /* Message.swift in Sources */,
