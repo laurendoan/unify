@@ -9,12 +9,12 @@
 import UIKit
 import Firebase
 
-class HomeViewController: UIViewController, UITableViewDataSource,  UITableViewDelegate, MessageProtocol {
-    
-    
-    var ref: DatabaseReference!
-    let user = Auth.auth().currentUser
+class HomeViewController: UIViewController, UITableViewDataSource,  UITableViewDelegate {
     @IBOutlet weak var tableView: UITableView!
+    
+    // Database reference.
+    var ref: DatabaseReference! = Database.database().reference()
+    let user = Auth.auth().currentUser // Current user.
     
     var courses: [String] = [] // User's list of courses.
     var courseTitles: [String] = [] // Used to display in table view.
@@ -27,18 +27,16 @@ class HomeViewController: UIViewController, UITableViewDataSource,  UITableViewD
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         tableView.delegate = self
         tableView.dataSource = self
         
         // Sets the background color.
         UIColourScheme.instance.set(for:self)
         
-        // Database reference.
-        ref = Database.database().reference()
-        
         // Retrieve courses from database, store in courses & courseTitles array.
         ref.child("users").child(user!.uid).child("courses").observe(.value, with: { (snapshot) in
-            // Reset course array.
+            // Reset course arrays.
             self.courses = []
             self.courseTitles = []
             
@@ -55,6 +53,11 @@ class HomeViewController: UIViewController, UITableViewDataSource,  UITableViewD
                 }) { (error) in
                     print(error.localizedDescription)
                 }
+            }
+            
+            // If user has no courses, reload table to show empty table.
+            if self.courses == [] {
+                self.tableView.reloadData()
             }
         }) { (error) in
             print(error.localizedDescription)
@@ -101,11 +104,5 @@ class HomeViewController: UIViewController, UITableViewDataSource,  UITableViewD
             destination.className = classClicked
             destination.classID = classClickedID
         }
-    }
-    
-    func reload(newCourses: [String]) {
-        courses = newCourses
-        print("Course: \(courses)")
-        tableView.reloadData()
     }
 }

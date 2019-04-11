@@ -17,8 +17,14 @@ protocol LeaveClassProtocol {
     func leaveClass(className: String)
 }
 
-class PanelViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
-{
+class PanelViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var dividerView: UIView!
+    @IBOutlet weak var stackView: UIStackView!
+    @IBOutlet weak var muteLabel: UILabel!
+    @IBOutlet weak var view1: UIView!
+    @IBOutlet weak var muteSwitch: UISwitch!
+    
     var delegate: MembersDelegate?
     var classNameRef = "ERROR - INCORRECT CLASSNAMEREF"
     var classId = ""
@@ -28,9 +34,18 @@ class PanelViewController: UIViewController, UITableViewDelegate, UITableViewDat
     var leaveClassDelegate: LeaveClassProtocol?
     var className = "" // Name of the current class.
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView.delegate = self
+        tableView.dataSource = self
+        //view1.frame = CGRect(x: view1.frame.minX, y: view1.frame.minY, width: view1.frame.width, height: 1.0)
+        //divider1.frame = CGRect(x: divider1.frame.minX, y: divider1.frame.minY, width: divider1.frame.width, height: 1.0)
+        // Do any additional setup after loading the view.
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //print(section)
-        return 5;
+        return 5
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -59,37 +74,17 @@ class PanelViewController: UIViewController, UITableViewDelegate, UITableViewDat
         return UITableViewCell()
     }
     
-    @IBOutlet weak var tableView: UITableView!
-    
-    @IBOutlet weak var dividerView: UIView!
-    @IBOutlet weak var stackView: UIStackView!
-    @IBOutlet weak var muteLabel: UILabel!
-    @IBOutlet weak var view1: UIView!
-    @IBOutlet weak var muteSwitch: UISwitch!
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        tableView.delegate = self
-        tableView.dataSource = self
-        //view1.frame = CGRect(x: view1.frame.minX, y: view1.frame.minY, width: view1.frame.width, height: 1.0)
-        //divider1.frame = CGRect(x: divider1.frame.minX, y: divider1.frame.minY, width: divider1.frame.width, height: 1.0)
-        // Do any additional setup after loading the view.
-    }
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let row = indexPath.row
         if(row == 1) {
             //print("they clicked notes")
             delegate?.membersPressed()
-        }
-        if (row == 3) {
+        } else if (row == 3) {
             //self.performSegue(withIdentifier: "scheduleToEventSegue", sender: self)
             eventVC.classRef = classNameRef
-        }
-        
-        // Leave class.
-        if indexPath.row == 4 {
-            print("Panel class name: \(className)")
+        } else if indexPath.row == 4 {
+            // Leave class.
             leaveClassDelegate?.leaveClass(className: className)
         }
     }
@@ -105,15 +100,4 @@ class PanelViewController: UIViewController, UITableViewDelegate, UITableViewDat
             destination.classId = classId
         }
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

@@ -10,8 +10,6 @@ import UIKit
 import Firebase
 
 class MembersViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
-
     @IBOutlet var membersLabel: UILabel!
     @IBOutlet var tableView: UITableView!
     var className: String = ""
@@ -20,18 +18,19 @@ class MembersViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         tableView.dataSource = self
         tableView.delegate = self
         
-        var ref = Database.database().reference()
-        print("Class: ",className)
+        let ref = Database.database().reference()
+        // print("Class: ",className)
         ref.child("courses").observeSingleEvent(of: .value, with: { (snapshot) in
             let value = snapshot.value as? NSDictionary
             let classValues = value![self.className]! as? NSDictionary
             //print(classValues)
             if let val = classValues!["members"]{
                 // now val is not nil and the Optional has been unwrapped, so use it
-                var mems = val as! [String]
+                let mems = val as! [String]
                 //print("val: ", val)
                 print(mems.count)
                 self.count = mems.count
@@ -57,18 +56,7 @@ class MembersViewController: UIViewController, UITableViewDelegate, UITableViewD
         let cell:MembersTableViewCell = tableView.dequeueReusableCell(withIdentifier: "membersCellIdentifier", for: indexPath as IndexPath) as! MembersTableViewCell
         
         cell.memberName.text = members[indexPath.row]
-        print("Name: ", cell.memberName.text)
+//        print("Name: ", cell.memberName.text)
         return cell
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

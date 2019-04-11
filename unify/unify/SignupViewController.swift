@@ -11,7 +11,6 @@ import Firebase
 import FirebaseAuth
 
 class SignupViewController: UIViewController {
-
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var retypePasswordTextField: UITextField!
@@ -19,6 +18,7 @@ class SignupViewController: UIViewController {
     @IBOutlet weak var lastNameTextField: UITextField!
     
     @IBOutlet weak var button: UIButton!
+    
     var ref: DatabaseReference!
    
     override func viewDidLoad() {

@@ -10,7 +10,5 @@ import UIKit
 
 // custom cell for displaying note images
 class NoteCollectionViewCell: UICollectionViewCell {
-    
-    
     @IBOutlet weak var imageView: UIImageView!
 }

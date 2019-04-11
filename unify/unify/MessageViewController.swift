@@ -12,24 +12,12 @@ import MessageKit
 import MessageInputBar
 import Firebase
 
-protocol MessageProtocol {
-    func reload(newCourses: [String])
-}
-
 final class MessageViewController: MessagesViewController, MembersDelegate, LeaveClassProtocol {
-
-   // sets style for status bar
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
+    // Database reference.
+    var ref = Database.database().reference()
+    let user = Auth.auth().currentUser // Current user.
     
-    // instance variables for side panel
-    var panelView = PanelViewController()
-    var membersView = MembersViewController()
-    var panelOut = false
-    var panelState = -1 //-1: inside, 0: standard, 1: members
-    
-    // instance variables for messages
+    // Instance variables for messages.
     var messageList: [Message] = []
     let refreshControl = UIRefreshControl()
     var className: String = ""
@@ -37,11 +25,13 @@ final class MessageViewController: MessagesViewController, MembersDelegate, Leav
     var senderDisplayName: String?
     var sender : Sender? = nil
     
-    // Database reference.
-    var ref = Database.database().reference()
-    let user = Auth.auth().currentUser // Current user.
-    let leaveClassSegueIdentifier = "leaveClassSegueIdentifier"
-    var messageDelegate: MessageProtocol?
+    // Instance variables for side panel.
+    var panelView = PanelViewController()
+    var membersView = MembersViewController()
+    var panelOut = false
+    var panelState = -1 //-1: inside, 0: standard, 1: members
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,7 +40,7 @@ final class MessageViewController: MessagesViewController, MembersDelegate, Leav
         self.navigationController?.isNavigationBarHidden = false
         title = "\(classID)"
         
-        // disable avatars next to messages
+        // Disable avatars next to messages.
         if let layout = messagesCollectionView.collectionViewLayout as? MessagesCollectionViewFlowLayout {
             layout.textMessageSizeCalculator.outgoingAvatarSize = .zero
             layout.textMessageSizeCalculator.incomingAvatarSize = .zero
@@ -72,13 +62,13 @@ final class MessageViewController: MessagesViewController, MembersDelegate, Leav
         
     }
     
-    // sets up side panel and enables nav bar
+    // Shows navigation bar. Sets up side panel.
     override func viewDidAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = false
         setupPanel()
     }
     
-    // sets up the side panel functionality
+    // Sets up side panel.
     func setupPanel() {
         //Currently, two things can be viewed in panel view: the standard panel class info page, and the members page.
         //At the start, these are both instantiated and placed with their left edges to the far right of the screen.
@@ -133,8 +123,7 @@ final class MessageViewController: MessagesViewController, MembersDelegate, Leav
                     self.panelView.view.frame = CGRect(x: self.view.frame.width/3, y: self.panelView.view.frame.minY, width: self.panelView.view.frame.width, height: self.panelView.view.frame.height)
                 }, completion:  nil)
             }
-        }
-        else {
+        } else {
             if(panelState == 0) { //normal panel is out, slide it back
                 self.membersView.view.frame = CGRect(x: self.view.frame.width, y: self.membersView.view.frame.minY, width: self.membersView.view.frame.width, height: self.membersView.view.frame.height) //move panel back even though it's invisible
                 UIView.animate(withDuration: 0.3, animations: {
@@ -174,13 +163,12 @@ final class MessageViewController: MessagesViewController, MembersDelegate, Leav
     
     // Removes the user from the given class.
     func leaveClass(className: String) {
-        print("Leaving a class...")
+        // Retrieve user's course list from the database.
         ref.child("users").child(user!.uid).observeSingleEvent(of: .value, with: { (snapshot) in
             let value = snapshot.value as? NSDictionary
             var courses = value?["courses"] as? Array ?? []
             
-            print("Before: \(courses)")
-            
+            // Find the class to leave.
             var index = 0
             for course in courses {
                 let courseName = course as? String
@@ -191,14 +179,11 @@ final class MessageViewController: MessagesViewController, MembersDelegate, Leav
                 index += 1
             }
             
+            // Update user's course list in the database.
             self.ref.child("users/\(self.user!.uid)/courses").setValue(courses)
-            print("Removed: \(courses)")
             
-            // Return to the home page once the class is removed.
-//            self.performSegue(withIdentifier: self.leaveClassSegueIdentifier, sender: nil)
-            
+            // Go back to Home page.
             if let navController = self.navigationController {
-                self.messageDelegate?.reload(newCourses: courses as! [String])
                 navController.popViewController(animated: true)
             }
             
@@ -216,6 +201,11 @@ final class MessageViewController: MessagesViewController, MembersDelegate, Leav
         panelState = 0
         
     }*/
+    
+    // sets style for status bar
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     
     // sets up basic configurations for messages collection view
     func configureMessageCollectionView() {

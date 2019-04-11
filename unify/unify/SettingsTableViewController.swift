@@ -20,9 +20,6 @@ class SettingsTableViewController: UITableViewController {
         
         // Sets the background color.
         UIColourScheme.instance.set(for:self)
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
     }
     
     // Hides the navigation bar when the view appears.
@@ -40,10 +37,11 @@ class SettingsTableViewController: UITableViewController {
         return rowsPerSection[section]
     }
     
+    // Performs certain actions when a specific row is selected.
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        // Account section.
+        // Edit account section.
         if indexPath.section == 2 {
             performSegue(withIdentifier: editAccountSegueIdentifier, sender: self)
         } else if indexPath.section == 3 {

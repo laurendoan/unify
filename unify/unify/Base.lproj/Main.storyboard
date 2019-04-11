@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3Pm-UF-PCa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3Pm-UF-PCa">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -955,7 +955,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uyH-NB-7xW">
-                                <rect key="frame" x="20" y="70" width="374" height="666"/>
+                                <rect key="frame" x="20" y="70" width="374" height="617"/>
                                 <color key="backgroundColor" red="0.9029574990272522" green="0.94418281316757202" blue="0.99216490983963013" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="separatorColor" red="0.89508980510000002" green="0.55798077580000005" blue="0.50586259369999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -1030,9 +1030,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Qsb-7X-jYh"/>
                     </view>
-                    <connections>
-                        <segue destination="nrL-UJ-u5x" kind="show" identifier="leaveClassSegueIdentifier" id="foa-id-vB9"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QfF-m7-Jdl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1594,17 +1591,16 @@
         </scene>
     </scenes>
     <resources>
-        <image name="icons8-calendar-17-50" width="20" height="20"/>
-        <image name="icons8-exit-50" width="50" height="50"/>
-        <image name="icons8-home-page-50" width="20" height="20"/>
-        <image name="icons8-settings-50" width="20" height="20"/>
+        <image name="icons8-calendar-17-50" width="15" height="15"/>
+        <image name="icons8-exit-50" width="156.52174377441406" height="156.52174377441406"/>
+        <image name="icons8-home-page-50" width="15" height="15"/>
+        <image name="icons8-settings-50" width="15" height="15"/>
         <image name="inf" width="600" height="224"/>
         <image name="logo" width="589" height="600"/>
         <image name="unifylogo" width="600" height="331"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="PHN-N8-s4K"/>
-        <segue reference="foa-id-vB9"/>
         <segue reference="PXg-qo-ebX"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -10,13 +10,13 @@ import UIKit
 import Firebase
 
 class AddClassViewController: UIViewController {
-
-    var ref: DatabaseReference!
-    
     @IBOutlet weak var courseNumTextField: UITextField!
     @IBOutlet weak var instructorTextField: UITextField!
     
     @IBOutlet weak var button: UIButton!
+    
+    var ref: DatabaseReference!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -70,13 +70,16 @@ class AddClassViewController: UIViewController {
                     if snapshot.hasChild(course) {
                         courses.append(course)
                         self.ref.child("users/\(userID!)/courses").setValue(courses)
-                        //Also add user to course's list, need display name first
+                        
+                        // Get user's display name.
                         self.ref.child("users/\(userID!)").observeSingleEvent(of: .value, with: { (snapshot) in
                             let value = snapshot.value as? NSDictionary
                             let displayName = value!["displayName"]
+                            
+                            // Add user to course's member list.
                             self.ref.child("courses").child(course).observeSingleEvent(of: .value, with: { (snapshot) in                            let value = snapshot.value as? NSDictionary
                                 var members = value?["members"] as? Array ?? []
-                                members.append(displayName)
+                                members.append(displayName!)
                                 self.ref.child("courses/\(course)/members").setValue(members)
                             })
                         })
