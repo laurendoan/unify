@@ -1028,10 +1028,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="Qsb-7X-jYh"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="ZIR-CJ-Cwu" appends="YES" id="rSg-e9-OAu"/>
+                        </connections>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QfF-m7-Jdl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="ZIR-CJ-Cwu">
+                    <connections>
+                        <action selector="swipeRight:" destination="2NO-OY-jFv" id="C1A-Zf-UhP"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="4487" y="448"/>
         </scene>
@@ -1166,17 +1175,25 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Class Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oi0-ya-zNT">
+                                <rect key="frame" x="33" y="223" width="171" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.88235294117647056" green="0.94901960784313721" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="XAE-jL-mQL"/>
                     </view>
                     <connections>
+                        <outlet property="classNameLabel" destination="oi0-ya-zNT" id="fwZ-fB-oRQ"/>
                         <outlet property="tableView" destination="C45-kz-6FX" id="h4U-jA-TE8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UZa-bJ-Aam" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5340.579710144928" y="447.99107142857139"/>
+            <point key="canvasLocation" x="5340.579710144928" y="447.554347826087"/>
         </scene>
         <!--Event Schedule View Controller-->
         <scene sceneID="fIj-aP-man">
@@ -1591,10 +1608,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="icons8-calendar-17-50" width="15" height="15"/>
-        <image name="icons8-exit-50" width="156.52174377441406" height="156.52174377441406"/>
-        <image name="icons8-home-page-50" width="15" height="15"/>
-        <image name="icons8-settings-50" width="15" height="15"/>
+        <image name="icons8-calendar-17-50" width="20" height="20"/>
+        <image name="icons8-exit-50" width="50" height="50"/>
+        <image name="icons8-home-page-50" width="20" height="20"/>
+        <image name="icons8-settings-50" width="20" height="20"/>
         <image name="inf" width="600" height="224"/>
         <image name="logo" width="589" height="600"/>
         <image name="unifylogo" width="600" height="331"/>

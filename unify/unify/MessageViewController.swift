@@ -76,7 +76,7 @@ final class MessageViewController: MessagesViewController, MembersDelegate, Leav
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "=", style: .plain, target: self, action: #selector(togglePanel)) //first create a button for the panel
         
         self.navigationItem.rightBarButtonItem?.image = UIImage(named: "icons8-menu-26.png")
-        
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         panelView = storyboard.instantiateViewController(withIdentifier: "PanelViewController") as! PanelViewController
     
@@ -85,6 +85,9 @@ final class MessageViewController: MessagesViewController, MembersDelegate, Leav
         
         panelView.tableView.rowHeight = 40
         panelView.tableView.frame = CGRect(x: 0, y: 100, width: 276, height: panelView.tableView.rowHeight * 5)
+        panelView.classNameLabel.text = className
+        panelView.classNameLabel.textAlignment = .center
+        panelView.classNameLabel.frame = CGRect(x: 0, y: 50, width: 276, height: 20)
         
         self.view.insertSubview(panelView.view, at: 0)
         self.view.bringSubviewToFront(panelView.view)
@@ -113,12 +116,19 @@ final class MessageViewController: MessagesViewController, MembersDelegate, Leav
         panelView.className = className // Pass in class name.
     }
     
+
+    @IBAction func swipeRight(_ sender: Any) {
+        togglePanel()
+    }
+    
     @objc func togglePanel() {
         if(panelOut == false) {
             if(panelState == -1) { //just pull up the normal class info
                 panelView.view.isHidden = false
                 panelOut = true
                 panelState = 0
+                self.navigationController?.navigationBar.isHidden = true
+                messageInputBar.isHidden = true
                 UIView.animate(withDuration: 0.3, animations: {
                     self.panelView.view.frame = CGRect(x: self.view.frame.width/3, y: self.panelView.view.frame.minY, width: self.panelView.view.frame.width, height: self.panelView.view.frame.height)
                 }, completion:  nil)
@@ -126,6 +136,8 @@ final class MessageViewController: MessagesViewController, MembersDelegate, Leav
         } else {
             if(panelState == 0) { //normal panel is out, slide it back
                 self.membersView.view.frame = CGRect(x: self.view.frame.width, y: self.membersView.view.frame.minY, width: self.membersView.view.frame.width, height: self.membersView.view.frame.height) //move panel back even though it's invisible
+                self.navigationController?.navigationBar.isHidden = false
+                messageInputBar.isHidden = false
                 UIView.animate(withDuration: 0.3, animations: {
                     self.panelView.view.frame = CGRect(x: self.view.frame.width, y: self.panelView.view.frame.minY, width: self.panelView.view.frame.width, height: self.panelView.view.frame.height)
                     

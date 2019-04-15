@@ -18,6 +18,7 @@ protocol LeaveClassProtocol {
 }
 
 class PanelViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    @IBOutlet weak var classNameLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var dividerView: UIView!
     @IBOutlet weak var stackView: UIStackView!
