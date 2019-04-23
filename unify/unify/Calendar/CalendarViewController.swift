@@ -19,12 +19,15 @@ class CalendarViewController: UIViewController {
     @IBOutlet weak var dateLabelTF: UILabel!
     
     /* Initialized variables */
+    let changeEventIdentifier = "changeEventSegue"
     let formatter = DateFormatter()
     var ref: DatabaseReference!
+    var userID: String!
     var courses: [String] = [] // User's list of courses.
     var courseTitles: [String] = [] // Used to display in table view.
     //var contents = [EventContent]()
     var clickedDateContent = [EventContent]()
+    var selectedContent: EventContent!
     var clickedDate = ""
     
     /* Default Colors (Will clean up later) */
@@ -42,21 +45,23 @@ class CalendarViewController: UIViewController {
         
         // Database reference
         ref = Database.database().reference()
-        let userID = Auth.auth().currentUser?.uid
+        userID = Auth.auth().currentUser?.uid
         
         // Sets the background color.
         UIColourScheme.instance.set(for:self)
+    }
+    
+    // Hides the navigation bar when the view appears.
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        navigationController?.setNavigationBarHidden(true, animated: true)
         
-        // Sets up the calendar
-        setupCalendarView()
-        
-        // Immediately scrolls to current date and selects it
-        let currentDate = Date()
-        calendarView.scrollToDate(currentDate)
-        calendarView.selectDates([currentDate])
+        courses.removeAll()
+        courseTitles.removeAll()
+        clickedDateContent.removeAll()
         
         // Retrieve courses from database, store in courses & courseTitles array.
-        ref.child("users").child(userID!).child("courses").observe(.value, with: { (snapshot) in
+        ref.child("users").child(userID!).child("courses").observeSingleEvent(of: .value, with: { (snapshot) in
             for i in snapshot.children.allObjects as! [DataSnapshot] {
                 // Add to courses array.
                 let identifier = i.value as? String
@@ -74,11 +79,16 @@ class CalendarViewController: UIViewController {
         }) { (error) in
             print(error.localizedDescription)
         }
-    }
-    
-    // Hides the navigation bar when the view appears.
-    override func viewWillAppear(_ animated: Bool) {
-        navigationController?.setNavigationBarHidden(true, animated: true)
+        self.tableView.reloadData()
+        self.calendarView.reloadData()
+        
+        // Sets up the calendar
+        setupCalendarView()
+        
+        // Immediately scrolls to current date and selects it
+        let currentDate = Date()
+        calendarView.scrollToDate(currentDate)
+        calendarView.selectDates([currentDate])
     }
     
     /* Additional aid in structuring the Calendar */
@@ -91,6 +101,9 @@ class CalendarViewController: UIViewController {
         calendarView.visibleDates{ (visibleDates) in
             self.setupViewsOfCalendar(from: visibleDates)
         }
+        
+        //courses.removeAll()
+        //courseTitles.removeAll()
     }
     
     /* Selection handles for dates */
@@ -145,6 +158,14 @@ class CalendarViewController: UIViewController {
         formatter.dateFormat = "MMMM"
         month.text = formatter.string(from: date)
     }
+    
+    // Prepares for segue to MessagesVC.
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == changeEventIdentifier,
+            let destination = segue.destination as? ChangeEventViewController {
+            destination.contentHolder = selectedContent
+        }
+    }
 }
 
 extension CalendarViewController: JTAppleCalendarViewDataSource, JTAppleCalendarViewDelegate {
@@ -197,12 +218,12 @@ extension CalendarViewController: JTAppleCalendarViewDataSource, JTAppleCalendar
         // Checks if there's any content for that date
         for index in 0 ..< courses.count {
             ref.child("schedule").child(courses[index]).observeSingleEvent(of: .value, with: {
-                (snapshot) in
-                if snapshot.hasChild(self.clickedDate) {
+                (snapshot1) in
+                if snapshot1.hasChild(self.clickedDate) {
                     // Observes all children under specific date
-                    self.ref.child("schedule").child(self.courses[index]).child(self.clickedDate)                    .observe(DataEventType.value) { (snapshot) in
+                    self.ref.child("schedule").child(self.courses[index]).child(self.clickedDate)                    .observeSingleEvent(of: DataEventType.value) { (snapshot2) in
                         // Iterates through the number of children
-                        for i in snapshot.children.allObjects as! [DataSnapshot] {
+                        for i in snapshot2.children.allObjects as! [DataSnapshot] {
                             // Pulls data from each child (name of course, course id, and the instructor)
                             let Object = i.value as? [String: AnyObject]
                             let name = Object?["name"]
@@ -217,7 +238,9 @@ extension CalendarViewController: JTAppleCalendarViewDataSource, JTAppleCalendar
                                                  date: date as? String,
                                                  start: start as? String,
                                                  end: end as? String,
-                                                 course: self.courseTitles[index])
+                                                 course: self.courseTitles[index],
+                                                 courseRef: self.courses[index],
+                                                 parentRef: i.key)
                             self.clickedDateContent.append(c)
                             self.tableView.reloadData()
                         }
@@ -268,5 +291,12 @@ extension CalendarViewController: UITableViewDelegate, UITableViewDataSource {
         cell.titleLabel.text = "\(title)"
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let row = indexPath.row
+        selectedContent = clickedDateContent[row]
+        self.performSegue(withIdentifier: changeEventIdentifier, sender: self)
     }
 }

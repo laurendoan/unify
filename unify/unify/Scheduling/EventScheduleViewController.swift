@@ -30,8 +30,8 @@ class EventScheduleViewController: UIViewController {
         /* Checks for completed conditions: completed textfields
            and correct formts for date, start, and end times */
         if ((eventNameTF.text?.isEmpty)! || (locationTF.text?.isEmpty)! ||
-            (dateTF.text?.isEmpty)! || (startTF.text?.isEmpty)!) {
-            alertErrorHelper(text: "Incompleted information. Please complete all four textfields.")
+            (dateTF.text?.isEmpty)! || (startTF.text?.isEmpty)! || (endTF.text?.isEmpty)!) {
+            alertErrorHelper(text: "ERROR: Incompleted information. Please complete all five textfields.")
         } else if (formatChecker(condition: "MM/dd/yyyy", text: dateTF.text!) == false
                     || dateTF.text!.count != 10) {
             alertErrorHelper(text: "Incorrect format for Date. (MM/DD/YYYY)")
