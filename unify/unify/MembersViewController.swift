@@ -35,6 +35,8 @@ class MembersViewController: UIViewController, UITableViewDelegate, UITableViewD
                 print(mems.count)
                 self.count = mems.count
                 self.members = mems
+                self.tableView.rowHeight = 40
+                self.tableView.frame = CGRect(x: 0, y: 100, width: 276, height: Int(self.tableView.rowHeight) * self.members.count)
                 self.tableView.reloadData() //Without this, the tableView won't have the correct data. Since this is an async call, it needs this to tell the TableView that data has been added.
             }
             

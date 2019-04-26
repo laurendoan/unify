@@ -24,6 +24,7 @@ class PanelViewController: UIViewController, UITableViewDelegate, UITableViewDat
     @IBOutlet weak var muteLabel: UILabel!
     @IBOutlet weak var view1: UIView!
     @IBOutlet weak var muteSwitch: UISwitch!
+    @IBOutlet weak var classNameLabel: UILabel!
     
     var delegate: MembersDelegate?
     var classNameRef = "ERROR - INCORRECT CLASSNAMEREF"
