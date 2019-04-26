@@ -12,6 +12,10 @@ protocol MembersDelegate {
     func membersPressed()
 }
 
+protocol NotesDelegate {
+    func notesPressed()
+}
+
 protocol LeaveClassProtocol {
     // Removes the given class from the user's class list.
     func leaveClass(className: String)
@@ -27,6 +31,7 @@ class PanelViewController: UIViewController, UITableViewDelegate, UITableViewDat
     @IBOutlet weak var classNameLabel: UILabel!
     
     var delegate: MembersDelegate?
+    var notesDelegate: NotesDelegate?
     var classNameRef = "ERROR - INCORRECT CLASSNAMEREF"
     var classId = ""
     let notesSegueIdentifier = "notesSegueIdentifier"
@@ -81,6 +86,8 @@ class PanelViewController: UIViewController, UITableViewDelegate, UITableViewDat
         if(row == 1) {
             //print("they clicked notes")
             delegate?.membersPressed()
+        } else if(row == 2) {
+            notesDelegate?.notesPressed()
         } else if (row == 3) {
             //self.performSegue(withIdentifier: "scheduleToEventSegue", sender: self)
             eventVC.classRef = classNameRef

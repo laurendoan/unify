@@ -142,7 +142,9 @@ class NotesViewController: UIViewController, UIImagePickerControllerDelegate, UI
             // upload image from here
             uploadImage(imageData: optimizedImageData)
         }
-        picker.dismiss(animated: true, completion:nil)
+        picker.dismiss(animated: true, completion: {
+            self.view.frame = CGRect(x: self.view.frame.width/3, y: 0, width: self.view.frame.width*2/3, height: self.view.frame.height)
+        })
     }
     
     // allows user to cancel and not take photo
