@@ -11,8 +11,9 @@ import MapKit
 import MessageKit
 import MessageInputBar
 import Firebase
+import UserNotifications
 
-final class MessageViewController: MessagesViewController, MembersDelegate, NotesDelegate, LeaveClassProtocol {
+final class MessageViewController: MessagesViewController, MembersDelegate, NotesDelegate, LeaveClassProtocol, UNUserNotificationCenterDelegate {
     // Database reference.
     var ref = Database.database().reference()
     let user = Auth.auth().currentUser // Current user.
@@ -32,7 +33,8 @@ final class MessageViewController: MessagesViewController, MembersDelegate, Note
     var panelOut = false
     var panelState = -1 //-1: inside, 0: standard, 1: members
     
-    
+    // Notification center.
+    let center = UNUserNotificationCenter.current()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,6 +63,7 @@ final class MessageViewController: MessagesViewController, MembersDelegate, Note
         configureMessageInputBar()
         loadMessages()
         
+        center.delegate = self
     }
     
     // Shows navigation bar. Sets up side panel.
@@ -454,6 +457,22 @@ extension MessageViewController: MessageInputBarDelegate {
                 let ref = Constants.refs.databaseChats.child(className).childByAutoId()
                 let newMessage = ["sender_id": current.id, "name": current.displayName, "text": str, "message_id": message.messageId, "date": String(Date().timeIntervalSince1970)]
                 ref.setValue(newMessage)
+                
+                // Create notification.
+                let notification = UNMutableNotificationContent()
+                notification.title = classID
+                notification.subtitle = current.displayName
+                notification.body = str
+                
+                // Trigger the notification after 5 seconds.
+                let delay: TimeInterval = 5.0
+                let trigger = UNTimeIntervalNotificationTrigger(timeInterval: delay, repeats: false)
+                
+                // Create request to submit notification.
+                let request = UNNotificationRequest(identifier: "notification", content: notification, trigger: trigger)
+                
+                // Submit request.
+                center.add(request)
             }
         }
         // refreshes message bar
