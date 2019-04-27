@@ -56,6 +56,9 @@ class CalendarViewController: UIViewController {
         super.viewWillAppear(true)
         navigationController?.setNavigationBarHidden(true, animated: true)
         
+        // Sets the background color.
+        UIColourScheme.instance.set(for:self)
+        
         courses.removeAll()
         courseTitles.removeAll()
         clickedDateContent.removeAll()

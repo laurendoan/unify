@@ -67,6 +67,8 @@ class HomeViewController: UIViewController, UITableViewDataSource,  UITableViewD
     // Hides the navigation bar when the view appears.
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.setNavigationBarHidden(true, animated: true)
+        // Sets the background color.
+        UIColourScheme.instance.set(for:self)
     }
     
     // Returns the number of courses.

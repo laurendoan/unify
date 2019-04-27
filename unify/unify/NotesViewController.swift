@@ -72,6 +72,11 @@ class NotesViewController: UIViewController, UIImagePickerControllerDelegate, UI
         })
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        // Sets the background color.
+        UIColourScheme.instance.set(for:self)
+    }
+    
     // return number of notes
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return pics.count

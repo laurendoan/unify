@@ -33,6 +33,9 @@ class AddClassViewController: UIViewController {
     // Shows the navigation bar when the view appears.
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.setNavigationBarHidden(false, animated: true)
+        // Sets the background color.
+        UIColourScheme.instance.set(for:self)
+        
     }
     
     // Adds a class to the user's course list when the "add" button is pressed.

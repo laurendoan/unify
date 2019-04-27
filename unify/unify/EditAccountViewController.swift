@@ -23,6 +23,9 @@ class EditAccountViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Sets the background color.
+        UIColourScheme.instance.set(for:self)
+        
         // Database reference.
         ref = Database.database().reference()
         
@@ -35,10 +38,13 @@ class EditAccountViewController: UIViewController {
         // Rounded button.
         button.layer.cornerRadius = 25
     }
+
     
     // Shows the navigation bar when the view appears.
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.setNavigationBarHidden(false, animated: true)
+        // Sets the background color.
+        UIColourScheme.instance.set(for:self)
     }
     
     // Update all user information before presenting alert and segueing.

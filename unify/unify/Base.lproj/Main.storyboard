@@ -73,32 +73,32 @@
                                     <constraint firstAttribute="height" constant="55" id="0Ck-WC-Po6"/>
                                     <constraint firstAttribute="width" constant="190" id="hD5-dZ-b2F"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="24"/>
-                                <state key="normal" title="Login">
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="24"/>
+                                <state key="normal" title="login">
                                     <color key="titleColor" red="0.9030032753944397" green="0.94410663843154907" blue="0.99608701467514038" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
                                     <action selector="loginButton:" destination="dsY-OT-WZX" eventType="touchUpInside" id="dIp-Fs-EGv"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Email:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F9v-fc-nKM">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="email:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F9v-fc-nKM">
                                 <rect key="frame" x="20" y="308" width="374" height="50"/>
-                                <color key="backgroundColor" red="0.902957499" green="0.94418281319999997" blue="0.99216490980000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Fqg-y8-zZg"/>
                                 </constraints>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Password:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AvY-4h-fo8">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="password:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AvY-4h-fo8">
                                 <rect key="frame" x="20" y="383" width="374" height="50"/>
-                                <color key="backgroundColor" red="0.902957499" green="0.94418281319999997" blue="0.99216490980000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="g1M-x6-cuN"/>
                                 </constraints>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="7JX-bK-pjx">
@@ -108,17 +108,17 @@
                                     <constraint firstAttribute="height" constant="150" id="sAb-Yy-Enz"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New User?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xZ0-fG-KUy">
-                                <rect key="frame" x="142" y="656" width="80" height="20"/>
-                                <color key="backgroundColor" red="0.9029574990272522" green="0.94418281316757202" blue="0.99216490983963013" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="14"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="new user?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xZ0-fG-KUy">
+                                <rect key="frame" x="132" y="656" width="62.666666666666657" height="20"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MJx-ri-PqG">
-                                <rect key="frame" x="230" y="645" width="83" height="40"/>
-                                <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="20"/>
-                                <state key="normal" title="Sign Up">
+                                <rect key="frame" x="202" y="643" width="79" height="40"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                                <state key="normal" title="SIGN UP">
                                     <color key="titleColor" red="0.8911724687" green="0.55803936720000002" blue="0.50194042920000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
@@ -126,22 +126,22 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.9029574990272522" green="0.94418281316757202" blue="0.99216490983963013" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="F9v-fc-nKM" firstAttribute="top" secondItem="7JX-bK-pjx" secondAttribute="bottom" constant="72" id="02r-pn-VQN"/>
                             <constraint firstItem="F9v-fc-nKM" firstAttribute="leading" secondItem="jsS-DC-N4g" secondAttribute="leading" constant="20" id="AgV-qW-syp"/>
+                            <constraint firstItem="MJx-ri-PqG" firstAttribute="leading" secondItem="xZ0-fG-KUy" secondAttribute="trailing" constant="7.3333333333333428" id="GpG-0i-oaW"/>
                             <constraint firstItem="jsS-DC-N4g" firstAttribute="trailing" secondItem="F9v-fc-nKM" secondAttribute="trailing" constant="20" id="JQg-JN-Z0K"/>
-                            <constraint firstItem="MJx-ri-PqG" firstAttribute="leading" secondItem="xZ0-fG-KUy" secondAttribute="trailing" constant="8" id="KwC-DV-FEq"/>
+                            <constraint firstItem="jsS-DC-N4g" firstAttribute="bottom" secondItem="MJx-ri-PqG" secondAttribute="bottom" constant="53" id="NWm-um-2RH"/>
                             <constraint firstItem="Fyu-QY-Ad3" firstAttribute="top" secondItem="AvY-4h-fo8" secondAttribute="bottom" constant="71" id="RHf-Ps-7yw"/>
-                            <constraint firstItem="jsS-DC-N4g" firstAttribute="trailing" secondItem="MJx-ri-PqG" secondAttribute="trailing" constant="101" id="Syp-JN-n6U"/>
+                            <constraint firstItem="jsS-DC-N4g" firstAttribute="bottom" secondItem="xZ0-fG-KUy" secondAttribute="bottom" constant="60" id="WIC-BQ-vdK"/>
                             <constraint firstItem="7JX-bK-pjx" firstAttribute="top" secondItem="jsS-DC-N4g" secondAttribute="top" constant="66" id="gpF-si-8EA"/>
                             <constraint firstItem="7JX-bK-pjx" firstAttribute="centerX" secondItem="ldV-9l-RT8" secondAttribute="centerX" id="hDL-fX-c7g"/>
                             <constraint firstItem="jsS-DC-N4g" firstAttribute="trailing" secondItem="AvY-4h-fo8" secondAttribute="trailing" constant="20" id="hjN-iu-kxq"/>
-                            <constraint firstItem="jsS-DC-N4g" firstAttribute="bottom" secondItem="xZ0-fG-KUy" secondAttribute="bottom" constant="60" id="iVy-VG-CV3"/>
                             <constraint firstItem="Fyu-QY-Ad3" firstAttribute="centerX" secondItem="ldV-9l-RT8" secondAttribute="centerX" id="iZ7-Uk-pB6"/>
                             <constraint firstItem="7JX-bK-pjx" firstAttribute="centerX" secondItem="ldV-9l-RT8" secondAttribute="centerX" id="jSy-8c-14S"/>
                             <constraint firstItem="AvY-4h-fo8" firstAttribute="top" secondItem="F9v-fc-nKM" secondAttribute="bottom" constant="25" id="pqP-cY-QMd"/>
-                            <constraint firstItem="jsS-DC-N4g" firstAttribute="bottom" secondItem="MJx-ri-PqG" secondAttribute="bottom" constant="51" id="xd1-SJ-tbc"/>
+                            <constraint firstItem="jsS-DC-N4g" firstAttribute="trailing" secondItem="MJx-ri-PqG" secondAttribute="trailing" constant="133" id="riS-DE-jAC"/>
                             <constraint firstItem="AvY-4h-fo8" firstAttribute="leading" secondItem="jsS-DC-N4g" secondAttribute="leading" constant="20" id="y7b-mM-88Z"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jsS-DC-N4g"/>
@@ -166,60 +166,60 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create your account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eAQ-8q-Ohh">
-                                <rect key="frame" x="64.666666666666686" y="116" width="285" height="38"/>
-                                <fontDescription key="fontDescription" name="GujaratiSangamMN-Bold" family="Gujarati Sangam MN" pointSize="27"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="create your account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eAQ-8q-Ohh">
+                                <rect key="frame" x="78.666666666666686" y="117" width="257" height="37"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="27"/>
                                 <color key="textColor" red="0.89117246866226196" green="0.55803936719894409" blue="0.50194042921066284" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Email:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eBs-aB-XbD">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="email:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eBs-aB-XbD">
                                 <rect key="frame" x="20" y="343" width="374" height="50"/>
-                                <color key="backgroundColor" red="0.9029574990272522" green="0.94418281316757202" blue="0.99216490983963013" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="6fs-b4-8lh"/>
                                 </constraints>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Password:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qUl-WV-utO">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="password:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qUl-WV-utO">
                                 <rect key="frame" x="20" y="410" width="374" height="50"/>
-                                <color key="backgroundColor" red="0.9029574990272522" green="0.94418281316757202" blue="0.99216490983963013" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="3vD-mg-QK1"/>
                                 </constraints>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Confirm Password:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hQA-oH-Z5e">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="confirm password:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hQA-oH-Z5e">
                                 <rect key="frame" x="20" y="476" width="374" height="50"/>
-                                <color key="backgroundColor" red="0.9029574990272522" green="0.94418281316757202" blue="0.99216490983963013" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="6o8-Rj-eeu"/>
                                 </constraints>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="First name:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tec-94-T9z">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="first name:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tec-94-T9z">
                                 <rect key="frame" x="20" y="213" width="374" height="50"/>
-                                <color key="backgroundColor" red="0.9029574990272522" green="0.94418281316757202" blue="0.99216490983963013" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="8KZ-wa-hC3"/>
                                 </constraints>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Last name:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NLc-Be-tnF">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="last name:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NLc-Be-tnF">
                                 <rect key="frame" x="20" y="278" width="374" height="50"/>
-                                <color key="backgroundColor" red="0.9029574990272522" green="0.94418281316757202" blue="0.99216490983963013" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="R4N-He-FLa"/>
                                 </constraints>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hN9-Ly-pK8">
@@ -229,8 +229,8 @@
                                     <constraint firstAttribute="width" constant="190" id="KDE-4O-0Mz"/>
                                     <constraint firstAttribute="height" constant="55" id="V1c-uT-UEL"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="22"/>
-                                <state key="normal" title="Sign Up">
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="24"/>
+                                <state key="normal" title="sign up">
                                     <color key="titleColor" red="0.9029574990272522" green="0.94418281316757202" blue="0.99216490983963013" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
@@ -238,7 +238,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.9029574990272522" green="0.94418281316757202" blue="0.99216490983963013" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="tec-94-T9z" firstAttribute="leading" secondItem="1c4-sd-O9T" secondAttribute="leading" constant="20" id="3mk-Fm-yaC"/>
                             <constraint firstItem="eBs-aB-XbD" firstAttribute="centerX" secondItem="5rT-Pr-aku" secondAttribute="centerX" id="3s2-UN-11l"/>
@@ -285,34 +285,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calendar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FUJ-1z-ICx">
-                                <rect key="frame" x="20" y="20" width="148" height="42"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="calendar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FUJ-1z-ICx">
+                                <rect key="frame" x="20" y="20" width="147" height="48"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="35"/>
                                 <color key="textColor" red="0.89117246866226196" green="0.55803936719894409" blue="0.50194042921066284" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="aUQ-4w-Xxp">
-                                <rect key="frame" x="0.0" y="70" width="414" height="380"/>
+                                <rect key="frame" x="0.0" y="76" width="414" height="380"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Xe9-wW-ue5">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="79"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Month" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IR6-GO-6Ta">
-                                                <rect key="frame" x="161.66666666666666" y="0.0" width="91" height="49.333333333333336"/>
-                                                <color key="backgroundColor" red="0.90196078430000004" green="0.94509803920000002" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <fontDescription key="fontDescription" name="GujaratiSangamMN-Bold" family="Gujarati Sangam MN" pointSize="27"/>
+                                                <rect key="frame" x="165.66666666666666" y="0.0" width="83" height="50"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="27"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Year" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A9B-Ma-Kih">
-                                                <rect key="frame" x="181.33333333333334" y="49.333333333333321" width="51.333333333333343" height="29.666666666666664"/>
-                                                <color key="backgroundColor" red="0.90196078430000004" green="0.94509803920000002" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="21"/>
+                                                <rect key="frame" x="187" y="50" width="40" height="29"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="21"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.90196078430000004" green="0.94509803920000002" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="IR6-GO-6Ta" firstAttribute="centerX" secondItem="Xe9-wW-ue5" secondAttribute="centerX" id="6es-In-dIX"/>
                                             <constraint firstItem="A9B-Ma-Kih" firstAttribute="centerX" secondItem="Xe9-wW-ue5" secondAttribute="centerX" id="duV-J6-so0"/>
@@ -325,62 +325,62 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sun" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ay8-A6-zE7">
                                                 <rect key="frame" x="0.0" y="0.0" width="59" height="20.666666666666668"/>
-                                                <color key="backgroundColor" red="0.90196078430000004" green="0.94509803920000002" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="17"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="19"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4V3-tT-rJD">
                                                 <rect key="frame" x="59" y="0.0" width="59.333333333333343" height="20.666666666666668"/>
-                                                <color key="backgroundColor" red="0.90196078430000004" green="0.94509803920000002" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="17"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="19"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tue" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dLy-f9-zBg">
                                                 <rect key="frame" x="118.33333333333331" y="0.0" width="59" height="20.666666666666668"/>
-                                                <color key="backgroundColor" red="0.90196078430000004" green="0.94509803920000002" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="17"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="19"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MKX-35-OCb">
                                                 <rect key="frame" x="177.33333333333334" y="0.0" width="59.333333333333343" height="20.666666666666668"/>
-                                                <color key="backgroundColor" red="0.90196078430000004" green="0.94509803920000002" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="17"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="19"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9T4-dR-E9n">
                                                 <rect key="frame" x="236.66666666666663" y="0.0" width="59" height="20.666666666666668"/>
-                                                <color key="backgroundColor" red="0.90196078430000004" green="0.94509803920000002" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="17"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="19"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fri" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e8z-0y-V4a">
                                                 <rect key="frame" x="295.66666666666669" y="0.0" width="59.333333333333314" height="20.666666666666668"/>
-                                                <color key="backgroundColor" red="0.90196078430000004" green="0.94509803920000002" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="17"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="19"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tQ1-JD-2Ey">
                                                 <rect key="frame" x="355" y="0.0" width="59" height="20.666666666666668"/>
-                                                <color key="backgroundColor" red="0.90196078430000004" green="0.94509803920000002" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="17"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="19"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.90196078430000004" green="0.94509803920000002" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20.5" id="bph-Yg-Q4Z"/>
                                         </constraints>
                                     </stackView>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rd4-oI-eyR" customClass="JTAppleCalendarView" customModule="JTAppleCalendar">
-                                        <rect key="frame" x="0.0" y="99.666666666666657" width="414" height="256.33333333333337"/>
-                                        <color key="backgroundColor" red="0.90196078430000004" green="0.94509803920000002" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <rect key="frame" x="0.0" y="99.666666666666657" width="414" height="257"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="1gN-Gm-B0j">
                                             <size key="itemSize" width="101" height="101"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -406,7 +406,7 @@
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YnV-5R-VjV">
                                                             <rect key="frame" x="29" y="40" width="42" height="21"/>
-                                                            <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="17"/>
+                                                            <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -430,22 +430,22 @@
                                         </connections>
                                     </collectionView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cDM-iC-xA6">
-                                        <rect key="frame" x="0.0" y="356" width="414" height="24"/>
-                                        <color key="backgroundColor" red="0.90196078430000004" green="0.94509803920000002" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="17"/>
+                                        <rect key="frame" x="0.0" y="356.66666666666669" width="414" height="23.333333333333314"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.90196078430000004" green="0.94509803920000002" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="Xe9-wW-ue5" firstAttribute="top" secondItem="aUQ-4w-Xxp" secondAttribute="top" id="1VK-Bv-gPm"/>
                                     <constraint firstAttribute="height" constant="380" id="6AL-i3-1In"/>
                                 </constraints>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RgI-jR-ChT">
-                                <rect key="frame" x="0.0" y="460" width="414" height="227"/>
-                                <color key="backgroundColor" red="0.90196078431372551" green="0.94509803921568625" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <rect key="frame" x="0.0" y="466" width="414" height="221"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="calendarTableViewIdentifier" rowHeight="100" id="80b-2H-irF" customClass="CalendarTableViewCell" customModule="unify" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="100"/>
@@ -455,39 +455,39 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="UdN-s3-qu6">
-                                                    <rect key="frame" x="28" y="9" width="95" height="82"/>
+                                                    <rect key="frame" x="28" y="10" width="82" height="80"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UxO-Na-1pZ">
-                                                            <rect key="frame" x="0.0" y="0.0" width="46" height="22.666666666666668"/>
-                                                            <fontDescription key="fontDescription" name="GujaratiSangamMN-Bold" family="Gujarati Sangam MN" pointSize="16"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="40.333333333333336" height="22"/>
+                                                            <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="16"/>
                                                             <color key="textColor" red="0.89411764709999997" green="0.56862745100000001" blue="0.50980392159999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Swn-QQ-elk">
-                                                            <rect key="frame" x="0.0" y="29.666666666666664" width="48.666666666666664" height="22.666666666666664"/>
+                                                            <rect key="frame" x="0.0" y="29" width="40.333333333333336" height="22"/>
                                                             <accessibility key="accessibilityConfiguration" identifier="eventNameTag"/>
-                                                            <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="16"/>
+                                                            <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
                                                             <color key="textColor" red="0.89411764709999997" green="0.56862745100000001" blue="0.50980392159999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RM1-CG-YtO">
-                                                            <rect key="frame" x="0.0" y="59.333333333333321" width="95" height="22.666666666666664"/>
+                                                            <rect key="frame" x="0.0" y="58" width="82" height="22"/>
                                                             <accessibility key="accessibilityConfiguration" identifier="contentTag"/>
-                                                            <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="16"/>
+                                                            <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
                                                             <color key="textColor" red="0.89411764709999997" green="0.56862745100000001" blue="0.50980392159999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" red="0.90196078430000004" green="0.94509803920000002" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </stackView>
                                             </subviews>
-                                            <color key="backgroundColor" red="0.90196078430000004" green="0.94509803920000002" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstItem="UdN-s3-qu6" firstAttribute="leading" secondItem="RS0-TD-dRB" secondAttribute="leadingMargin" constant="8" id="JMQ-yR-XsO"/>
                                                 <constraint firstItem="UdN-s3-qu6" firstAttribute="centerY" secondItem="RS0-TD-dRB" secondAttribute="centerY" id="khA-d6-uIS"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.90196078430000004" green="0.94509803920000002" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="descriptionLabel" destination="RM1-CG-YtO" id="Ixe-Y5-SQv"/>
                                             <outlet property="eventNameLabel" destination="Swn-QQ-elk" id="Tbd-mK-yPc"/>
@@ -539,34 +539,34 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hmx-Nr-rPH">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
-                                        <color key="backgroundColor" red="0.90196078430000004" green="0.94509803920000002" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1000" id="VcA-We-UKO"/>
                                         </constraints>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Schedule" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n1S-Wk-7Rx">
-                                        <rect key="frame" x="121.66666666666667" y="40" width="170.66666666666663" height="49"/>
-                                        <fontDescription key="fontDescription" name="GujaratiSangamMN-Bold" family="Gujarati Sangam MN" pointSize="35"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="schedule" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n1S-Wk-7Rx">
+                                        <rect key="frame" x="135" y="40" width="144" height="48"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="35"/>
                                         <color key="textColor" red="0.89411764709999997" green="0.56862745100000001" blue="0.50980392159999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="i5A-YA-WTG">
-                                        <rect key="frame" x="45.333333333333343" y="129" width="323.33333333333326" height="500"/>
+                                        <rect key="frame" x="40.333333333333343" y="128" width="333.33333333333326" height="500"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="9CX-vN-hAT">
-                                                <rect key="frame" x="0.0" y="0.0" width="323.33333333333331" height="84"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="333.33333333333331" height="84"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eG8-UG-wUl">
-                                                        <rect key="frame" x="0.0" y="0.0" width="133.66666666666666" height="28"/>
-                                                        <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="20"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="event name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eG8-UG-wUl">
+                                                        <rect key="frame" x="0.0" y="0.0" width="110.66666666666667" height="27.333333333333332"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
                                                         <color key="textColor" red="0.89510935540000003" green="0.56985825300000004" blue="0.5097833276" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ex: CS439 Exam 1" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6MW-0S-eu1">
-                                                        <rect key="frame" x="0.0" y="36" width="323.33333333333331" height="48"/>
-                                                        <color key="backgroundColor" red="0.89516109229999996" green="0.94824951889999998" blue="0.98824256659999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <rect key="frame" x="0.0" y="35.333333333333343" width="333.33333333333331" height="48.666666666666657"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="textColor"/>
-                                                        <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="20"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="24"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                 </subviews>
@@ -577,19 +577,19 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Dsw-7W-6lk">
-                                                <rect key="frame" x="0.0" y="104" width="323.33333333333331" height="84"/>
+                                                <rect key="frame" x="0.0" y="104" width="333.33333333333331" height="84"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qq5-R3-Flj">
-                                                        <rect key="frame" x="0.0" y="0.0" width="95" height="28"/>
-                                                        <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="20"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="location:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qq5-R3-Flj">
+                                                        <rect key="frame" x="0.0" y="0.0" width="76.666666666666671" height="27.333333333333332"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
                                                         <color key="textColor" red="0.89510935540000003" green="0.56985825300000004" blue="0.5097833276" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ex: UTC: 2.102A" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t9u-oF-O6g">
-                                                        <rect key="frame" x="0.0" y="36" width="323.33333333333331" height="48"/>
-                                                        <color key="backgroundColor" red="0.89516109229999996" green="0.94824951889999998" blue="0.98824256659999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <rect key="frame" x="0.0" y="35.333333333333314" width="333.33333333333331" height="48.666666666666657"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="textColor"/>
-                                                        <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="20"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="24"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                 </subviews>
@@ -600,19 +600,19 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="aJO-8H-5Sc">
-                                                <rect key="frame" x="0.0" y="208" width="323.33333333333331" height="84"/>
+                                                <rect key="frame" x="0.0" y="208" width="333.33333333333331" height="84"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OAO-a0-hbQ">
-                                                        <rect key="frame" x="0.0" y="0.0" width="54.666666666666664" height="28"/>
-                                                        <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="20"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OAO-a0-hbQ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="46" height="27.333333333333332"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
                                                         <color key="textColor" red="0.89510935540000003" green="0.56985825300000004" blue="0.5097833276" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="MM/DD/YYYY" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kIV-tj-4ex">
-                                                        <rect key="frame" x="0.0" y="36" width="323.33333333333331" height="48"/>
-                                                        <color key="backgroundColor" red="0.89516109229999996" green="0.94824951889999998" blue="0.98824256659999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <rect key="frame" x="0.0" y="35.333333333333314" width="333.33333333333331" height="48.666666666666657"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="textColor"/>
-                                                        <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="20"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="24"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                 </subviews>
@@ -623,19 +623,19 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lkh-7P-RPR">
-                                                <rect key="frame" x="0.0" y="312" width="323.33333333333331" height="84"/>
+                                                <rect key="frame" x="0.0" y="312" width="333.33333333333331" height="84"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QLG-Zw-1fa">
-                                                        <rect key="frame" x="0.0" y="0.0" width="114.33333333333333" height="28"/>
-                                                        <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="20"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="start time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QLG-Zw-1fa">
+                                                        <rect key="frame" x="0.0" y="0.0" width="89.666666666666671" height="27.333333333333332"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
                                                         <color key="textColor" red="0.89510935540000003" green="0.56985825300000004" blue="0.5097833276" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="HH:MMam/pm (Ex: 01:00am)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OU8-OO-pK6">
-                                                        <rect key="frame" x="0.0" y="36" width="323.33333333333331" height="48"/>
-                                                        <color key="backgroundColor" red="0.89516109229999996" green="0.94824951889999998" blue="0.98824256659999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <rect key="frame" x="0.0" y="35.333333333333314" width="333.33333333333331" height="48.666666666666657"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="textColor"/>
-                                                        <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="20"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="24"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                 </subviews>
@@ -646,19 +646,19 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="knD-uD-qjT">
-                                                <rect key="frame" x="0.0" y="416" width="323.33333333333331" height="84"/>
+                                                <rect key="frame" x="0.0" y="416" width="333.33333333333331" height="84"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End Time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pbo-dK-vXT">
-                                                        <rect key="frame" x="0.0" y="0.0" width="106" height="28"/>
-                                                        <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="20"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="end time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pbo-dK-vXT">
+                                                        <rect key="frame" x="0.0" y="0.0" width="85.333333333333329" height="27.333333333333332"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
                                                         <color key="textColor" red="0.89510935540000003" green="0.56985825300000004" blue="0.5097833276" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="HH:MMam/pm (Ex: 01:00am)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UiS-lW-fCf">
-                                                        <rect key="frame" x="0.0" y="36" width="323.33333333333331" height="48"/>
-                                                        <color key="backgroundColor" red="0.89516109229999996" green="0.94824951889999998" blue="0.98824256659999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <rect key="frame" x="0.0" y="35.333333333333371" width="333.33333333333331" height="48.666666666666657"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="textColor"/>
-                                                        <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="20"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="24"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                 </subviews>
@@ -671,7 +671,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="96q-Yn-Sih">
-                                        <rect key="frame" x="112" y="669" width="190" height="221"/>
+                                        <rect key="frame" x="112" y="668" width="190" height="221"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QjX-dn-iTA">
                                                 <rect key="frame" x="0.0" y="0.0" width="190" height="55"/>
@@ -680,8 +680,8 @@
                                                     <constraint firstAttribute="height" constant="55" id="Q7f-ec-Plu"/>
                                                     <constraint firstAttribute="width" constant="190" id="pxF-c0-IzA"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                                <state key="normal" title="Save">
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="25"/>
+                                                <state key="normal" title="save">
                                                     <color key="titleColor" red="0.90300327540000003" green="0.94410663839999998" blue="0.99608701470000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </state>
                                                 <connections>
@@ -695,8 +695,8 @@
                                                     <constraint firstAttribute="height" constant="55" id="9pY-qz-cYA"/>
                                                     <constraint firstAttribute="width" constant="190" id="hTD-Ev-oac"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                                <state key="normal" title="Delete">
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="25"/>
+                                                <state key="normal" title="delete">
                                                     <color key="titleColor" red="0.90300327540000003" green="0.94410663839999998" blue="0.99608701470000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </state>
                                                 <connections>
@@ -710,8 +710,8 @@
                                                     <constraint firstAttribute="height" constant="55" id="aVv-17-Ftv"/>
                                                     <constraint firstAttribute="width" constant="190" id="mcB-g7-Z43"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                                <state key="normal" title="Cancel">
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="25"/>
+                                                <state key="normal" title="cancel">
                                                     <color key="titleColor" red="0.90300327540000003" green="0.94410663839999998" blue="0.99608701470000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </state>
                                                 <connections>
@@ -740,7 +740,7 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" red="0.90196078430000004" green="0.94509803920000002" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Hmx-Nr-rPH" firstAttribute="width" secondItem="TpQ-yU-nUG" secondAttribute="width" id="00G-35-bLQ"/>
                             <constraint firstAttribute="bottom" secondItem="Dfp-1B-g7t" secondAttribute="bottom" id="Fgf-Ly-BJy"/>
@@ -772,12 +772,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Add a class" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zAA-yg-g1v">
-                                <rect key="frame" x="20" y="20" width="218" height="49"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="218" id="f23-L0-KN6"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="GujaratiSangamMN-Bold" family="Gujarati Sangam MN" pointSize="35"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="add a class" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zAA-yg-g1v">
+                                <rect key="frame" x="20" y="20" width="184.33333333333334" height="48"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="35"/>
                                 <color key="textColor" red="0.8911724687" green="0.55803936720000002" blue="0.50194042920000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -788,56 +785,55 @@
                                     <constraint firstAttribute="height" constant="54" id="OXp-Ub-Mve"/>
                                     <constraint firstAttribute="width" constant="150" id="vl4-8f-aU3"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="27"/>
-                                <state key="normal" title="Add">
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="24"/>
+                                <state key="normal" title="add">
                                     <color key="titleColor" red="0.902957499" green="0.94418281319999997" blue="0.99216490980000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
                                     <action selector="addButton:" destination="9ii-rc-XoX" eventType="touchUpInside" id="98E-wE-hQA"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instructor:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mj2-Qk-cKG">
-                                <rect key="frame" x="20" y="259" width="132" height="35"/>
-                                <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="25"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="instructor:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mj2-Qk-cKG">
+                                <rect key="frame" x="20.000000000000007" y="253" width="111.66666666666669" height="35"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="25"/>
                                 <color key="textColor" red="0.89508980510000002" green="0.55798077580000005" blue="0.50586259369999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="i.e. CS 331" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vje-Ci-Q0f">
-                                <rect key="frame" x="20" y="173" width="374" height="40"/>
-                                <color key="backgroundColor" red="0.9029574990272522" green="0.94418281316757202" blue="0.99216490983963013" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Course Number:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KN5-5L-Jur">
-                                <rect key="frame" x="20" y="122" width="213" height="35"/>
-                                <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="25"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="course number:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KN5-5L-Jur">
+                                <rect key="frame" x="20" y="118" width="174.33333333333334" height="35"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="25"/>
                                 <color key="textColor" red="0.89508980510000002" green="0.55798077580000005" blue="0.50586259369999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="i.e. NORMAN A" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Apv-vp-DO8">
-                                <rect key="frame" x="20" y="324" width="374" height="40"/>
-                                <color key="backgroundColor" red="0.9029574990272522" green="0.94418281316757202" blue="0.99216490983963013" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <rect key="frame" x="20" y="298" width="374" height="35"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="22"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="i.e. CS 331" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vje-Ci-Q0f">
+                                <rect key="frame" x="20" y="163" width="374" height="35"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="22"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="vje-Ci-Q0f" firstAttribute="top" secondItem="KN5-5L-Jur" secondAttribute="bottom" constant="16" id="1kz-zK-udl"/>
                             <constraint firstItem="Apv-vp-DO8" firstAttribute="leading" secondItem="3qk-DA-vVC" secondAttribute="leading" constant="20" id="1p6-ZN-Sg1"/>
                             <constraint firstItem="zAA-yg-g1v" firstAttribute="top" secondItem="3qk-DA-vVC" secondAttribute="top" id="4ut-8e-1th"/>
                             <constraint firstItem="3qk-DA-vVC" firstAttribute="trailing" secondItem="Apv-vp-DO8" secondAttribute="trailing" constant="20" id="8v4-TD-FMt"/>
-                            <constraint firstItem="Mj2-Qk-cKG" firstAttribute="top" secondItem="vje-Ci-Q0f" secondAttribute="bottom" constant="46" id="9Oa-2I-CsS"/>
+                            <constraint firstItem="zAA-yg-g1v" firstAttribute="leading" secondItem="3qk-DA-vVC" secondAttribute="leading" constant="20" id="EbU-Ih-Grx"/>
                             <constraint firstItem="vje-Ci-Q0f" firstAttribute="leading" secondItem="3qk-DA-vVC" secondAttribute="leading" constant="20" id="Emb-pZ-x6w"/>
-                            <constraint firstItem="Apv-vp-DO8" firstAttribute="top" secondItem="Mj2-Qk-cKG" secondAttribute="bottom" constant="30" id="K2Q-Lc-0M2"/>
+                            <constraint firstItem="Mj2-Qk-cKG" firstAttribute="top" secondItem="vje-Ci-Q0f" secondAttribute="bottom" constant="55" id="LxU-bi-b9b"/>
+                            <constraint firstItem="vje-Ci-Q0f" firstAttribute="top" secondItem="KN5-5L-Jur" secondAttribute="bottom" constant="10" id="MVv-Yx-Htw"/>
                             <constraint firstItem="3qk-DA-vVC" firstAttribute="bottom" secondItem="dwA-T3-q65" secondAttribute="bottom" constant="103" id="TdJ-An-3Fh"/>
                             <constraint firstItem="vje-Ci-Q0f" firstAttribute="centerX" secondItem="jDy-le-EAU" secondAttribute="centerX" id="W1m-Eq-p6J"/>
                             <constraint firstItem="dwA-T3-q65" firstAttribute="centerX" secondItem="jDy-le-EAU" secondAttribute="centerX" id="ZVb-oz-oai"/>
                             <constraint firstItem="KN5-5L-Jur" firstAttribute="leading" secondItem="3qk-DA-vVC" secondAttribute="leading" constant="20" id="ePx-3a-dXD"/>
+                            <constraint firstItem="Apv-vp-DO8" firstAttribute="top" secondItem="Mj2-Qk-cKG" secondAttribute="bottom" constant="10" id="rL0-UH-2Az"/>
                             <constraint firstItem="3qk-DA-vVC" firstAttribute="trailing" secondItem="vje-Ci-Q0f" secondAttribute="trailing" constant="20" id="t8u-UX-kgF"/>
-                            <constraint firstItem="KN5-5L-Jur" firstAttribute="top" secondItem="zAA-yg-g1v" secondAttribute="bottom" constant="53" id="un5-Nj-Vei"/>
+                            <constraint firstItem="KN5-5L-Jur" firstAttribute="top" secondItem="zAA-yg-g1v" secondAttribute="bottom" constant="50" id="un5-Nj-Vei"/>
                             <constraint firstItem="Mj2-Qk-cKG" firstAttribute="leading" secondItem="3qk-DA-vVC" secondAttribute="leading" constant="20" id="xGH-6G-DfS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3qk-DA-vVC"/>
@@ -862,10 +858,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="   Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Scw-ZV-gzR">
+                        <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="   settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Scw-ZV-gzR">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" name="GujaratiSangamMN-Bold" family="Gujarati Sangam MN" pointSize="35"/>
+                            <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="35"/>
                             <color key="textColor" red="0.94892293210000001" green="0.53954499960000002" blue="0.488080442" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -879,9 +875,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chat alerts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qmt-qf-UdB">
-                                                    <rect key="frame" x="20" y="12" width="96" height="24"/>
-                                                    <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="chat alerts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qmt-qf-UdB">
+                                                    <rect key="frame" x="20" y="12" width="82.333333333333329" height="24"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -889,6 +885,7 @@
                                                     <rect key="frame" x="334" y="5" width="49" height="31"/>
                                                 </switch>
                                             </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="vMh-Dy-tZx" secondAttribute="trailing" constant="33" id="2d4-6z-vhF"/>
                                                 <constraint firstItem="Qmt-qf-UdB" firstAttribute="leading" secondItem="qxL-O7-jrT" secondAttribute="leading" constant="20" id="OPL-EE-aAt"/>
@@ -896,6 +893,7 @@
                                                 <constraint firstItem="vMh-Dy-tZx" firstAttribute="top" secondItem="qxL-O7-jrT" secondAttribute="top" constant="5" id="Tm0-qa-JjC"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="vWU-WM-5vc">
                                         <rect key="frame" x="0.0" y="143.33333333333334" width="414" height="44"/>
@@ -904,9 +902,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calendar updates" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6c-Es-qze">
-                                                    <rect key="frame" x="20" y="12" width="156" height="24"/>
-                                                    <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="calendar updates" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6c-Es-qze">
+                                                    <rect key="frame" x="20" y="12" width="139" height="24"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -914,6 +912,7 @@
                                                     <rect key="frame" x="336" y="6" width="49" height="31"/>
                                                 </switch>
                                             </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="32X-lG-Vw8" secondAttribute="trailing" constant="31" id="5rb-mo-vpo"/>
                                                 <constraint firstItem="f6c-Es-qze" firstAttribute="leading" secondItem="ay5-wx-0L2" secondAttribute="leading" constant="20" id="JGC-6R-kIN"/>
@@ -921,6 +920,7 @@
                                                 <constraint firstItem="32X-lG-Vw8" firstAttribute="top" secondItem="ay5-wx-0L2" secondAttribute="top" constant="6" id="uO7-ih-600"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -933,16 +933,20 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dark mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l7l-9b-Od5">
-                                                    <rect key="frame" x="20" y="12" width="97" height="24"/>
-                                                    <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dark mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l7l-9b-Od5">
+                                                    <rect key="frame" x="20" y="12" width="87.333333333333329" height="24"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lvn-zc-Rn5">
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="lvn-zc-Rn5">
                                                     <rect key="frame" x="336" y="6" width="49" height="31"/>
+                                                    <connections>
+                                                        <action selector="darkModeToggled:" destination="PGs-D4-gbo" eventType="valueChanged" id="Ip7-FK-cpL"/>
+                                                    </connections>
                                                 </switch>
                                             </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstItem="l7l-9b-Od5" firstAttribute="top" secondItem="nk7-nP-JAI" secondAttribute="top" constant="12" id="1iI-6P-2aV"/>
                                                 <constraint firstAttribute="trailing" secondItem="lvn-zc-Rn5" secondAttribute="trailing" constant="31" id="YvC-dP-l7U"/>
@@ -950,6 +954,7 @@
                                                 <constraint firstItem="lvn-zc-Rn5" firstAttribute="top" secondItem="nk7-nP-JAI" secondAttribute="top" constant="6" id="fLI-Ro-S84"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -962,18 +967,20 @@
                                             <rect key="frame" x="0.0" y="0.0" width="376" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit account information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="des-Hn-asL">
-                                                    <rect key="frame" x="20" y="12" width="216" height="24"/>
-                                                    <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="edit account information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="des-Hn-asL">
+                                                    <rect key="frame" x="20" y="12" width="197" height="24"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstItem="des-Hn-asL" firstAttribute="top" secondItem="syu-YG-zoQ" secondAttribute="top" constant="12" id="xxY-um-wie"/>
                                                 <constraint firstItem="des-Hn-asL" firstAttribute="leading" secondItem="syu-YG-zoQ" secondAttribute="leading" constant="20" id="yvx-jz-WKh"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -986,20 +993,21 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Out" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aiI-O6-4Eh">
-                                                    <rect key="frame" x="20" y="12" width="78" height="24"/>
-                                                    <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sign Out" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aiI-O6-4Eh">
+                                                    <rect key="frame" x="20" y="12" width="69" height="24"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
                                                     <color key="textColor" red="0.99955898523330688" green="0.0" blue="0.006430882029235363" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-exit-50" translatesAutoresizingMaskIntoConstraints="NO" id="rKC-An-00X">
-                                                    <rect key="frame" x="111" y="17" width="12" height="14"/>
+                                                    <rect key="frame" x="102" y="17" width="12" height="14"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="12" id="03L-Ig-3oj"/>
                                                         <constraint firstAttribute="height" constant="14" id="yjK-mB-EbB"/>
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstItem="rKC-An-00X" firstAttribute="top" secondItem="p8w-zi-CK1" secondAttribute="top" constant="17" id="KnQ-SY-fl1"/>
                                                 <constraint firstItem="aiI-O6-4Eh" firstAttribute="top" secondItem="p8w-zi-CK1" secondAttribute="top" constant="12" id="enY-LO-bV7"/>
@@ -1007,6 +1015,7 @@
                                                 <constraint firstItem="rKC-An-00X" firstAttribute="leading" secondItem="aiI-O6-4Eh" secondAttribute="trailing" constant="13" id="xj7-sx-tP4"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -1034,12 +1043,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit Account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MpP-lD-lwV">
-                                <rect key="frame" x="20" y="20" width="220" height="45"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="edit account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MpP-lD-lwV">
+                                <rect key="frame" x="20" y="20" width="220" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="220" id="6SS-8h-42G"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="GujaratiSangamMN-Bold" family="Gujarati Sangam MN" pointSize="32"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="32"/>
                                 <color key="textColor" red="0.89510935544967651" green="0.56985825300216675" blue="0.50978332757949829" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1050,28 +1059,28 @@
                                     <constraint firstAttribute="height" constant="60" id="30O-T5-LCc"/>
                                     <constraint firstAttribute="width" constant="190" id="nlM-De-AfF"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="25"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="24"/>
                                 <color key="tintColor" red="0.86029630899999998" green="0.94024223090000003" blue="0.98824423549999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" title="Save"/>
+                                <state key="normal" title="save"/>
                                 <connections>
                                     <action selector="saveButton:" destination="RV3-ea-3q0" eventType="touchUpInside" id="psh-Fp-O7H"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="4W9-o9-eGY">
-                                <rect key="frame" x="20" y="101" width="374" height="327"/>
+                                <rect key="frame" x="20" y="100" width="374" height="347"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="QkS-Cn-y2r">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="60"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="65"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Display Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ShX-8P-P2P">
-                                                <rect key="frame" x="0.0" y="0.0" width="111.66666666666667" height="21"/>
-                                                <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="15"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="display name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ShX-8P-P2P">
+                                                <rect key="frame" x="0.0" y="0.0" width="117.33333333333333" height="26"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="19"/>
                                                 <color key="textColor" red="0.89510935544967651" green="0.56985825300216675" blue="0.50978332757949829" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mUG-ZP-ShW">
-                                                <rect key="frame" x="0.0" y="26" width="374" height="34"/>
-                                                <color key="backgroundColor" red="0.9029574990272522" green="0.94418281316757202" blue="0.99216490983963013" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <rect key="frame" x="0.0" y="31" width="374" height="34"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -1083,17 +1092,17 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="eYO-BU-hyl">
-                                        <rect key="frame" x="0.0" y="89" width="374" height="60"/>
+                                        <rect key="frame" x="0.0" y="94" width="374" height="65"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rfb-l2-ShV">
-                                                <rect key="frame" x="0.0" y="0.0" width="48" height="21"/>
-                                                <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="15"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="email:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rfb-l2-ShV">
+                                                <rect key="frame" x="0.0" y="0.0" width="51.333333333333336" height="26"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="19"/>
                                                 <color key="textColor" red="0.89510935544967651" green="0.56985825300216675" blue="0.50978332757949829" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nt8-LZ-0m6">
-                                                <rect key="frame" x="0.0" y="26" width="374" height="34"/>
-                                                <color key="backgroundColor" red="0.90300327540000003" green="0.94410663839999998" blue="0.99608701470000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <rect key="frame" x="0.0" y="31" width="374" height="34"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -1105,17 +1114,17 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="kbl-7K-o2W">
-                                        <rect key="frame" x="0.0" y="178" width="374" height="60"/>
+                                        <rect key="frame" x="0.0" y="188" width="374" height="65"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pYi-hD-7Bq">
-                                                <rect key="frame" x="0.0" y="0.0" width="79" height="21"/>
-                                                <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="15"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pYi-hD-7Bq">
+                                                <rect key="frame" x="0.0" y="0.0" width="85.666666666666671" height="26"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="19"/>
                                                 <color key="textColor" red="0.89510935544967651" green="0.56985825300216675" blue="0.50978332757949829" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mbn-hF-9b1">
-                                                <rect key="frame" x="0.0" y="26" width="374" height="34"/>
-                                                <color key="backgroundColor" red="0.90300327540000003" green="0.94410663839999998" blue="0.99608701470000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <rect key="frame" x="0.0" y="31" width="374" height="34"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -1127,17 +1136,17 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Zau-2D-Cif">
-                                        <rect key="frame" x="0.0" y="267" width="374" height="60"/>
+                                        <rect key="frame" x="0.0" y="282" width="374" height="65"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm Password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BU6-4b-zOJ">
-                                                <rect key="frame" x="0.0" y="0.0" width="374" height="21"/>
-                                                <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="15"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="confirm password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BU6-4b-zOJ">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="26"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="19"/>
                                                 <color key="textColor" red="0.89510935544967651" green="0.56985825300216675" blue="0.50978332757949829" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n6y-mQ-NY0">
-                                                <rect key="frame" x="0.0" y="26" width="374" height="34"/>
-                                                <color key="backgroundColor" red="0.90300327540000003" green="0.94410663839999998" blue="0.99608701470000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <rect key="frame" x="0.0" y="31" width="374" height="34"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -1161,7 +1170,7 @@
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.902957499" green="0.94418281319999997" blue="0.99216490980000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="h56-fR-x9s" firstAttribute="trailing" secondItem="4W9-o9-eGY" secondAttribute="trailing" constant="20" id="5j5-aE-Nsq"/>
                             <constraint firstItem="4W9-o9-eGY" firstAttribute="leading" secondItem="h56-fR-x9s" secondAttribute="leading" constant="20" id="7QB-FD-3aP"/>
@@ -1195,10 +1204,10 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uyH-NB-7xW">
                                 <rect key="frame" x="20" y="70" width="374" height="617"/>
-                                <color key="backgroundColor" red="0.9029574990272522" green="0.94418281316757202" blue="0.99216490983963013" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" red="0.89508980510000002" green="0.55798077580000005" blue="0.50586259369999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <color key="sectionIndexBackgroundColor" red="0.9029574990272522" green="0.94418281316757202" blue="0.99216490983963013" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="0.0" reuseIdentifier="textCellIdentifier" textLabel="GcW-ei-5fY" rowHeight="160" style="IBUITableViewCellStyleDefault" id="9EC-uo-0zr">
                                         <rect key="frame" x="0.0" y="28" width="374" height="160"/>
@@ -1207,23 +1216,23 @@
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="159.66666666666666"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GcW-ei-5fY">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GcW-ei-5fY">
                                                     <rect key="frame" x="15" y="0.0" width="339" height="159.66666666666666"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" name="GujaratiSangamMN-Bold" family="Gujarati Sangam MN" pointSize="25"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="25"/>
                                                     <color key="textColor" red="0.89508980512619019" green="0.55798077583312988" blue="0.50586259365081787" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" red="0.902957499" green="0.94418281319999997" blue="0.99216490980000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.9029574990272522" green="0.94418281316757202" blue="0.99216490983963013" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chats" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RJT-1l-2rM">
-                                <rect key="frame" x="20.000000000000007" y="20" width="108.66666666666669" height="49"/>
-                                <fontDescription key="fontDescription" name="GujaratiSangamMN-Bold" family="Gujarati Sangam MN" pointSize="35"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="chats" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RJT-1l-2rM">
+                                <rect key="frame" x="19.999999999999993" y="20" width="88.333333333333314" height="48"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="35"/>
                                 <color key="textColor" red="0.89508980510000002" green="0.55798077580000005" blue="0.50586259369999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1300,8 +1309,8 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" estimatedRowHeight="-1" sectionHeaderHeight="-1" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="C45-kz-6FX">
                                 <rect key="frame" x="20" y="275" width="276" height="240"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="sectionIndexBackgroundColor" red="0.902957499" green="0.94418281319999997" blue="0.99216490980000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="muteCellIdentifier" id="AXU-qr-Bde" customClass="MuteTableViewCell" customModule="unify" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="276" height="44"/>
@@ -1326,10 +1335,12 @@
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         </switch>
                                                     </subviews>
-                                                    <color key="backgroundColor" red="0.902957499" green="0.94418281319999997" blue="0.99216490980000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </view>
                                             </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="membersCellIdentifier" id="1gY-5w-Z7l" customClass="MembersTableViewCell" customModule="unify" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="72" width="276" height="44"/>
@@ -1350,11 +1361,12 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" red="0.902957499" green="0.94418281319999997" blue="0.99216490980000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </view>
                                             </subviews>
-                                            <color key="backgroundColor" red="0.902957499" green="0.94418281319999997" blue="0.99216490980000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="notesCellIdentifier" id="859-sn-xhh">
                                         <rect key="frame" x="0.0" y="116" width="276" height="44"/>
@@ -1371,9 +1383,9 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" red="0.902957499" green="0.94418281319999997" blue="0.99216490980000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.902957499" green="0.94418281319999997" blue="0.99216490980000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <segue destination="d5N-Yh-7KA" kind="show" id="Sm2-z5-89P"/>
                                         </connections>
@@ -1393,9 +1405,9 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" red="0.902957499" green="0.94418281319999997" blue="0.99216490980000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.902957499" green="0.94418281319999997" blue="0.99216490980000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <segue destination="ePl-W5-c24" kind="show" identifier="scheduleToEventSegue" id="JgM-8Y-hdr"/>
                                         </connections>
@@ -1415,20 +1427,21 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" red="0.902957499" green="0.94418281319999997" blue="0.99216490980000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TyI-ff-1cR">
-                                <rect key="frame" x="137" y="90" width="42" height="21"/>
+                                <rect key="frame" x="137" y="90" width="42" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.88235294117647056" green="0.94901960784313721" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="XAE-jL-mQL"/>
                     </view>
                     <connections>
@@ -1453,34 +1466,34 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VGX-dk-0qg">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="800"/>
-                                        <color key="backgroundColor" red="0.88235294117647056" green="0.94901960784313721" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="800" id="Djf-Vz-6Hy"/>
                                         </constraints>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Schedule" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bDZ-ah-Grw">
-                                        <rect key="frame" x="121.66666666666667" y="20" width="170.66666666666663" height="49"/>
-                                        <fontDescription key="fontDescription" name="GujaratiSangamMN-Bold" family="Gujarati Sangam MN" pointSize="35"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="schedule" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bDZ-ah-Grw">
+                                        <rect key="frame" x="130.66666666666669" y="20" width="152.66666666666669" height="48"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="35"/>
                                         <color key="textColor" red="0.89411764705882346" green="0.56862745098039214" blue="0.50980392156862742" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="eV2-9o-Qhv">
-                                        <rect key="frame" x="45.333333333333343" y="89" width="323.33333333333326" height="500"/>
+                                        <rect key="frame" x="34" y="88" width="346.33333333333331" height="500"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="5Ka-zd-syD">
-                                                <rect key="frame" x="0.0" y="0.0" width="323.33333333333331" height="84"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="346.33333333333331" height="84"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SSo-Cx-4WD">
-                                                        <rect key="frame" x="0.0" y="0.0" width="133.66666666666666" height="28"/>
-                                                        <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="20"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="event name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SSo-Cx-4WD">
+                                                        <rect key="frame" x="0.0" y="0.0" width="110.66666666666667" height="27.333333333333332"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
                                                         <color key="textColor" red="0.89510935540000003" green="0.56985825300000004" blue="0.5097833276" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ex: CS439 Exam 1" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k9B-yH-5do">
-                                                        <rect key="frame" x="0.0" y="36" width="323.33333333333331" height="48"/>
-                                                        <color key="backgroundColor" red="0.89516109228134155" green="0.94824951887130737" blue="0.98824256658554077" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <rect key="frame" x="0.0" y="35.333333333333343" width="346.33333333333331" height="48.666666666666657"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="textColor"/>
-                                                        <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="20"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="25"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                 </subviews>
@@ -1491,19 +1504,19 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="A4q-bI-sIw">
-                                                <rect key="frame" x="0.0" y="104" width="323.33333333333331" height="84"/>
+                                                <rect key="frame" x="0.0" y="104" width="346.33333333333331" height="84"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jro-mL-WO3">
-                                                        <rect key="frame" x="0.0" y="0.0" width="95" height="28"/>
-                                                        <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="20"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="location:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jro-mL-WO3">
+                                                        <rect key="frame" x="0.0" y="0.0" width="76.666666666666671" height="27.333333333333332"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
                                                         <color key="textColor" red="0.89510935540000003" green="0.56985825300000004" blue="0.5097833276" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ex: UTC: 2.102A" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R1f-3h-bLb">
-                                                        <rect key="frame" x="0.0" y="36" width="323.33333333333331" height="48"/>
-                                                        <color key="backgroundColor" red="0.89516109228134155" green="0.94824951887130737" blue="0.98824256658554077" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <rect key="frame" x="0.0" y="35.333333333333343" width="346.33333333333331" height="48.666666666666657"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="textColor"/>
-                                                        <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="20"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="25"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                 </subviews>
@@ -1514,19 +1527,19 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="aHu-Ey-luD">
-                                                <rect key="frame" x="0.0" y="208" width="323.33333333333331" height="84"/>
+                                                <rect key="frame" x="0.0" y="208" width="346.33333333333331" height="84"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pou-QC-dAk">
-                                                        <rect key="frame" x="0.0" y="0.0" width="54.666666666666664" height="28"/>
-                                                        <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="20"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pou-QC-dAk">
+                                                        <rect key="frame" x="0.0" y="0.0" width="46" height="27.333333333333332"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
                                                         <color key="textColor" red="0.89510935540000003" green="0.56985825300000004" blue="0.5097833276" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="MM/DD/YYYY" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j6Z-i7-aYP">
-                                                        <rect key="frame" x="0.0" y="36" width="323.33333333333331" height="48"/>
-                                                        <color key="backgroundColor" red="0.89516109228134155" green="0.94824951887130737" blue="0.98824256658554077" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <rect key="frame" x="0.0" y="35.333333333333314" width="346.33333333333331" height="48.666666666666657"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="textColor"/>
-                                                        <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="20"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="25"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                 </subviews>
@@ -1537,19 +1550,19 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="qWe-sE-NZj">
-                                                <rect key="frame" x="0.0" y="312" width="323.33333333333331" height="84"/>
+                                                <rect key="frame" x="0.0" y="312" width="346.33333333333331" height="84"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yvD-20-FFf">
-                                                        <rect key="frame" x="0.0" y="0.0" width="114.33333333333333" height="28"/>
-                                                        <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="20"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="start time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yvD-20-FFf">
+                                                        <rect key="frame" x="0.0" y="0.0" width="89.666666666666671" height="27.333333333333332"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
                                                         <color key="textColor" red="0.89510935540000003" green="0.56985825300000004" blue="0.5097833276" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="HH:MMam/pm (Ex: 01:00am)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Eo-6G-A9o">
-                                                        <rect key="frame" x="0.0" y="36" width="323.33333333333331" height="48"/>
-                                                        <color key="backgroundColor" red="0.89516109228134155" green="0.94824951887130737" blue="0.98824256658554077" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <rect key="frame" x="0.0" y="35.333333333333314" width="346.33333333333331" height="48.666666666666657"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="textColor"/>
-                                                        <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="20"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="25"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                 </subviews>
@@ -1560,19 +1573,19 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="uwU-uR-fn9">
-                                                <rect key="frame" x="0.0" y="416" width="323.33333333333331" height="84"/>
+                                                <rect key="frame" x="0.0" y="416" width="346.33333333333331" height="84"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End Time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xah-ui-Pk9">
-                                                        <rect key="frame" x="0.0" y="0.0" width="106" height="28"/>
-                                                        <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="20"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="end time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xah-ui-Pk9">
+                                                        <rect key="frame" x="0.0" y="0.0" width="85.333333333333329" height="27.333333333333332"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
                                                         <color key="textColor" red="0.89510935540000003" green="0.56985825300000004" blue="0.5097833276" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="HH:MMam/pm (Ex: 01:00am)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pvg-wm-62W">
-                                                        <rect key="frame" x="0.0" y="36" width="323.33333333333331" height="48"/>
-                                                        <color key="backgroundColor" red="0.89516109229999996" green="0.94824951889999998" blue="0.98824256659999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <rect key="frame" x="0.0" y="35.333333333333371" width="346.33333333333331" height="48.666666666666657"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="textColor"/>
-                                                        <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="20"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="25"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                 </subviews>
@@ -1585,14 +1598,14 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3FN-g8-lah">
-                                        <rect key="frame" x="112" y="629" width="190" height="55"/>
+                                        <rect key="frame" x="112" y="628" width="190" height="55"/>
                                         <color key="backgroundColor" red="0.89510935544967651" green="0.56985825300216675" blue="0.50978332757949829" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="190" id="daX-hO-dgd"/>
                                             <constraint firstAttribute="height" constant="55" id="jZl-Ai-FTZ"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                        <state key="normal" title="Submit">
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="24"/>
+                                        <state key="normal" title="submit">
                                             <color key="titleColor" red="0.9030032753944397" green="0.94410663843154907" blue="0.99608701467514038" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
                                         <connections>
@@ -1614,7 +1627,7 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" red="0.90196078431372551" green="0.94509803921568625" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="uAi-75-McN" firstAttribute="bottom" secondItem="ZU4-5Y-Qyq" secondAttribute="bottom" id="Hup-K1-BRK"/>
                             <constraint firstItem="ZU4-5Y-Qyq" firstAttribute="top" secondItem="uAi-75-McN" secondAttribute="top" id="N3w-Nj-lTX"/>
@@ -1648,7 +1661,7 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="J6q-rN-bT3">
                                 <rect key="frame" x="20" y="64" width="374" height="628"/>
-                                <color key="backgroundColor" red="0.88235294117647056" green="0.94901960784313721" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qL1-BT-72f">
                                     <size key="itemSize" width="85" height="85"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -1691,7 +1704,7 @@
                                 </items>
                             </toolbar>
                         </subviews>
-                        <color key="backgroundColor" red="0.88235294117647056" green="0.94901960784313721" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="foK-ix-T1p" firstAttribute="leading" secondItem="UDJ-m2-o5t" secondAttribute="leading" id="4XZ-sJ-ZOz"/>
                             <constraint firstItem="foK-ix-T1p" firstAttribute="top" secondItem="J6q-rN-bT3" secondAttribute="bottom" id="NtB-39-NKz"/>
@@ -1804,10 +1817,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Members" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xh9-GB-a83">
-                                <rect key="frame" x="168" y="89" width="72" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="members" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xh9-GB-a83">
+                                <rect key="frame" x="168" y="89" width="72" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1826,7 +1839,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="memberName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sE2-qC-iFM">
                                                     <rect key="frame" x="20" y="11" width="271" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -1840,7 +1853,7 @@
                                 </prototypes>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="0.88235294119999996" green="0.94901960780000005" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="NOx-33-ejk"/>
                     </view>
                     <connections>
@@ -1854,10 +1867,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="icons8-calendar-17-50" width="20" height="20"/>
-        <image name="icons8-exit-50" width="50" height="50"/>
-        <image name="icons8-home-page-50" width="20" height="20"/>
-        <image name="icons8-settings-50" width="20" height="20"/>
+        <image name="icons8-calendar-17-50" width="15" height="15"/>
+        <image name="icons8-exit-50" width="156.52174377441406" height="156.52174377441406"/>
+        <image name="icons8-home-page-50" width="15" height="15"/>
+        <image name="icons8-settings-50" width="15" height="15"/>
         <image name="inf" width="600" height="224"/>
         <image name="logo" width="589" height="600"/>
         <image name="unifylogo" width="600" height="331"/>

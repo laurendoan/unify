@@ -15,16 +15,21 @@ class SettingsTableViewController: UITableViewController {
     let editAccountSegueIdentifier = "editAccountSegueIdentifier"
     let signOutSegueIdentifier = "signOutSegueIdentifier"
     
+    @IBOutlet weak var darkModeSwitch: UISwitch!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Sets the background color.
         UIColourScheme.instance.set(for:self)
+//        darkModeSwitch.addTarget(self, action: #selector(stateChanged), for: .valueChanged)
     }
     
     // Hides the navigation bar when the view appears.
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.setNavigationBarHidden(true, animated: true)
+        // Sets the background color.
+        UIColourScheme.instance.set(for:self)
     }
 
     // Returns the number of sections in the table view.
@@ -58,4 +63,19 @@ class SettingsTableViewController: UITableViewController {
             }
         }
     }
+    
+    
+    @IBAction func darkModeToggled(_ sender: UISwitch) {
+        UIColourScheme.instance.switchColor()
+    }
+    
+    
+//    @objc func stateChanged(darkModeSwitch: UISwitch) {
+//        if darkModeSwitch.isOn {
+//            UIColourScheme.instance.switchColor()
+//        } else {
+//            UIColourScheme.instance.switchColor()
+//        }
+//    }
+    
 }

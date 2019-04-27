@@ -32,6 +32,11 @@ class ViewNoteViewController: UIViewController {
         title = "View Note"
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        // Sets the background color.
+        UIColourScheme.instance.set(for:self)
+    }
+    
     // allows saving to user photo gallery
     @IBAction func buttonPressed(_ sender: UIBarButtonItem) {
         UIImageWriteToSavedPhotosAlbum(newImage!, nil, nil, nil);

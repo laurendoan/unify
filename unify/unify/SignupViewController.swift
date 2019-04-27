@@ -37,6 +37,8 @@ class SignupViewController: UIViewController {
     // Shows the navigation bar when the view appears.
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.setNavigationBarHidden(false, animated: true)
+        // Sets the background color.
+        UIColourScheme.instance.set(for:self)
     }
 
     // Signs up a user.

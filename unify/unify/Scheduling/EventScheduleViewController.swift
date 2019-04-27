@@ -73,6 +73,11 @@ class EventScheduleViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        // Sets the background color.
+        UIColourScheme.instance.set(for:self)
+    }
+    
     /* Helper function to check formats of dates or times */
     func formatChecker(condition: String, text: String) -> Bool {
         formatter.dateFormat = condition
