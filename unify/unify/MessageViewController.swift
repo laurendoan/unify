@@ -459,10 +459,12 @@ extension MessageViewController: MessageInputBarDelegate {
                 ref.setValue(newMessage)
                 
                 // Create action for notification.
-                let replyAction = UNNotificationAction(
+                let replyAction = UNTextInputNotificationAction(
                     identifier: "reply",
                     title: "Reply",
-                    options: []
+                    options: [],
+                    textInputButtonTitle: "Send",
+                    textInputPlaceholder: "Message"
                 )
                 
                 // Create category for action.
@@ -491,13 +493,34 @@ extension MessageViewController: MessageInputBarDelegate {
                 
                 // Submit request.
                 center.add(request) { error in
-                    print("Add request error: ", error as Any)
+                    if let e = error {
+                        print("Add request error: \(e)")
+                    }
                 }
             }
         }
         // refreshes message bar
         inputBar.inputTextView.text = String()
         messagesCollectionView.scrollToBottom(animated: true)
+    }
+    
+    // Handles "reply" action in message notification.
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        let identifier = response.actionIdentifier
+//        let request = response.notification.request
+        
+        if identifier == "reply" {
+            let textResponse = response as! UNTextInputNotificationResponse
+            let message = textResponse.userText
+            
+            // Add new message to database.
+            let currentUser = currentSender()
+            let databaseRef = Constants.refs.databaseChats.child(className).childByAutoId()
+            let newMessage = ["sender_id": currentUser.id, "name": currentUser.displayName, "text": message, "message_id": UUID().uuidString, "date": String(Date().timeIntervalSince1970)]
+            databaseRef.setValue(newMessage)
+        }
+        
+        completionHandler()
     }
     
 }
