@@ -458,21 +458,41 @@ extension MessageViewController: MessageInputBarDelegate {
                 let newMessage = ["sender_id": current.id, "name": current.displayName, "text": str, "message_id": message.messageId, "date": String(Date().timeIntervalSince1970)]
                 ref.setValue(newMessage)
                 
+                // Create action for notification.
+                let replyAction = UNNotificationAction(
+                    identifier: "reply",
+                    title: "Reply",
+                    options: []
+                )
+                
+                // Create category for action.
+                let notificationCategory = UNNotificationCategory(
+                    identifier: "notificationCategory",
+                    actions: [replyAction],
+                    intentIdentifiers: [],
+                    options: []
+                )
+                
+                center.setNotificationCategories([notificationCategory])
+                
                 // Create notification.
                 let notification = UNMutableNotificationContent()
                 notification.title = classID
                 notification.subtitle = current.displayName
                 notification.body = str
+                notification.categoryIdentifier = "notificationCategory"
                 
-                // Trigger the notification after 5 seconds.
-                let delay: TimeInterval = 5.0
+                // Trigger the notification after 3 seconds.
+                let delay: TimeInterval = 3.0
                 let trigger = UNTimeIntervalNotificationTrigger(timeInterval: delay, repeats: false)
                 
                 // Create request to submit notification.
                 let request = UNNotificationRequest(identifier: "notification", content: notification, trigger: trigger)
                 
                 // Submit request.
-                center.add(request)
+                center.add(request) { error in
+                    print("Add request error: ", error as Any)
+                }
             }
         }
         // refreshes message bar
