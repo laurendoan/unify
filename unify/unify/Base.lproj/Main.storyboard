@@ -517,8 +517,15 @@
                     <connections>
                         <outlet property="calendarView" destination="rd4-oI-eyR" id="4NC-hl-mtp"/>
                         <outlet property="dateLabelTF" destination="cDM-iC-xA6" id="JFL-m6-OtE"/>
+                        <outlet property="fri" destination="e8z-0y-V4a" id="SvN-Ph-Jgg"/>
+                        <outlet property="mon" destination="4V3-tT-rJD" id="7Id-iz-quN"/>
                         <outlet property="month" destination="IR6-GO-6Ta" id="Wla-iu-cNt"/>
+                        <outlet property="sat" destination="tQ1-JD-2Ey" id="DtI-Cb-pHU"/>
+                        <outlet property="sun" destination="ay8-A6-zE7" id="vWo-4k-Bbw"/>
                         <outlet property="tableView" destination="RgI-jR-ChT" id="O3E-my-AY1"/>
+                        <outlet property="thu" destination="9T4-dR-E9n" id="05G-Fd-Bdg"/>
+                        <outlet property="tue" destination="dLy-f9-zBg" id="K3j-Ln-MHT"/>
+                        <outlet property="wed" destination="MKX-35-OCb" id="kFd-cd-VnL"/>
                         <outlet property="year" destination="A9B-Ma-Kih" id="Wso-iZ-bu9"/>
                         <segue destination="kk3-WT-8y4" kind="show" identifier="changeEventSegue" id="grD-cv-Px4"/>
                     </connections>
