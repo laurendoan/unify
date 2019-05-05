@@ -94,5 +94,4 @@ class SettingsTableViewController: UITableViewController {
     func updateTheme() {
         self.view.backgroundColor = JDColor.appSubviewBackground.color
     }
-    
 }
