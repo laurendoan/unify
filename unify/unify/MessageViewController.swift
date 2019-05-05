@@ -33,8 +33,8 @@ final class MessageViewController: MessagesViewController, MembersDelegate, Note
     var panelOut = false
     var panelState = -1 //-1: inside, 0: standard, 1: members
     
-    // Notification center.
-    let center = UNUserNotificationCenter.current()
+    let center = UNUserNotificationCenter.current() // Notification center.
+    let chatAlerts = UserDefaults.standard.bool(forKey: "Chat Alerts") // Chat alerts switch.
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -461,43 +461,45 @@ extension MessageViewController: MessageInputBarDelegate {
                 let newMessage = ["sender_id": current.id, "name": current.displayName, "text": str, "message_id": message.messageId, "date": String(Date().timeIntervalSince1970)]
                 ref.setValue(newMessage)
                 
-                // Create action for notification.
-                let replyAction = UNTextInputNotificationAction(
-                    identifier: "reply",
-                    title: "Reply",
-                    options: [],
-                    textInputButtonTitle: "Send",
-                    textInputPlaceholder: "Message"
-                )
-                
-                // Create category for action.
-                let notificationCategory = UNNotificationCategory(
-                    identifier: "notificationCategory",
-                    actions: [replyAction],
-                    intentIdentifiers: [],
-                    options: []
-                )
-                
-                center.setNotificationCategories([notificationCategory])
-                
-                // Create notification.
-                let notification = UNMutableNotificationContent()
-                notification.title = classID
-                notification.subtitle = current.displayName
-                notification.body = str
-                notification.categoryIdentifier = "notificationCategory"
-                
-                // Trigger the notification after 3 seconds.
-                let delay: TimeInterval = 3.0
-                let trigger = UNTimeIntervalNotificationTrigger(timeInterval: delay, repeats: false)
-                
-                // Create request to submit notification.
-                let request = UNNotificationRequest(identifier: "notification", content: notification, trigger: trigger)
-                
-                // Submit request.
-                center.add(request) { error in
-                    if let e = error {
-                        print("Add request error: \(e)")
+                if chatAlerts {
+                    // Create action for notification.
+                    let replyAction = UNTextInputNotificationAction(
+                        identifier: "reply",
+                        title: "Reply",
+                        options: [],
+                        textInputButtonTitle: "Send",
+                        textInputPlaceholder: "Message"
+                    )
+                    
+                    // Create category for action.
+                    let notificationCategory = UNNotificationCategory(
+                        identifier: "notificationCategory",
+                        actions: [replyAction],
+                        intentIdentifiers: [],
+                        options: []
+                    )
+                    
+                    center.setNotificationCategories([notificationCategory])
+                    
+                    // Create notification.
+                    let notification = UNMutableNotificationContent()
+                    notification.title = classID
+                    notification.subtitle = current.displayName
+                    notification.body = str
+                    notification.categoryIdentifier = "notificationCategory"
+                    
+                    // Trigger the notification after 3 seconds.
+                    let delay: TimeInterval = 3.0
+                    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: delay, repeats: false)
+                    
+                    // Create request to submit notification.
+                    let request = UNNotificationRequest(identifier: "notification", content: notification, trigger: trigger)
+                    
+                    // Submit request.
+                    center.add(request) { error in
+                        if let e = error {
+                            print("Add request error: \(e)")
+                        }
                     }
                 }
             }

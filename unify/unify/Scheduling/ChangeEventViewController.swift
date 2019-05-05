@@ -16,6 +16,7 @@ class ChangeEventViewController: UIViewController {
     let formatter = DateFormatter()
     var ref: DatabaseReference! // Database reference.
     let center = UNUserNotificationCenter.current() // Notification center.
+    var calendarUpdates = UserDefaults.standard.bool(forKey: "Calendar Updates")
     
     /* Initialized textfields */
     @IBOutlet weak var name: UITextField!
@@ -117,23 +118,25 @@ class ChangeEventViewController: UIViewController {
                 "end" : e
                 ])
             
-            // Create notification.
-            let notification = UNMutableNotificationContent()
-            notification.title = contentHolder.course!
-            notification.subtitle = n
-            notification.body = "This event has been updated."
-            
-            // Trigger the notification after 3 seconds.
-            let delay: TimeInterval = 3.0
-            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: delay, repeats: false)
-            
-            // Create request to submit notification.
-            let request = UNNotificationRequest(identifier: "notification", content: notification, trigger: trigger)
-            
-            // Submit request.
-            center.add(request) { error in
-                if let e = error {
-                    print("Add request error: \(e)")
+            if calendarUpdates {
+                // Create notification.
+                let notification = UNMutableNotificationContent()
+                notification.title = contentHolder.course!
+                notification.subtitle = n
+                notification.body = "This event has been updated."
+                
+                // Trigger the notification after 3 seconds.
+                let delay: TimeInterval = 3.0
+                let trigger = UNTimeIntervalNotificationTrigger(timeInterval: delay, repeats: false)
+                
+                // Create request to submit notification.
+                let request = UNNotificationRequest(identifier: "notification", content: notification, trigger: trigger)
+                
+                // Submit request.
+                center.add(request) { error in
+                    if let e = error {
+                        print("Add request error: \(e)")
+                    }
                 }
             }
         }

@@ -10,15 +10,27 @@ import UIKit
 import FirebaseAuth
 
 class SettingsTableViewController: UITableViewController {
+    @IBOutlet weak var chatAlertsSwitch: UISwitch!
+    @IBOutlet weak var calendarUpdatesSwitch: UISwitch!
+    @IBOutlet weak var darkModeSwitch: UISwitch!
+    
     var rowsPerSection:[Int] = [2, 1, 1, 1] // Number of rows per section.
     
     let editAccountSegueIdentifier = "editAccountSegueIdentifier"
     let signOutSegueIdentifier = "signOutSegueIdentifier"
     
-    @IBOutlet weak var darkModeSwitch: UISwitch!
+    let userDefaults = UserDefaults.standard
+    var chatAlerts = true
+    var calendarUpdates = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        chatAlerts = userDefaults.bool(forKey: "Chat Alerts")
+        chatAlertsSwitch.setOn(chatAlerts, animated: true)
+        
+        calendarUpdates = userDefaults.bool(forKey: "Calendar Updates")
+        calendarUpdatesSwitch.setOn(calendarUpdates, animated: true)
         
         darkModeSwitch.setOn(ThemeManager.sharedThemeManager.isNightMode(), animated: false)
 //        darkModeSwitch.addTarget(self, action: #selector(stateChanged), for: .valueChanged)
@@ -64,6 +76,15 @@ class SettingsTableViewController: UITableViewController {
         }
     }
     
+    @IBAction func chatAlertsToggled(_ sender: Any) {
+        chatAlerts = chatAlertsSwitch.isOn
+        userDefaults.set(chatAlerts, forKey: "Chat Alerts")
+    }
+    
+    @IBAction func calendarUpdatesToggled(_ sender: Any) {
+        calendarUpdates = calendarUpdatesSwitch.isOn
+        userDefaults.set(calendarUpdates, forKey: "Calendar Updates")
+    }
     
     @IBAction func darkModeToggled(_ sender: UISwitch) {
         ThemeManager.sharedThemeManager.toggleTheme()

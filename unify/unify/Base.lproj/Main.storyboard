@@ -885,6 +885,9 @@
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vMh-Dy-tZx">
                                                     <rect key="frame" x="334" y="5" width="49" height="31"/>
+                                                    <connections>
+                                                        <action selector="chatAlertsToggled:" destination="PGs-D4-gbo" eventType="valueChanged" id="ijJ-pF-RPI"/>
+                                                    </connections>
                                                 </switch>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -912,6 +915,9 @@
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="32X-lG-Vw8">
                                                     <rect key="frame" x="336" y="6" width="49" height="31"/>
+                                                    <connections>
+                                                        <action selector="calendarUpdatesToggled:" destination="PGs-D4-gbo" eventType="valueChanged" id="jLG-VQ-8Wh"/>
+                                                    </connections>
                                                 </switch>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1029,6 +1035,8 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Settings" image="icons8-settings-50" id="5wL-JZ-EZw"/>
                     <connections>
+                        <outlet property="calendarUpdatesSwitch" destination="32X-lG-Vw8" id="fbn-y8-SVZ"/>
+                        <outlet property="chatAlertsSwitch" destination="vMh-Dy-tZx" id="mfe-qw-sWl"/>
                         <outlet property="darkModeSwitch" destination="lvn-zc-Rn5" id="CZg-re-RYy"/>
                         <segue destination="dsY-OT-WZX" kind="show" identifier="signOutSegueIdentifier" id="PXg-qo-ebX"/>
                         <segue destination="RV3-ea-3q0" kind="show" identifier="editAccountSegueIdentifier" id="PrU-2c-MNF"/>
