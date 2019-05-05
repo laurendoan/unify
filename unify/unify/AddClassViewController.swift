@@ -12,7 +12,6 @@ import Firebase
 class AddClassViewController: UIViewController {
     @IBOutlet weak var courseNumTextField: UITextField!
     @IBOutlet weak var instructorTextField: UITextField!
-    
     @IBOutlet weak var button: UIButton!
     
     var ref: DatabaseReference!

@@ -19,23 +19,62 @@ class EventScheduleViewController: UIViewController {
     @IBOutlet weak var endTF: UITextField!
     @IBOutlet weak var button: UIButton!
     
+    
     /* Initialized Variables */
     let formatter = DateFormatter()
     var ref: DatabaseReference!
     let center = UNUserNotificationCenter.current() // Notification center.
     var classRef = "ERROR - NO CLASSREF"
     var courseName = ""
+    let accent = UIColor(red: 227/255, green: 142/255, blue: 128/255, alpha: 1)
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        button.layer.cornerRadius = 25
         ref = Database.database().reference()
+        
         // Do any additional setup after loading the view.
+        button.layer.cornerRadius = 25
+        button.layer.borderWidth = 1
+        button.layer.borderColor = accent.cgColor
+        button.setTitleColor(accent, for: .normal)
+        
+        // Style text fields
+        addBottomTextBorder(textField: eventNameTF)
+        addBottomTextBorder(textField: locationTF)
+        addBottomTextBorder(textField: dateTF)
+        addBottomTextBorder(textField: startTF)
+        addBottomTextBorder(textField: endTF)
+    }
+    
+    func addBottomTextBorder(textField:UITextField) {
+        let border = CALayer()
+        let width = CGFloat(2.0)
+        border.borderColor = accent.cgColor
+        border.frame = CGRect(x: 0, y: textField.frame.size.height - width, width: textField.frame.size.width, height: textField.frame.size.height)
+        
+        border.borderWidth = width
+        textField.layer.addSublayer(border)
+        textField.layer.masksToBounds = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.view.backgroundColor = JDColor.appSubviewBackground.color
+        
+        eventNameTF.attributedPlaceholder = NSAttributedString(string: "ex: CS439 Exam 1", attributes: [NSAttributedString.Key.foregroundColor : JDColor.appSubText.color])
+        eventNameTF.textColor = JDColor.appText.color
+        
+        locationTF.attributedPlaceholder = NSAttributedString(string: "ex: UTC: 2.102A", attributes: [NSAttributedString.Key.foregroundColor : JDColor.appSubText.color])
+        locationTF.textColor = JDColor.appText.color
+        
+        dateTF.attributedPlaceholder = NSAttributedString(string: "mm/dd/yyyy", attributes: [NSAttributedString.Key.foregroundColor : JDColor.appSubText.color])
+        dateTF.textColor = JDColor.appText.color
+        
+        startTF.attributedPlaceholder = NSAttributedString(string: "HH:MMam/pm (ex: 01:00am)", attributes: [NSAttributedString.Key.foregroundColor : JDColor.appSubText.color])
+        startTF.textColor = JDColor.appText.color
+        
+        endTF.attributedPlaceholder = NSAttributedString(string: "HH:MMam/pm (ex: 01:00am)", attributes: [NSAttributedString.Key.foregroundColor : JDColor.appSubText.color])
+        endTF.textColor = JDColor.appText.color
     }
     
     /* Used to send event data back to Database under userID -> schedule */
