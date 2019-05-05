@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import UserNotifications
 
 class EventScheduleViewController: UIViewController {
     /* Initialized Outlets */
@@ -16,14 +17,26 @@ class EventScheduleViewController: UIViewController {
     @IBOutlet weak var dateTF: UITextField!
     @IBOutlet weak var startTF: UITextField!
     @IBOutlet weak var endTF: UITextField!
-    
-    
     @IBOutlet weak var button: UIButton!
     
     /* Initialized Variables */
     let formatter = DateFormatter()
     var ref: DatabaseReference!
+    let center = UNUserNotificationCenter.current() // Notification center.
     var classRef = "ERROR - NO CLASSREF"
+    var courseName = ""
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        button.layer.cornerRadius = 25
+        ref = Database.database().reference()
+        // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.view.backgroundColor = JDColor.appSubviewBackground.color
+    }
     
     /* Used to send event data back to Database under userID -> schedule */
     @IBAction func submitButton(_ sender: Any) {
@@ -58,23 +71,30 @@ class EventScheduleViewController: UIViewController {
                 "end" : eT
                 ])
             
+            // Create notification.
+            let notification = UNMutableNotificationContent()
+            notification.title = courseName
+            notification.subtitle = e
+            notification.body = "A new event has been created."
+            
+            // Trigger the notification after 3 seconds.
+            let delay: TimeInterval = 3.0
+            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: delay, repeats: false)
+            
+            // Create request to submit notification.
+            let request = UNNotificationRequest(identifier: "notification", content: notification, trigger: trigger)
+            
+            // Submit request.
+            center.add(request) { error in
+                if let e = error {
+                    print("Add request error: \(e)")
+                }
+            }
+            
             // Dismisses the EventScheduleVC back to sidePanel
             dismiss(animated: true, completion: nil)
             self.navigationController?.popViewController(animated: true)
         }
-    }
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        button.layer.cornerRadius = 25
-        ref = Database.database().reference()
-        // Do any additional setup after loading the view.
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.view.backgroundColor = JDColor.appSubviewBackground.color
     }
     
     /* Helper function to check formats of dates or times */
@@ -95,16 +115,4 @@ class EventScheduleViewController: UIViewController {
         alertController.addAction(defaultAction)
         self.present(alertController, animated: true, completion: nil)
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

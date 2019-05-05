@@ -107,6 +107,7 @@ class PanelViewController: UIViewController, UITableViewDelegate, UITableViewDat
         if segue.identifier == "scheduleToEventSegue",
             let destination = segue.destination as? EventScheduleViewController {
             destination.classRef = classNameRef
+            destination.courseName = classId
         } else if segue.identifier == notesSegueIdentifier,
             let destination = segue.destination as? NotesViewController {
             destination.className = classNameRef
