@@ -54,7 +54,6 @@ class CalendarViewController: UIViewController {
         navigationController?.setNavigationBarHidden(true, animated: true)
         self.view.backgroundColor = JDColor.appSubviewBackground.color
         
-        
         courses.removeAll()
         courseTitles.removeAll()
         clickedDateContent.removeAll()
@@ -220,7 +219,7 @@ extension CalendarViewController: JTAppleCalendarViewDataSource, JTAppleCalendar
                 (snapshot1) in
                 if snapshot1.hasChild(self.clickedDate) {
                     // Observes all children under specific date
-                    self.ref.child("schedule").child(self.courses[index]).child(self.clickedDate)                    .observeSingleEvent(of: DataEventType.value) { (snapshot2) in
+                    self.ref.child("schedule").child(self.courses[index]).child(self.clickedDate).observeSingleEvent(of: DataEventType.value) { (snapshot2) in
                         // Iterates through the number of children
                         for i in snapshot2.children.allObjects as! [DataSnapshot] {
                             // Pulls data from each child (name of course, course id, and the instructor)
@@ -269,7 +268,6 @@ extension CalendarViewController: JTAppleCalendarViewDataSource, JTAppleCalendar
         handleCellTextColor (view: myCustomCell, cellState: cellState)
     }
 }
-
 
 extension CalendarViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

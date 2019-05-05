@@ -16,6 +16,7 @@ class ChangeEventViewController: UIViewController {
     let formatter = DateFormatter()
     var ref: DatabaseReference! // Database reference.
     let center = UNUserNotificationCenter.current() // Notification center.
+    var calendarUpdates = UserDefaults.standard.bool(forKey: "Calendar Updates")
     
     /* Initialized textfields */
     @IBOutlet weak var name: UITextField!
@@ -23,6 +24,9 @@ class ChangeEventViewController: UIViewController {
     @IBOutlet weak var date: UITextField!
     @IBOutlet weak var start: UITextField!
     @IBOutlet weak var end: UITextField!
+    
+    @IBOutlet weak var save: UIButton!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +40,21 @@ class ChangeEventViewController: UIViewController {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: true)
         self.view.backgroundColor = JDColor.appSubviewBackground.color
+        
+        name.attributedPlaceholder = NSAttributedString(string: "ex: CS439 Exam 1", attributes: [NSAttributedString.Key.foregroundColor : JDColor.appSubText.color])
+        name.textColor = JDColor.appText.color
+        
+        location.attributedPlaceholder = NSAttributedString(string: "ex: UTC: 2.102A", attributes: [NSAttributedString.Key.foregroundColor : JDColor.appSubText.color])
+        location.textColor = JDColor.appText.color
+        
+        date.attributedPlaceholder = NSAttributedString(string: "mm/dd/yyyy", attributes: [NSAttributedString.Key.foregroundColor : JDColor.appSubText.color])
+        date.textColor = JDColor.appText.color
+        
+        start.attributedPlaceholder = NSAttributedString(string: "HH:MMam/pm (ex: 01:00am)", attributes: [NSAttributedString.Key.foregroundColor : JDColor.appSubText.color])
+        start.textColor = JDColor.appText.color
+        
+        end.attributedPlaceholder = NSAttributedString(string: "HH:MMam/pm (ex: 01:00am)", attributes: [NSAttributedString.Key.foregroundColor : JDColor.appSubText.color])
+        end.textColor = JDColor.appText.color
     }
     
     /* Helper functioin to setup the variables and textfields */
@@ -99,23 +118,25 @@ class ChangeEventViewController: UIViewController {
                 "end" : e
                 ])
             
-            // Create notification.
-            let notification = UNMutableNotificationContent()
-            notification.title = contentHolder.course!
-            notification.subtitle = n
-            notification.body = "This event has been updated."
-            
-            // Trigger the notification after 3 seconds.
-            let delay: TimeInterval = 3.0
-            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: delay, repeats: false)
-            
-            // Create request to submit notification.
-            let request = UNNotificationRequest(identifier: "notification", content: notification, trigger: trigger)
-            
-            // Submit request.
-            center.add(request) { error in
-                if let e = error {
-                    print("Add request error: \(e)")
+            if calendarUpdates {
+                // Create notification.
+                let notification = UNMutableNotificationContent()
+                notification.title = contentHolder.course!
+                notification.subtitle = n
+                notification.body = "This event has been updated."
+                
+                // Trigger the notification after 3 seconds.
+                let delay: TimeInterval = 3.0
+                let trigger = UNTimeIntervalNotificationTrigger(timeInterval: delay, repeats: false)
+                
+                // Create request to submit notification.
+                let request = UNNotificationRequest(identifier: "notification", content: notification, trigger: trigger)
+                
+                // Submit request.
+                center.add(request) { error in
+                    if let e = error {
+                        print("Add request error: \(e)")
+                    }
                 }
             }
         }
@@ -137,7 +158,7 @@ class ChangeEventViewController: UIViewController {
     
     /* Helper function reset variables to dismiss the VC */
     func resetAndBack() {
-        // Resets the variables back to ni
+        // Resets the variables back to nil
         contentHolder = nil
         
         // Dismisses the ChangeEventVC back to CalendarVC

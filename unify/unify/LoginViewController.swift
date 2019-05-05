@@ -16,6 +16,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var button: UIButton!
     @IBOutlet weak var suButton: UIButton!
     
+    @IBOutlet weak var newUserLabel: UILabel!
+    
     let accent = UIColor(red: 227/255, green: 142/255, blue: 128/255, alpha: 1)
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,20 +30,19 @@ class LoginViewController: UIViewController {
         // Style "Sign Up" button.
         suButton.layer.cornerRadius = 10
         
+        addBottomTextBorder(textField: emailTextField)
+        addBottomTextBorder(textField: passwordTextField)
+    }
+    
+    func addBottomTextBorder(textField:UITextField) {
         let border = CALayer()
-        let border2 = CALayer()
         let width = CGFloat(2.0)
         border.borderColor = accent.cgColor
-        border.frame = CGRect(x: 0, y: emailTextField.frame.size.height - width, width: emailTextField.frame.size.width, height: emailTextField.frame.size.height)
+        border.frame = CGRect(x: 0, y: textField.frame.size.height - width, width: textField.frame.size.width, height: textField.frame.size.height)
         
         border.borderWidth = width
-        emailTextField.layer.addSublayer(border)
-        emailTextField.layer.masksToBounds = true
-        border2.borderColor = accent.cgColor
-        border2.frame = CGRect(x: 0, y: passwordTextField.frame.size.height - width, width: passwordTextField.frame.size.width, height: passwordTextField.frame.size.height)
-        border2.borderWidth = width
-        passwordTextField.layer.addSublayer(border2)
-        passwordTextField.layer.masksToBounds = true
+        textField.layer.addSublayer(border)
+        textField.layer.masksToBounds = true
     }
     
     // Hides the navigation bar when the view appears.
@@ -53,6 +54,7 @@ class LoginViewController: UIViewController {
         emailTextField.textColor = JDColor.appText.color
         passwordTextField.attributedPlaceholder = NSAttributedString(string: "password", attributes: [NSAttributedString.Key.foregroundColor : JDColor.appSubText.color])
         passwordTextField.textColor = JDColor.appText.color
+        newUserLabel.textColor = JDColor.appText.color
     }
     
     // Logs the user in.

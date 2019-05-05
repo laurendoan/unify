@@ -9,16 +9,30 @@
 import UIKit
 
 class MuteTableViewCell: UITableViewCell {
-
+    @IBOutlet weak var muteSwitch: UISwitch!
+    
+    let userDefaults = UserDefaults.standard
+    var mute = true
+    var courseName = ""
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
-
+    
+    func configure(courseName: String) {
+        self.courseName = courseName
+//        print("Configure mute cell \(self.courseName)")
+        mute = userDefaults.bool(forKey: "Mute \(courseName)")
+        muteSwitch.setOn(mute, animated: true)
+    }
+    
+    @IBAction func muteSwitchToggled(_ sender: Any) {
+//        print("Toggle mute switch \(courseName)")
+        mute = muteSwitch.isOn
+        userDefaults.set(mute, forKey: "Mute \(courseName)")
+    }
 }

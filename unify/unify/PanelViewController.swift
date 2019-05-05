@@ -63,6 +63,7 @@ class PanelViewController: UIViewController, UITableViewDelegate, UITableViewDat
         //print("in function", indexPath.row)
         if(indexPath.row == 0) {
             let cell:MuteTableViewCell = tableView.dequeueReusableCell(withIdentifier: "muteCellIdentifier", for: indexPath as IndexPath) as! MuteTableViewCell
+            cell.configure(courseName: className)
             return cell
         }
         if(indexPath.row == 1) {
