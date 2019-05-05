@@ -44,6 +44,12 @@ class MembersViewController: UIViewController, UITableViewDelegate, UITableViewD
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.view.backgroundColor = JDColor.appSubviewBackground.color
+        self.membersLabel.textColor = JDColor.appText.color
+    }
+    
     /*override func viewDidAppear(_ animated: Bool) {
         
     }*/

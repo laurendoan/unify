@@ -17,9 +17,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Set the background color.
-        UIColourScheme.instance.set(for:self)
-        
         // Animate infinity sign.
         UIView.animate(
             withDuration: 2.5,
@@ -46,6 +43,8 @@ class ViewController: UIViewController {
     
     // Hides the navigation bar when the view appears.
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: true)
+        self.view.backgroundColor = JDColor.appSubviewBackground.color
     }
 }

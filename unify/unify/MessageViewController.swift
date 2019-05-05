@@ -68,10 +68,13 @@ final class MessageViewController: MessagesViewController, MembersDelegate, Note
     
     // Shows navigation bar. Sets up side panel.
     override func viewDidAppear(_ animated: Bool) {
-        self.navigationController?.isNavigationBarHidden = false
-        // Sets the background color.
-        UIColourScheme.instance.set(for:self)
+        navigationController?.setNavigationBarHidden(false, animated: true)
         setupPanel()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.view.backgroundColor = JDColor.appSubviewBackground.color
     }
     
     // Sets up side panel.

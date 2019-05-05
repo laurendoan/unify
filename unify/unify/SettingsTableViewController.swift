@@ -20,8 +20,7 @@ class SettingsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Sets the background color.
-        UIColourScheme.instance.set(for:self)
+        darkModeSwitch.setOn(ThemeManager.sharedThemeManager.isNightMode(), animated: false)
 //        darkModeSwitch.addTarget(self, action: #selector(stateChanged), for: .valueChanged)
     }
     
@@ -29,7 +28,8 @@ class SettingsTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.setNavigationBarHidden(true, animated: true)
         // Sets the background color.
-        UIColourScheme.instance.set(for:self)
+        super.viewWillAppear(animated)
+        updateTheme()
     }
 
     // Returns the number of sections in the table view.
@@ -66,16 +66,12 @@ class SettingsTableViewController: UITableViewController {
     
     
     @IBAction func darkModeToggled(_ sender: UISwitch) {
-        UIColourScheme.instance.switchColor()
+        ThemeManager.sharedThemeManager.toggleTheme()
+        updateTheme()
     }
     
-    
-//    @objc func stateChanged(darkModeSwitch: UISwitch) {
-//        if darkModeSwitch.isOn {
-//            UIColourScheme.instance.switchColor()
-//        } else {
-//            UIColourScheme.instance.switchColor()
-//        }
-//    }
+    func updateTheme() {
+        self.view.backgroundColor = JDColor.appSubviewBackground.color
+    }
     
 }

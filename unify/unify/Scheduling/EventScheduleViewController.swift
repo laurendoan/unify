@@ -68,14 +68,13 @@ class EventScheduleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         button.layer.cornerRadius = 25
-        UIColourScheme.instance.set(for:self)
         ref = Database.database().reference()
         // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        // Sets the background color.
-        UIColourScheme.instance.set(for:self)
+        super.viewWillAppear(animated)
+        self.view.backgroundColor = JDColor.appSubviewBackground.color
     }
     
     /* Helper function to check formats of dates or times */

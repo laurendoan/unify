@@ -80,6 +80,12 @@ class ChangeEventViewController: UIViewController {
         setup()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: true)
+        self.view.backgroundColor = JDColor.appSubviewBackground.color
+    }
+    
     /* Helper functioin to setup the variables and textfields */
     func setup() {
         // Error checking. Otherwise, adapt changes from variables to textfields */

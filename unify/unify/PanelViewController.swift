@@ -47,8 +47,11 @@ class PanelViewController: UIViewController, UITableViewDelegate, UITableViewDat
         //view1.frame = CGRect(x: view1.frame.minX, y: view1.frame.minY, width: view1.frame.width, height: 1.0)
         //divider1.frame = CGRect(x: divider1.frame.minX, y: divider1.frame.minY, width: divider1.frame.width, height: 1.0)
         // Do any additional setup after loading the view.
-        // Sets the background color.
-        UIColourScheme.instance.set(for:self)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.view.backgroundColor = JDColor.appSubviewBackground.color
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

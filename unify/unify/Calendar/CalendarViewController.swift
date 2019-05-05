@@ -46,18 +46,14 @@ class CalendarViewController: UIViewController {
         // Database reference
         ref = Database.database().reference()
         userID = Auth.auth().currentUser?.uid
-        
-        // Sets the background color.
-        UIColourScheme.instance.set(for:self)
     }
     
     // Hides the navigation bar when the view appears.
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
+        super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: true)
+        self.view.backgroundColor = JDColor.appSubviewBackground.color
         
-        // Sets the background color.
-        UIColourScheme.instance.set(for:self)
         
         courses.removeAll()
         courseTitles.removeAll()

@@ -15,24 +15,44 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var button: UIButton!
     @IBOutlet weak var suButton: UIButton!
+    
+    let accent = UIColor(red: 227/255, green: 142/255, blue: 128/255, alpha: 1)
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Sets the background color.
-        UIColourScheme.instance.set(for:self)
-        
         // Style "Login" button.
         button.layer.cornerRadius = 25
-        
+        button.layer.borderWidth = 1
+        button.layer.borderColor = accent.cgColor
+        button.setTitleColor(accent, for: .normal)
         // Style "Sign Up" button.
         suButton.layer.cornerRadius = 10
+        
+        let border = CALayer()
+        let border2 = CALayer()
+        let width = CGFloat(2.0)
+        border.borderColor = accent.cgColor
+        border.frame = CGRect(x: 0, y: emailTextField.frame.size.height - width, width: emailTextField.frame.size.width, height: emailTextField.frame.size.height)
+        
+        border.borderWidth = width
+        emailTextField.layer.addSublayer(border)
+        emailTextField.layer.masksToBounds = true
+        border2.borderColor = accent.cgColor
+        border2.frame = CGRect(x: 0, y: passwordTextField.frame.size.height - width, width: passwordTextField.frame.size.width, height: passwordTextField.frame.size.height)
+        border2.borderWidth = width
+        passwordTextField.layer.addSublayer(border2)
+        passwordTextField.layer.masksToBounds = true
     }
     
     // Hides the navigation bar when the view appears.
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: true)
-        // Sets the background color.
-        UIColourScheme.instance.set(for:self)
+        self.view.backgroundColor = JDColor.appSubviewBackground.color
+        emailTextField.attributedPlaceholder = NSAttributedString(string: "email", attributes: [NSAttributedString.Key.foregroundColor : JDColor.appSubText.color])
+        emailTextField.textColor = JDColor.appText.color
+        passwordTextField.attributedPlaceholder = NSAttributedString(string: "password", attributes: [NSAttributedString.Key.foregroundColor : JDColor.appSubText.color])
+        passwordTextField.textColor = JDColor.appText.color
     }
     
     // Logs the user in.

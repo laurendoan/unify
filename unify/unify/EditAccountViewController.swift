@@ -23,9 +23,6 @@ class EditAccountViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Sets the background color.
-        UIColourScheme.instance.set(for:self)
-        
         // Database reference.
         ref = Database.database().reference()
         
@@ -42,9 +39,9 @@ class EditAccountViewController: UIViewController {
     
     // Shows the navigation bar when the view appears.
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: true)
-        // Sets the background color.
-        UIColourScheme.instance.set(for:self)
+        self.view.backgroundColor = JDColor.appSubviewBackground.color
     }
     
     // Update all user information before presenting alert and segueing.

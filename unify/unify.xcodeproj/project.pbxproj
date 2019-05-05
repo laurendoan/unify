@@ -21,6 +21,8 @@
 		B96952AD225BEFE40011DB22 /* ViewNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96952AC225BEFE40011DB22 /* ViewNoteViewController.swift */; };
 		B96CD3DE224ABE630083F080 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96CD3DD224ABE630083F080 /* Constants.swift */; };
 		DB60BCA4F1410B7E51997131 /* Pods_unify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F270BD575D0200A0C904A45 /* Pods_unify.framework */; };
+		E203CA0E227E507700F18D49 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E203CA0D227E507700F18D49 /* ThemeManager.swift */; };
+		E203CA10227E508000F18D49 /* UIColorClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E203CA0F227E508000F18D49 /* UIColorClass.swift */; };
 		E254C9C922487B0800F28F30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E254C9C822487B0800F28F30 /* AppDelegate.swift */; };
 		E254C9CB22487B0800F28F30 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E254C9CA22487B0800F28F30 /* ViewController.swift */; };
 		E254C9CE22487B0800F28F30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E254C9CC22487B0800F28F30 /* Main.storyboard */; };
@@ -59,6 +61,8 @@
 		B96CD3DC224ABE260083F080 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		B96CD3DD224ABE630083F080 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C02668A1F95126759323CD90 /* Pods-unify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unify.release.xcconfig"; path = "Target Support Files/Pods-unify/Pods-unify.release.xcconfig"; sourceTree = "<group>"; };
+		E203CA0D227E507700F18D49 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
+		E203CA0F227E508000F18D49 /* UIColorClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorClass.swift; sourceTree = "<group>"; };
 		E254C9C522487B0800F28F30 /* unify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = unify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E254C9C822487B0800F28F30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E254C9CA22487B0800F28F30 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +123,8 @@
 			isa = PBXGroup;
 			children = (
 				E254C9C822487B0800F28F30 /* AppDelegate.swift */,
+				E203CA0D227E507700F18D49 /* ThemeManager.swift */,
+				E203CA0F227E508000F18D49 /* UIColorClass.swift */,
 				E254C9CA22487B0800F28F30 /* ViewController.swift */,
 				E254C9CC22487B0800F28F30 /* Main.storyboard */,
 				98EDC28F22594EA500B05494 /* EditAccountViewController.swift */,
@@ -335,6 +341,7 @@
 				982ACE48224AA0C700DE62AD /* CalendarViewController.swift in Sources */,
 				ED8C0DD522599BCB00B3CE13 /* Message.swift in Sources */,
 				EDA2023C226F116400BBE906 /* ChangeEventViewController.swift in Sources */,
+				E203CA10227E508000F18D49 /* UIColorClass.swift in Sources */,
 				B96952AB225BE7510011DB22 /* NoteCollectionViewCell.swift in Sources */,
 				ED2E4693225C62DD00B67569 /* EventScheduleViewController.swift in Sources */,
 				01FA81F5225BBEEF006CAE18 /* MembersTableViewCell.swift in Sources */,
@@ -343,6 +350,7 @@
 				ED8C0DDE22599CCF00B3CE13 /* EventContent.swift in Sources */,
 				E254C9C922487B0800F28F30 /* AppDelegate.swift in Sources */,
 				ED8C0DE022599CF600B3CE13 /* CalendarTableViewCell.swift in Sources */,
+				E203CA0E227E507700F18D49 /* ThemeManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

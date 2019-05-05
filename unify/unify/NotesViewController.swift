@@ -36,10 +36,6 @@ class NotesViewController: UIViewController, UIImagePickerControllerDelegate, UI
         noteCollectionView.delegate = self
         noteCollectionView.dataSource = self
         
-        // Sets the background color.
-        UIColourScheme.instance.set(for:self)
-        noteCollectionView.backgroundColor = UIColor(red: 230/255, green: 241/255, blue: 253/255, alpha: 1)
-        
         // Set title of chatroom.
         self.navigationController?.isNavigationBarHidden = false
         title = "\(classId)"
@@ -73,8 +69,10 @@ class NotesViewController: UIViewController, UIImagePickerControllerDelegate, UI
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        // Sets the background color.
-        UIColourScheme.instance.set(for:self)
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: true)
+        self.view.backgroundColor = JDColor.appSubviewBackground.color
+        noteCollectionView.backgroundColor = JDColor.appSubviewBackground.color
     }
     
     // return number of notes

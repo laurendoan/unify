@@ -31,9 +31,6 @@ class HomeViewController: UIViewController, UITableViewDataSource,  UITableViewD
         tableView.delegate = self
         tableView.dataSource = self
         
-        // Sets the background color.
-        UIColourScheme.instance.set(for:self)
-        
         // Retrieve courses from database, store in courses & courseTitles array.
         ref.child("users").child(user!.uid).child("courses").observe(.value, with: { (snapshot) in
             // Reset course arrays.
@@ -66,9 +63,9 @@ class HomeViewController: UIViewController, UITableViewDataSource,  UITableViewD
     
     // Hides the navigation bar when the view appears.
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: true)
-        // Sets the background color.
-        UIColourScheme.instance.set(for:self)
+        self.view.backgroundColor = JDColor.appSubviewBackground.color
     }
     
     // Returns the number of courses.

@@ -14,16 +14,13 @@ class SettingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Sets the background color.
-        UIColourScheme.instance.set(for:self)
     }
     
     // Hides the navigation bar when the view appears.
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: true)
-        // Sets the background color.
-        UIColourScheme.instance.set(for:self)
+        self.view.backgroundColor = JDColor.appSubviewBackground.color
     }
     
     // Signs out the current user.

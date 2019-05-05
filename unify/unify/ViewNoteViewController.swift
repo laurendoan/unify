@@ -24,17 +24,16 @@ class ViewNoteViewController: UIViewController {
         // display image selected
         imageView.image = newImage
         imageView.contentMode = .scaleAspectFit
-        
-        // Sets the background color.
-        UIColourScheme.instance.set(for:self)
+
         // Set title
         self.navigationController?.isNavigationBarHidden = false
         title = "View Note"
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        // Sets the background color.
-        UIColourScheme.instance.set(for:self)
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: true)
+        self.view.backgroundColor = JDColor.appSubviewBackground.color
     }
     
     // allows saving to user photo gallery
