@@ -60,8 +60,10 @@ class NotesViewController: UIViewController, UIImagePickerControllerDelegate, UI
                     } else {
                         // Data for image is returned
                         let image = UIImage(data: data!)
-                        self!.pics.append(image!)
-                        self!.noteCollectionView.reloadData()
+                        if (image != nil) {
+                            self!.pics.append(image!)
+                            self!.noteCollectionView.reloadData()
+                        }
                     }
                 }
             }
