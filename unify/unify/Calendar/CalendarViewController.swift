@@ -34,8 +34,8 @@ class CalendarViewController: UIViewController {
     let monthTextColor = UIColor(red: 63/255, green: 75/255, blue: 79/255, alpha: 1)
     let nonMonthTextColor = UIColor(red: 218/255, green: 235/255, blue: 237/255, alpha: 1)
     let outsideMonthColor = UIColor(red: 227/255, green: 240/255, blue: 255/255, alpha: 1)
-    let calendarBGColor = UIColor(red: 165/255, green: 206/255, blue: 254/255, alpha: 1)
-    let selectedDateColor = UIColor.black
+    //let calendarBGColor = UIColor(red: 165/255, green: 206/255, blue: 254/255, alpha: 1)
+    let selectedDateColor = UIColor(red: 227/255, green: 142/255, blue: 128/255, alpha: 1)
     
     override func viewDidLoad() {
         super.viewDidLoad()

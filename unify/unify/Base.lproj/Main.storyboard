@@ -1035,9 +1035,13 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Settings" image="icons8-settings-50" id="5wL-JZ-EZw"/>
                     <connections>
+                        <outlet property="calendarUpdateLabel" destination="f6c-Es-qze" id="hKa-yw-7Vf"/>
                         <outlet property="calendarUpdatesSwitch" destination="32X-lG-Vw8" id="fbn-y8-SVZ"/>
+                        <outlet property="chatAlertLabel" destination="Qmt-qf-UdB" id="70g-Ft-He7"/>
                         <outlet property="chatAlertsSwitch" destination="vMh-Dy-tZx" id="mfe-qw-sWl"/>
+                        <outlet property="darkModeLabel" destination="l7l-9b-Od5" id="S8n-Uw-KPs"/>
                         <outlet property="darkModeSwitch" destination="lvn-zc-Rn5" id="CZg-re-RYy"/>
+                        <outlet property="editInfoLabel" destination="des-Hn-asL" id="0gb-Nn-YmZ"/>
                         <segue destination="dsY-OT-WZX" kind="show" identifier="signOutSegueIdentifier" id="PXg-qo-ebX"/>
                         <segue destination="RV3-ea-3q0" kind="show" identifier="editAccountSegueIdentifier" id="PrU-2c-MNF"/>
                     </connections>
@@ -1859,10 +1863,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="icons8-calendar-17-50" width="20" height="20"/>
-        <image name="icons8-exit-50" width="50" height="50"/>
-        <image name="icons8-home-page-50" width="20" height="20"/>
-        <image name="icons8-settings-50" width="20" height="20"/>
+        <image name="icons8-calendar-17-50" width="15" height="15"/>
+        <image name="icons8-exit-50" width="156.52174377441406" height="156.52174377441406"/>
+        <image name="icons8-home-page-50" width="15" height="15"/>
+        <image name="icons8-settings-50" width="15" height="15"/>
         <image name="inf" width="600" height="224"/>
         <image name="logo" width="589" height="600"/>
         <image name="unifylogo" width="600" height="331"/>
