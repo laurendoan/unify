@@ -20,6 +20,8 @@ class CustomTabBarController: UITabBarController {
     
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
         // Hides the navigation bar when the view appears.
         navigationController?.setNavigationBarHidden(true, animated: true)
     }
