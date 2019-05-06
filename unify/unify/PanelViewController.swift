@@ -112,6 +112,7 @@ class PanelViewController: UIViewController, UITableViewDelegate, UITableViewDat
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "scheduleToEventSegue",
             let destination = segue.destination as? EventScheduleViewController {
+            self.navigationController!.view.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
             destination.classRef = classNameRef
             destination.courseName = classId
         } else if segue.identifier == notesSegueIdentifier,

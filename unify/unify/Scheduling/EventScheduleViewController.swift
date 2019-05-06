@@ -31,7 +31,7 @@ class EventScheduleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         ref = Database.database().reference()
-        
+        //self.view.frame = CGRect(x: 0, y: 0, width: self.parent!.view.frame.width, height: self.view.frame.height)
         // Do any additional setup after loading the view.
         button.layer.cornerRadius = 25
         button.layer.borderWidth = 1
@@ -75,6 +75,10 @@ class EventScheduleViewController: UIViewController {
         
         endTF.attributedPlaceholder = NSAttributedString(string: "HH:MMam/pm (ex: 01:00am)", attributes: [NSAttributedString.Key.foregroundColor : JDColor.appSubText.color])
         endTF.textColor = JDColor.appText.color
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.parent?.view.frame = CGRect(x: self.view.frame.width/3, y: 0, width: self.view.frame.width*2/3, height: self.view.frame.height) //want it 1/3 of the way across the screen so it's coming from the right
     }
     
     /* Used to send event data back to Database under userID -> schedule */

@@ -206,6 +206,7 @@ class NotesViewController: UIViewController, UIImagePickerControllerDelegate, UI
     // segues to viewnoteviewcontroller to view note fullscreen
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == viewImageSegueIdentifier, let destination = segue.destination as? ViewNoteViewController {
+            self.navigationController!.view.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
             destination.newImage! = imageSelected
             destination.className = self.className
             destination.classId = classId
