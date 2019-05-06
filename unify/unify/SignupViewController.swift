@@ -19,7 +19,6 @@ class SignupViewController: UIViewController {
     
     @IBOutlet weak var button: UIButton!
     
-    let accent = UIColor(red: 227/255, green: 142/255, blue: 128/255, alpha: 1)
     var ref: DatabaseReference!
    
     override func viewDidLoad() {
@@ -31,8 +30,7 @@ class SignupViewController: UIViewController {
         // Style "Sign Up" button.
         button.layer.cornerRadius = 25
         button.layer.borderWidth = 1
-        button.layer.borderColor = accent.cgColor
-        button.setTitleColor(accent, for: .normal)
+        button.layer.borderColor = JDColor.appAccent.color.cgColor
         
         // Style text fields
         addBottomTextBorder(textField: emailTextField)
@@ -46,7 +44,7 @@ class SignupViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: true)
-        self.view.backgroundColor = JDColor.appSubviewBackground.color
+        self.view.backgroundColor = JDColor.appViewBackground.color
         emailTextField.attributedPlaceholder = NSAttributedString(string: "email", attributes: [NSAttributedString.Key.foregroundColor : JDColor.appSubText.color])
         emailTextField.textColor = JDColor.appText.color
         
@@ -69,7 +67,7 @@ class SignupViewController: UIViewController {
     func addBottomTextBorder(textField:UITextField) {
         let border = CALayer()
         let width = CGFloat(2.0)
-        border.borderColor = accent.cgColor
+        border.borderColor = JDColor.appAccent.color.cgColor
         border.frame = CGRect(x: 0, y: textField.frame.size.height - width, width: textField.frame.size.width, height: textField.frame.size.height)
         
         border.borderWidth = width

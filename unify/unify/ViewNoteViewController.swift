@@ -33,7 +33,7 @@ class ViewNoteViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: true)
-        self.view.backgroundColor = JDColor.appSubviewBackground.color
+        self.view.backgroundColor = JDColor.appViewBackground.color
     }
     
     // allows saving to user photo gallery

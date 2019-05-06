@@ -68,22 +68,21 @@ final class MessageViewController: MessagesViewController, MembersDelegate, Note
         center.delegate = self
     }
     
-    // Shows navigation bar. Sets up side panel.
+    // Sets up side panel.
     override func viewDidAppear(_ animated: Bool) {
-        navigationController?.setNavigationBarHidden(false, animated: true)
-        navigationController?.navigationBar.barTintColor = JDColor.appTabBarBackground.color
-        navigationController?.navigationBar.tintColor = JDColor.appSubText.color
-        if let layout = messagesCollectionView.collectionViewLayout as? MessagesCollectionViewFlowLayout {
-            layout.collectionView!.backgroundColor = JDColor.appSubviewBackground.color
-        }
-        messageInputBar.contentView.backgroundColor = JDColor.appTabBarBackground.color
-        messageInputBar.backgroundView.backgroundColor = JDColor.appTabBarBackground.color
         setupPanel()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.view.backgroundColor = JDColor.appSubviewBackground.color
+        navigationController?.setNavigationBarHidden(false, animated: true)
+        navigationController?.navigationBar.barTintColor = JDColor.appTabBarBackground.color
+        navigationController?.navigationBar.tintColor = JDColor.appSubText.color
+        if let layout = messagesCollectionView.collectionViewLayout as? MessagesCollectionViewFlowLayout {
+            layout.collectionView!.backgroundColor = JDColor.appViewBackground.color
+        }
+        messageInputBar.contentView.backgroundColor = JDColor.appTabBarBackground.color
+        messageInputBar.backgroundView.backgroundColor = JDColor.appTabBarBackground.color
     }
     
     // Sets up side panel.

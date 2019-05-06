@@ -41,7 +41,7 @@ class EditAccountViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: true)
-        self.view.backgroundColor = JDColor.appSubviewBackground.color
+        self.view.backgroundColor = JDColor.appViewBackground.color
     }
     
     // Update all user information before presenting alert and segueing.

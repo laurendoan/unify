@@ -97,7 +97,7 @@ class SettingsTableViewController: UITableViewController {
     }
     
     func updateTheme() {
-        self.view.backgroundColor = JDColor.appSubviewBackground.color
+        self.view.backgroundColor = JDColor.appViewBackground.color
         chatAlertLabel.textColor = JDColor.appText.color
         calendarUpdateLabel.textColor = JDColor.appText.color
         darkModeLabel.textColor = JDColor.appText.color

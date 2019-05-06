@@ -42,7 +42,7 @@ class CalendarViewController: UIViewController {
     var nonMonthTextColor = JDColor.appSubText.color
 //    var outsideMonthColor = UIColor(red: 227/255, green: 240/255, blue: 255/255, alpha: 1)
     //let calendarBGColor = UIColor(red: 165/255, green: 206/255, blue: 254/255, alpha: 1)
-    var selectedDateColor = UIColor(red: 227/255, green: 142/255, blue: 128/255, alpha: 1)
+    var selectedDateColor = JDColor.appAccent.color
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,7 +59,7 @@ class CalendarViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: true)
-        self.view.backgroundColor = JDColor.appSubviewBackground.color
+        self.view.backgroundColor = JDColor.appViewBackground.color
         monthTextColor = JDColor.appText.color
         nonMonthTextColor = JDColor.appSubText.color
         month.textColor = JDColor.appAccent.color

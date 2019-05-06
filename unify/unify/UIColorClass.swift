@@ -46,9 +46,9 @@ extension JDColor {
         case .appTabSwipeBackground:
             return ThemeColor(light: 0xF7F7F7, dark: 0x505050)
         case .appViewBackground:
-            return ThemeColor(light: 0xefefef, dark: 0x111111)
+            return ThemeColor(light: 0xefefef, dark: 0x2B2B2B)
         case .appSubviewBackground:
-            return ThemeColor(light: 0xFFFFFF, dark: 0x2B2B2B)
+            return ThemeColor(light: 0xFFFFFF, dark: 0x4e4e4e)
         case .appCalendarText:
             return ThemeColor(light: 0xFFFFFF, dark: 0x2B2B2B)
         case .appAccent:

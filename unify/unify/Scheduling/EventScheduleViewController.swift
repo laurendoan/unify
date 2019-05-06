@@ -27,7 +27,6 @@ class EventScheduleViewController: UIViewController {
     var calendarUpdates = UserDefaults.standard.bool(forKey: "Calendar Updates")
     var classRef = "ERROR - NO CLASSREF"
     var courseName = ""
-    let accent = UIColor(red: 227/255, green: 142/255, blue: 128/255, alpha: 1)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,8 +35,7 @@ class EventScheduleViewController: UIViewController {
         // Do any additional setup after loading the view.
         button.layer.cornerRadius = 25
         button.layer.borderWidth = 1
-        button.layer.borderColor = accent.cgColor
-        button.setTitleColor(accent, for: .normal)
+        button.layer.borderColor = JDColor.appAccent.color.cgColor
         
         // Style text fields
         addBottomTextBorder(textField: eventNameTF)
@@ -50,7 +48,7 @@ class EventScheduleViewController: UIViewController {
     func addBottomTextBorder(textField:UITextField) {
         let border = CALayer()
         let width = CGFloat(2.0)
-        border.borderColor = accent.cgColor
+        border.borderColor = JDColor.appAccent.color.cgColor
         border.frame = CGRect(x: 0, y: textField.frame.size.height - width, width: textField.frame.size.width, height: textField.frame.size.height)
         
         border.borderWidth = width
@@ -60,7 +58,8 @@ class EventScheduleViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.view.backgroundColor = JDColor.appSubviewBackground.color
+        navigationController?.setNavigationBarHidden(false, animated: true)
+        self.view.backgroundColor = JDColor.appViewBackground.color
         
         eventNameTF.attributedPlaceholder = NSAttributedString(string: "ex: CS439 Exam 1", attributes: [NSAttributedString.Key.foregroundColor : JDColor.appSubText.color])
         eventNameTF.textColor = JDColor.appText.color

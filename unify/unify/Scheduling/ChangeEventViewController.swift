@@ -33,13 +33,34 @@ class ChangeEventViewController: UIViewController {
         
         ref = Database.database().reference()
         
-        setup()
+        setup()// Do any additional setup after loading the view.
+        save.layer.cornerRadius = 25
+        save.layer.borderWidth = 1
+        save.layer.borderColor = JDColor.appAccent.color.cgColor
+        
+        // Style text fields
+        addBottomTextBorder(textField: name)
+        addBottomTextBorder(textField: location)
+        addBottomTextBorder(textField: date)
+        addBottomTextBorder(textField: start)
+        addBottomTextBorder(textField: end)
+    }
+    
+    func addBottomTextBorder(textField:UITextField) {
+        let border = CALayer()
+        let width = CGFloat(2.0)
+        border.borderColor = JDColor.appAccent.color.cgColor
+        border.frame = CGRect(x: 0, y: textField.frame.size.height - width, width: textField.frame.size.width, height: textField.frame.size.height)
+        
+        border.borderWidth = width
+        textField.layer.addSublayer(border)
+        textField.layer.masksToBounds = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: true)
-        self.view.backgroundColor = JDColor.appSubviewBackground.color
+        self.view.backgroundColor = JDColor.appViewBackground.color
         
         name.attributedPlaceholder = NSAttributedString(string: "ex: CS439 Exam 1", attributes: [NSAttributedString.Key.foregroundColor : JDColor.appSubText.color])
         name.textColor = JDColor.appText.color
