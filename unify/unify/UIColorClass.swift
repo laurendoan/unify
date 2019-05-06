@@ -30,6 +30,8 @@ struct ThemeColor {
     case appViewBackground = 5
     case appSubviewBackground = 6
     // If you wanna add more color please add color name here.
+    case appCalendarText = 7
+    case appAccent = 8
 }
 
 extension JDColor {
@@ -47,6 +49,10 @@ extension JDColor {
             return ThemeColor(light: 0xF7F7F7, dark: 0x111111)
         case .appSubviewBackground:
             return ThemeColor(light: 0xFFFFFF, dark: 0x2B2B2B)
+        case .appCalendarText:
+            return ThemeColor(light: 0xFFFFFF, dark: 0x2B2B2B)
+        case .appAccent:
+            return ThemeColor(light: 0xE38E80, dark: 0xE38E80)
             // More colors you can add if you want here.
         }
     }

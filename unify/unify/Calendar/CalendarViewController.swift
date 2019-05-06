@@ -17,6 +17,13 @@ class CalendarViewController: UIViewController {
     @IBOutlet weak var year: UILabel!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var dateLabelTF: UILabel!
+    @IBOutlet weak var sun: UILabel!
+    @IBOutlet weak var mon: UILabel!
+    @IBOutlet weak var tue: UILabel!
+    @IBOutlet weak var wed: UILabel!
+    @IBOutlet weak var thu: UILabel!
+    @IBOutlet weak var fri: UILabel!
+    @IBOutlet weak var sat: UILabel!
     
     /* Initialized variables */
     let changeEventIdentifier = "changeEventSegue"
@@ -31,11 +38,11 @@ class CalendarViewController: UIViewController {
     var clickedDate = ""
     
     /* Default Colors (Will clean up later) */
-    let monthTextColor = UIColor(red: 63/255, green: 75/255, blue: 79/255, alpha: 1)
-    let nonMonthTextColor = UIColor(red: 218/255, green: 235/255, blue: 237/255, alpha: 1)
-    let outsideMonthColor = UIColor(red: 227/255, green: 240/255, blue: 255/255, alpha: 1)
-    let calendarBGColor = UIColor(red: 165/255, green: 206/255, blue: 254/255, alpha: 1)
-    let selectedDateColor = UIColor.black
+    var monthTextColor = JDColor.appText.color
+    var nonMonthTextColor = JDColor.appSubText.color
+//    var outsideMonthColor = UIColor(red: 227/255, green: 240/255, blue: 255/255, alpha: 1)
+    //let calendarBGColor = UIColor(red: 165/255, green: 206/255, blue: 254/255, alpha: 1)
+    var selectedDateColor = UIColor(red: 227/255, green: 142/255, blue: 128/255, alpha: 1)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,7 +60,18 @@ class CalendarViewController: UIViewController {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: true)
         self.view.backgroundColor = JDColor.appSubviewBackground.color
-        
+        monthTextColor = JDColor.appText.color
+        nonMonthTextColor = JDColor.appSubText.color
+        month.textColor = JDColor.appAccent.color
+        year.textColor = JDColor.appAccent.color
+        dateLabelTF.textColor = JDColor.appText.color
+        sun.textColor = JDColor.appText.color
+        mon.textColor = JDColor.appText.color
+        tue.textColor = JDColor.appText.color
+        wed.textColor = JDColor.appText.color
+        thu.textColor = JDColor.appText.color
+        fri.textColor = JDColor.appText.color
+        sat.textColor = JDColor.appText.color
         courses.removeAll()
         courseTitles.removeAll()
         clickedDateContent.removeAll()

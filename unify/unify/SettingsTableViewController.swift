@@ -13,6 +13,10 @@ class SettingsTableViewController: UITableViewController {
     @IBOutlet weak var chatAlertsSwitch: UISwitch!
     @IBOutlet weak var calendarUpdatesSwitch: UISwitch!
     @IBOutlet weak var darkModeSwitch: UISwitch!
+    @IBOutlet weak var chatAlertLabel: UILabel!
+    @IBOutlet weak var calendarUpdateLabel: UILabel!
+    @IBOutlet weak var darkModeLabel: UILabel!
+    @IBOutlet weak var editInfoLabel: UILabel!
     
     var rowsPerSection:[Int] = [2, 1, 1, 1] // Number of rows per section.
     
@@ -41,6 +45,7 @@ class SettingsTableViewController: UITableViewController {
         navigationController?.setNavigationBarHidden(true, animated: true)
         // Sets the background color.
         super.viewWillAppear(animated)
+        
         updateTheme()
     }
 
@@ -93,5 +98,9 @@ class SettingsTableViewController: UITableViewController {
     
     func updateTheme() {
         self.view.backgroundColor = JDColor.appSubviewBackground.color
+        chatAlertLabel.textColor = JDColor.appText.color
+        calendarUpdateLabel.textColor = JDColor.appText.color
+        darkModeLabel.textColor = JDColor.appText.color
+        editInfoLabel.textColor = JDColor.appText.color
     }
 }
