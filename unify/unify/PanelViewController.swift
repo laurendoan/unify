@@ -52,6 +52,10 @@ class PanelViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        // Show navigation bar.
+        navigationController?.setNavigationBarHidden(false, animated: true)
+        
         self.view.backgroundColor = JDColor.appSubviewBackground.color
         classNameLabel.textColor = JDColor.appAccent.color
     }

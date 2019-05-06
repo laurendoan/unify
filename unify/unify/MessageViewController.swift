@@ -41,7 +41,6 @@ final class MessageViewController: MessagesViewController, MembersDelegate, Note
         super.viewDidLoad()
         
         // Set title of chatroom.
-        self.navigationController?.isNavigationBarHidden = false
         title = "\(classID)"
         
         // Disable avatars next to messages.
@@ -157,7 +156,7 @@ final class MessageViewController: MessagesViewController, MembersDelegate, Note
                 panelView.view.isHidden = false
                 panelOut = true
                 panelState = 0
-                self.navigationController?.navigationBar.isHidden = true
+                navigationController?.setNavigationBarHidden(true, animated: true)
                 messageInputBar.isHidden = true
                 UIView.animate(withDuration: 0.3, animations: {
                     self.panelView.view.frame = CGRect(x: self.view.frame.width/3, y: self.panelView.view.frame.minY, width: self.panelView.view.frame.width, height: self.panelView.view.frame.height)
@@ -167,7 +166,7 @@ final class MessageViewController: MessagesViewController, MembersDelegate, Note
             if(panelState == 0) { //normal panel is out, slide it back
                 self.membersView.view.frame = CGRect(x: self.view.frame.width, y: self.membersView.view.frame.minY, width: self.membersView.view.frame.width, height: self.membersView.view.frame.height) //move panel back even though it's invisible
                 self.notesView.view.frame = CGRect(x: self.view.frame.width, y: self.notesView.view.frame.minY, width: self.notesView.view.frame.width, height: self.notesView.view.frame.height) //move panel back even though it's invisible
-                self.navigationController?.navigationBar.isHidden = false
+                navigationController?.setNavigationBarHidden(false, animated: true)
                 messageInputBar.isHidden = false
                 UIView.animate(withDuration: 0.3, animations: {
                     self.panelView.view.frame = CGRect(x: self.view.frame.width, y: self.panelView.view.frame.minY, width: self.panelView.view.frame.width, height: self.panelView.view.frame.height)
@@ -182,7 +181,7 @@ final class MessageViewController: MessagesViewController, MembersDelegate, Note
             else if(panelState == 1) { //members view is out, slide it back but hide panel as well and move it back
                 self.panelView.view.frame = CGRect(x: self.view.frame.width, y: self.panelView.view.frame.minY, width: self.panelView.view.frame.width, height: self.panelView.view.frame.height) //move panel back even though it's invisible
                 self.notesView.view.frame = CGRect(x: self.view.frame.width, y: self.notesView.view.frame.minY, width: self.notesView.view.frame.width, height: self.notesView.view.frame.height) //move panel back even though it's invisible
-                self.navigationController?.navigationBar.isHidden = false
+                navigationController?.setNavigationBarHidden(false, animated: true)
                 messageInputBar.isHidden = false
                 UIView.animate(withDuration: 0.3, animations: { //only thing changing is the x value so it moves across the screen
                     //self.panelView.view.alpha = 0
@@ -198,7 +197,7 @@ final class MessageViewController: MessagesViewController, MembersDelegate, Note
             else if(panelState == 2) { //notes view is out, slide it back
                 self.panelView.view.frame = CGRect(x: self.view.frame.width, y: self.panelView.view.frame.minY, width: self.panelView.view.frame.width, height: self.panelView.view.frame.height) //move panel back even though it's invisible
                 self.membersView.view.frame = CGRect(x: self.view.frame.width, y: self.membersView.view.frame.minY, width: self.membersView.view.frame.width, height: self.membersView.view.frame.height) //move panel back even though it's invisible
-                self.navigationController?.navigationBar.isHidden = false
+                navigationController?.setNavigationBarHidden(false, animated: true)
                 messageInputBar.isHidden = false
                 UIView.animate(withDuration: 0.3, animations: { //only thing changing is the x value so it moves across the screen
                     //self.panelView.view.alpha = 0

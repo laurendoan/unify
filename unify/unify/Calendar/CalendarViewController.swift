@@ -58,7 +58,10 @@ class CalendarViewController: UIViewController {
     // Hides the navigation bar when the view appears.
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        // Hide navigation bar.
         navigationController?.setNavigationBarHidden(true, animated: true)
+        
         self.view.backgroundColor = JDColor.appViewBackground.color
         monthTextColor = JDColor.appText.color
         nonMonthTextColor = JDColor.appSubText.color

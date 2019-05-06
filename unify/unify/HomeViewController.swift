@@ -61,10 +61,12 @@ class HomeViewController: UIViewController, UITableViewDataSource,  UITableViewD
         }
     }
     
-    // Hides the navigation bar when the view appears.
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        // Hides the navigation bar when the view appears.
         navigationController?.setNavigationBarHidden(true, animated: true)
+        
         self.view.backgroundColor = JDColor.appViewBackground.color
     }
     
