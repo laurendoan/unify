@@ -35,6 +35,7 @@ final class MessageViewController: MessagesViewController, MembersDelegate, Note
     
     let center = UNUserNotificationCenter.current() // Notification center.
     let chatAlerts = UserDefaults.standard.bool(forKey: "Chat Alerts") // Chat alerts switch.
+    var mute = true // Mute switch.
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -469,7 +470,8 @@ extension MessageViewController: MessageInputBarDelegate {
                 let newMessage = ["sender_id": current.id, "name": current.displayName, "text": str, "message_id": message.messageId, "date": String(Date().timeIntervalSince1970)]
                 ref.setValue(newMessage)
                 
-                if chatAlerts {
+                mute = UserDefaults.standard.bool(forKey: "Mute \(className)")
+                if chatAlerts && !mute {
                     // Create action for notification.
                     let replyAction = UNTextInputNotificationAction(
                         identifier: "reply",
@@ -496,8 +498,8 @@ extension MessageViewController: MessageInputBarDelegate {
                     notification.body = str
                     notification.categoryIdentifier = "notificationCategory"
                     
-                    // Trigger the notification after 3 seconds.
-                    let delay: TimeInterval = 3.0
+                    // Trigger the notification after 5 seconds.
+                    let delay: TimeInterval = 5.0
                     let trigger = UNTimeIntervalNotificationTrigger(timeInterval: delay, repeats: false)
                     
                     // Create request to submit notification.
