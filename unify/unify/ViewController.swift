@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         
         // Animate infinity sign.
         UIView.animate(
-            withDuration: 2.5,
+            withDuration: 3.5,
             delay: 0.0,
             options: .repeat, animations: {
                 // Rotate 180 degrees.
