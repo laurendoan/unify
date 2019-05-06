@@ -745,6 +745,7 @@
                     <size key="freeformSize" width="414" height="1000"/>
                     <connections>
                         <outlet property="date" destination="kIV-tj-4ex" id="3gt-5L-5q8"/>
+                        <outlet property="delete" destination="eNA-nm-cJI" id="bAa-n7-GxU"/>
                         <outlet property="end" destination="UiS-lW-fCf" id="HlJ-35-00l"/>
                         <outlet property="location" destination="t9u-oF-O6g" id="Wwn-dp-EUk"/>
                         <outlet property="name" destination="6MW-0S-eu1" id="l85-PI-ZFg"/>
@@ -1220,7 +1221,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="700-0a-GvE">
                                 <rect key="frame" x="364" y="14" width="30" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="+"/>
+                                <state key="normal" title="+">
+                                    <color key="titleColor" red="0.0" green="0.79607843140000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
                                 <connections>
                                     <segue destination="9ii-rc-XoX" kind="show" id="exp-r3-AJf"/>
                                 </connections>

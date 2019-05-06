@@ -64,6 +64,7 @@ class MembersViewController: UIViewController, UITableViewDelegate, UITableViewD
         let cell:MembersTableViewCell = tableView.dequeueReusableCell(withIdentifier: "membersCellIdentifier", for: indexPath as IndexPath) as! MembersTableViewCell
         
         cell.memberName.text = members[indexPath.row]
+        cell.memberName.textColor = JDColor.appText.color
 //        print("Name: ", cell.memberName.text)
         return cell
     }

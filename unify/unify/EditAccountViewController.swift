@@ -34,6 +34,24 @@ class EditAccountViewController: UIViewController {
         
         // Rounded button.
         button.layer.cornerRadius = 25
+        button.layer.borderWidth = 1
+        button.layer.borderColor = JDColor.appAccent.color.cgColor
+
+        addBottomTextBorder(textField: displayNameTextField)
+        addBottomTextBorder(textField: emailTextField)
+        addBottomTextBorder(textField: passwordTextField)
+        addBottomTextBorder(textField: confirmPasswordTextField)
+    }
+    
+    func addBottomTextBorder(textField:UITextField) {
+        let border = CALayer()
+        let width = CGFloat(2.0)
+        border.borderColor = JDColor.appAccent.color.cgColor
+        border.frame = CGRect(x: 0, y: textField.frame.size.height - width, width: textField.frame.size.width, height: textField.frame.size.height)
+        
+        border.borderWidth = width
+        textField.layer.addSublayer(border)
+        textField.layer.masksToBounds = true
     }
 
     
@@ -41,7 +59,17 @@ class EditAccountViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: true)
+        navigationController?.navigationBar.barTintColor = JDColor.appTabBarBackground.color
+        navigationController?.navigationBar.tintColor = JDColor.appSubText.color
         self.view.backgroundColor = JDColor.appViewBackground.color
+        displayNameTextField.attributedPlaceholder = NSAttributedString(string: "display name", attributes: [NSAttributedString.Key.foregroundColor : JDColor.appSubText.color])
+        displayNameTextField.textColor = JDColor.appText.color
+        emailTextField.attributedPlaceholder = NSAttributedString(string: "email", attributes: [NSAttributedString.Key.foregroundColor : JDColor.appSubText.color])
+        emailTextField.textColor = JDColor.appText.color
+        passwordTextField.attributedPlaceholder = NSAttributedString(string: "password", attributes: [NSAttributedString.Key.foregroundColor : JDColor.appSubText.color])
+        passwordTextField.textColor = JDColor.appText.color
+        confirmPasswordTextField.attributedPlaceholder = NSAttributedString(string: "confirm password", attributes: [NSAttributedString.Key.foregroundColor : JDColor.appSubText.color])
+        confirmPasswordTextField.textColor = JDColor.appText.color
     }
     
     // Update all user information before presenting alert and segueing.

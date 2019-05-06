@@ -24,6 +24,22 @@ class AddClassViewController: UIViewController {
         
         // Style "Login" button.
         button.layer.cornerRadius = 25
+        button.layer.borderWidth = 1
+        button.layer.borderColor = JDColor.appAccent.color.cgColor
+        
+        addBottomTextBorder(textField: courseNumTextField)
+        addBottomTextBorder(textField: instructorTextField)
+    }
+    
+    func addBottomTextBorder(textField:UITextField) {
+        let border = CALayer()
+        let width = CGFloat(2.0)
+        border.borderColor = JDColor.appAccent.color.cgColor
+        border.frame = CGRect(x: 0, y: textField.frame.size.height - width, width: textField.frame.size.width, height: textField.frame.size.height)
+        
+        border.borderWidth = width
+        textField.layer.addSublayer(border)
+        textField.layer.masksToBounds = true
     }
     
     // Shows the navigation bar when the view appears.
@@ -32,6 +48,12 @@ class AddClassViewController: UIViewController {
         navigationController?.setNavigationBarHidden(false, animated: true)
         self.view.backgroundColor = JDColor.appViewBackground.color
         
+        courseNumTextField.attributedPlaceholder = NSAttributedString(string: "ex: CS 371L", attributes: [NSAttributedString.Key.foregroundColor : JDColor.appSubText.color])
+        courseNumTextField.textColor = JDColor.appText.color
+        instructorTextField.attributedPlaceholder = NSAttributedString(string: "ex: BULKO W", attributes: [NSAttributedString.Key.foregroundColor : JDColor.appSubText.color])
+        instructorTextField.textColor = JDColor.appText.color
+        navigationController?.navigationBar.barTintColor = JDColor.appTabBarBackground.color
+        navigationController?.navigationBar.tintColor = JDColor.appSubText.color
     }
     
     // Adds a class to the user's course list when the "add" button is pressed.
