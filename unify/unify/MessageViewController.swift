@@ -57,6 +57,7 @@ final class MessageViewController: MessagesViewController, MembersDelegate, Note
             layout.videoMessageSizeCalculator.incomingAvatarSize = .zero
             layout.attributedTextMessageSizeCalculator.outgoingAvatarSize = .zero
             layout.attributedTextMessageSizeCalculator.outgoingAvatarSize = .zero
+            layout.collectionView!.backgroundColor = JDColor.appSubviewBackground.color
         }
         
         configureMessageCollectionView()
@@ -69,6 +70,13 @@ final class MessageViewController: MessagesViewController, MembersDelegate, Note
     // Shows navigation bar. Sets up side panel.
     override func viewDidAppear(_ animated: Bool) {
         navigationController?.setNavigationBarHidden(false, animated: true)
+        navigationController?.navigationBar.barTintColor = JDColor.appTabBarBackground.color
+        navigationController?.navigationBar.tintColor = JDColor.appSubText.color
+        if let layout = messagesCollectionView.collectionViewLayout as? MessagesCollectionViewFlowLayout {
+            layout.collectionView!.backgroundColor = JDColor.appSubviewBackground.color
+        }
+        messageInputBar.contentView.backgroundColor = JDColor.appTabBarBackground.color
+        messageInputBar.backgroundView.backgroundColor = JDColor.appTabBarBackground.color
         setupPanel()
     }
     

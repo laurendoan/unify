@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "unify/NotesViewController.swift"
-            timestampString = "578791233.064934"
+            timestampString = "578793514.932312"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "76"
@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "unify/NotesViewController.swift"
-            timestampString = "578791233.065024"
+            timestampString = "578793514.932436"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "40"
@@ -38,33 +38,157 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "unify/NotesViewController.swift"
-            timestampString = "578791233.065073"
+            timestampString = "578793514.932506"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "26"
             endingLineNumber = "26"
             landmarkName = "NotesViewController"
             landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "unify.NotesViewController.toolbar.getter : Swift.Optional&lt;__C.UIToolbar&gt;"
+                  moduleName = "unify"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Julian/Documents/unify/unify/unify/NotesViewController.swift"
+                  timestampString = "578793072.842356"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "114">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "unify.NotesViewController.toolbar.setter : Swift.Optional&lt;__C.UIToolbar&gt;"
+                  moduleName = "unify"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Julian/Documents/unify/unify/unify/NotesViewController.swift"
+                  timestampString = "578793072.845821"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "128">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "unify.NotesViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; unify.NotesViewController"
+                  moduleName = "unify"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Julian/Documents/unify/unify/unify/NotesViewController.swift"
+                  timestampString = "578793072.8489"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "500">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "unify.NotesViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;unify.NotesViewController&gt;"
+                  moduleName = "unify"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Julian/Documents/unify/unify/unify/NotesViewController.swift"
+                  timestampString = "578793072.852806"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "469">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "unify/NotesViewController.swift"
-            timestampString = "578791233.065135"
+            timestampString = "578793514.93258"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "25"
             endingLineNumber = "25"
             landmarkName = "NotesViewController"
             landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "unify.NotesViewController.noteCollectionView.getter : weak Swift.Optional&lt;__C.UICollectionView&gt;"
+                  moduleName = "unify"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Julian/Documents/unify/unify/unify/NotesViewController.swift"
+                  timestampString = "578793072.866632"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "86">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "unify.NotesViewController.noteCollectionView.setter : weak Swift.Optional&lt;__C.UICollectionView&gt;"
+                  moduleName = "unify"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Julian/Documents/unify/unify/unify/NotesViewController.swift"
+                  timestampString = "578793072.869687"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "106">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "unify.NotesViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; unify.NotesViewController"
+                  moduleName = "unify"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Julian/Documents/unify/unify/unify/NotesViewController.swift"
+                  timestampString = "578793072.872225"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "398">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "unify.NotesViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;unify.NotesViewController&gt;"
+                  moduleName = "unify"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Julian/Documents/unify/unify/unify/NotesViewController.swift"
+                  timestampString = "578793072.874536"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "370">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
