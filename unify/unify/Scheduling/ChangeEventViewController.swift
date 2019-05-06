@@ -78,7 +78,7 @@ class ChangeEventViewController: UIViewController {
             end.text = contentHolder.end
             
             /* Disable date textfield as changes are meant to only adjust time/location/name */
-            date.isUserInteractionEnabled = false
+            //date.isUserInteractionEnabled = false
             print("Debugging - ChangeEventVC - ClassRef:", contentHolder.courseRef!)
             print("Debugging - ChangeEventVC - ParentIDRef:", contentHolder.parentRef!)
         }
@@ -104,11 +104,15 @@ class ChangeEventViewController: UIViewController {
             // Readys the textfields for usage
             let n = name.text!
             let l = location.text!
-            let d = contentHolder.date!
+            let d = date.text!.replacingOccurrences(of: "/", with: "")
             let s = start.text!
             let e = end.text!
             
-            // Update data onto Firebase
+            // Deletes data on FireBase - conditioned specifically to help update the date
+            self.ref.child("schedule").child(contentHolder.courseRef!).child(contentHolder.date!)
+                .child(contentHolder.parentRef!).removeValue()
+            
+            // Update data onto Firebase - Recreates the event with its altered data
             self.ref.child("schedule").child(contentHolder.courseRef!).child(d)
                     .child(contentHolder.parentRef!).setValue([
                 "date" : d,
@@ -148,11 +152,6 @@ class ChangeEventViewController: UIViewController {
     @IBAction func deleteButton(_ sender: Any) {
         self.ref.child("schedule").child(contentHolder.courseRef!).child(contentHolder.date!)
             .child(contentHolder.parentRef!).removeValue()
-        resetAndBack()
-    }
-    
-    /* Does nothing, no changes are made. Pops back to previous view controller */
-    @IBAction func cancelButton(_ sender: Any) {
         resetAndBack()
     }
     
