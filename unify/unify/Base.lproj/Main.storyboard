@@ -678,7 +678,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="96q-Yn-Sih">
-                                        <rect key="frame" x="112" y="668" width="190" height="138"/>
+                                        <rect key="frame" x="112" y="668" width="190" height="55"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QjX-dn-iTA">
                                                 <rect key="frame" x="0.0" y="0.0" width="190" height="55"/>
@@ -693,21 +693,6 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="saveButton:" destination="kk3-WT-8y4" eventType="touchUpInside" id="VnU-wd-hcv"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eNA-nm-cJI">
-                                                <rect key="frame" x="0.0" y="83" width="190" height="55"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="55" id="9pY-qz-cYA"/>
-                                                    <constraint firstAttribute="width" constant="190" id="hTD-Ev-oac"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="25"/>
-                                                <state key="normal" title="delete">
-                                                    <color key="titleColor" red="0.0" green="0.79607843140000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="deleteButton:" destination="kk3-WT-8y4" eventType="touchUpInside" id="FJY-3Y-f7Z"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -745,7 +730,6 @@
                     <size key="freeformSize" width="414" height="1000"/>
                     <connections>
                         <outlet property="date" destination="kIV-tj-4ex" id="3gt-5L-5q8"/>
-                        <outlet property="delete" destination="eNA-nm-cJI" id="bAa-n7-GxU"/>
                         <outlet property="end" destination="UiS-lW-fCf" id="HlJ-35-00l"/>
                         <outlet property="location" destination="t9u-oF-O6g" id="Wwn-dp-EUk"/>
                         <outlet property="name" destination="6MW-0S-eu1" id="l85-PI-ZFg"/>
@@ -1438,7 +1422,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UZa-bJ-Aam" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5340.579710144928" y="447.99107142857139"/>
+            <point key="canvasLocation" x="5340.579710144928" y="447.554347826087"/>
         </scene>
         <!--Event Schedule View Controller-->
         <scene sceneID="fIj-aP-man">
@@ -1865,7 +1849,6 @@
         <image name="unifylogo" width="600" height="331"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="exp-r3-AJf"/>
         <segue reference="PHN-N8-s4K"/>
         <segue reference="PXg-qo-ebX"/>
     </inferredMetricsTieBreakers>

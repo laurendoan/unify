@@ -314,4 +314,21 @@ extension CalendarViewController: UITableViewDelegate, UITableViewDataSource {
         selectedContent = clickedDateContent[row]
         self.performSegue(withIdentifier: changeEventIdentifier, sender: self)
     }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == .delete) {
+            // handle delete (by removing the data from your array and updating the tableview)
+            let row = indexPath.row
+            selectedContent = clickedDateContent[row]
+            self.ref.child("schedule").child(selectedContent.courseRef!).child(selectedContent.date!)
+                .child(selectedContent.parentRef!).removeValue()
+            clickedDateContent.remove(at: row)
+            self.tableView.reloadData()
+            self.calendarView.reloadData()
+        }
+    }
 }

@@ -27,7 +27,6 @@ class ChangeEventViewController: UIViewController {
     
     @IBOutlet weak var save: UIButton!
 
-    @IBOutlet weak var delete: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,9 +37,6 @@ class ChangeEventViewController: UIViewController {
         save.layer.cornerRadius = 25
         save.layer.borderWidth = 1
         save.layer.borderColor = JDColor.appAccent.color.cgColor
-        delete.layer.cornerRadius = 25
-        delete.layer.borderWidth = 1
-        delete.layer.borderColor = JDColor.appAccent.color.cgColor
         // Style text fields
         addBottomTextBorder(textField: name)
         addBottomTextBorder(textField: location)
@@ -169,13 +165,6 @@ class ChangeEventViewController: UIViewController {
             }
         }
         
-        resetAndBack()
-    }
-    
-    /* Deletes the event using the parentIDRef*/
-    @IBAction func deleteButton(_ sender: Any) {
-        self.ref.child("schedule").child(contentHolder.courseRef!).child(contentHolder.date!)
-            .child(contentHolder.parentRef!).removeValue()
         resetAndBack()
     }
     

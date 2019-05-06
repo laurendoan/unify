@@ -30,6 +30,7 @@ class PanelViewController: UIViewController, UITableViewDelegate, UITableViewDat
     @IBOutlet weak var muteSwitch: UISwitch!
     @IBOutlet weak var classNameLabel: UILabel!
     
+
     var delegate: MembersDelegate?
     var notesDelegate: NotesDelegate?
     var classNameRef = "ERROR - INCORRECT CLASSNAMEREF"
@@ -52,6 +53,7 @@ class PanelViewController: UIViewController, UITableViewDelegate, UITableViewDat
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.view.backgroundColor = JDColor.appSubviewBackground.color
+        classNameLabel.textColor = JDColor.appAccent.color
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
