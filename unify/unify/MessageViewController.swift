@@ -40,7 +40,7 @@ final class MessageViewController: MessagesViewController, MembersDelegate, Note
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print("messagesDidLoad")
         // Set title of chatroom.
         title = "\(classID)"
         
@@ -64,14 +64,13 @@ final class MessageViewController: MessagesViewController, MembersDelegate, Note
         configureMessageCollectionView()
         configureMessageInputBar()
         loadMessages()
-        
+        setupPanel()
         center.delegate = self
     }
 
     // Sets up side panel.
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        setupPanel()
         navigationController?.setNavigationBarHidden(false, animated: true)
         navigationController?.navigationBar.barTintColor = JDColor.appTabBarBackground.color
         navigationController?.navigationBar.tintColor = JDColor.appSubText.color
@@ -110,11 +109,16 @@ final class MessageViewController: MessagesViewController, MembersDelegate, Note
         
         panelView.delegate = self
         panelView.notesDelegate = self
+        panelView.classNameRef = className
         panelOut = false
         
         
         notesView = storyboard.instantiateViewController(withIdentifier: "NotesViewController") as! NotesViewController
         notesView.view.frame = CGRect(x: self.view.frame.width/3, y: 0, width: self.view.frame.width*2/3, height: self.view.frame.height) //want it 1/3 of the way across the screen so it's coming from the right
+        notesView.className = className
+        notesView.classId = classID
+        print("notes view instantiated: ", className)
+        
         
         membersView = storyboard.instantiateViewController(withIdentifier: "MembersViewController") as! MembersViewController
         membersView.view.frame = CGRect(x: self.view.frame.width/3, y: 0, width: self.view.frame.width*2/3, height: self.view.frame.height) //want it 1/3 of the way across the screen so it's coming from the right
@@ -132,8 +136,7 @@ final class MessageViewController: MessagesViewController, MembersDelegate, Note
         navController.view.isHidden = true; //don't show it initially
         navController.view.frame = CGRect(x: self.view.frame.width, y: navController.view.frame.minY, width: navController.view.frame.width, height: navController.view.frame.height)
         navController.didMove(toParent: self)
-        
-        
+
         
         //panelView.view.isHidden = true; //don't show it initially
         //panelView.view.frame = CGRect(x: self.view.frame.width, y: panelView.view.frame.minY, width: panelView.view.frame.width, height: panelView.view.frame.height)
@@ -192,7 +195,7 @@ final class MessageViewController: MessagesViewController, MembersDelegate, Note
             navigationController?.setNavigationBarHidden(false, animated: true)
             messageInputBar.isHidden = false
             UIView.animate(withDuration: 0.3, animations: {
-                self.navController.view.frame = CGRect(x: self.view.frame.width, y: self.navController.view.frame.minY, width: self.panelView.view.frame.width, height: self.panelView.view.frame.width)
+                self.navController.view.frame = CGRect(x: self.view.frame.width, y: self.navController.view.frame.minY, width: self.panelView.view.frame.width, height: self.panelView.view.frame.height)
             }, completion: {
                 (value: Bool) in
                 self.panelOut = false
@@ -273,7 +276,9 @@ final class MessageViewController: MessagesViewController, MembersDelegate, Note
     }
     
     func notesPressed() {
-        print("notes pressed")
+        print("notes pressed: ", className)
+        notesView.className = className
+        notesView.classId = classID
         navController.pushViewController(notesView, animated: true)
         /*panelView.view.isHidden = true
         membersView.view.isHidden = true

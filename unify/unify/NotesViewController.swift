@@ -35,11 +35,14 @@ class NotesViewController: UIViewController, UIImagePickerControllerDelegate, UI
         super.viewDidLoad()
         noteCollectionView.delegate = self
         noteCollectionView.dataSource = self
-        
+        print("notesDidLoad")
+        //print(self.parent)
+        //let parent:UINavigationController = self.parent as! UINavigationController
+        //print(parent.children)
         // Set title of chatroom.
-        self.navigationController?.isNavigationBarHidden = false
+        //self.navigationController?.isNavigationBarHidden = false
         title = "\(classId)"
-        
+        print(className)
         // gets database reference for current class images
         let databaseClass = Database.database().reference().child("images").child(className)
         let query = databaseClass.queryLimited(toLast: 10)
@@ -71,6 +74,7 @@ class NotesViewController: UIViewController, UIImagePickerControllerDelegate, UI
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        print("notes viewWillAppear called")
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: true)
         self.view.backgroundColor = JDColor.appSubviewBackground.color
@@ -157,7 +161,11 @@ class NotesViewController: UIViewController, UIImagePickerControllerDelegate, UI
     // allows user to cancel and not take photo
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController)
     {
-        picker.dismiss(animated: true, completion:nil)
+        picker.dismiss(animated: true, completion: {
+            self.parent?.navigationController?.isNavigationBarHidden = true
+            //self.view.frame = CGRect(x: self.view.frame.width/3, y: 0, width: self.view.frame.width*2/3, height: self.view.frame.height)
+        })
+        
     }
     
     // uploads image to database

@@ -98,7 +98,7 @@ class PanelViewController: UIViewController, UITableViewDelegate, UITableViewDat
             //print("they clicked notes")
             delegate?.membersPressed()
         } else if(row == 2) {
-            notesDelegate?.notesPressed()
+            //notesDelegate?.notesPressed()
         } else if (row == 3) {
             //self.performSegue(withIdentifier: "scheduleToEventSegue", sender: self)
             eventVC.classRef = classNameRef
@@ -116,6 +116,8 @@ class PanelViewController: UIViewController, UITableViewDelegate, UITableViewDat
             destination.courseName = classId
         } else if segue.identifier == notesSegueIdentifier,
             let destination = segue.destination as? NotesViewController {
+            print("notes segueing")
+
             destination.className = classNameRef
             destination.classId = classId
         }
