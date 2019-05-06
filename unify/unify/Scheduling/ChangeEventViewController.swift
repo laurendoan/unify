@@ -148,9 +148,10 @@ class ChangeEventViewController: UIViewController {
                 notification.title = contentHolder.course!
                 notification.subtitle = n
                 notification.body = "This event has been updated."
+                notification.sound = UNNotificationSound.default
                 
-                // Trigger the notification after 3 seconds.
-                let delay: TimeInterval = 3.0
+                // Trigger the notification after 5 seconds.
+                let delay: TimeInterval = 5.0
                 let trigger = UNTimeIntervalNotificationTrigger(timeInterval: delay, repeats: false)
                 
                 // Create request to submit notification.

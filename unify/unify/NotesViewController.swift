@@ -120,6 +120,7 @@ class NotesViewController: UIViewController, UIImagePickerControllerDelegate, UI
     @IBAction func takePhotoButtonPressed(_ sender: UIBarButtonItem) {
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
             let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
             imagePicker.allowsEditing = false
             imagePicker.sourceType = UIImagePickerController.SourceType.camera
             imagePicker.cameraCaptureMode = .photo
