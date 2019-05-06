@@ -17,4 +17,9 @@ class CustomTabBarController: UITabBarController {
         // Sets the default VC to index 1 of the tab bar.
         // selectedIndex = 1
     }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+    }
 }
