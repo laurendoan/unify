@@ -81,6 +81,10 @@ final class MessageViewController: MessagesViewController, MembersDelegate, Note
         messageInputBar.backgroundView.backgroundColor = JDColor.appTabBarBackground.color
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
     // Sets up side panel.
     func setupPanel() {
         //Currently, two things can be viewed in panel view: the standard panel class info page, and the members page.
