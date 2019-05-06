@@ -17,16 +17,14 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var suButton: UIButton!
     
     @IBOutlet weak var newUserLabel: UILabel!
-    
-    let accent = UIColor(red: 227/255, green: 142/255, blue: 128/255, alpha: 1)
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Style "Login" button.
         button.layer.cornerRadius = 25
         button.layer.borderWidth = 1
-        button.layer.borderColor = accent.cgColor
-        button.setTitleColor(accent, for: .normal)
+        button.layer.borderColor = JDColor.appAccent.color.cgColor
         // Style "Sign Up" button.
         suButton.layer.cornerRadius = 10
         
@@ -37,7 +35,7 @@ class LoginViewController: UIViewController {
     func addBottomTextBorder(textField:UITextField) {
         let border = CALayer()
         let width = CGFloat(2.0)
-        border.borderColor = accent.cgColor
+        border.borderColor = JDColor.appAccent.color.cgColor
         border.frame = CGRect(x: 0, y: textField.frame.size.height - width, width: textField.frame.size.width, height: textField.frame.size.height)
         
         border.borderWidth = width
@@ -49,7 +47,7 @@ class LoginViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: true)
-        self.view.backgroundColor = JDColor.appSubviewBackground.color
+        self.view.backgroundColor = JDColor.appViewBackground.color
         emailTextField.attributedPlaceholder = NSAttributedString(string: "email", attributes: [NSAttributedString.Key.foregroundColor : JDColor.appSubText.color])
         emailTextField.textColor = JDColor.appText.color
         passwordTextField.attributedPlaceholder = NSAttributedString(string: "password", attributes: [NSAttributedString.Key.foregroundColor : JDColor.appSubText.color])
