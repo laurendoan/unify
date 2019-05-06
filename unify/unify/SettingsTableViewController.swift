@@ -102,5 +102,8 @@ class SettingsTableViewController: UITableViewController {
         calendarUpdateLabel.textColor = JDColor.appText.color
         darkModeLabel.textColor = JDColor.appText.color
         editInfoLabel.textColor = JDColor.appText.color
+        self.tabBarController?.tabBar.barTintColor = JDColor.appTabBarBackground.color
+        self.tabBarController?.tabBar.tintColor = JDColor.appAccent.color
+        self.tabBarController?.tabBar.unselectedItemTintColor = JDColor.appSubText.color
     }
 }

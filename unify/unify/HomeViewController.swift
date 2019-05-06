@@ -68,6 +68,9 @@ class HomeViewController: UIViewController, UITableViewDataSource,  UITableViewD
         navigationController?.setNavigationBarHidden(true, animated: true)
         
         self.view.backgroundColor = JDColor.appViewBackground.color
+        self.tabBarController?.tabBar.barTintColor = JDColor.appTabBarBackground.color
+        self.tabBarController?.tabBar.tintColor = JDColor.appAccent.color
+        self.tabBarController?.tabBar.unselectedItemTintColor = JDColor.appSubText.color
     }
     
     // Returns the number of courses.

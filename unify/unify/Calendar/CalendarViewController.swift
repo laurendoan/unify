@@ -63,6 +63,9 @@ class CalendarViewController: UIViewController {
         navigationController?.setNavigationBarHidden(true, animated: true)
         
         self.view.backgroundColor = JDColor.appViewBackground.color
+        self.tabBarController?.tabBar.barTintColor = JDColor.appTabBarBackground.color
+        self.tabBarController?.tabBar.tintColor = JDColor.appAccent.color
+        self.tabBarController?.tabBar.unselectedItemTintColor = JDColor.appSubText.color
         monthTextColor = JDColor.appText.color
         nonMonthTextColor = JDColor.appSubText.color
         month.textColor = JDColor.appAccent.color
