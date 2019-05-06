@@ -1399,19 +1399,11 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TyI-ff-1cR">
-                                <rect key="frame" x="137" y="90" width="42" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="XAE-jL-mQL"/>
                     </view>
                     <connections>
-                        <outlet property="classNameLabel" destination="TyI-ff-1cR" id="UnR-KJ-Dr1"/>
                         <outlet property="tableView" destination="C45-kz-6FX" id="h4U-jA-TE8"/>
                     </connections>
                 </viewController>
@@ -1835,10 +1827,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="icons8-calendar-17-50" width="15" height="15"/>
-        <image name="icons8-exit-50" width="156.52174377441406" height="156.52174377441406"/>
-        <image name="icons8-home-page-50" width="15" height="15"/>
-        <image name="icons8-settings-50" width="15" height="15"/>
+        <image name="icons8-calendar-17-50" width="20" height="20"/>
+        <image name="icons8-exit-50" width="50" height="50"/>
+        <image name="icons8-home-page-50" width="20" height="20"/>
+        <image name="icons8-settings-50" width="20" height="20"/>
         <image name="inf" width="72" height="43"/>
         <image name="unify_icon" width="400" height="241"/>
         <image name="unifylogo" width="400" height="231"/>

@@ -149,7 +149,8 @@ class NotesViewController: UIViewController, UIImagePickerControllerDelegate, UI
             uploadImage(imageData: optimizedImageData)
         }
         picker.dismiss(animated: true, completion: {
-            self.view.frame = CGRect(x: self.view.frame.width/3, y: 0, width: self.view.frame.width*2/3, height: self.view.frame.height)
+            self.parent?.navigationController?.isNavigationBarHidden = true
+            //self.view.frame = CGRect(x: self.view.frame.width/3, y: 0, width: self.view.frame.width*2/3, height: self.view.frame.height)
         })
     }
     

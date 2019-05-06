@@ -27,6 +27,7 @@ final class MessageViewController: MessagesViewController, MembersDelegate, Note
     var sender : Sender? = nil
     
     // Instance variables for side panel.
+    var navController = UINavigationController()
     var panelView = PanelViewController()
     var membersView = MembersViewController()
     var notesView = NotesViewController()
@@ -90,28 +91,55 @@ final class MessageViewController: MessagesViewController, MembersDelegate, Note
         
         self.navigationItem.rightBarButtonItem?.image = UIImage(named: "icons8-menu-26.png")
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
+        
+        
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         panelView = storyboard.instantiateViewController(withIdentifier: "PanelViewController") as! PanelViewController
     
-        addChild(panelView)
+        //addChild(panelView)
         panelView.view.frame = CGRect(x: self.view.frame.width/3, y: 0, width: self.view.frame.width*2/3, height: self.view.frame.height) //want it 1/3 of the way across the screen so it's coming from the right
         
         panelView.tableView.rowHeight = 40
         panelView.tableView.frame = CGRect(x: 0, y: 100, width: 276, height: panelView.tableView.rowHeight * 5)
-        panelView.classNameLabel.text = className
-        panelView.classNameLabel.textAlignment = .center
-        panelView.classNameLabel.frame = CGRect(x: 0, y: 50, width: 276, height: 20)
+        //panelView.classNameLabel.text = className
+        //panelView.classNameLabel.textAlignment = .center
+        //panelView.classNameLabel.frame = CGRect(x: 0, y: 100, width: 276, height: 20)
         
-        self.view.insertSubview(panelView.view, at: 0)
-        self.view.bringSubviewToFront(panelView.view)
+        //self.view.insertSubview(panelView.view, at: 0)
+        //self.view.bringSubviewToFront(panelView.view)
         
         panelView.delegate = self
+        panelView.notesDelegate = self
         panelOut = false
-        panelView.view.isHidden = true; //don't show it initially
-        panelView.view.frame = CGRect(x: self.view.frame.width, y: panelView.view.frame.minY, width: panelView.view.frame.width, height: panelView.view.frame.height)
-        panelView.didMove(toParent: self)
+        
+        
+        notesView = storyboard.instantiateViewController(withIdentifier: "NotesViewController") as! NotesViewController
+        notesView.view.frame = CGRect(x: self.view.frame.width/3, y: 0, width: self.view.frame.width*2/3, height: self.view.frame.height) //want it 1/3 of the way across the screen so it's coming from the right
         
         membersView = storyboard.instantiateViewController(withIdentifier: "MembersViewController") as! MembersViewController
+        membersView.view.frame = CGRect(x: self.view.frame.width/3, y: 0, width: self.view.frame.width*2/3, height: self.view.frame.height) //want it 1/3 of the way across the screen so it's coming from the right
+        membersView.className = self.className
+        
+        navController = UINavigationController(rootViewController: panelView)
+        navController.view.frame = CGRect(x: self.view.frame.width/3, y: 0, width: self.view.frame.width*2/3, height: self.view.frame.height) //want it 1/3 of the way across the screen so it's coming from the right
+        navController.navigationItem.title = className
+        navController.interactivePopGestureRecognizer?.isEnabled = false
+        panelView.title = className
+        
+        addChild(navController)
+        self.view.insertSubview(navController.view, at: 0)
+        self.view.bringSubviewToFront(navController.view)
+        navController.view.isHidden = true; //don't show it initially
+        navController.view.frame = CGRect(x: self.view.frame.width, y: navController.view.frame.minY, width: navController.view.frame.width, height: navController.view.frame.height)
+        navController.didMove(toParent: self)
+        
+        
+        
+        //panelView.view.isHidden = true; //don't show it initially
+        //panelView.view.frame = CGRect(x: self.view.frame.width, y: panelView.view.frame.minY, width: panelView.view.frame.width, height: panelView.view.frame.height)
+        //panelView.didMove(toParent: self)
+        
+        /*membersView = storyboard.instantiateViewController(withIdentifier: "MembersViewController") as! MembersViewController
         membersView.view.frame = CGRect(x: self.view.frame.width/3, y: 0, width: self.view.frame.width*2/3, height: self.view.frame.height) //want it 1/3 of the way across the screen so it's coming from the right
         
         self.view.insertSubview(membersView.view, at: 0)
@@ -137,7 +165,7 @@ final class MessageViewController: MessagesViewController, MembersDelegate, Note
         panelView.classId = self.classID
         
         panelView.leaveClassDelegate = self
-        panelView.className = className // Pass in class name.
+        panelView.className = className // Pass in class name.*/
     }
     
 
@@ -152,6 +180,26 @@ final class MessageViewController: MessagesViewController, MembersDelegate, Note
     
     @objc func togglePanel() {
         if(panelOut == false) {
+            navController.view.isHidden = false
+            panelOut = true
+            navigationController?.setNavigationBarHidden(true, animated: true)
+            messageInputBar.isHidden = true
+            UIView.animate(withDuration: 0.3, animations: {
+                self.navController.view.frame = CGRect(x: self.view.frame.width/3, y: self.navController.view.frame.minY, width: self.navController.view.frame.width, height: self.navController.view.frame.height)
+            })
+        }
+        else {
+            navigationController?.setNavigationBarHidden(false, animated: true)
+            messageInputBar.isHidden = false
+            UIView.animate(withDuration: 0.3, animations: {
+                self.navController.view.frame = CGRect(x: self.view.frame.width, y: self.navController.view.frame.minY, width: self.panelView.view.frame.width, height: self.panelView.view.frame.width)
+            }, completion: {
+                (value: Bool) in
+                self.panelOut = false
+            })
+        }
+        
+        /*if(panelOut == false) {
             if(panelState == -1) { //just pull up the normal class info
                 panelView.view.isHidden = false
                 panelOut = true
@@ -210,27 +258,29 @@ final class MessageViewController: MessagesViewController, MembersDelegate, Note
                     self.panelState = -1
                 })
             }
-        }
+        }*/
         
     }
 
     func membersPressed() { //when the members button is pressed in the side panel
-        panelView.view.isHidden = true
+        navController.pushViewController(membersView, animated: true)
+        /*panelView.view.isHidden = true
         notesView.view.isHidden = true
         membersView.view.isHidden = false //show correct view
         self.membersView.view.frame = CGRect(x: self.view.frame.width/3, y: self.membersView.view.frame.minY, width: self.membersView.view.frame.width, height: self.membersView.view.frame.height)
         self.view.bringSubviewToFront(membersView.view) //bring it to front
-        panelState = 1 //update state so we know it's out
+        panelState = 1 //update state so we know it's out*/
     }
     
     func notesPressed() {
-        //print("notes pressed")
-        panelView.view.isHidden = true
+        print("notes pressed")
+        navController.pushViewController(notesView, animated: true)
+        /*panelView.view.isHidden = true
         membersView.view.isHidden = true
         notesView.view.isHidden = false
         self.notesView.view.frame = CGRect(x: self.view.frame.width/3, y: self.notesView.view.frame.minY, width: self.notesView.view.frame.width, height: self.notesView.view.frame.height)
         self.view.bringSubviewToFront(notesView.view) //bring it to front
-        panelState = 2 //update state so we know it's out
+        panelState = 2 //update state so we know it's out*/
         
     }
     

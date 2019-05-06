@@ -28,7 +28,6 @@ class PanelViewController: UIViewController, UITableViewDelegate, UITableViewDat
     @IBOutlet weak var muteLabel: UILabel!
     @IBOutlet weak var view1: UIView!
     @IBOutlet weak var muteSwitch: UISwitch!
-    @IBOutlet weak var classNameLabel: UILabel!
     
 
     var delegate: MembersDelegate?
@@ -57,7 +56,7 @@ class PanelViewController: UIViewController, UITableViewDelegate, UITableViewDat
         navigationController?.setNavigationBarHidden(false, animated: true)
         
         self.view.backgroundColor = JDColor.appSubviewBackground.color
-        classNameLabel.textColor = JDColor.appAccent.color
+        //classNameLabel.textColor = JDColor.appAccent.color
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
