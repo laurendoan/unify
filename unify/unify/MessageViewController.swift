@@ -301,8 +301,6 @@ final class MessageViewController: MessagesViewController, MembersDelegate, Note
     // initializes the input bar for messages
     func configureMessageInputBar() {
         messageInputBar.delegate = self
-        messageInputBar.inputTextView.tintColor = .primaryColor
-        messageInputBar.sendButton.tintColor = .primaryColor
     }
     
     // loads messages for chat room
@@ -389,7 +387,7 @@ extension MessageViewController: MessagesDisplayDelegate {
     
     // sets message background color depending on who sent message
     func backgroundColor(for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> UIColor {
-        return isFromCurrentSender(message: message) ? .primaryColor : UIColor(red: 230/255, green: 241/255, blue: 253/255, alpha: 1)
+        return isFromCurrentSender(message: message) ? JDColor.appAccent.color : UIColor(red: 230/255, green: 241/255, blue: 253/255, alpha: 1)
     }
     
     // sets bubble tail direction depending on who sent message
