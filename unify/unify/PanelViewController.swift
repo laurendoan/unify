@@ -117,8 +117,6 @@ class PanelViewController: UIViewController, UITableViewDelegate, UITableViewDat
             destination.courseName = classId
         } else if segue.identifier == notesSegueIdentifier,
             let destination = segue.destination as? NotesViewController {
-            print("notes segueing")
-
             destination.className = classNameRef
             destination.classId = classId
         }

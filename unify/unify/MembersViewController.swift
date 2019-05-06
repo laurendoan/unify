@@ -19,6 +19,8 @@ class MembersViewController: UIViewController, UITableViewDelegate, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        title = "Members"
+        
         tableView.dataSource = self
         tableView.delegate = self
         
@@ -31,8 +33,6 @@ class MembersViewController: UIViewController, UITableViewDelegate, UITableViewD
             if let val = classValues!["members"]{
                 // now val is not nil and the Optional has been unwrapped, so use it
                 let mems = val as! [String]
-                //print("val: ", val)
-                print(mems.count)
                 self.count = mems.count
                 self.members = mems
                 self.tableView.rowHeight = 40
@@ -47,7 +47,6 @@ class MembersViewController: UIViewController, UITableViewDelegate, UITableViewD
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.view.backgroundColor = JDColor.appSubviewBackground.color
-        self.membersLabel.textColor = JDColor.appText.color
     }
     
     /*override func viewDidAppear(_ animated: Bool) {

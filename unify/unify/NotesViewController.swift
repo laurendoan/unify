@@ -33,16 +33,14 @@ class NotesViewController: UIViewController, UIImagePickerControllerDelegate, UI
     // sets up initial notes collection view
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         noteCollectionView.delegate = self
         noteCollectionView.dataSource = self
-        print("notesDidLoad")
-        //print(self.parent)
         //let parent:UINavigationController = self.parent as! UINavigationController
-        //print(parent.children)
+        
         // Set title of chatroom.
-        //self.navigationController?.isNavigationBarHidden = false
-        title = "\(classId)"
-        print(className)
+        title = "Notes"
+        
         // gets database reference for current class images
         let databaseClass = Database.database().reference().child("images").child(className)
         let query = databaseClass.queryLimited(toLast: 10)
@@ -74,7 +72,6 @@ class NotesViewController: UIViewController, UIImagePickerControllerDelegate, UI
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        print("notes viewWillAppear called")
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: true)
         self.view.backgroundColor = JDColor.appSubviewBackground.color

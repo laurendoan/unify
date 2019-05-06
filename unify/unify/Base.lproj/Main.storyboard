@@ -1778,13 +1778,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="members" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xh9-GB-a83">
-                                <rect key="frame" x="168" y="89" width="72" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6Aa-8P-mW5">
                                 <rect key="frame" x="20" y="118" width="374" height="713"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1820,7 +1813,6 @@
                         <viewLayoutGuide key="safeArea" id="NOx-33-ejk"/>
                     </view>
                     <connections>
-                        <outlet property="membersLabel" destination="Xh9-GB-a83" id="CwV-lT-Zdn"/>
                         <outlet property="tableView" destination="6Aa-8P-mW5" id="MFr-hs-c47"/>
                     </connections>
                 </viewController>
@@ -1830,16 +1822,15 @@
         </scene>
     </scenes>
     <resources>
-        <image name="icons8-calendar-17-50" width="20" height="20"/>
-        <image name="icons8-exit-50" width="50" height="50"/>
-        <image name="icons8-home-page-50" width="20" height="20"/>
-        <image name="icons8-settings-50" width="20" height="20"/>
+        <image name="icons8-calendar-17-50" width="15" height="15"/>
+        <image name="icons8-exit-50" width="156.52174377441406" height="156.52174377441406"/>
+        <image name="icons8-home-page-50" width="15" height="15"/>
+        <image name="icons8-settings-50" width="15" height="15"/>
         <image name="inf" width="72" height="43"/>
         <image name="unify_icon" width="400" height="241"/>
         <image name="unifylogo" width="400" height="231"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="exp-r3-AJf"/>
         <segue reference="PHN-N8-s4K"/>
         <segue reference="cXk-L4-t7L"/>
     </inferredMetricsTieBreakers>

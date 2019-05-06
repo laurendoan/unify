@@ -40,7 +40,7 @@ final class MessageViewController: MessagesViewController, MembersDelegate, Note
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("messagesDidLoad")
+        
         // Set title of chatroom.
         title = "\(classID)"
         
@@ -121,7 +121,6 @@ final class MessageViewController: MessagesViewController, MembersDelegate, Note
         notesView.view.frame = CGRect(x: self.view.frame.width/3, y: 0, width: self.view.frame.width*2/3, height: self.view.frame.height) //want it 1/3 of the way across the screen so it's coming from the right
         notesView.className = className
         notesView.classId = classID
-        print("notes view instantiated: ", className)
         
         
         membersView = storyboard.instantiateViewController(withIdentifier: "MembersViewController") as! MembersViewController
@@ -132,7 +131,7 @@ final class MessageViewController: MessagesViewController, MembersDelegate, Note
         navController.view.frame = CGRect(x: self.view.frame.width/3, y: 0, width: self.view.frame.width*2/3, height: self.view.frame.height) //want it 1/3 of the way across the screen so it's coming from the right
         navController.navigationItem.title = className
         navController.interactivePopGestureRecognizer?.isEnabled = false
-        panelView.title = className
+        panelView.title = classID
         
         addChild(navController)
         self.view.insertSubview(navController.view, at: 0)
@@ -146,33 +145,33 @@ final class MessageViewController: MessagesViewController, MembersDelegate, Note
         //panelView.view.frame = CGRect(x: self.view.frame.width, y: panelView.view.frame.minY, width: panelView.view.frame.width, height: panelView.view.frame.height)
         //panelView.didMove(toParent: self)
         
-        /*membersView = storyboard.instantiateViewController(withIdentifier: "MembersViewController") as! MembersViewController
-        membersView.view.frame = CGRect(x: self.view.frame.width/3, y: 0, width: self.view.frame.width*2/3, height: self.view.frame.height) //want it 1/3 of the way across the screen so it's coming from the right
-        
-        self.view.insertSubview(membersView.view, at: 0)
-        self.view.bringSubviewToFront(panelView.view)
-        membersView.view.frame = CGRect(x: self.view.frame.width, y: membersView.view.frame.minY, width: membersView.view.frame.width, height: membersView.view.frame.height)
-        //Arrange its components as well: the label and the tableView
-        membersView.membersLabel.frame = CGRect(x: panelView.view.frame.width/2 - membersView.membersLabel.frame.width/2, y: 50, width: membersView.membersLabel.frame.width, height: membersView.membersLabel.frame.height)
-        membersView.tableView.frame = CGRect(x: 0, y: 100, width: 276, height:  membersView.tableView.frame.height)
-        addChild(membersView)
-        membersView.didMove(toParent: self)
-        
-        panelView.notesDelegate = self
-        notesView = storyboard.instantiateViewController(withIdentifier: "NotesViewController") as! NotesViewController
-        notesView.view.frame = CGRect(x: self.view.frame.width/3, y: 0, width: self.view.frame.width*2/3, height: self.view.frame.height) //want it 1/3 of the way across the screen so it's coming from the right
-        
-        self.view.insertSubview(notesView.view, at: 0)
-        self.view.bringSubviewToFront(panelView.view)
-        notesView.view.frame = CGRect(x: self.view.frame.width, y: notesView.view.frame.minY, width: notesView.view.frame.width, height: notesView.view.frame.height)
-
-        membersView.className = self.className
-
-        panelView.classNameRef = self.className
-        panelView.classId = self.classID
+//        membersView = storyboard.instantiateViewController(withIdentifier: "MembersViewController") as! MembersViewController
+//        membersView.view.frame = CGRect(x: self.view.frame.width/3, y: 0, width: self.view.frame.width*2/3, height: self.view.frame.height) //want it 1/3 of the way across the screen so it's coming from the right
+//
+//        self.view.insertSubview(membersView.view, at: 0)
+//        self.view.bringSubviewToFront(panelView.view)
+//        membersView.view.frame = CGRect(x: self.view.frame.width, y: membersView.view.frame.minY, width: membersView.view.frame.width, height: membersView.view.frame.height)
+//        //Arrange its components as well: the label and the tableView
+//        membersView.membersLabel.frame = CGRect(x: panelView.view.frame.width/2 - membersView.membersLabel.frame.width/2, y: 50, width: membersView.membersLabel.frame.width, height: membersView.membersLabel.frame.height)
+//        membersView.tableView.frame = CGRect(x: 0, y: 100, width: 276, height:  membersView.tableView.frame.height)
+//        addChild(membersView)
+//        membersView.didMove(toParent: self)
+//
+//        panelView.notesDelegate = self
+//        notesView = storyboard.instantiateViewController(withIdentifier: "NotesViewController") as! NotesViewController
+//        notesView.view.frame = CGRect(x: self.view.frame.width/3, y: 0, width: self.view.frame.width*2/3, height: self.view.frame.height) //want it 1/3 of the way across the screen so it's coming from the right
+//
+//        self.view.insertSubview(notesView.view, at: 0)
+//        self.view.bringSubviewToFront(panelView.view)
+//        notesView.view.frame = CGRect(x: self.view.frame.width, y: notesView.view.frame.minY, width: notesView.view.frame.width, height: notesView.view.frame.height)
+//
+//        membersView.className = self.className
+//
+//        panelView.classNameRef = self.className
+//        panelView.classId = self.classID
         
         panelView.leaveClassDelegate = self
-        panelView.className = className // Pass in class name.*/
+        panelView.className = className  // Pass in class name.
     }
     
 
@@ -280,7 +279,6 @@ final class MessageViewController: MessagesViewController, MembersDelegate, Note
     }
     
     func notesPressed() {
-        print("notes pressed: ", className)
         notesView.className = className
         notesView.classId = classID
         navController.pushViewController(notesView, animated: true)
