@@ -491,6 +491,7 @@ extension MessageViewController: MessageInputBarDelegate {
                     notification.subtitle = current.displayName
                     notification.body = str
                     notification.categoryIdentifier = "notificationCategory"
+                    notification.sound = UNNotificationSound.default
                     
                     // Trigger the notification after 5 seconds.
                     let delay: TimeInterval = 5.0

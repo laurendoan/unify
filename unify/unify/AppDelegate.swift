@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         
         // Ask user to enable notifications.
-        UNUserNotificationCenter.current().requestAuthorization(options: .alert, completionHandler: {
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound], completionHandler: {
             success, error in
             if success {
                 print("Notifications enabled.")
