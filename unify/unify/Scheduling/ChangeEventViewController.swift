@@ -27,6 +27,7 @@ class ChangeEventViewController: UIViewController {
     
     @IBOutlet weak var save: UIButton!
 
+    @IBOutlet weak var scrollView: UIScrollView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +44,16 @@ class ChangeEventViewController: UIViewController {
         addBottomTextBorder(textField: date)
         addBottomTextBorder(textField: start)
         addBottomTextBorder(textField: end)
+        
+        let recognizer = UITapGestureRecognizer(target: self, action: #selector(self.touch))
+        recognizer.numberOfTapsRequired = 1
+        recognizer.numberOfTouchesRequired = 1
+        scrollView.addGestureRecognizer(recognizer)
+    }
+    
+    @objc func touch() {
+        //print("Touches")
+        self.view.endEditing(true)
     }
     
     func addBottomTextBorder(textField:UITextField) {

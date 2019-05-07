@@ -19,6 +19,7 @@ class EventScheduleViewController: UIViewController {
     @IBOutlet weak var endTF: UITextField!
     @IBOutlet weak var button: UIButton!
     
+    @IBOutlet weak var scrollView: UIScrollView!
     
     /* Initialized Variables */
     let formatter = DateFormatter()
@@ -43,6 +44,16 @@ class EventScheduleViewController: UIViewController {
         addBottomTextBorder(textField: dateTF)
         addBottomTextBorder(textField: startTF)
         addBottomTextBorder(textField: endTF)
+        
+        let recognizer = UITapGestureRecognizer(target: self, action: #selector(self.touch))
+        recognizer.numberOfTapsRequired = 1
+        recognizer.numberOfTouchesRequired = 1
+        scrollView.addGestureRecognizer(recognizer)
+    }
+    
+    @objc func touch() {
+        //print("Touches")
+        self.view.endEditing(true)
     }
     
     func addBottomTextBorder(textField:UITextField) {
