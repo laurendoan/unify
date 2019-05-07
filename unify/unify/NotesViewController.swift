@@ -55,7 +55,7 @@ class NotesViewController: UIViewController, UIImagePickerControllerDelegate, UI
             {
                 let storageRef = Storage.storage().reference(forURL: downloadURL)
                 // Download the data
-                storageRef.getData(maxSize: 4 * 1024 * 1024) { data, error in
+                storageRef.getData(maxSize: 2 * 1024 * 1024) { data, error in
                     if let _ = error {
                         // Uh-oh, an error occurred!
                     } else {
@@ -76,6 +76,12 @@ class NotesViewController: UIViewController, UIImagePickerControllerDelegate, UI
         navigationController?.setNavigationBarHidden(false, animated: true)
         self.view.backgroundColor = JDColor.appSubviewBackground.color
         noteCollectionView.backgroundColor = JDColor.appSubviewBackground.color
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        let databaseClass = Database.database().reference().child("images").child(className)
+        let query = databaseClass.queryLimited(toLast: 10)
+        query.removeAllObservers()
     }
     
     // return number of notes

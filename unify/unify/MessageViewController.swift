@@ -66,6 +66,7 @@ final class MessageViewController: MessagesViewController, MembersDelegate, Note
         loadMessages()
         setupPanel()
         center.delegate = self
+        self.messagesCollectionView.scrollToBottom(animated: true)
     }
 
     // Sets up side panel.
@@ -79,6 +80,8 @@ final class MessageViewController: MessagesViewController, MembersDelegate, Note
         }
         messageInputBar.contentView.backgroundColor = JDColor.appTabBarBackground.color
         messageInputBar.backgroundView.backgroundColor = JDColor.appTabBarBackground.color
+        messageInputBar.inputTextView.textColor = JDColor.appSubText.color
+        self.messagesCollectionView.scrollToBottom(animated: true)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -384,6 +387,7 @@ final class MessageViewController: MessagesViewController, MembersDelegate, Note
                     let date = Date(timeIntervalSince1970: Double(interval)!)
                     let message = Message(text: text, sender: Sender(id: id, displayName: name), messageId: messageId, date: date)
                     self?.insertMessage(message)
+                    self?.messagesCollectionView.scrollToBottom(animated: true)
                 }
             })
         }) { (error) in
