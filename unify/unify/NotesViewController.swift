@@ -29,6 +29,7 @@ class NotesViewController: UIViewController, UIImagePickerControllerDelegate, UI
     let viewImageSegueIdentifier = "viewImageSegueIdentifier"
     let backToMessagesSegueIdentifier = "backToMessagesSegueIdentifier"
     var imageSelected: UIImage!
+    let picker = UIImagePickerController()
     
     // sets up initial notes collection view
     override func viewDidLoad() {
@@ -37,13 +38,14 @@ class NotesViewController: UIViewController, UIImagePickerControllerDelegate, UI
         noteCollectionView.delegate = self
         noteCollectionView.dataSource = self
         //let parent:UINavigationController = self.parent as! UINavigationController
+        picker.delegate = self
         
         // Set title of chatroom.
         title = "Notes"
         
         // gets database reference for current class images
         let databaseClass = Database.database().reference().child("images").child(className)
-        let query = databaseClass.queryLimited(toLast: 10)
+        let query = databaseClass.queryLimited(toLast: 100)
         query.removeAllObservers()
         
         // loads in current class images
@@ -55,13 +57,13 @@ class NotesViewController: UIViewController, UIImagePickerControllerDelegate, UI
             {
                 let storageRef = Storage.storage().reference(forURL: downloadURL)
                 // Download the data
-                storageRef.getData(maxSize: 2 * 1024 * 1024) { data, error in
+                storageRef.getData(maxSize: 4 * 1024 * 1024) { data, error in
                     if let _ = error {
                         // Uh-oh, an error occurred!
                     } else {
                         // Data for image is returned
                         let image = UIImage(data: data!)
-                        if (image != nil) {
+                        if (image != nil && self != nil) {
                             self!.pics.append(image!)
                             self!.noteCollectionView.reloadData()
                         }
@@ -76,12 +78,6 @@ class NotesViewController: UIViewController, UIImagePickerControllerDelegate, UI
         navigationController?.setNavigationBarHidden(false, animated: true)
         self.view.backgroundColor = JDColor.appSubviewBackground.color
         noteCollectionView.backgroundColor = JDColor.appSubviewBackground.color
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        let databaseClass = Database.database().reference().child("images").child(className)
-        let query = databaseClass.queryLimited(toLast: 10)
-        query.removeAllObservers()
     }
     
     // return number of notes
@@ -116,41 +112,62 @@ class NotesViewController: UIViewController, UIImagePickerControllerDelegate, UI
     
     // brings up UIImagePickerController to allow user to select image from photo gallery to upload
     @IBAction func uploadNoteButtonPressed(_ sender: UIBarButtonItem) {
-        let imagePicker = UIImagePickerController()
-        imagePicker.sourceType = UIImagePickerController.SourceType.photoLibrary
-        imagePicker.mediaTypes = [kUTTypeImage as String]
-        imagePicker.delegate = self
-        present(imagePicker, animated: true, completion: nil)
+        // whole picture, not an edited version
+        picker.allowsEditing = false
+        
+        // set the source to be the Photo Library
+        picker.sourceType = .photoLibrary
+        
+        // present the picker in a full screen popover
+        picker.modalPresentationStyle = .popover
+        
+        present(picker, animated: true, completion: nil)
+        
+        // popovers are REQUIRED to view the Photo Library
+        picker.popoverPresentationController?.barButtonItem = sender
+    }
+    
+    // if no camera is available on the device, pop up an alert.
+    // (used from camera demo)
+    func noCamera(){
+        let alertVC = UIAlertController(
+            title: "No Camera",
+            message: "Sorry, this device has no camera",
+            preferredStyle: .alert)
+        let okAction = UIAlertAction(
+            title: "OK",
+            style:.default,
+            handler: nil)
+        alertVC.addAction(okAction)
+        present(alertVC, animated: true, completion: nil)
     }
     
     // brings up camera to allow user to take image to upload
     @IBAction func takePhotoButtonPressed(_ sender: UIBarButtonItem) {
-        if UIImagePickerController.isSourceTypeAvailable(.camera) {
-            let imagePicker = UIImagePickerController()
-            imagePicker.delegate = self
-            imagePicker.allowsEditing = false
-            imagePicker.sourceType = UIImagePickerController.SourceType.camera
-            imagePicker.cameraCaptureMode = .photo
-            imagePicker.modalPresentationStyle = .fullScreen
-            present(imagePicker, animated: true, completion: nil)
+        if UIImagePickerController.availableCaptureModes(for: .rear) != nil {
+            
+            // whole picture, not an edited version
+            picker.allowsEditing = false
+            
+            // set the source to be the camera
+            picker.sourceType = .camera
+            
+            // set camera mode to "photo"
+            picker.cameraCaptureMode = .photo
+            
+            present(picker, animated: true, completion: nil)
+            
         } else {
-            // if no camera available (simulation) display alert and cancel
-            let alert = UIAlertController(title: "This device has no camera", message: "Please try again with a device supporting camera use.", preferredStyle: .alert)
-            
-            alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-            
-            self.present(alert, animated: true)
+            noCamera()
         }
     }
     
     // save image upon selection/ photo taken
-    @objc func imagePickerController(_ picker: UIImagePickerController,
+    internal func imagePickerController(_ picker: UIImagePickerController,
                                      didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any])
     {
-        guard (info[.originalImage] as? UIImage) != nil else {
-            fatalError("Expected a dictionary containing an image, but was provided the following: \(info)")
-        }
-        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage, let optimizedImageData = image.jpegData(compressionQuality: 0.6)
+        // get the selected picture
+        if let image = info[.originalImage] as? UIImage, let optimizedImageData = image.jpegData(compressionQuality: 0.6)
         {
             // upload image from here
             uploadImage(imageData: optimizedImageData)

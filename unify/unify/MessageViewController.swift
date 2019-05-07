@@ -372,7 +372,7 @@ final class MessageViewController: MessagesViewController, MembersDelegate, Note
             let value = snapshot.value as? NSDictionary
             self.senderDisplayName = value?["displayName"] as? String ?? ""
             self.sender = Sender(id: senderId, displayName: self.senderDisplayName!)
-            let query = databaseClass.queryLimited(toLast: 20)
+            let query = databaseClass.queryLimited(toLast: 30)
             
             _ = query.observe(.childAdded, with: { [weak self] snapshot in
                 
