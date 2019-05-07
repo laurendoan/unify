@@ -75,6 +75,7 @@ final class MessageViewController: MessagesViewController, MembersDelegate, Note
         navigationController?.setNavigationBarHidden(false, animated: true)
         navigationController?.navigationBar.barTintColor = JDColor.appTabBarBackground.color
         navigationController?.navigationBar.tintColor = JDColor.appSubText.color
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:JDColor.appAccent.color]
         if let layout = messagesCollectionView.collectionViewLayout as? MessagesCollectionViewFlowLayout {
             layout.collectionView!.backgroundColor = JDColor.appViewBackground.color
         }
@@ -97,7 +98,7 @@ final class MessageViewController: MessagesViewController, MembersDelegate, Note
         
         self.navigationItem.rightBarButtonItem?.image = UIImage(named: "icons8-menu-26.png")
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
-        
+
         
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         panelView = storyboard.instantiateViewController(withIdentifier: "PanelViewController") as! PanelViewController

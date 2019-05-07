@@ -1732,11 +1732,12 @@
                     </view>
                     <connections>
                         <outlet property="imageView" destination="Ohs-vc-ncn" id="AYA-MH-4xt"/>
+                        <outlet property="toolbar" destination="LuV-Vq-P01" id="Tgg-RU-M98"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bay-8s-wNP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7224.6376811594209" y="447.99107142857139"/>
+            <point key="canvasLocation" x="7148" y="448"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Vos-SW-Wlp">

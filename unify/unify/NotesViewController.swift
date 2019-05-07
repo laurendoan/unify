@@ -78,6 +78,8 @@ class NotesViewController: UIViewController, UIImagePickerControllerDelegate, UI
         navigationController?.setNavigationBarHidden(false, animated: true)
         self.view.backgroundColor = JDColor.appSubviewBackground.color
         noteCollectionView.backgroundColor = JDColor.appSubviewBackground.color
+        self.toolbar.barTintColor = JDColor.appTabBarBackground.color
+        self.toolbar.tintColor = JDColor.appAccent.color
     }
     
     // return number of notes

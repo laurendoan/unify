@@ -57,6 +57,10 @@ class PanelViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         self.view.backgroundColor = JDColor.appSubviewBackground.color
         //classNameLabel.textColor = JDColor.appAccent.color
+        navigationController?.navigationBar.barTintColor = JDColor.appTabBarBackground.color
+        navigationController?.navigationBar.tintColor = JDColor.appSubText.color
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:JDColor.appAccent.color]
+
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

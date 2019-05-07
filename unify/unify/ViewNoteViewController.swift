@@ -17,6 +17,7 @@ class ViewNoteViewController: UIViewController {
     var className = ""
     var classId = ""
     
+    @IBOutlet weak var toolbar: UIToolbar!
     // sets up initial view
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +35,8 @@ class ViewNoteViewController: UIViewController {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: true)
         self.view.backgroundColor = JDColor.appViewBackground.color
+        self.toolbar.barTintColor = JDColor.appTabBarBackground.color
+        self.toolbar.tintColor = JDColor.appAccent.color
     }
     
     override func viewWillDisappear(_ animated: Bool) {
