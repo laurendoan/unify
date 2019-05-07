@@ -59,7 +59,7 @@ class NotesViewController: UIViewController, UIImagePickerControllerDelegate, UI
                 // Download the data
                 storageRef.getData(maxSize: 4 * 1024 * 1024) { data, error in
                     if let _ = error {
-                        // Uh-oh, an error occurred!
+                        print("AN ERROR READING NOTES")// Uh-oh, an error occurred!
                     } else {
                         // Data for image is returned
                         let image = UIImage(data: data!)

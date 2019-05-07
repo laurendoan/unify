@@ -505,9 +505,35 @@ extension MessageViewController: MessagesDataSource {
         
         let date = message.sentDate
         let calendar = Calendar.current
-        let hour = calendar.component(.hour, from: date)
+        var hour = calendar.component(.hour, from: date)
         let minutes = calendar.component(.minute, from: date)
-        let dateString: String = "\(hour):\(minutes)"
+        var minutesString = "00"
+        if(minutes < 10)
+        {
+            minutesString = "0\(minutes)"
+        }
+        else
+        {
+            minutesString = "\(minutes)"
+        }
+        var hoursString = "00"
+        if(hour < 12)
+        {
+            hoursString = "\(hour)"
+            minutesString += " am"
+        }
+        else if (hour > 12)
+        {
+            hour -= 12
+            hoursString = "\(hour)"
+            minutesString += " pm"
+        }
+        else
+        {
+            hoursString = "\(hour)"
+            minutesString += " pm"
+        }
+        let dateString = hoursString + ":" + minutesString
         return NSAttributedString(string: dateString, attributes: [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .caption2), NSAttributedString.Key.foregroundColor : JDColor.appSubText.color])
     }
 }
