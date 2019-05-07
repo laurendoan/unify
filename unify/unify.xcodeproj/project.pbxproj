@@ -33,6 +33,9 @@
 		E254C9E32248831D00F28F30 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E254C9E22248831D00F28F30 /* HomeViewController.swift */; };
 		E254C9E5224892E300F28F30 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E254C9E4224892E300F28F30 /* GoogleService-Info.plist */; };
 		E2FB94F22249532C00A4D57A /* AddClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FB94F12249532C00A4D57A /* AddClassViewController.swift */; };
+		E2FE158B228230D800F6204B /* NotesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FE158A228230D800F6204B /* NotesTableViewCell.swift */; };
+		E2FE158D228230FA00F6204B /* ScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FE158C228230FA00F6204B /* ScheduleTableViewCell.swift */; };
+		E2FE158F228232EA00F6204B /* MembersPanelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FE158E228232EA00F6204B /* MembersPanelTableViewCell.swift */; };
 		ED2E4693225C62DD00B67569 /* EventScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2E4692225C62DD00B67569 /* EventScheduleViewController.swift */; };
 		ED8C0DD522599BCB00B3CE13 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8C0DD422599BCB00B3CE13 /* Message.swift */; };
 		ED8C0DD922599C2D00B3CE13 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8C0DD822599C2D00B3CE13 /* MessageViewController.swift */; };
@@ -75,6 +78,9 @@
 		E254C9E22248831D00F28F30 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E254C9E4224892E300F28F30 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E2FB94F12249532C00A4D57A /* AddClassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddClassViewController.swift; sourceTree = "<group>"; };
+		E2FE158A228230D800F6204B /* NotesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTableViewCell.swift; sourceTree = "<group>"; };
+		E2FE158C228230FA00F6204B /* ScheduleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewCell.swift; sourceTree = "<group>"; };
+		E2FE158E228232EA00F6204B /* MembersPanelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembersPanelTableViewCell.swift; sourceTree = "<group>"; };
 		ED2E4692225C62DD00B67569 /* EventScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventScheduleViewController.swift; sourceTree = "<group>"; };
 		ED8C0DD422599BCB00B3CE13 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		ED8C0DD822599C2D00B3CE13 /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
@@ -146,8 +152,11 @@
 				EDA2023D226F21AF00BBE906 /* Scheduling */,
 				ED8C0DDA22599C3200B3CE13 /* Calendar */,
 				01FB02CA225AC111009288A8 /* PanelViewController.swift */,
+				E2FE158A228230D800F6204B /* NotesTableViewCell.swift */,
 				01FA81F2225BB797006CAE18 /* MuteTableViewCell.swift */,
 				01FA81F4225BBEEF006CAE18 /* MembersTableViewCell.swift */,
+				E2FE158E228232EA00F6204B /* MembersPanelTableViewCell.swift */,
+				E2FE158C228230FA00F6204B /* ScheduleTableViewCell.swift */,
 				01D32ABC225E507600661683 /* MembersViewController.swift */,
 			);
 			path = unify;
@@ -331,6 +340,7 @@
 				ED8C0DD922599C2D00B3CE13 /* MessageViewController.swift in Sources */,
 				B96952AD225BEFE40011DB22 /* ViewNoteViewController.swift in Sources */,
 				EDD02CDE224AD913009D9B98 /* UIColorScheme.swift in Sources */,
+				E2FE158D228230FA00F6204B /* ScheduleTableViewCell.swift in Sources */,
 				ED8C0DDC22599CB100B3CE13 /* CustomCell.swift in Sources */,
 				982ACE46224A9F3100DE62AD /* CustomTabBarController.swift in Sources */,
 				982ACE42224A95F800DE62AD /* SettingsViewController.swift in Sources */,
@@ -339,11 +349,13 @@
 				01D32ABD225E507600661683 /* MembersViewController.swift in Sources */,
 				98EDC29022594EA500B05494 /* EditAccountViewController.swift in Sources */,
 				982ACE48224AA0C700DE62AD /* CalendarViewController.swift in Sources */,
+				E2FE158B228230D800F6204B /* NotesTableViewCell.swift in Sources */,
 				ED8C0DD522599BCB00B3CE13 /* Message.swift in Sources */,
 				EDA2023C226F116400BBE906 /* ChangeEventViewController.swift in Sources */,
 				E203CA10227E508000F18D49 /* UIColorClass.swift in Sources */,
 				B96952AB225BE7510011DB22 /* NoteCollectionViewCell.swift in Sources */,
 				ED2E4693225C62DD00B67569 /* EventScheduleViewController.swift in Sources */,
+				E2FE158F228232EA00F6204B /* MembersPanelTableViewCell.swift in Sources */,
 				01FA81F5225BBEEF006CAE18 /* MembersTableViewCell.swift in Sources */,
 				01FB02CB225AC111009288A8 /* PanelViewController.swift in Sources */,
 				E254C9E122487CB200F28F30 /* SignupViewController.swift in Sources */,

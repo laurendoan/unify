@@ -73,16 +73,22 @@ class PanelViewController: UIViewController, UITableViewDelegate, UITableViewDat
             return cell
         }
         if(indexPath.row == 1) {
-            let cell:MembersTableViewCell = tableView.dequeueReusableCell(withIdentifier: "membersCellIdentifier", for: indexPath as IndexPath) as! MembersTableViewCell
+            let cell:MembersPanelTableViewCell = tableView.dequeueReusableCell(withIdentifier: "membersCellIdentifier", for: indexPath as IndexPath) as! MembersPanelTableViewCell
+            cell.selectionStyle = UITableViewCell.SelectionStyle.none
+            cell.configure()
             return cell
         }
         //return UITableViewCell()
         if(indexPath.row == 2) {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "notesCellIdentifier", for: indexPath as IndexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: "notesCellIdentifier", for: indexPath as IndexPath) as! NotesTableViewCell
+            cell.selectionStyle = UITableViewCell.SelectionStyle.none
+            cell.configure()
             return cell
         }
         if(indexPath.row == 3) {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "scheduleCellIdentifier", for: indexPath as IndexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: "scheduleCellIdentifier", for: indexPath as IndexPath) as! ScheduleTableViewCell
+            cell.selectionStyle = UITableViewCell.SelectionStyle.none
+            cell.configure()
             return cell
         }
         if(indexPath.row == 4) {

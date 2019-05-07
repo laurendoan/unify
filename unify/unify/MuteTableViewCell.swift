@@ -10,6 +10,7 @@ import UIKit
 
 class MuteTableViewCell: UITableViewCell {
     @IBOutlet weak var muteSwitch: UISwitch!
+    @IBOutlet weak var muteLabel: UILabel!
     
     let userDefaults = UserDefaults.standard
     var mute = true
@@ -18,6 +19,7 @@ class MuteTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
     }
+    
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
@@ -28,6 +30,7 @@ class MuteTableViewCell: UITableViewCell {
 //        print("Configure mute cell \(self.courseName)")
         mute = userDefaults.bool(forKey: "Mute \(courseName)")
         muteSwitch.setOn(mute, animated: true)
+        muteLabel.textColor = JDColor.appText.color
     }
     
     @IBAction func muteSwitchToggled(_ sender: Any) {

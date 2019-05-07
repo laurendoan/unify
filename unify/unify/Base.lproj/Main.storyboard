@@ -1308,13 +1308,14 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
+                                            <outlet property="muteLabel" destination="2mL-2n-PDH" id="gob-M3-8VI"/>
                                             <outlet property="muteSwitch" destination="Wuj-NI-ll1" id="Jlx-tJ-5cG"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="membersCellIdentifier" id="1gY-5w-Z7l" customClass="MembersTableViewCell" customModule="unify" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="membersCellIdentifier" id="1gY-5w-Z7l" customClass="MembersPanelTableViewCell" customModule="unify" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="72" width="276" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1gY-5w-Z7l" id="biX-IJ-wMx">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1gY-5w-Z7l" id="biX-IJ-wMx" customClass="MembersPanelTableViewCell" customModule="unify" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="242" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
@@ -1336,8 +1337,11 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="membersLabel" destination="JbF-Vc-uNB" id="Cwv-sO-zUo"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="notesCellIdentifier" id="859-sn-xhh">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="notesCellIdentifier" id="859-sn-xhh" customClass="NotesTableViewCell" customModule="unify" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="116" width="276" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="859-sn-xhh" id="tG9-n2-JsZ">
@@ -1356,10 +1360,11 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
+                                            <outlet property="notesLabel" destination="AET-hH-cYj" id="aJt-G5-RUR"/>
                                             <segue destination="d5N-Yh-7KA" kind="show" identifier="notesSegueIdentifier" id="nDm-z8-mMb"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="scheduleCellIdentifier" id="Ijg-O2-paO">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="scheduleCellIdentifier" id="Ijg-O2-paO" customClass="ScheduleTableViewCell" customModule="unify" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="160" width="276" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ijg-O2-paO" id="rk7-7b-fND">
@@ -1378,6 +1383,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
+                                            <outlet property="scheduleLabel" destination="Ri2-MW-bCx" id="wcX-fC-eTy"/>
                                             <segue destination="ePl-W5-c24" kind="show" identifier="scheduleToEventSegue" id="JgM-8Y-hdr"/>
                                         </connections>
                                     </tableViewCell>
@@ -1822,10 +1828,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="icons8-calendar-17-50" width="20" height="20"/>
-        <image name="icons8-exit-50" width="50" height="50"/>
-        <image name="icons8-home-page-50" width="20" height="20"/>
-        <image name="icons8-settings-50" width="20" height="20"/>
+        <image name="icons8-calendar-17-50" width="15" height="15"/>
+        <image name="icons8-exit-50" width="156.52174377441406" height="156.52174377441406"/>
+        <image name="icons8-home-page-50" width="15" height="15"/>
+        <image name="icons8-settings-50" width="15" height="15"/>
         <image name="inf" width="72" height="43"/>
         <image name="unify_icon" width="400" height="241"/>
         <image name="unifylogo" width="400" height="231"/>
