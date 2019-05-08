@@ -90,6 +90,17 @@ class EditAccountViewController: UIViewController {
                     // Update in database too, if successful.
                     let user = Auth.auth().currentUser
                     self.ref.child("users/\(user!.uid)/displayName").setValue(self.displayNameTextField.text)
+                    self.ref.child("users").child(user!.uid).observeSingleEvent(of: .value, with: { (snapshot) in
+                        let value = snapshot.value as? NSDictionary
+                        let courses = value?["courses"] as? Array ?? []
+                        for course in courses {
+                            let childUpdates = ["/courses/\(course)/members/\(user!.uid)/": self.displayNameTextField.text]
+                            self.ref.updateChildValues(childUpdates as [AnyHashable : Any])
+                        }
+                        
+                    }) { (error) in
+                        print(error.localizedDescription)
+                    }
                     
                 }
             }
