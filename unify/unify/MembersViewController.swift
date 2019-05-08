@@ -53,7 +53,7 @@ class MembersViewController: UIViewController, UITableViewDelegate, UITableViewD
         self.view.backgroundColor = JDColor.appSubviewBackground.color
         
         members.removeAll()
-        /*
+        
         ref.child("courses").child(className).child("members").observe(DataEventType.value) { (snapshot) in
             if (snapshot.childrenCount > 0) {
                 //self.courses.removeAll()
@@ -61,19 +61,15 @@ class MembersViewController: UIViewController, UITableViewDelegate, UITableViewD
                 // Iterates through the number of children
                 for i in snapshot.children.allObjects as! [DataSnapshot] {
                     // Pulls data from each child (name of course, course id, and the instructor)
-                    let Object = i.value as? [String: AnyObject]
-                    let name = Object?["fullName"]
-                    let id = i.key
-                    let instructor = Object?["instructor"]
-                    
-                    // Adds classes to the array of 'courses'
-                    let c = Courses(name: name as? String, id: id, instructor: instructor as? String, unique: "")
-                    self.courses.append(c)
-                    self.classes.reloadData()
+                    let Object = i.value as? String
+                    self.members.append(Object!)
+                    self.tableView.reloadData()
                 }
+                self.tableView.rowHeight = 40
+                self.tableView.frame = CGRect(x: 0, y: 100, width: 276, height: Int(self.tableView.rowHeight) * self.members.count)
             }
         }
-        */
+        
     }
     
     /*override func viewDidAppear(_ animated: Bool) {
@@ -82,14 +78,14 @@ class MembersViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 1//members.count
+        return members.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell:MembersTableViewCell = tableView.dequeueReusableCell(withIdentifier: "membersCellIdentifier", for: indexPath as IndexPath) as! MembersTableViewCell
         
-        cell.memberName.text = "hello"//members[indexPath.row]
+        cell.memberName.text = members[indexPath.row]
         cell.memberName.textColor = JDColor.appText.color
 //        print("Name: ", cell.memberName.text)
         return cell

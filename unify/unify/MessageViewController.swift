@@ -325,17 +325,7 @@ final class MessageViewController: MessagesViewController, MembersDelegate, Note
             print(error.localizedDescription)
         }
         
-        ref.child("courses").child(className).observeSingleEvent(of: .value, with: {
-                snapshot in
-            let username = Auth.auth().currentUser?.displayName
-            if let sharers = snapshot.value as? [String] {
-                for i in 0..<sharers.count {
-                    if sharers[i] == username {
-                        self.ref.child("courses").child(self.className).child("\(i)").removeValue()
-                    }
-                }
-            }
-        })
+        ref.child("courses").child(className).child("members").child(user!.uid).removeValue()
     }
     
     /*func backPressed() {
