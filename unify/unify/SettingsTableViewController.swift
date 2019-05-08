@@ -31,10 +31,10 @@ class SettingsTableViewController: UITableViewController {
         super.viewDidLoad()
         
         chatAlerts = userDefaults.bool(forKey: "Chat Alerts")
-        chatAlertsSwitch.setOn(chatAlerts, animated: true)
+        chatAlertsSwitch.setOn(chatAlerts, animated: false)
         
         calendarUpdates = userDefaults.bool(forKey: "Calendar Updates")
-        calendarUpdatesSwitch.setOn(calendarUpdates, animated: true)
+        calendarUpdatesSwitch.setOn(calendarUpdates, animated: false)
         
         darkModeSwitch.setOn(ThemeManager.sharedThemeManager.isNightMode(), animated: false)
 //        darkModeSwitch.addTarget(self, action: #selector(stateChanged), for: .valueChanged)
