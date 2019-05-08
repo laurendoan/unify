@@ -73,7 +73,7 @@ class AddClassViewController: UIViewController {
             ref.child("users").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
                 let value = snapshot.value as? NSDictionary
                 var courses = value?["courses"] as? Array ?? []
-                let course = (self.courseNumTextField.text!.replacingOccurrences(of: " ", with: "") + self.instructorTextField.text!.replacingOccurrences(of: " ", with: "").replacingOccurrences(of: ",", with: "")).uppercased()
+                let course = (self.courseNumTextField.text!.replacingOccurrences(of: " ", with: "") + self.instructorTextField.text!.replacingOccurrences(of: " ", with: "").replacingOccurrences(of: ",", with: "").replacingOccurrences(of: ".", with: "")).uppercased()
                 
                 // Check if the user is already a part of given course.
                 guard !courses.contains(where: { (element) -> Bool in
