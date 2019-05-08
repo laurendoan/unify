@@ -38,6 +38,7 @@ class ChangeEventViewController: UIViewController {
         save.layer.cornerRadius = 25
         save.layer.borderWidth = 1
         save.layer.borderColor = JDColor.appAccent.color.cgColor
+        
         // Style text fields
         addBottomTextBorder(textField: name)
         addBottomTextBorder(textField: location)
@@ -45,14 +46,15 @@ class ChangeEventViewController: UIViewController {
         addBottomTextBorder(textField: start)
         addBottomTextBorder(textField: end)
         
+        // Used to dismiss keyboard on scroll view
         let recognizer = UITapGestureRecognizer(target: self, action: #selector(self.touch))
         recognizer.numberOfTapsRequired = 1
         recognizer.numberOfTouchesRequired = 1
         scrollView.addGestureRecognizer(recognizer)
     }
     
+    // Helper function to dismiss keyboard
     @objc func touch() {
-        //print("Touches")
         self.view.endEditing(true)
     }
     
@@ -107,11 +109,6 @@ class ChangeEventViewController: UIViewController {
             date.text = str
             start.text = contentHolder.start
             end.text = contentHolder.end
-            
-            /* Disable date textfield as changes are meant to only adjust time/location/name */
-            //date.isUserInteractionEnabled = false
-            print("Debugging - ChangeEventVC - ClassRef:", contentHolder.courseRef!)
-            print("Debugging - ChangeEventVC - ParentIDRef:", contentHolder.parentRef!)
         }
     }
     

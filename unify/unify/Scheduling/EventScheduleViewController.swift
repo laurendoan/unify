@@ -32,7 +32,7 @@ class EventScheduleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         ref = Database.database().reference()
-        //self.view.frame = CGRect(x: 0, y: 0, width: self.parent!.view.frame.width, height: self.view.frame.height)
+        
         // Do any additional setup after loading the view.
         button.layer.cornerRadius = 25
         button.layer.borderWidth = 1
@@ -45,14 +45,15 @@ class EventScheduleViewController: UIViewController {
         addBottomTextBorder(textField: startTF)
         addBottomTextBorder(textField: endTF)
         
+        // Used to dismiss keyboard on scroll view
         let recognizer = UITapGestureRecognizer(target: self, action: #selector(self.touch))
         recognizer.numberOfTapsRequired = 1
         recognizer.numberOfTouchesRequired = 1
         scrollView.addGestureRecognizer(recognizer)
     }
     
+    // Helper function to dismiss keyboard
     @objc func touch() {
-        //print("Touches")
         self.view.endEditing(true)
     }
     

@@ -217,6 +217,7 @@ final class MessageViewController: MessagesViewController, MembersDelegate, Note
             print(error.localizedDescription)
         }
         
+        // Removes the user from the member's list under course -> class's name -> members
         ref.child("courses").child(className).child("members").child(user!.uid).removeValue()
     }
 

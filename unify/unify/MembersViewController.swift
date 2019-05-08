@@ -26,25 +26,7 @@ class MembersViewController: UIViewController, UITableViewDelegate, UITableViewD
         tableView.delegate = self
         
         ref = Database.database().reference()
-        /*
-        // print("Class: ",className)
-        ref.child("courses").observeSingleEvent(of: .value, with: { (snapshot) in
-            let value = snapshot.value as? NSDictionary
-            let classValues = value![self.className]! as? NSDictionary
-            //print(classValues)
-            if let val = classValues!["members"]{
-                // now val is not nil and the Optional has been unwrapped, so use it
-                print(val)
-                let mems = val as! [String]
-                self.count = mems.count
-                self.members = mems
-                self.tableView.rowHeight = 40
-                self.tableView.frame = CGRect(x: 0, y: 100, width: 276, height: Int(self.tableView.rowHeight) * self.members.count)
-                self.tableView.reloadData() //Without this, the tableView won't have the correct data. Since this is an async call, it needs this to tell the TableView that data has been added.
-            }
-            
-        })
-        */
+
         // Do any additional setup after loading the view.
     }
     
@@ -56,11 +38,12 @@ class MembersViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         ref.child("courses").child(className).child("members").observe(DataEventType.value) { (snapshot) in
             if (snapshot.childrenCount > 0) {
+                // Used to avoid duplications
                 self.members.removeAll()
                 
                 // Iterates through the number of children
                 for i in snapshot.children.allObjects as! [DataSnapshot] {
-                    // Pulls data from each child (name of course, course id, and the instructor)
+                    // Pulls data from each child and adds it to the member's array
                     let Object = i.value as? String
                     self.members.append(Object!)
                     self.tableView.reloadData()

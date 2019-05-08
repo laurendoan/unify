@@ -37,11 +37,9 @@ class CalendarViewController: UIViewController {
     var selectedContent: EventContent!
     var clickedDate = ""
     
-    /* Default Colors (Will clean up later) */
+    /* Default Colors */
     var monthTextColor = JDColor.appText.color
     var nonMonthTextColor = JDColor.appSubText.color
-//    var outsideMonthColor = UIColor(red: 227/255, green: 240/255, blue: 255/255, alpha: 1)
-    //let calendarBGColor = UIColor(red: 165/255, green: 206/255, blue: 254/255, alpha: 1)
     var selectedDateColor = JDColor.appAccent.color
     
     override func viewDidLoad() {
@@ -66,6 +64,8 @@ class CalendarViewController: UIViewController {
         self.tabBarController?.tabBar.barTintColor = JDColor.appTabBarBackground.color
         self.tabBarController?.tabBar.tintColor = JDColor.appAccent.color
         self.tabBarController?.tabBar.unselectedItemTintColor = JDColor.appSubText.color
+        
+        // Sets up the text colors
         monthTextColor = JDColor.appText.color
         nonMonthTextColor = JDColor.appSubText.color
         month.textColor = JDColor.appAccent.color
@@ -78,6 +78,8 @@ class CalendarViewController: UIViewController {
         thu.textColor = JDColor.appText.color
         fri.textColor = JDColor.appText.color
         sat.textColor = JDColor.appText.color
+        
+        // Resets the VC for a fresh start
         courses.removeAll()
         courseTitles.removeAll()
         clickedDateContent.removeAll()
@@ -123,9 +125,6 @@ class CalendarViewController: UIViewController {
         calendarView.visibleDates{ (visibleDates) in
             self.setupViewsOfCalendar(from: visibleDates)
         }
-        
-        //courses.removeAll()
-        //courseTitles.removeAll()
     }
     
     /* Selection handles for dates */
@@ -142,21 +141,6 @@ class CalendarViewController: UIViewController {
     /* Coloring handles for dates */
     func handleCellTextColor (view: JTAppleCell?, cellState: CellState) {
         guard let validCell = view as? CustomCell else { return }
-        
-        // Darkens the current date. Otherwise, revert back to original color
-        // JK. doesn't work yet
-        /*
-        let todaysDate = Date()
-        formatter.dateFormat = "yyyy MM dd"
-        let todaysDateString = formatter.string(from: todaysDate)
-        let monthDateString = formatter.string(from: cellState.date)
-        if todaysDateString == monthDateString {
-            validCell.dataLabel.textColor = UIColor.blue
-        } else {
-            validCell.dataLabel.textColor = cellState.isSelected ?
-                monthTextColor : nonMonthTextColor
-        }
-         */
         
         // Configures colors between selected, month dates, and non-month dates
         if cellState.isSelected {
@@ -232,7 +216,6 @@ extension CalendarViewController: JTAppleCalendarViewDataSource, JTAppleCalendar
         formatter.dateFormat = "EEEE, MMMM dd"
         let labelDate = formatter.string(from: date)
         dateLabelTF.text = labelDate
-        print(labelDate)
         
         // Empties array for usage
         self.clickedDateContent.removeAll()
@@ -246,7 +229,7 @@ extension CalendarViewController: JTAppleCalendarViewDataSource, JTAppleCalendar
                     self.ref.child("schedule").child(self.courses[index]).child(self.clickedDate).observeSingleEvent(of: DataEventType.value) { (snapshot2) in
                         // Iterates through the number of children
                         for i in snapshot2.children.allObjects as! [DataSnapshot] {
-                            // Pulls data from each child (name of course, course id, and the instructor)
+                            // Pulls data from each child (name of course, course id, the instructor, etc)
                             let Object = i.value as? [String: AnyObject]
                             let name = Object?["name"]
                             let location = Object?["location"]
@@ -301,12 +284,15 @@ extension CalendarViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:CalendarTableViewCell = tableView.dequeueReusableCell(withIdentifier: "calendarTableViewIdentifier", for: indexPath as IndexPath) as! CalendarTableViewCell
         
+        // Sets up the variables for usage
         let row = indexPath.row
         let n = String(clickedDateContent[row].name!)
         let l = String(clickedDateContent[row].location!)
         let sT = String(clickedDateContent[row].start!)
         let eT = String(clickedDateContent[row].end!)
         let title = String(clickedDateContent[row].course!)
+        
+        // Sets the labels to the assign variables
         cell.eventNameLabel.text = "\(n) (\(sT) - \(eT))"
         cell.descriptionLabel.text = "Location: \(l)"
         cell.titleLabel.text = "\(title)"
