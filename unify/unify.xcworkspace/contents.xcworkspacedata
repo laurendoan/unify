@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:../../../../Users/skenkare/Downloads/GoogleService-Info.plist">
+   </FileRef>
+   <FileRef
       location = "group:unify.xcodeproj">
    </FileRef>
    <FileRef

@@ -2,39 +2,35 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
-	<string>ca-app-pub-3940256099942544/2934735716</string>
-	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
-	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>219596194709-6uhua168gl12a2unaajvbt9b59vc8q63.apps.googleusercontent.com</string>
+	<string>710904283420-idbhejcuq6t2b9cvk957r7rdpcrcoh40.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.219596194709-6uhua168gl12a2unaajvbt9b59vc8q63</string>
+	<string>com.googleusercontent.apps.710904283420-idbhejcuq6t2b9cvk957r7rdpcrcoh40</string>
 	<key>API_KEY</key>
-	<string>AIzaSyBtOcC7zF6bciBUTuAW9hFoBXYX8Lhj-rE</string>
+	<string>AIzaSyD5T2jP3W7YDWShpt4_wcJdtgEPz72kgKw</string>
 	<key>GCM_SENDER_ID</key>
-	<string>219596194709</string>
+	<string>710904283420</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>default.unify</string>
+	<string>unify.bundle</string>
 	<key>PROJECT_ID</key>
-	<string>unify-3e3cd</string>
+	<string>unify-72f64</string>
 	<key>STORAGE_BUCKET</key>
-	<string>unify-3e3cd.appspot.com</string>
+	<string>unify-72f64.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
-	<true></true>
+	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
 	<false></false>
 	<key>IS_APPINVITE_ENABLED</key>
-	<false></false>
+	<true></true>
 	<key>IS_GCM_ENABLED</key>
 	<true></true>
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:219596194709:ios:9704eb2428bec655</string>
+	<string>1:710904283420:ios:c3a201931490c26c</string>
 	<key>DATABASE_URL</key>
-	<string>https://unify-3e3cd.firebaseio.com</string>
+	<string>https://unify-72f64.firebaseio.com</string>
 </dict>
 </plist>
