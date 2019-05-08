@@ -99,7 +99,10 @@ class AddClassViewController: UIViewController {
                             let value = snapshot.value as? NSDictionary
                             let displayName = value!["displayName"]
                             
-                            self.ref.child("courses").child(course).child("members").setValue([(self.cur.uid): displayName])
+//                            self.ref.child("courses").child(course).child("members").setValue([(self.cur.uid): displayName])
+                            
+                            let databaseRef = Constants.refs.databaseCourses.child("\(course)/members/\((self.cur.uid))")
+                            databaseRef.setValue(displayName)
                             /*
                             // Add user to course's member list.
                             self.ref.child("courses").child(course).observeSingleEvent(of: .value, with: { (snapshot) in                            let value = snapshot.value as? NSDictionary
