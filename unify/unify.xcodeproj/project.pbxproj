@@ -14,6 +14,7 @@
 		982ACE42224A95F800DE62AD /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982ACE41224A95F800DE62AD /* SettingsViewController.swift */; };
 		982ACE46224A9F3100DE62AD /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982ACE45224A9F3100DE62AD /* CustomTabBarController.swift */; };
 		982ACE48224AA0C700DE62AD /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982ACE47224AA0C700DE62AD /* CalendarViewController.swift */; };
+		98C9B4BB228273D20044B146 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 98C9B4BA228273D20044B146 /* GoogleService-Info.plist */; };
 		98EDC28E22593A7C00B05494 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EDC28D22593A7C00B05494 /* SettingsTableViewController.swift */; };
 		98EDC29022594EA500B05494 /* EditAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EDC28F22594EA500B05494 /* EditAccountViewController.swift */; };
 		B96952A9225BE55F0011DB22 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96952A8225BE55F0011DB22 /* NotesViewController.swift */; };
@@ -31,7 +32,6 @@
 		E254C9DF22487C9400F28F30 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E254C9DE22487C9400F28F30 /* LoginViewController.swift */; };
 		E254C9E122487CB200F28F30 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E254C9E022487CB200F28F30 /* SignupViewController.swift */; };
 		E254C9E32248831D00F28F30 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E254C9E22248831D00F28F30 /* HomeViewController.swift */; };
-		E254C9E5224892E300F28F30 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E254C9E4224892E300F28F30 /* GoogleService-Info.plist */; };
 		E2FB94F22249532C00A4D57A /* AddClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FB94F12249532C00A4D57A /* AddClassViewController.swift */; };
 		E2FE158B228230D800F6204B /* NotesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FE158A228230D800F6204B /* NotesTableViewCell.swift */; };
 		E2FE158D228230FA00F6204B /* ScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FE158C228230FA00F6204B /* ScheduleTableViewCell.swift */; };
@@ -56,6 +56,7 @@
 		982ACE41224A95F800DE62AD /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		982ACE45224A9F3100DE62AD /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		982ACE47224AA0C700DE62AD /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		98C9B4BA228273D20044B146 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		98EDC28D22593A7C00B05494 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		98EDC28F22594EA500B05494 /* EditAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAccountViewController.swift; sourceTree = "<group>"; };
 		B96952A8225BE55F0011DB22 /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
@@ -76,7 +77,6 @@
 		E254C9DE22487C9400F28F30 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E254C9E022487CB200F28F30 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		E254C9E22248831D00F28F30 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		E254C9E4224892E300F28F30 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E2FB94F12249532C00A4D57A /* AddClassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddClassViewController.swift; sourceTree = "<group>"; };
 		E2FE158A228230D800F6204B /* NotesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTableViewCell.swift; sourceTree = "<group>"; };
 		E2FE158C228230FA00F6204B /* ScheduleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewCell.swift; sourceTree = "<group>"; };
@@ -147,8 +147,8 @@
 				B96952AC225BEFE40011DB22 /* ViewNoteViewController.swift */,
 				E254C9CF22487B0900F28F30 /* Assets.xcassets */,
 				E254C9D122487B0900F28F30 /* LaunchScreen.storyboard */,
-				E254C9E4224892E300F28F30 /* GoogleService-Info.plist */,
 				E254C9D422487B0900F28F30 /* Info.plist */,
+				98C9B4BA228273D20044B146 /* GoogleService-Info.plist */,
 				EDA2023D226F21AF00BBE906 /* Scheduling */,
 				ED8C0DDA22599C3200B3CE13 /* Calendar */,
 				01FB02CA225AC111009288A8 /* PanelViewController.swift */,
@@ -276,7 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E254C9D322487B0900F28F30 /* LaunchScreen.storyboard in Resources */,
-				E254C9E5224892E300F28F30 /* GoogleService-Info.plist in Resources */,
+				98C9B4BB228273D20044B146 /* GoogleService-Info.plist in Resources */,
 				E254C9D022487B0900F28F30 /* Assets.xcassets in Resources */,
 				E254C9CE22487B0800F28F30 /* Main.storyboard in Resources */,
 			);
@@ -510,7 +510,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = BTUHS8Y6LT;
 				INFOPLIST_FILE = unify/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -530,7 +530,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = BTUHS8Y6LT;
 				INFOPLIST_FILE = unify/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
