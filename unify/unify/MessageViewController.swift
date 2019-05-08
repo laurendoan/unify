@@ -112,6 +112,7 @@ final class MessageViewController: MessagesViewController, MembersDelegate, Note
         panelView.delegate = self
         panelView.notesDelegate = self
         panelView.classNameRef = className
+        panelView.classId = classID
         panelOut = false
         
         
