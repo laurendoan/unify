@@ -54,7 +54,7 @@ class MembersViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         members.removeAll()
         
-        ref.child("courses").child(className).child("members").observeSingleEvent(of: DataEventType.value) { (snapshot) in
+        ref.child("courses").child(className).child("members").observe(DataEventType.value) { (snapshot) in
             if (snapshot.childrenCount > 0) {
                 self.members.removeAll()
                 
