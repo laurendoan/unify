@@ -15,6 +15,7 @@ class MembersViewController: UIViewController, UITableViewDelegate, UITableViewD
     var className: String = ""
     var members: [String] = []
     var count = 0
+    var ref: DatabaseReference!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +25,8 @@ class MembersViewController: UIViewController, UITableViewDelegate, UITableViewD
         tableView.dataSource = self
         tableView.delegate = self
         
-        let ref = Database.database().reference()
+        ref = Database.database().reference()
+        /*
         // print("Class: ",className)
         ref.child("courses").observeSingleEvent(of: .value, with: { (snapshot) in
             let value = snapshot.value as? NSDictionary
@@ -32,6 +34,7 @@ class MembersViewController: UIViewController, UITableViewDelegate, UITableViewD
             //print(classValues)
             if let val = classValues!["members"]{
                 // now val is not nil and the Optional has been unwrapped, so use it
+                print(val)
                 let mems = val as! [String]
                 self.count = mems.count
                 self.members = mems
@@ -41,12 +44,36 @@ class MembersViewController: UIViewController, UITableViewDelegate, UITableViewD
             }
             
         })
+        */
         // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.view.backgroundColor = JDColor.appSubviewBackground.color
+        
+        members.removeAll()
+        /*
+        ref.child("courses").child(className).child("members").observe(DataEventType.value) { (snapshot) in
+            if (snapshot.childrenCount > 0) {
+                //self.courses.removeAll()
+                
+                // Iterates through the number of children
+                for i in snapshot.children.allObjects as! [DataSnapshot] {
+                    // Pulls data from each child (name of course, course id, and the instructor)
+                    let Object = i.value as? [String: AnyObject]
+                    let name = Object?["fullName"]
+                    let id = i.key
+                    let instructor = Object?["instructor"]
+                    
+                    // Adds classes to the array of 'courses'
+                    let c = Courses(name: name as? String, id: id, instructor: instructor as? String, unique: "")
+                    self.courses.append(c)
+                    self.classes.reloadData()
+                }
+            }
+        }
+        */
     }
     
     /*override func viewDidAppear(_ animated: Bool) {
@@ -55,14 +82,14 @@ class MembersViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return members.count
+        return 1//members.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
+        
         let cell:MembersTableViewCell = tableView.dequeueReusableCell(withIdentifier: "membersCellIdentifier", for: indexPath as IndexPath) as! MembersTableViewCell
         
-        cell.memberName.text = members[indexPath.row]
+        cell.memberName.text = "hello"//members[indexPath.row]
         cell.memberName.textColor = JDColor.appText.color
 //        print("Name: ", cell.memberName.text)
         return cell

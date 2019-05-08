@@ -15,6 +15,7 @@ class AddClassViewController: UIViewController {
     @IBOutlet weak var button: UIButton!
     
     var ref: DatabaseReference!
+    let cur = Auth.auth().currentUser!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -92,17 +93,23 @@ class AddClassViewController: UIViewController {
                         courses.append(course)
                         self.ref.child("users/\(userID!)/courses").setValue(courses)
                         
+                        //print("\(course) - \(self.cur.uid) - \(self.cur.displayName!)")
                         // Get user's display name.
                         self.ref.child("users/\(userID!)").observeSingleEvent(of: .value, with: { (snapshot) in
                             let value = snapshot.value as? NSDictionary
                             let displayName = value!["displayName"]
                             
+                            self.ref.child("courses").child(course).child("members").setValue([(self.cur.uid): displayName])
+                            /*
                             // Add user to course's member list.
                             self.ref.child("courses").child(course).observeSingleEvent(of: .value, with: { (snapshot) in                            let value = snapshot.value as? NSDictionary
                                 var members = value?["members"] as? Array ?? []
                                 members.append(displayName!)
+                                let cur = Auth.auth().currentUser!
                                 self.ref.child("courses/\(course)/members").setValue(members)
+                                //self.ref.child("courses/\(course)/members").setValue([cur.uid: cur.displayName])
                             })
+                            */
                         })
                         self.performSegue(withIdentifier: "addClassSegueIdentifier", sender: self)
                     } else {
