@@ -106,12 +106,8 @@ class PanelViewController: UIViewController, UITableViewDelegate, UITableViewDat
         tableView.deselectRow(at: indexPath, animated: true)
         let row = indexPath.row
         if(row == 1) {
-            //print("they clicked notes")
             delegate?.membersPressed()
-        } else if(row == 2) {
-            //notesDelegate?.notesPressed()
         } else if (row == 3) {
-            //self.performSegue(withIdentifier: "scheduleToEventSegue", sender: self)
             eventVC.classRef = classNameRef
         } else if indexPath.row == 4 {
             // Leave class.
@@ -127,7 +123,7 @@ class PanelViewController: UIViewController, UITableViewDelegate, UITableViewDat
             destination.classRef = classNameRef
             destination.courseName = classId
         } else if segue.identifier == notesSegueIdentifier,
-            let destination = segue.destination as? NotesViewController {
+            let destination = segue.destination as? NotesViewController { //need to pass class info to notes
             destination.className = classNameRef
             destination.classId = classId
         }

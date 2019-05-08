@@ -108,12 +108,6 @@ final class MessageViewController: MessagesViewController, MembersDelegate, Note
         
         panelView.tableView.rowHeight = 40
         panelView.tableView.frame = CGRect(x: 0, y: 100, width: 276, height: panelView.tableView.rowHeight * 5)
-        //panelView.classNameLabel.text = className
-        //panelView.classNameLabel.textAlignment = .center
-        //panelView.classNameLabel.frame = CGRect(x: 0, y: 100, width: 276, height: 20)
-        
-        //self.view.insertSubview(panelView.view, at: 0)
-        //self.view.bringSubviewToFront(panelView.view)
         
         panelView.delegate = self
         panelView.notesDelegate = self
@@ -142,45 +136,15 @@ final class MessageViewController: MessagesViewController, MembersDelegate, Note
         self.view.bringSubviewToFront(navController.view)
         navController.view.isHidden = true; //don't show it initially
         navController.view.frame = CGRect(x: self.view.frame.width, y: navController.view.frame.minY, width: navController.view.frame.width, height: navController.view.frame.height)
-        navController.didMove(toParent: self)
+        navController.didMove(toParent: self) //the only thing added to the current VC is the nav controller because it will handle the rest
 
-        
-        //panelView.view.isHidden = true; //don't show it initially
-        //panelView.view.frame = CGRect(x: self.view.frame.width, y: panelView.view.frame.minY, width: panelView.view.frame.width, height: panelView.view.frame.height)
-        //panelView.didMove(toParent: self)
-        
-//        membersView = storyboard.instantiateViewController(withIdentifier: "MembersViewController") as! MembersViewController
-//        membersView.view.frame = CGRect(x: self.view.frame.width/3, y: 0, width: self.view.frame.width*2/3, height: self.view.frame.height) //want it 1/3 of the way across the screen so it's coming from the right
-//
-//        self.view.insertSubview(membersView.view, at: 0)
-//        self.view.bringSubviewToFront(panelView.view)
-//        membersView.view.frame = CGRect(x: self.view.frame.width, y: membersView.view.frame.minY, width: membersView.view.frame.width, height: membersView.view.frame.height)
-//        //Arrange its components as well: the label and the tableView
-//        membersView.membersLabel.frame = CGRect(x: panelView.view.frame.width/2 - membersView.membersLabel.frame.width/2, y: 50, width: membersView.membersLabel.frame.width, height: membersView.membersLabel.frame.height)
-//        membersView.tableView.frame = CGRect(x: 0, y: 100, width: 276, height:  membersView.tableView.frame.height)
-//        addChild(membersView)
-//        membersView.didMove(toParent: self)
-//
-//        panelView.notesDelegate = self
-//        notesView = storyboard.instantiateViewController(withIdentifier: "NotesViewController") as! NotesViewController
-//        notesView.view.frame = CGRect(x: self.view.frame.width/3, y: 0, width: self.view.frame.width*2/3, height: self.view.frame.height) //want it 1/3 of the way across the screen so it's coming from the right
-//
-//        self.view.insertSubview(notesView.view, at: 0)
-//        self.view.bringSubviewToFront(panelView.view)
-//        notesView.view.frame = CGRect(x: self.view.frame.width, y: notesView.view.frame.minY, width: notesView.view.frame.width, height: notesView.view.frame.height)
-//
-//        membersView.className = self.className
-//
-//        panelView.classNameRef = self.className
-//        panelView.classId = self.classID
-        
+                
         panelView.leaveClassDelegate = self
         panelView.className = className  // Pass in class name.
     }
     
 
     @IBAction func swipeRight(_ sender: Any) {
-        //print("Swiped Right")
         togglePanel()
     }
     
@@ -209,89 +173,16 @@ final class MessageViewController: MessagesViewController, MembersDelegate, Note
             })
         }
         
-        /*if(panelOut == false) {
-            if(panelState == -1) { //just pull up the normal class info
-                panelView.view.isHidden = false
-                panelOut = true
-                panelState = 0
-                navigationController?.setNavigationBarHidden(true, animated: true)
-                messageInputBar.isHidden = true
-                UIView.animate(withDuration: 0.3, animations: {
-                    self.panelView.view.frame = CGRect(x: self.view.frame.width/3, y: self.panelView.view.frame.minY, width: self.panelView.view.frame.width, height: self.panelView.view.frame.height)
-                }, completion:  nil)
-            }
-        } else {
-            if(panelState == 0) { //normal panel is out, slide it back
-                self.membersView.view.frame = CGRect(x: self.view.frame.width, y: self.membersView.view.frame.minY, width: self.membersView.view.frame.width, height: self.membersView.view.frame.height) //move panel back even though it's invisible
-                self.notesView.view.frame = CGRect(x: self.view.frame.width, y: self.notesView.view.frame.minY, width: self.notesView.view.frame.width, height: self.notesView.view.frame.height) //move panel back even though it's invisible
-                navigationController?.setNavigationBarHidden(false, animated: true)
-                messageInputBar.isHidden = false
-                UIView.animate(withDuration: 0.3, animations: {
-                    self.panelView.view.frame = CGRect(x: self.view.frame.width, y: self.panelView.view.frame.minY, width: self.panelView.view.frame.width, height: self.panelView.view.frame.height)
-                    
-                }, completion:  {
-                    (value: Bool) in
-                    self.panelView.view.isHidden = true
-                    self.panelOut = false
-                    self.panelState = -1
-                })
-            }
-            else if(panelState == 1) { //members view is out, slide it back but hide panel as well and move it back
-                self.panelView.view.frame = CGRect(x: self.view.frame.width, y: self.panelView.view.frame.minY, width: self.panelView.view.frame.width, height: self.panelView.view.frame.height) //move panel back even though it's invisible
-                self.notesView.view.frame = CGRect(x: self.view.frame.width, y: self.notesView.view.frame.minY, width: self.notesView.view.frame.width, height: self.notesView.view.frame.height) //move panel back even though it's invisible
-                navigationController?.setNavigationBarHidden(false, animated: true)
-                messageInputBar.isHidden = false
-                UIView.animate(withDuration: 0.3, animations: { //only thing changing is the x value so it moves across the screen
-                    //self.panelView.view.alpha = 0
-                    self.membersView.view.frame = CGRect(x: self.view.frame.width, y: self.membersView.view.frame.minY, width: self.membersView.view.frame.width, height: self.membersView.view.frame.height)
-                    
-                }, completion:  {
-                    (value: Bool) in
-                    self.membersView.view.isHidden = true
-                    self.panelOut = false
-                    self.panelState = -1
-                })
-            }
-            else if(panelState == 2) { //notes view is out, slide it back
-                self.panelView.view.frame = CGRect(x: self.view.frame.width, y: self.panelView.view.frame.minY, width: self.panelView.view.frame.width, height: self.panelView.view.frame.height) //move panel back even though it's invisible
-                self.membersView.view.frame = CGRect(x: self.view.frame.width, y: self.membersView.view.frame.minY, width: self.membersView.view.frame.width, height: self.membersView.view.frame.height) //move panel back even though it's invisible
-                navigationController?.setNavigationBarHidden(false, animated: true)
-                messageInputBar.isHidden = false
-                UIView.animate(withDuration: 0.3, animations: { //only thing changing is the x value so it moves across the screen
-                    //self.panelView.view.alpha = 0
-                    self.notesView.view.frame = CGRect(x: self.view.frame.width, y: self.notesView.view.frame.minY, width: self.notesView.view.frame.width, height: self.notesView.view.frame.height)
-                    
-                }, completion:  {
-                    (value: Bool) in
-                    self.notesView.view.isHidden = true
-                    self.panelOut = false
-                    self.panelState = -1
-                })
-            }
-        }*/
-        
     }
 
     func membersPressed() { //when the members button is pressed in the side panel
-        navController.pushViewController(membersView, animated: true)
-        /*panelView.view.isHidden = true
-        notesView.view.isHidden = true
-        membersView.view.isHidden = false //show correct view
-        self.membersView.view.frame = CGRect(x: self.view.frame.width/3, y: self.membersView.view.frame.minY, width: self.membersView.view.frame.width, height: self.membersView.view.frame.height)
-        self.view.bringSubviewToFront(membersView.view) //bring it to front
-        panelState = 1 //update state so we know it's out*/
+        navController.pushViewController(membersView, animated: true) //the side panel nav handles it
     }
     
     func notesPressed() {
         notesView.className = className
         notesView.classId = classID
         navController.pushViewController(notesView, animated: true)
-        /*panelView.view.isHidden = true
-        membersView.view.isHidden = true
-        notesView.view.isHidden = false
-        self.notesView.view.frame = CGRect(x: self.view.frame.width/3, y: self.notesView.view.frame.minY, width: self.notesView.view.frame.width, height: self.notesView.view.frame.height)
-        self.view.bringSubviewToFront(notesView.view) //bring it to front
-        panelState = 2 //update state so we know it's out*/
         
     }
     
@@ -327,16 +218,7 @@ final class MessageViewController: MessagesViewController, MembersDelegate, Note
         
         ref.child("courses").child(className).child("members").child(user!.uid).removeValue()
     }
-    
-    /*func backPressed() {
-        print("back pressed")
-        notesView.view.isHidden = true
-        panelView.view.isHidden = false
-        self.panelView.view.frame = CGRect(x: self.view.frame.width/3, y: self.panelView.view.frame.minY, width: self.panelView.view.frame.width, height: self.panelView.view.frame.height)
-        self.view.bringSubviewToFront(panelView.view)
-        panelState = 0
-        
-    }*/
+
     
     // sets style for status bar
     override var preferredStatusBarStyle: UIStatusBarStyle {
