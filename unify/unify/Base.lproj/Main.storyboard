@@ -295,17 +295,17 @@
                                 <rect key="frame" x="0.0" y="120" width="414" height="380"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Xe9-wW-ue5">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="79"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Month" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IR6-GO-6Ta">
-                                                <rect key="frame" x="165.66666666666666" y="0.0" width="83" height="50"/>
+                                                <rect key="frame" x="165.66666666666666" y="0.0" width="83" height="41"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="27"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A9B-Ma-Kih">
-                                                <rect key="frame" x="187" y="50" width="40" height="29"/>
+                                                <rect key="frame" x="187" y="41" width="40" height="29"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="29" id="Oj6-gk-Aw3"/>
@@ -319,12 +319,11 @@
                                         <constraints>
                                             <constraint firstItem="IR6-GO-6Ta" firstAttribute="centerX" secondItem="Xe9-wW-ue5" secondAttribute="centerX" id="6es-In-dIX"/>
                                             <constraint firstItem="A9B-Ma-Kih" firstAttribute="centerX" secondItem="Xe9-wW-ue5" secondAttribute="centerX" id="duV-J6-so0"/>
-                                            <constraint firstAttribute="height" constant="79" id="eK1-d9-HSC"/>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="fV0-Bo-uVM"/>
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="aiw-O5-pIK">
-                                        <rect key="frame" x="0.0" y="79" width="414" height="20.666666666666671"/>
+                                        <rect key="frame" x="0.0" y="70" width="414" height="20.666666666666671"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sun" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ay8-A6-zE7">
                                                 <rect key="frame" x="0.0" y="0.0" width="59" height="20.666666666666668"/>
@@ -382,7 +381,7 @@
                                         </constraints>
                                     </stackView>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rd4-oI-eyR" customClass="JTAppleCalendarView" customModule="JTAppleCalendar">
-                                        <rect key="frame" x="0.0" y="99.666666666666657" width="414" height="257"/>
+                                        <rect key="frame" x="0.0" y="90.666666666666657" width="414" height="266"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="1gN-Gm-B0j">
                                             <size key="itemSize" width="101" height="101"/>
@@ -509,6 +508,7 @@
                             <constraint firstItem="RgI-jR-ChT" firstAttribute="top" secondItem="aUQ-4w-Xxp" secondAttribute="bottom" constant="10" id="OKR-MS-KzX"/>
                             <constraint firstItem="FUJ-1z-ICx" firstAttribute="top" secondItem="qZ5-KT-Xii" secondAttribute="top" id="UtJ-mt-TM0"/>
                             <constraint firstItem="aUQ-4w-Xxp" firstAttribute="centerY" secondItem="1Bz-mS-3ri" secondAttribute="centerY" constant="-58" id="afJ-sH-6By"/>
+                            <constraint firstItem="Xe9-wW-ue5" firstAttribute="top" secondItem="qZ5-KT-Xii" secondAttribute="top" constant="100" id="bNw-D2-FaZ"/>
                             <constraint firstItem="qZ5-KT-Xii" firstAttribute="bottom" secondItem="RgI-jR-ChT" secondAttribute="bottom" id="lPE-wi-PFZ"/>
                             <constraint firstItem="qZ5-KT-Xii" firstAttribute="trailing" secondItem="RgI-jR-ChT" secondAttribute="trailing" id="sDc-W1-poV"/>
                         </constraints>
