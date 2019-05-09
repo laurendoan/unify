@@ -32,7 +32,6 @@ class CalendarViewController: UIViewController {
     var userID: String!
     var courses: [String] = [] // User's list of courses.
     var courseTitles: [String] = [] // Used to display in table view.
-    //var contents = [EventContent]()
     var clickedDateContent = [EventContent]()
     var selectedContent: EventContent!
     var clickedDate = ""
@@ -53,14 +52,16 @@ class CalendarViewController: UIViewController {
         userID = Auth.auth().currentUser?.uid
     }
     
-    // Hides the navigation bar when the view appears.
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        // Hide navigation bar.
+        // Hides the navigation bar when the view appears.
         navigationController?.setNavigationBarHidden(true, animated: true)
         
+        // Set background color.
         self.view.backgroundColor = JDColor.appViewBackground.color
+        
+        /// Customize Tab Bar colors.
         self.tabBarController?.tabBar.barTintColor = JDColor.appTabBarBackground.color
         self.tabBarController?.tabBar.tintColor = JDColor.appAccent.color
         self.tabBarController?.tabBar.unselectedItemTintColor = JDColor.appSubText.color
