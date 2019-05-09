@@ -40,30 +40,7 @@ class SignupViewController: UIViewController {
         addBottomTextBorder(textField: lastNameTextField)
     }
     
-    // Shows the navigation bar when the view appears.
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.setNavigationBarHidden(false, animated: true)
-        self.view.backgroundColor = JDColor.appViewBackground.color
-        emailTextField.attributedPlaceholder = NSAttributedString(string: "email", attributes: [NSAttributedString.Key.foregroundColor : JDColor.appSubText.color])
-        emailTextField.textColor = JDColor.appText.color
-        
-        passwordTextField.attributedPlaceholder = NSAttributedString(string: "password", attributes: [NSAttributedString.Key.foregroundColor : JDColor.appSubText.color])
-        passwordTextField.textColor = JDColor.appText.color
-        
-        retypePasswordTextField.attributedPlaceholder = NSAttributedString(string: "confirm password", attributes: [NSAttributedString.Key.foregroundColor : JDColor.appSubText.color])
-        retypePasswordTextField.textColor = JDColor.appText.color
-        
-        firstNameTextField.attributedPlaceholder = NSAttributedString(string: "first name", attributes: [NSAttributedString.Key.foregroundColor : JDColor.appSubText.color])
-        firstNameTextField.textColor = JDColor.appText.color
-        
-        lastNameTextField.attributedPlaceholder = NSAttributedString(string: "last name", attributes: [NSAttributedString.Key.foregroundColor : JDColor.appSubText.color])
-        lastNameTextField.textColor = JDColor.appText.color
-        
-        navigationController?.navigationBar.barTintColor = JDColor.appTabBarBackground.color
-        navigationController?.navigationBar.tintColor = JDColor.appSubText.color
-    }
-
+    // Helper func to add a line under text field (for UI).
     func addBottomTextBorder(textField:UITextField) {
         let border = CALayer()
         let width = CGFloat(2.0)
@@ -73,6 +50,33 @@ class SignupViewController: UIViewController {
         border.borderWidth = width
         textField.layer.addSublayer(border)
         textField.layer.masksToBounds = true
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // Shows the navigation bar when the view appears.
+        navigationController?.setNavigationBarHidden(false, animated: true)
+        
+        // Set background color.
+        self.view.backgroundColor = JDColor.appViewBackground.color
+        
+        // Customize text fields text and placeholder text colors.
+        customizeTextFieldText(textField: firstNameTextField, placeHolderText: "first name")
+        customizeTextFieldText(textField: lastNameTextField, placeHolderText: "last name")
+        customizeTextFieldText(textField: emailTextField, placeHolderText: "email")
+        customizeTextFieldText(textField: passwordTextField, placeHolderText: "password")
+        customizeTextFieldText(textField: retypePasswordTextField, placeHolderText: "confirm password")
+        
+        // Customize navigation bar.
+        navigationController?.navigationBar.barTintColor = JDColor.appTabBarBackground.color
+        navigationController?.navigationBar.tintColor = JDColor.appSubText.color
+    }
+    
+    // Helper func to change text field text and placeholder text color.
+    func customizeTextFieldText(textField: UITextField, placeHolderText: String) {
+        textField.attributedPlaceholder = NSAttributedString(string: placeHolderText, attributes: [NSAttributedString.Key.foregroundColor : JDColor.appSubText.color])
+        textField.textColor = JDColor.appText.color
     }
     
     // Signs up a user.

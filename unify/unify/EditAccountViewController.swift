@@ -42,6 +42,7 @@ class EditAccountViewController: UIViewController {
         addBottomTextBorder(textField: confirmPasswordTextField)
     }
     
+    // Helper func to add a line under text field (for UI).
     func addBottomTextBorder(textField:UITextField) {
         let border = CALayer()
         let width = CGFloat(2.0)
@@ -67,14 +68,16 @@ class EditAccountViewController: UIViewController {
         self.view.backgroundColor = JDColor.appViewBackground.color
         
         // Customize text in text fields.
-        displayNameTextField.attributedPlaceholder = NSAttributedString(string: "display name", attributes: [NSAttributedString.Key.foregroundColor : JDColor.appSubText.color])
-        displayNameTextField.textColor = JDColor.appText.color
-        emailTextField.attributedPlaceholder = NSAttributedString(string: "email", attributes: [NSAttributedString.Key.foregroundColor : JDColor.appSubText.color])
-        emailTextField.textColor = JDColor.appText.color
-        passwordTextField.attributedPlaceholder = NSAttributedString(string: "password", attributes: [NSAttributedString.Key.foregroundColor : JDColor.appSubText.color])
-        passwordTextField.textColor = JDColor.appText.color
-        confirmPasswordTextField.attributedPlaceholder = NSAttributedString(string: "confirm password", attributes: [NSAttributedString.Key.foregroundColor : JDColor.appSubText.color])
-        confirmPasswordTextField.textColor = JDColor.appText.color
+        customizeTextFieldText(textField: displayNameTextField, placeHolderText: "display name")
+        customizeTextFieldText(textField: emailTextField, placeHolderText: "email")
+        customizeTextFieldText(textField: passwordTextField, placeHolderText: "password")
+        customizeTextFieldText(textField: confirmPasswordTextField, placeHolderText: "confirm password")
+    }
+    
+    // Helper func to change text field text and placeholder text color.
+    func customizeTextFieldText(textField: UITextField, placeHolderText: String) {
+        textField.attributedPlaceholder = NSAttributedString(string: placeHolderText, attributes: [NSAttributedString.Key.foregroundColor : JDColor.appSubText.color])
+        textField.textColor = JDColor.appText.color
     }
     
     // Updates all user information before presenting alert and segueing.

@@ -25,13 +25,16 @@ class LoginViewController: UIViewController {
         button.layer.cornerRadius = 25
         button.layer.borderWidth = 1
         button.layer.borderColor = JDColor.appAccent.color.cgColor
+        
         // Style "Sign Up" button.
         suButton.layer.cornerRadius = 10
         
+        // Style text fields
         addBottomTextBorder(textField: emailTextField)
         addBottomTextBorder(textField: passwordTextField)
     }
     
+    // Helper func to add a line under text field (for UI).
     func addBottomTextBorder(textField:UITextField) {
         let border = CALayer()
         let width = CGFloat(2.0)
@@ -43,16 +46,27 @@ class LoginViewController: UIViewController {
         textField.layer.masksToBounds = true
     }
     
-    // Hides the navigation bar when the view appears.
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        // Hides the navigation bar when the view appears.
         navigationController?.setNavigationBarHidden(true, animated: true)
+        
+        // Set background color.
         self.view.backgroundColor = JDColor.appViewBackground.color
-        emailTextField.attributedPlaceholder = NSAttributedString(string: "email", attributes: [NSAttributedString.Key.foregroundColor : JDColor.appSubText.color])
-        emailTextField.textColor = JDColor.appText.color
-        passwordTextField.attributedPlaceholder = NSAttributedString(string: "password", attributes: [NSAttributedString.Key.foregroundColor : JDColor.appSubText.color])
-        passwordTextField.textColor = JDColor.appText.color
+        
+        // Customize text fields text and placeholder text colors.
+        customizeTextFieldText(textField: emailTextField, placeHolderText: "email")
+        customizeTextFieldText(textField: passwordTextField, placeHolderText: "password")
+        
+        // Set "new user" label color
         newUserLabel.textColor = JDColor.appText.color
+    }
+    
+    // Helper func to change text field text and placeholder text color.
+    func customizeTextFieldText(textField: UITextField, placeHolderText: String) {
+        textField.attributedPlaceholder = NSAttributedString(string: placeHolderText, attributes: [NSAttributedString.Key.foregroundColor : JDColor.appSubText.color])
+        textField.textColor = JDColor.appText.color
     }
     
     // Logs the user in.

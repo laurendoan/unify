@@ -32,6 +32,7 @@ class AddClassViewController: UIViewController {
         addBottomTextBorder(textField: instructorTextField)
     }
     
+    // Helper func to add a line under text field (for UI).
     func addBottomTextBorder(textField:UITextField) {
         let border = CALayer()
         let width = CGFloat(2.0)
@@ -53,12 +54,18 @@ class AddClassViewController: UIViewController {
         self.view.backgroundColor = JDColor.appViewBackground.color
         
         // Customize text in textfields.
-        courseNumTextField.attributedPlaceholder = NSAttributedString(string: "ex: CS 371L", attributes: [NSAttributedString.Key.foregroundColor : JDColor.appSubText.color])
-        courseNumTextField.textColor = JDColor.appText.color
-        instructorTextField.attributedPlaceholder = NSAttributedString(string: "ex: BULKO W", attributes: [NSAttributedString.Key.foregroundColor : JDColor.appSubText.color])
-        instructorTextField.textColor = JDColor.appText.color
+        customizeTextFieldText(textField: courseNumTextField, placeHolderText: "ex: CS 371L")
+        customizeTextFieldText(textField: instructorTextField, placeHolderText: "ex: BULKO W")
+        
+        // Customize navigation bar.
         navigationController?.navigationBar.barTintColor = JDColor.appTabBarBackground.color
         navigationController?.navigationBar.tintColor = JDColor.appSubText.color
+    }
+    
+    // Helper func to change text field text and placeholder text color.
+    func customizeTextFieldText(textField: UITextField, placeHolderText: String) {
+        textField.attributedPlaceholder = NSAttributedString(string: placeHolderText, attributes: [NSAttributedString.Key.foregroundColor : JDColor.appSubText.color])
+        textField.textColor = JDColor.appText.color
     }
     
     // Adds a class to the user's course list when the "add" button is pressed.
@@ -77,6 +84,7 @@ class AddClassViewController: UIViewController {
             ref.child("users").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
                 let value = snapshot.value as? NSDictionary
                 var courses = value?["courses"] as? Array ?? []
+                // Remove spaces and ignore commas or periods for course key.
                 let course = (self.courseNumTextField.text!.replacingOccurrences(of: " ", with: "") + self.instructorTextField.text!.replacingOccurrences(of: " ", with: "").replacingOccurrences(of: ",", with: "").replacingOccurrences(of: ".", with: "")).uppercased()
                 
                 // Check if the user is already a part of given course.

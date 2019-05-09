@@ -67,7 +67,10 @@ class HomeViewController: UIViewController, UITableViewDataSource,  UITableViewD
         // Hides the navigation bar when the view appears.
         navigationController?.setNavigationBarHidden(true, animated: true)
         
+        // Set background color.
         self.view.backgroundColor = JDColor.appViewBackground.color
+        
+        // Customize Tab Bar colors.
         self.tabBarController?.tabBar.barTintColor = JDColor.appTabBarBackground.color
         self.tabBarController?.tabBar.tintColor = JDColor.appAccent.color
         self.tabBarController?.tabBar.unselectedItemTintColor = JDColor.appSubText.color

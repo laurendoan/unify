@@ -105,11 +105,16 @@ class SettingsTableViewController: UITableViewController {
     
     // Update theme to light/dark mode.
     func updateTheme() {
+        // Set background color
         self.view.backgroundColor = JDColor.appViewBackground.color
+        
+        // Customize labels text color
         chatAlertLabel.textColor = JDColor.appText.color
         calendarUpdateLabel.textColor = JDColor.appText.color
         darkModeLabel.textColor = JDColor.appText.color
         editInfoLabel.textColor = JDColor.appText.color
+        
+        //Customize Tab Bar colors
         self.tabBarController?.tabBar.barTintColor = JDColor.appTabBarBackground.color
         self.tabBarController?.tabBar.tintColor = JDColor.appAccent.color
         self.tabBarController?.tabBar.unselectedItemTintColor = JDColor.appSubText.color
