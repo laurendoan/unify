@@ -27,7 +27,6 @@ import CoreLocation
 import MessageKit
 
 private struct CoordinateItem: LocationItem {
-    
     var location: CLLocation
     var size: CGSize
     
@@ -39,7 +38,6 @@ private struct CoordinateItem: LocationItem {
 }
 
 private struct ImageMediaItem: MediaItem {
-    
     var url: URL?
     var image: UIImage?
     var placeholderImage: UIImage
@@ -50,11 +48,9 @@ private struct ImageMediaItem: MediaItem {
         self.size = CGSize(width: 240, height: 240)
         self.placeholderImage = UIImage()
     }
-    
 }
 
 internal struct Message: MessageType {
-    
     var messageId: String
     var sender: Sender
     var sentDate: Date
@@ -97,5 +93,4 @@ internal struct Message: MessageType {
     init(emoji: String, sender: Sender, messageId: String, date: Date) {
         self.init(kind: .emoji(emoji), sender: sender, messageId: messageId, date: date)
     }
-    
 }

@@ -10,9 +10,10 @@ import UIKit
 import FirebaseAuth
 
 class ViewController: UIViewController {
+    @IBOutlet weak var infImage: UIImageView!
+    
     let yesUserSegueIdentifier = "yesUserSegueIdentifier"
     let noUserSegueIdentifier = "noUserSegueIdentifier"
-    @IBOutlet weak var infImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,10 +42,13 @@ class ViewController: UIViewController {
         })
     }
     
-    // Hides the navigation bar when the view appears.
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        // Hide  navigation bar when  view appears.
         navigationController?.setNavigationBarHidden(true, animated: true)
+        
+        // Set background color.
         self.view.backgroundColor = JDColor.appViewBackground.color
     }
 }

@@ -18,11 +18,12 @@ class SettingsTableViewController: UITableViewController {
     @IBOutlet weak var darkModeLabel: UILabel!
     @IBOutlet weak var editInfoLabel: UILabel!
     
-    var rowsPerSection:[Int] = [2, 1, 1, 1] // Number of rows per section.
+    var rowsPerSection: [Int] = [2, 1, 1, 1] // Number of rows per section.
     
     let editAccountSegueIdentifier = "editAccountSegueIdentifier"
     let signOutSegueIdentifier = "signOutSegueIdentifier"
     
+    // User defaults for chat and calendar notifications.
     let userDefaults = UserDefaults.standard
     var chatAlerts = true
     var calendarUpdates = true
@@ -30,23 +31,26 @@ class SettingsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Set chat notifications.
         chatAlerts = userDefaults.bool(forKey: "Chat Alerts")
         chatAlertsSwitch.setOn(chatAlerts, animated: false)
         
+        // Set calendar notifications.
         calendarUpdates = userDefaults.bool(forKey: "Calendar Updates")
         calendarUpdatesSwitch.setOn(calendarUpdates, animated: false)
         
+        // Set dark mode.
         darkModeSwitch.setOn(ThemeManager.sharedThemeManager.isNightMode(), animated: false)
-//        darkModeSwitch.addTarget(self, action: #selector(stateChanged), for: .valueChanged)
     }
     
-    // Hides the navigation bar when the view appears.
     override func viewWillAppear(_ animated: Bool) {
+        // Hide navigation bar when view appears.
         navigationController?.setNavigationBarHidden(true, animated: true)
+        
         // Sets the background color.
         super.viewWillAppear(animated)
         
-        updateTheme()
+        updateTheme() // Update theme to light/dark mode.
     }
 
     // Returns the number of sections in the table view.
@@ -81,21 +85,25 @@ class SettingsTableViewController: UITableViewController {
         }
     }
     
+    // Updates user defaults if chat alerts switch toggled.
     @IBAction func chatAlertsToggled(_ sender: Any) {
         chatAlerts = chatAlertsSwitch.isOn
         userDefaults.set(chatAlerts, forKey: "Chat Alerts")
     }
     
+    // Updates user defaults if calendar updates switch toggled.
     @IBAction func calendarUpdatesToggled(_ sender: Any) {
         calendarUpdates = calendarUpdatesSwitch.isOn
         userDefaults.set(calendarUpdates, forKey: "Calendar Updates")
     }
     
+    // Updates user defaults if dark mode switch toggled.
     @IBAction func darkModeToggled(_ sender: UISwitch) {
         ThemeManager.sharedThemeManager.toggleTheme()
         updateTheme()
     }
     
+    // Update theme to light/dark mode.
     func updateTheme() {
         self.view.backgroundColor = JDColor.appViewBackground.color
         chatAlertLabel.textColor = JDColor.appText.color

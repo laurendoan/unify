@@ -14,20 +14,20 @@ class AddClassViewController: UIViewController {
     @IBOutlet weak var instructorTextField: UITextField!
     @IBOutlet weak var button: UIButton!
     
-    var ref: DatabaseReference!
-    let cur = Auth.auth().currentUser!
+    var ref: DatabaseReference! // Database reference.
+    let cur = Auth.auth().currentUser! // Current user.
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Database reference.
         ref = Database.database().reference()
         
-        // Style "Login" button.
+        // Customize login button.
         button.layer.cornerRadius = 25
         button.layer.borderWidth = 1
         button.layer.borderColor = JDColor.appAccent.color.cgColor
         
+        // Customize text fields.
         addBottomTextBorder(textField: courseNumTextField)
         addBottomTextBorder(textField: instructorTextField)
     }
@@ -43,12 +43,16 @@ class AddClassViewController: UIViewController {
         textField.layer.masksToBounds = true
     }
     
-    // Shows the navigation bar when the view appears.
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        // Show navigation bar when view appears.
         navigationController?.setNavigationBarHidden(false, animated: true)
+        
+        // Set background color.
         self.view.backgroundColor = JDColor.appViewBackground.color
         
+        // Customize text in textfields.
         courseNumTextField.attributedPlaceholder = NSAttributedString(string: "ex: CS 371L", attributes: [NSAttributedString.Key.foregroundColor : JDColor.appSubText.color])
         courseNumTextField.textColor = JDColor.appText.color
         instructorTextField.attributedPlaceholder = NSAttributedString(string: "ex: BULKO W", attributes: [NSAttributedString.Key.foregroundColor : JDColor.appSubText.color])
