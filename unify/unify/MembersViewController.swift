@@ -26,12 +26,12 @@ class MembersViewController: UIViewController, UITableViewDelegate, UITableViewD
         tableView.delegate = self
         
         ref = Database.database().reference()
-
-        // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        // Set panel background color
         self.view.backgroundColor = JDColor.appSubviewBackground.color
         
         members.removeAll()
@@ -48,29 +48,26 @@ class MembersViewController: UIViewController, UITableViewDelegate, UITableViewD
                     self.members.append(Object!)
                     self.tableView.reloadData()
                 }
+                
+                // Set layout of members table view row.
                 self.tableView.rowHeight = 40
                 self.tableView.frame = CGRect(x: 0, y: 100, width: 276, height: Int(self.tableView.rowHeight) * self.members.count)
             }
         }
         
     }
-    
-    /*override func viewDidAppear(_ animated: Bool) {
-        
-    }*/
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         return members.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell:MembersTableViewCell = tableView.dequeueReusableCell(withIdentifier: "membersCellIdentifier", for: indexPath as IndexPath) as! MembersTableViewCell
         
+        // Set member name text color.
         cell.memberName.text = members[indexPath.row]
         cell.memberName.textColor = JDColor.appText.color
-//        print("Name: ", cell.memberName.text)
+        
         return cell
     }
 }
