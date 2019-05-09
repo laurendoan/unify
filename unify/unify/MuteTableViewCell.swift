@@ -19,7 +19,6 @@ class MuteTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-    
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
@@ -27,14 +26,15 @@ class MuteTableViewCell: UITableViewCell {
     
     func configure(courseName: String) {
         self.courseName = courseName
-//        print("Configure mute cell \(self.courseName)")
+        // Display switch based on previous toggle stored in userDefaults.
         mute = userDefaults.bool(forKey: "Mute \(courseName)")
         muteSwitch.setOn(mute, animated: true)
+        // Set color of mute label.
         muteLabel.textColor = JDColor.appText.color
     }
     
+    // Set mute switch state in userDefaults when toggled.
     @IBAction func muteSwitchToggled(_ sender: Any) {
-//        print("Toggle mute switch \(courseName)")
         mute = muteSwitch.isOn
         userDefaults.set(mute, forKey: "Mute \(courseName)")
     }
