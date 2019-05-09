@@ -23,13 +23,7 @@ protocol LeaveClassProtocol {
 
 class PanelViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var dividerView: UIView!
-    @IBOutlet weak var stackView: UIStackView!
-    @IBOutlet weak var muteLabel: UILabel!
-    @IBOutlet weak var view1: UIView!
-    @IBOutlet weak var muteSwitch: UISwitch!
     
-
     var delegate: MembersDelegate?
     var notesDelegate: NotesDelegate?
     var classNameRef = "ERROR - INCORRECT CLASSNAMEREF"
@@ -42,11 +36,9 @@ class PanelViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         tableView.delegate = self
         tableView.dataSource = self
-        //view1.frame = CGRect(x: view1.frame.minX, y: view1.frame.minY, width: view1.frame.width, height: 1.0)
-        //divider1.frame = CGRect(x: divider1.frame.minX, y: divider1.frame.minY, width: divider1.frame.width, height: 1.0)
-        // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -55,47 +47,47 @@ class PanelViewController: UIViewController, UITableViewDelegate, UITableViewDat
         // Show navigation bar.
         navigationController?.setNavigationBarHidden(false, animated: true)
         
+        // Set background color.
         self.view.backgroundColor = JDColor.appSubviewBackground.color
-        //classNameLabel.textColor = JDColor.appAccent.color
+        
+        // Customize navigation bar.
         navigationController?.navigationBar.barTintColor = JDColor.appTabBarBackground.color
         navigationController?.navigationBar.tintColor = JDColor.appSubText.color
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:JDColor.appAccent.color]
 
     }
     
+    // Returns the number of rows in side panel.
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //print(section)
         return 5
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //print("in function", indexPath.row)
-        if(indexPath.row == 0) {
+        if indexPath.row == 0 {
             let cell:MuteTableViewCell = tableView.dequeueReusableCell(withIdentifier: "muteCellIdentifier", for: indexPath as IndexPath) as! MuteTableViewCell
             cell.selectionStyle = UITableViewCell.SelectionStyle.none
             cell.configure(courseName: className)
             return cell
         }
-        if(indexPath.row == 1) {
+        if indexPath.row == 1 {
             let cell:MembersPanelTableViewCell = tableView.dequeueReusableCell(withIdentifier: "membersCellIdentifier", for: indexPath as IndexPath) as! MembersPanelTableViewCell
             cell.selectionStyle = UITableViewCell.SelectionStyle.none
             cell.configure()
             return cell
         }
-        //return UITableViewCell()
-        if(indexPath.row == 2) {
+        if indexPath.row == 2 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "notesCellIdentifier", for: indexPath as IndexPath) as! NotesTableViewCell
             cell.selectionStyle = UITableViewCell.SelectionStyle.none
             cell.configure()
             return cell
         }
-        if(indexPath.row == 3) {
+        if indexPath.row == 3 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "scheduleCellIdentifier", for: indexPath as IndexPath) as! ScheduleTableViewCell
             cell.selectionStyle = UITableViewCell.SelectionStyle.none
             cell.configure()
             return cell
         }
-        if(indexPath.row == 4) {
+        if indexPath.row == 4 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "leaveClassCellIdentifier", for: indexPath as IndexPath)
             return cell
         }
@@ -104,12 +96,13 @@ class PanelViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
         let row = indexPath.row
-        if(row == 1) {
+        if row == 1 {
             delegate?.membersPressed()
-        } else if (row == 3) {
+        } else if row == 3 {
             eventVC.classRef = classNameRef
-        } else if indexPath.row == 4 {
+        } else if row == 4 {
             // Leave class.
             leaveClassDelegate?.leaveClass(className: className)
         }
@@ -123,7 +116,7 @@ class PanelViewController: UIViewController, UITableViewDelegate, UITableViewDat
             destination.classRef = classNameRef
             destination.courseName = classId
         } else if segue.identifier == notesSegueIdentifier,
-            let destination = segue.destination as? NotesViewController { //need to pass class info to notes
+            let destination = segue.destination as? NotesViewController {
             destination.className = classNameRef
             destination.classId = classId
         }
