@@ -11,19 +11,13 @@ import UIKit
 import MobileCoreServices
 import Firebase
 
-/*protocol BackDelegate {
-    func backPressed()
-}*/
-
 class NotesViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UICollectionViewDataSource, UICollectionViewDelegate {
-    
-    //var delegate: BackDelegate?
 
-    //instance variables
-    var className = "CS439"
-    var classId = ""
+    // Instance variables.
     @IBOutlet weak var noteCollectionView: UICollectionView!
     @IBOutlet var toolbar: UIToolbar!
+    var className = "CS439"
+    var classId = ""
     var pics = [UIImage]()
     let noteCellIdentifier = "noteCellIdentifier"
     let viewImageSegueIdentifier = "viewImageSegueIdentifier"
@@ -31,24 +25,23 @@ class NotesViewController: UIViewController, UIImagePickerControllerDelegate, UI
     var imageSelected: UIImage!
     let picker = UIImagePickerController()
     
-    // sets up initial notes collection view
+    // Sets up initial notes collection view.
     override func viewDidLoad() {
         super.viewDidLoad()
         
         noteCollectionView.delegate = self
         noteCollectionView.dataSource = self
-        //let parent:UINavigationController = self.parent as! UINavigationController
         picker.delegate = self
         
         // Set title of chatroom.
         title = "Notes"
         
-        // gets database reference for current class images
+        // Gets database reference for current class images.
         let databaseClass = Database.database().reference().child("images").child(className)
         let query = databaseClass.queryLimited(toLast: 100)
         query.removeAllObservers()
         
-        // loads in current class images
+        // Loads in current class images.
         _ = query.observe(.childAdded, with: { [weak self] snapshot in
             
             if  let data                = snapshot.value as? [String: String],
@@ -56,12 +49,12 @@ class NotesViewController: UIViewController, UIImagePickerControllerDelegate, UI
                 !downloadURL.isEmpty
             {
                 let storageRef = Storage.storage().reference(forURL: downloadURL)
-                // Download the data
+                // Download the data.
                 storageRef.getData(maxSize: 4 * 1024 * 1024) { data, error in
                     if let _ = error {
-                        print("AN ERROR READING NOTES")// Uh-oh, an error occurred!
+                        print("AN ERROR READING NOTES") // Uh-oh, an error occurred!
                     } else {
-                        // Data for image is returned
+                        // Data for image is returned.
                         let image = UIImage(data: data!)
                         if (image != nil && self != nil) {
                             self!.pics.append(image!)
@@ -75,23 +68,25 @@ class NotesViewController: UIViewController, UIImagePickerControllerDelegate, UI
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        // Show navigation bar when view appears.
         navigationController?.setNavigationBarHidden(false, animated: true)
+        
+        // Set background color to panel background color.
         self.view.backgroundColor = JDColor.appSubviewBackground.color
         noteCollectionView.backgroundColor = JDColor.appSubviewBackground.color
+        
+        // Customize toolbar colors.
         self.toolbar.barTintColor = JDColor.appTabBarBackground.color
         self.toolbar.tintColor = JDColor.appAccent.color
     }
     
-    // return number of notes
+    // Return number of notes.
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return pics.count
     }
-    
-    /*@IBAction func backButtonPressed(_ sender: Any) {
-        delegate?.backPressed()
-    }*/
-    
-    // set data for cell depending on row
+
+    // Set data for cell depending on row.
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: noteCellIdentifier, for: indexPath) as! NoteCollectionViewCell
         
@@ -101,36 +96,35 @@ class NotesViewController: UIViewController, UIImagePickerControllerDelegate, UI
         return cell
     }
     
-    // perform segue to view displaying image selected
+    // Perform segue to view displaying image selected.
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         self.imageSelected = pics[indexPath.row]
         performSegue(withIdentifier: viewImageSegueIdentifier, sender: self)
     }
     
-    // only 1 image per collection view section
+    // Only 1 image per collection view section.
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
     
-    // brings up UIImagePickerController to allow user to select image from photo gallery to upload
+    // Brings up UIImagePickerController to allow user to select image from photo gallery to upload.
     @IBAction func uploadNoteButtonPressed(_ sender: UIBarButtonItem) {
-        // whole picture, not an edited version
+        // Whole picture, not an edited version.
         picker.allowsEditing = false
         
-        // set the source to be the Photo Library
+        // Set the source to be the Photo Library.
         picker.sourceType = .photoLibrary
         
-        // present the picker in a full screen popover
+        // Present the picker in a full screen popover.
         picker.modalPresentationStyle = .popover
         
         present(picker, animated: true, completion: nil)
         
-        // popovers are REQUIRED to view the Photo Library
+        // Popovers are REQUIRED to view the Photo Library.
         picker.popoverPresentationController?.barButtonItem = sender
     }
     
-    // if no camera is available on the device, pop up an alert.
-    // (used from camera demo)
+    // If no camera is available on the device, pop up an alert. (used from camera demo).
     func noCamera(){
         let alertVC = UIAlertController(
             title: "No Camera",
@@ -144,17 +138,17 @@ class NotesViewController: UIViewController, UIImagePickerControllerDelegate, UI
         present(alertVC, animated: true, completion: nil)
     }
     
-    // brings up camera to allow user to take image to upload
+    // Brings up camera to allow user to take image to upload.
     @IBAction func takePhotoButtonPressed(_ sender: UIBarButtonItem) {
         if UIImagePickerController.availableCaptureModes(for: .rear) != nil {
             
-            // whole picture, not an edited version
+            // Whole picture, not an edited version.
             picker.allowsEditing = false
             
-            // set the source to be the camera
+            // Set the source to be the camera.
             picker.sourceType = .camera
             
-            // set camera mode to "photo"
+            // Set camera mode to "photo".
             picker.cameraCaptureMode = .photo
             
             present(picker, animated: true, completion: nil)
@@ -164,51 +158,49 @@ class NotesViewController: UIViewController, UIImagePickerControllerDelegate, UI
         }
     }
     
-    // save image upon selection/ photo taken
+    // Save image upon selection/ photo taken.
     internal func imagePickerController(_ picker: UIImagePickerController,
                                      didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any])
     {
-        // get the selected picture
+        // Get the selected picture.
         if let image = info[.originalImage] as? UIImage, let optimizedImageData = image.jpegData(compressionQuality: 0.6)
         {
-            // upload image from here
+            // Upload image from here.
             uploadImage(imageData: optimizedImageData)
         }
         picker.dismiss(animated: true, completion: {
             self.parent?.navigationController?.isNavigationBarHidden = true
-            //self.view.frame = CGRect(x: self.view.frame.width/3, y: 0, width: self.view.frame.width*2/3, height: self.view.frame.height)
         })
     }
     
-    // allows user to cancel and not take photo
+    // Allows user to cancel and not take photo.
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController)
     {
         picker.dismiss(animated: true, completion: {
             self.parent?.navigationController?.isNavigationBarHidden = true
-            //self.view.frame = CGRect(x: self.view.frame.width/3, y: 0, width: self.view.frame.width*2/3, height: self.view.frame.height)
         })
         
     }
     
-    // uploads image to database
+    // Uploads image to database.
     func uploadImage(imageData: Data)
     {
-        // sets up loading icon
+        // Sets up loading icon.
         let activityIndicator = UIActivityIndicatorView.init(style: .gray)
         activityIndicator.startAnimating()
         activityIndicator.center = self.view.center
         self.view.addSubview(activityIndicator)
         
-        // generate data and database reference to upload
+        // Generate data and database reference to upload.
         let uuid = UUID().uuidString
         let storageReference = Storage.storage().reference()
         let imageRef = storageReference.child("images").child(className).child(uuid)
         let uploadMetaData = StorageMetadata()
         uploadMetaData.contentType = "image/jpeg"
         
-        // places data in database with auto generated ID
+        // Places data in database with auto generated ID.
         imageRef.putData(imageData, metadata: uploadMetaData).observe(.success) { (metadata) in
-            // stop loading icon
+            // Stop loading icon.
             activityIndicator.stopAnimating()
             activityIndicator.removeFromSuperview()
             
@@ -217,7 +209,7 @@ class NotesViewController: UIViewController, UIImagePickerControllerDelegate, UI
                     // Uh-oh, an error occurred!
                     return
                 }
-                // saves download URL to realtime databse with className to allow loading images by class
+                // Saves download URL to realtime databse with className to allow loading images by class.
                 let databaseReference = Database.database().reference().child("images").child(self.className).child(uuid)
                 let url = ["downloadURL": downloadURL.absoluteString]
                 databaseReference.setValue(url)
@@ -225,7 +217,7 @@ class NotesViewController: UIViewController, UIImagePickerControllerDelegate, UI
         }
     }
     
-    // segues to viewnoteviewcontroller to view note fullscreen
+    // Segues to viewnoteviewcontroller to view note fullscreen.
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == viewImageSegueIdentifier, let destination = segue.destination as? ViewNoteViewController {
             self.navigationController!.view.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
